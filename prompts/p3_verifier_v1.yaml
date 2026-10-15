@@ -1,7 +1,9 @@
 id: p3_verifier
 version: "1"
-task: Problem 3 challenger (multi-agent) — Verifier repairs or deletes claims whose quotes are not verbatim in both texts
-output: JSON {"job_id","matched_skills":[...],"missing_skills":[...],"dropped":[{"skill","reason"}]}
+task: |
+  Problem 3 challenger (multi-agent) — Verifier repairs or deletes claims whose quotes are not verbatim in both texts
+output: |
+  JSON {"job_id","matched_skills":[...],"missing_skills":[...],"dropped":[{"skill","reason"}]}
 system: |
   You are the Verifier in a job-matching system. A Matcher produced claims about one job for one resume. A program
   has already checked every quote and marked the claims whose quotes are NOT verbatim substrings of the resume or

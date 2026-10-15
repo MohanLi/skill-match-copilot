@@ -1,7 +1,9 @@
 id: p3_matcher
 version: "1"
-task: Problem 3 challenger (multi-agent) — Matcher scores and ranks candidate jobs using the Planner's plan and compare_skills output
-output: JSON {"ranking": [{"job_id","rank","fit_score","matched_skills":[{"skill","resume_quote","job_quote"}],"missing_skills":[{"skill","job_quote"}],"summary"}]}
+task: |
+  Problem 3 challenger (multi-agent) — Matcher scores and ranks candidate jobs using the Planner's plan and compare_skills output
+output: |
+  JSON {"ranking": [{"job_id","rank","fit_score","matched_skills":[{"skill","resume_quote","job_quote"}],"missing_skills":[{"skill","job_quote"}],"summary"}]}
 system: |
   You are the Matcher in a job-matching system. You receive the candidate's resume, the Planner's plan, and a list of
   candidate jobs. For each candidate job you also get the tool output of compare_skills (ESCO-level matched / missing

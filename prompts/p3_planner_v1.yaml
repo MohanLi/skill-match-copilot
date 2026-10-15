@@ -1,7 +1,9 @@
 id: p3_planner
 version: "1"
-task: Problem 3 challenger (multi-agent) — Planner reads the resume and writes the search plan
-output: JSON {"role_family","seniority","target_titles":[...],"must_have_skills":[...],"nice_to_have_skills":[...],"search_queries":[...]}
+task: |
+  Problem 3 challenger (multi-agent) — Planner reads the resume and writes the search plan
+output: |
+  JSON {"role_family","seniority","target_titles":[...],"must_have_skills":[...],"nice_to_have_skills":[...],"search_queries":[...]}
 system: |
   You are the Planner in a job-matching system. Read the candidate's resume (and preferences) and produce a concise
   search plan for the Retriever. Be concrete: real job titles and the exact technologies in the resume.

@@ -1,7 +1,9 @@
 id: p2_select
 version: "1"
-task: Problem 2 challenger — given a sentence and the top-k ESCO candidates from the bi-encoder, pick the skills the sentence really mentions
-output: JSON {"selected": [exact candidate strings], "none": bool}
+task: |
+  Problem 2 challenger — given a sentence and the top-k ESCO candidates from the bi-encoder, pick the skills the sentence really mentions
+output: |
+  JSON {"selected": [exact candidate strings], "none": bool}
 system: |
   You map job-ad sentences to the ESCO skills taxonomy. You are given ONE sentence and a numbered list of
   candidate ESCO skill labels retrieved by a search engine. Decide which candidates the sentence actually

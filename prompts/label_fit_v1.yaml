@@ -1,7 +1,9 @@
 id: label_fit
 version: "1"
-task: Gold-standard labelling of resume–job fit (0/1/2) following data/labels/guideline.md
-output: JSON {"label": 0|1|2, "role_family_match": bool, "core_requirements": [...], "present": [...], "missing": [...], "seniority_gap_levels": int, "rationale": "<2-3 sentences>"}
+task: |
+  Gold-standard labelling of resume–job fit (0/1/2) following data/labels/guideline.md
+output: |
+  JSON {"label": 0|1|2, "role_family_match": bool, "core_requirements": [...], "present": [...], "missing": [...], "seniority_gap_levels": int, "rationale": "<2-3 sentences>"}
 system: |
   You are an experienced technical recruiter acting as an annotator. You will see ONE candidate profile (CV)
   and ONE job posting. Decide how well the candidate fits the job, following the guideline below exactly.

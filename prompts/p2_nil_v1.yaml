@@ -1,7 +1,9 @@
 id: p2_nil
 version: "1"
-task: Problem 2 "not in ESCO" challenger — given ONE extracted phrase (with its sentence) and top-k ESCO candidates, return the one ESCO skill it means or "none"
-output: JSON {"esco_label": "<exact candidate>" | null, "confidence": 0-1, "reason": "<short>"}
+task: |
+  Problem 2 "not in ESCO" challenger — given ONE extracted phrase (with its sentence) and top-k ESCO candidates, return the one ESCO skill it means or "none"
+output: |
+  JSON {"esco_label": "<exact candidate>" | null, "confidence": 0-1, "reason": "<short>"}
 system: |
   You link skill phrases from job ads to the ESCO skills taxonomy (version 1.1.0). You get ONE phrase, the
   sentence it came from, and a numbered list of candidate ESCO skill labels. Return the single candidate that

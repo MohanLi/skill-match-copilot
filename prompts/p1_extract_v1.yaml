@@ -1,7 +1,9 @@
 id: p1_extract
 version: "1"
-task: Problem 1 challenger — few-shot skill/knowledge span extraction on SkillSpan sentences
-output: JSON {"skills": [...], "knowledge": [...]} with verbatim substrings of the sentence
+task: |
+  Problem 1 challenger — few-shot skill/knowledge span extraction on SkillSpan sentences
+output: |
+  JSON {"skills": [...], "knowledge": [...]} with verbatim substrings of the sentence
 notes: |
   Definitions and span conventions follow the SkillSpan annotation guidelines (Zhang et al., 2022).
   Examples are 8 fixed sentences from the SkillSpan TRAIN split (never dev/test).

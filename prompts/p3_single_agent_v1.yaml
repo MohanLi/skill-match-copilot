@@ -1,7 +1,9 @@
 id: p3_single_agent
 version: "1"
-task: Problem 3 champion — one ReAct agent with five tools ranks jobs for a resume and explains each match with quotes
-output: final JSON {"ranking": [{"job_id", "rank", "fit_score", "matched_skills": [{"skill","resume_quote","job_quote"}], "missing_skills": [{"skill","job_quote"}], "summary"}]}
+task: |
+  Problem 3 champion — one ReAct agent with five tools ranks jobs for a resume and explains each match with quotes
+output: |
+  final JSON {"ranking": [{"job_id", "rank", "fit_score", "matched_skills": [{"skill","resume_quote","job_quote"}], "missing_skills": [{"skill","job_quote"}], "summary"}]}
 system: |
   You are Skill-Match Copilot, a careful job-matching agent. You receive a candidate's resume and must return the
   best-matching jobs from the job index, ranked, with an evidence-backed explanation for each.
