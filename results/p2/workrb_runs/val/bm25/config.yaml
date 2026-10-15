@@ -25,8 +25,8 @@ task_configs:
 languages:
 - en
 custom_metrics: null
-output_folder: results/p2/_scratch_bm25_val
+output_folder: /home/claude/skill-match-copilot/results/p2/workrb_runs/val/bm25
 checkpoint_enabled: true
 checkpoint_frequency: per_task
-created_at: '2026-10-15T09:49:26.497003+00:00'
+created_at: '2026-10-15T09:57:03.215950+00:00'
 description: ''

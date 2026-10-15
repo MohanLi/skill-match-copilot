@@ -106,5 +106,23 @@
     "source": "src/p1_extract/evaluate.py",
     "order": 18,
     "updated": "2026-10-15"
+  },
+  "p2_workrb_map_val": {
+    "caption": "Problem 2: WorkRB MAP per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+    "source": "src/p2_normalize/run_workrb.py",
+    "order": 19,
+    "updated": "2026-10-15"
+  },
+  "p2_workrb_rp10_val": {
+    "caption": "Problem 2: WorkRB RP@10 per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+    "source": "src/p2_normalize/run_workrb.py",
+    "order": 20,
+    "updated": "2026-10-15"
+  },
+  "p2_workrb_mrr_val": {
+    "caption": "Problem 2: WorkRB MRR per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+    "source": "src/p2_normalize/run_workrb.py",
+    "order": 21,
+    "updated": "2026-10-15"
   }
 }

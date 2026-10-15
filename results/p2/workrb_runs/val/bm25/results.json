@@ -10,7 +10,7 @@
       },
       "datasetid_results": {
         "en": {
-          "evaluation_time": 1.5558428764343262,
+          "evaluation_time": 1.5691475868225098,
           "metrics_dict": {
             "map": 0.42408570991176253,
             "rp@10": 0.5482222222222223,
@@ -35,7 +35,7 @@
       },
       "datasetid_results": {
         "en": {
-          "evaluation_time": 1.8726637363433838,
+          "evaluation_time": 2.136187791824341,
           "metrics_dict": {
             "map": 0.2563703290879188,
             "rp@10": 0.3702185792349727,
@@ -53,8 +53,8 @@
   },
   "metadata": {
     "model_name": "BM25-lower",
-    "total_evaluation_time": 3.431049108505249,
-    "timestamp": 1792057766.4970431,
+    "total_evaluation_time": 3.709415912628174,
+    "timestamp": 1792058223.21599,
     "num_tasks": 2,
     "languages": [
       "Language.EN"

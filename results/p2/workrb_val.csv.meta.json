@@ -1,0 +1,28 @@
+{
+  "file": "results/p2/workrb_val.csv",
+  "rows": 2,
+  "columns": [
+    "model_key",
+    "k",
+    "model",
+    "task",
+    "split",
+    "map",
+    "rp@10",
+    "mrr",
+    "n_queries",
+    "eval_time_s",
+    "esco_source",
+    "llm_cost_usd",
+    "llm_calls",
+    "run_utc"
+  ],
+  "created_utc": "2026-10-15T09:57:06Z",
+  "git_commit": "7f03816",
+  "split": "val",
+  "esco_source": "benchmark_label_list_standin",
+  "tasks": {
+    "Skill Extraction Tech": 75,
+    "Skill Extraction House": 61
+  }
+}

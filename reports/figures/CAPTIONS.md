@@ -22,3 +22,6 @@ Every figure exists as `<name>.png` (for slides/report) and `<name>.html` (inter
 | 16 | `p1_f1_comparison_test.png` | Problem 1: strict and loose span F1 per approach and span type on the SkillSpan test split (identical sentence set for all approaches; tagger = mean over seeds). | src/p1_extract/evaluate.py |
 | 17 | `p1_false_positives_test.png` | Problem 1: over-extraction on sentences without any gold span (headers, benefits) — how often each approach invents a span where annotators found none. | src/p1_extract/evaluate.py |
 | 18 | `p1_f1_by_source_test.png` | Problem 1: strict span F1 split by posting source (tech vs house) — the domain gap each approach suffers. | src/p1_extract/evaluate.py |
+| 19 | `p2_workrb_map_val.png` | Problem 2: WorkRB MAP per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
+| 20 | `p2_workrb_rp10_val.png` | Problem 2: WorkRB RP@10 per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
+| 21 | `p2_workrb_mrr_val.png` | Problem 2: WorkRB MRR per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
