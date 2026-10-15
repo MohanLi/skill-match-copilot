@@ -1,0 +1,73 @@
+{
+  "task_results": {
+    "Skill Extraction Tech": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+        "split": "val"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 1.5558428764343262,
+          "metrics_dict": {
+            "map": 0.42408570991176253,
+            "rp@10": 0.5482222222222223,
+            "mrr": 0.514064323870865
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction House": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+        "split": "val"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 1.8726637363433838,
+          "metrics_dict": {
+            "map": 0.2563703290879188,
+            "rp@10": 0.3702185792349727,
+            "mrr": 0.3039376107856471
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "BM25-lower",
+    "total_evaluation_time": 3.431049108505249,
+    "timestamp": 1792057766.4970431,
+    "num_tasks": 2,
+    "languages": [
+      "Language.EN"
+    ],
+    "resumed_from_checkpoint": false,
+    "language_aggregation_mode": "monolingual_only",
+    "replayed_from_workrb_version": null
+  },
+  "key_metrics_by_task_group": {
+    "rank_skill_extraction": [
+      "map",
+      "rp@10",
+      "mrr"
+    ]
+  }
+}

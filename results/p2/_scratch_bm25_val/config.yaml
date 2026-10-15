@@ -1,0 +1,32 @@
+model_name: BM25-lower
+model_class: BM25Model
+model_kwargs: {}
+task_configs:
+- name: Skill Extraction Tech
+  languages:
+  - en
+  split: val
+  class: LocalTechSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from technical text descriptions in the TECH subset
+    of CAREER.
+- name: Skill Extraction House
+  languages:
+  - en
+  split: val
+  class: LocalHouseSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from general text descriptions in the HOUSE subset of
+    CAREER.
+languages:
+- en
+custom_metrics: null
+output_folder: results/p2/_scratch_bm25_val
+checkpoint_enabled: true
+checkpoint_frequency: per_task
+created_at: '2026-10-15T09:49:26.497003+00:00'
+description: ''

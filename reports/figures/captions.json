@@ -1,0 +1,110 @@
+{
+  "eda01_sentences_by_split_source": {
+    "caption": "SkillSpan: sentences per split (train 4,800 / dev 3,174 / test 3,569), coloured by source (tech vs house).",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 1,
+    "updated": "2026-10-15"
+  },
+  "eda01_tokens_per_sentence": {
+    "caption": "Tokens per sentence by source; 99% of sentences are shorter than the 128-token training limit.",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 2,
+    "updated": "2026-10-15"
+  },
+  "eda01_span_length_hist": {
+    "caption": "Span length distribution (tokens): skill spans are multi-word verb phrases (median 4), knowledge spans are mostly 1–2 tokens.",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 3,
+    "updated": "2026-10-15"
+  },
+  "eda01_top_skill_phrases": {
+    "caption": "The 30 most frequent skill phrases in the training split — dominated by soft skills ('communication skills', 'team player').",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 4,
+    "updated": "2026-10-15"
+  },
+  "eda01_top_knowledge_phrases": {
+    "caption": "The 30 most frequent knowledge phrases in the training split — programming languages, frameworks and degrees.",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 5,
+    "updated": "2026-10-15"
+  },
+  "eda01_pos_patterns": {
+    "caption": "Part-of-speech patterns of spans: skills are VERB+… phrases or NOUN+NOUN ('communication skills'); knowledge is PROPN/NOUN heads.",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 6,
+    "updated": "2026-10-15"
+  },
+  "eda01_ngrams_tech_vs_house": {
+    "caption": "Top bigrams per source: tech postings are about software development, experience and flexible working; house postings mix application boilerplate ('further information', 'please contact') with business domains ('supply chain', 'project management').",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 7,
+    "updated": "2026-10-15"
+  },
+  "eda01_entities": {
+    "caption": "spaCy entity labels in SkillSpan sentences: ORG/GPE are mostly scrubbed to placeholders; DATE and CARDINAL ('3+ years') dominate what remains.",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 8,
+    "updated": "2026-10-15"
+  },
+  "eda01_tagged_example": {
+    "caption": "A SkillSpan sentence with its merged BIO tags (blue = skill, orange = knowledge).",
+    "source": "notebooks/01_eda_skillspan",
+    "order": 9,
+    "updated": "2026-10-15"
+  },
+  "eda02_label_status_by_subset": {
+    "caption": "Label status per benchmark subset: in TECH ads about 43% of annotated skill phrases cannot be mapped to ESCO (mostly LABEL NOT PRESENT) and 37% in HOUSE — the gap the 'not in ESCO' detector targets; TECHWOLF has sentence-level ESCO labels only.",
+    "source": "notebooks/02_eda_esco_benchmark",
+    "order": 10,
+    "updated": "2026-10-15"
+  },
+  "eda02_top_esco_labels": {
+    "caption": "The most frequent ESCO target skills: a long tail — the top 25 skills cover only a small share of phrases, so retrieval must handle thousands of rare labels.",
+    "source": "notebooks/02_eda_esco_benchmark",
+    "order": 11,
+    "updated": "2026-10-15"
+  },
+  "eda02_esco_label_length": {
+    "caption": "Token length of the ~13.9k ESCO skill labels: most are 2–5-word verb phrases ('manage musical staff'), which is why a bi-encoder (not keyword match) is needed.",
+    "source": "notebooks/02_eda_esco_benchmark",
+    "order": 12,
+    "updated": "2026-10-15"
+  },
+  "eda02_sentence_length": {
+    "caption": "Sentence length per subset: TECH sentences are shortest (median ~10 tokens), HOUSE sentences the longest (median 15–18 tokens).",
+    "source": "notebooks/02_eda_esco_benchmark",
+    "order": 13,
+    "updated": "2026-10-15"
+  },
+  "eda02_spans_per_sentence": {
+    "caption": "Number of annotated skill phrases per sentence: most sentences carry 1–3 phrases; a few list-style sentences carry 10+.",
+    "source": "notebooks/02_eda_esco_benchmark",
+    "order": 14,
+    "updated": "2026-10-15"
+  },
+  "eda02_unmapped_terms": {
+    "caption": "Phrases annotators could not map to ESCO 1.1.0: concrete frameworks, tools and platforms (ReactJS, Docker, Django, Spring, Azure, Node.js…) — exactly the vocabulary a job-matching product must track outside the taxonomy.",
+    "source": "notebooks/02_eda_esco_benchmark",
+    "order": 15,
+    "updated": "2026-10-15"
+  },
+  "p1_f1_comparison_test": {
+    "caption": "Problem 1: strict and loose span F1 per approach and span type on the SkillSpan test split (identical sentence set for all approaches; tagger = mean over seeds).",
+    "source": "src/p1_extract/evaluate.py",
+    "order": 16,
+    "updated": "2026-10-15"
+  },
+  "p1_false_positives_test": {
+    "caption": "Problem 1: over-extraction on sentences without any gold span (headers, benefits) — how often each approach invents a span where annotators found none.",
+    "source": "src/p1_extract/evaluate.py",
+    "order": 17,
+    "updated": "2026-10-15"
+  },
+  "p1_f1_by_source_test": {
+    "caption": "Problem 1: strict span F1 split by posting source (tech vs house) — the domain gap each approach suffers.",
+    "source": "src/p1_extract/evaluate.py",
+    "order": 18,
+    "updated": "2026-10-15"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "approach": "dict",
+  "column": "skill",
+  "seed": 0,
+  "split": "dev",
+  "n": 3174,
+  "latency_ms_per_sentence": 0.035,
+  "dictionary_phrases": 1957
+}

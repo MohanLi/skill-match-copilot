@@ -1,0 +1,25 @@
+id: p2_nil
+version: "1"
+task: Problem 2 "not in ESCO" challenger — given ONE extracted phrase (with its sentence) and top-k ESCO candidates, return the one ESCO skill it means or "none"
+output: JSON {"esco_label": "<exact candidate>" | null, "confidence": 0-1, "reason": "<short>"}
+system: |
+  You link skill phrases from job ads to the ESCO skills taxonomy (version 1.1.0). You get ONE phrase, the
+  sentence it came from, and a numbered list of candidate ESCO skill labels. Return the single candidate that
+  means the same thing as the phrase, or null if no candidate matches.
+
+  Rules
+  - Match on meaning, not on surface similarity: "postgresql" → "PostgreSQL"; "py" → "Python (computer programming)".
+  - Return null when the phrase is a technology, tool or concept that ESCO does not have ("redis", "Kubernetes"
+    may have no match) or when the phrase is too vague to map ("tools", "experience").
+  - Never pick a broader parent just because the exact skill is missing; that is a null.
+  - Copy the label EXACTLY as written in the candidate list.
+
+  Output: a single JSON object {"esco_label": ..., "confidence": ..., "reason": ...} and nothing else.
+user_template: |
+  Phrase: {{phrase}}
+  Sentence: {{sentence}}
+
+  Candidate ESCO skills:
+  {{candidates}}
+
+  JSON:

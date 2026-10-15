@@ -1,0 +1,31 @@
+{
+  "file": "results/p1/metrics_summary_test.csv",
+  "rows": 2,
+  "columns": [
+    "approach",
+    "column",
+    "seeds",
+    "strict_f1_mean",
+    "strict_f1_std",
+    "strict_precision",
+    "strict_recall",
+    "loose_f1",
+    "strict_f1_tech",
+    "strict_f1_house",
+    "fp_spans_per_100_all_O",
+    "share_all_O_with_fp",
+    "n_pred_spans",
+    "n_gold_spans",
+    "n_sentences",
+    "latency_ms",
+    "cost_usd_per_1000",
+    "hallucination_rate"
+  ],
+  "created_utc": "2026-10-15T09:54:24Z",
+  "git_commit": "77573e4",
+  "split": "test",
+  "common_sentences": {
+    "knowledge": 3569,
+    "skill": 3569
+  }
+}

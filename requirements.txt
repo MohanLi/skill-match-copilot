@@ -38,3 +38,4 @@ beautifulsoup4
 lxml
 rank-bm25
 pytest
+accelerate

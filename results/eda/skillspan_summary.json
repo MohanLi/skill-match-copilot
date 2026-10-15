@@ -1,0 +1,145 @@
+{
+  "record_counts": {
+    "train": 4800,
+    "dev": 3174,
+    "test": 3569
+  },
+  "by_split_source": {
+    "dev/house": 1018,
+    "dev/tech": 2156,
+    "test/house": 1283,
+    "test/tech": 2286,
+    "train/house": 1667,
+    "train/tech": 3133
+  },
+  "missing_values": {
+    "tokens": 0,
+    "tags_skill": 0,
+    "tags_knowledge": 0,
+    "source": 0
+  },
+  "length_mismatches": 0,
+  "placeholder_share_of_sentences": 0.1966,
+  "tokens_per_sentence_quantiles": {
+    "0.5": 11.0,
+    "0.9": 30.0,
+    "0.95": 39.0,
+    "0.99": 82.57999999999993,
+    "1.0": 748.0
+  },
+  "vocab_size_train": 8219,
+  "all_O_share": {
+    "train": 0.67,
+    "dev": 0.712,
+    "test": 0.7271
+  },
+  "spans": {
+    "train": {
+      "skill": 2221,
+      "knowledge": 2807
+    },
+    "dev": {
+      "skill": 1070,
+      "knowledge": 1044
+    },
+    "test": {
+      "skill": 1091,
+      "knowledge": 1157
+    }
+  },
+  "span_len_median": {
+    "knowledge": 1.0,
+    "skill": 4.0
+  },
+  "span_len_mean": {
+    "knowledge": 1.83,
+    "skill": 4.37
+  },
+  "overlap_share_of_tagged_tokens": 0.01719,
+  "label_scheme_decision": "separate",
+  "spans_ending_with_punctuation_share": 0.0024,
+  "top_skill_phrases": [
+    {
+      "phrase": "communication skills",
+      "count": 25
+    },
+    {
+      "phrase": "motivated",
+      "count": 12
+    },
+    {
+      "phrase": "passionate",
+      "count": 10
+    },
+    {
+      "phrase": "proactive",
+      "count": 9
+    },
+    {
+      "phrase": "team player",
+      "count": 9
+    },
+    {
+      "phrase": "communication",
+      "count": 8
+    },
+    {
+      "phrase": "analytical",
+      "count": 8
+    },
+    {
+      "phrase": "apply your depth of knowledge and expertise",
+      "count": 7
+    },
+    {
+      "phrase": "partner continuously with your many stakeholders",
+      "count": 7
+    },
+    {
+      "phrase": "curious",
+      "count": 7
+    }
+  ],
+  "top_knowledge_phrases": [
+    {
+      "phrase": "english",
+      "count": 53
+    },
+    {
+      "phrase": "javascript",
+      "count": 40
+    },
+    {
+      "phrase": "python",
+      "count": 37
+    },
+    {
+      "phrase": "java",
+      "count": 30
+    },
+    {
+      "phrase": "agile",
+      "count": 22
+    },
+    {
+      "phrase": "node.js",
+      "count": 22
+    },
+    {
+      "phrase": "financial services",
+      "count": 21
+    },
+    {
+      "phrase": "computer science",
+      "count": 21
+    },
+    {
+      "phrase": "kubernetes",
+      "count": 19
+    },
+    {
+      "phrase": "docker",
+      "count": 18
+    }
+  ]
+}

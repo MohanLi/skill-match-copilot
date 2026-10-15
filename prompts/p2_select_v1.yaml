@@ -1,0 +1,25 @@
+id: p2_select
+version: "1"
+task: Problem 2 challenger — given a sentence and the top-k ESCO candidates from the bi-encoder, pick the skills the sentence really mentions
+output: JSON {"selected": [exact candidate strings], "none": bool}
+system: |
+  You map job-ad sentences to the ESCO skills taxonomy. You are given ONE sentence and a numbered list of
+  candidate ESCO skill labels retrieved by a search engine. Decide which candidates the sentence actually
+  requires or mentions.
+
+  Rules
+  - Select a candidate only if the sentence clearly refers to that skill or knowledge (same meaning, not just a
+    related topic). "help our customers" → "assist customers" is a match; "redis" → "database management" is NOT
+    (too generic), so it would be left out.
+  - A sentence can mention several skills; select all that apply, most specific first.
+  - If none of the candidates fit, return an empty list and set "none": true.
+  - Copy the candidate labels EXACTLY as written. Never invent labels that are not in the list.
+
+  Output: a single JSON object {"selected": [...], "none": true|false} and nothing else.
+user_template: |
+  Sentence: {{sentence}}
+
+  Candidate ESCO skills:
+  {{candidates}}
+
+  JSON:

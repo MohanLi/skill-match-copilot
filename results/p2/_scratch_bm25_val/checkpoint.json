@@ -1,0 +1,117 @@
+{
+  "config": {
+    "model_name": "BM25-lower",
+    "model_class": "BM25Model",
+    "model_kwargs": {},
+    "task_configs": [
+      {
+        "name": "Skill Extraction Tech",
+        "languages": [
+          "en"
+        ],
+        "split": "val",
+        "class": "LocalTechSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER."
+      },
+      {
+        "name": "Skill Extraction House",
+        "languages": [
+          "en"
+        ],
+        "split": "val",
+        "class": "LocalHouseSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER."
+      }
+    ],
+    "languages": [
+      "en"
+    ],
+    "custom_metrics": null,
+    "output_folder": "results/p2/_scratch_bm25_val",
+    "checkpoint_enabled": true,
+    "checkpoint_frequency": "per_task",
+    "created_at": "2026-10-15T09:49:26.497003+00:00",
+    "description": ""
+  },
+  "last_updated": 1792057769.9279823,
+  "last_updated_iso": "2026-10-15T09:49:29.927985+00:00",
+  "results": {
+    "task_results": {
+      "Skill Extraction Tech": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+          "split": "val"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 1.5558428764343262,
+            "metrics_dict": {
+              "map": 0.42408570991176253,
+              "rp@10": 0.5482222222222223,
+              "mrr": 0.514064323870865
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      },
+      "Skill Extraction House": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+          "split": "val"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 1.8726637363433838,
+            "metrics_dict": {
+              "map": 0.2563703290879188,
+              "rp@10": 0.3702185792349727,
+              "mrr": 0.3039376107856471
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model_name": "BM25-lower",
+      "total_evaluation_time": 0.0,
+      "timestamp": 1792057766.4970431,
+      "num_tasks": 2,
+      "languages": [
+        "Language.EN"
+      ],
+      "resumed_from_checkpoint": false,
+      "language_aggregation_mode": "monolingual_only",
+      "replayed_from_workrb_version": null
+    },
+    "key_metrics_by_task_group": {
+      "rank_skill_extraction": [
+        "map",
+        "rp@10",
+        "mrr"
+      ]
+    }
+  }
+}

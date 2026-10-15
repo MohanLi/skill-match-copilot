@@ -1,0 +1,9 @@
+{
+  "approach": "dict",
+  "column": "knowledge",
+  "seed": 0,
+  "split": "test",
+  "n": 3569,
+  "latency_ms_per_sentence": 0.016,
+  "dictionary_phrases": 1831
+}

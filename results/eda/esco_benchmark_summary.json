@@ -1,0 +1,156 @@
+{
+  "counts": [
+    {
+      "subset_split": "house/test",
+      "phrases": 891,
+      "sentences": 326,
+      "distinct_labels": 321,
+      "phrases/sentence": 2.73
+    },
+    {
+      "subset_split": "house/val",
+      "phrases": 231,
+      "sentences": 77,
+      "distinct_labels": 109,
+      "phrases/sentence": 3.0
+    },
+    {
+      "subset_split": "tech/test",
+      "phrases": 1164,
+      "sentences": 425,
+      "distinct_labels": 272,
+      "phrases/sentence": 2.74
+    },
+    {
+      "subset_split": "tech/val",
+      "phrases": 293,
+      "sentences": 101,
+      "distinct_labels": 67,
+      "phrases/sentence": 2.9
+    },
+    {
+      "subset_split": "techwolf/test",
+      "phrases": 588,
+      "sentences": 326,
+      "distinct_labels": 314,
+      "phrases/sentence": 1.8
+    }
+  ],
+  "empty_cells": {
+    "sentence": 0,
+    "span": 0,
+    "sub_span": 2042,
+    "label": 0
+  },
+  "status_share": {
+    "house/test": {
+      "ESCO": 0.6375,
+      "LABEL NOT PRESENT": 0.312,
+      "UNDERSPECIFIED": 0.0505
+    },
+    "house/val": {
+      "ESCO": 0.5887,
+      "LABEL NOT PRESENT": 0.3766,
+      "UNDERSPECIFIED": 0.0346
+    },
+    "tech/test": {
+      "ESCO": 0.579,
+      "LABEL NOT PRESENT": 0.3351,
+      "UNDERSPECIFIED": 0.0859
+    },
+    "tech/val": {
+      "ESCO": 0.5222,
+      "LABEL NOT PRESENT": 0.4334,
+      "UNDERSPECIFIED": 0.0444
+    },
+    "techwolf/test": {
+      "ESCO": 1.0
+    }
+  },
+  "not_mappable_share_by_subset": {
+    "house": 0.373,
+    "tech": 0.432,
+    "techwolf": 0.0
+  },
+  "esco_vocab_size": 13896,
+  "esco_source": "benchmark_label_list",
+  "benchmark_labels_in_vocab_share": 0.9972,
+  "distinct_esco_skills_used": 768,
+  "esco_coverage_share": 0.0553,
+  "top25_coverage_of_phrases": 0.2388,
+  "tokens_per_sentence_median_by_subset": {
+    "house/test": 17.5,
+    "house/val": 15.0,
+    "tech/test": 10.0,
+    "tech/val": 9.0,
+    "techwolf/test": 13.0
+  },
+  "span_len_median_by_status": {
+    "ESCO": 2.0,
+    "LABEL NOT PRESENT": 2.0,
+    "UNDERSPECIFIED": 2.0
+  },
+  "single_token_share_of_unmapped": 0.3084,
+  "top_unmapped": [
+    {
+      "phrase": "reactjs",
+      "count": 9
+    },
+    {
+      "phrase": "docker",
+      "count": 7
+    },
+    {
+      "phrase": "bs/ba degree",
+      "count": 6
+    },
+    {
+      "phrase": "react",
+      "count": 6
+    },
+    {
+      "phrase": "django",
+      "count": 6
+    },
+    {
+      "phrase": "rest",
+      "count": 6
+    },
+    {
+      "phrase": "spring",
+      "count": 5
+    },
+    {
+      "phrase": "azure",
+      "count": 5
+    },
+    {
+      "phrase": "node.js",
+      "count": 5
+    },
+    {
+      "phrase": "development and modification of frameworks common components and business components",
+      "count": 5
+    },
+    {
+      "phrase": "development",
+      "count": 4
+    },
+    {
+      "phrase": "software improvement",
+      "count": 4
+    },
+    {
+      "phrase": "design",
+      "count": 4
+    },
+    {
+      "phrase": "powershell",
+      "count": 4
+    },
+    {
+      "phrase": "microservices",
+      "count": 4
+    }
+  ]
+}
