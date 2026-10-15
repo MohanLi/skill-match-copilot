@@ -60,7 +60,16 @@ def _norm(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         out["job_id"] = [f"live-{i}" for i in range(len(out))]
     out["description"] = out["description_html"].fillna("").astype(str).map(strip_html)
     out["title"] = out["title"].fillna("").astype(str).str.strip()
-    out["locations"] = out["locations"].map(lambda v: ", ".join(map(str, v)) if isinstance(v, (list, tuple)) or hasattr(v, "tolist") and not isinstance(v, str) else ("" if v is None else str(v)))
+    def _loc(v):
+        if v is None:
+            return ""
+        if isinstance(v, (list, tuple)) or (hasattr(v, "tolist") and not isinstance(v, (str, float, int))):
+            return ", ".join(str(x) for x in list(v))
+        if isinstance(v, float):
+            return ""
+        return str(v)
+
+    out["locations"] = out["locations"].map(_loc)
     out["text"] = (out["title"] + "\n" + out["description"]).str.strip()
     out["n_chars"] = out["description"].str.len()
     return out, used

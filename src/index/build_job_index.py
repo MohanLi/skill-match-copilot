@@ -23,7 +23,8 @@ from .store import JobIndex
 
 
 def select_djinni_sample(jobs: pd.DataFrame, n: int, seed: int, n_categories: int) -> pd.DataFrame:
-    jobs = jobs[(jobs["n_chars"] >= 300) & (jobs["category"].notna())]
+    jobs = jobs[(jobs["n_chars"] >= 300) & jobs["category"].notna() & (jobs["category"].astype(str).str.strip() != "")]
+    jobs = jobs.drop_duplicates(["title", "description"])
     top_cats = jobs["category"].value_counts().head(n_categories).index.tolist()
     per_cat = n // n_categories
     parts = [jobs[jobs["category"] == c].sample(n=min(per_cat, (jobs["category"] == c).sum()), random_state=seed) for c in top_cats]
