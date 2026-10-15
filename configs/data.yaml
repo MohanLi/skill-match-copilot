@@ -1,0 +1,77 @@
+# Dataset registry — single source of truth for ids, versions, expected sizes and local paths.
+# Counts marked "expected" come from the project plan (checked Oct 7-10, 2026) and are
+# re-verified by src/data/verify_assets.py; verified values are written to docs/data_schema.md.
+seed: 42
+
+datasets:
+  skillspan:
+    description: Job-ad sentences with expert BIO tags for SKILL and KNOWLEDGE spans
+    primary_source: github            # the GitHub repo ships train/dev/test JSON + tech/house CoNLL
+    github: https://github.com/kris927b/SkillSpan
+    hf: jjzha/skillspan
+    license: CC BY 4.0
+    local_github: data/raw/github/SkillSpan
+    local_hf: data/raw/hf/jjzha__skillspan
+    expected_counts: {train: 4800, dev: 3174, test: 3569}
+
+  esco_benchmark:
+    description: Skill-Extraction-benchmark (TECH / HOUSE / TECHWOLF) — spans mapped to ESCO 1.1.0 skills
+    github: https://github.com/jensjorisdecorte/Skill-Extraction-benchmark
+    hf: [TechWolf/skill-extraction-tech, TechWolf/skill-extraction-house, TechWolf/skill-extraction-techwolf]
+    license: CC BY 4.0 (Hugging Face copies); GitHub repo has no LICENSE file
+    local_github: data/raw/github/Skill-Extraction-benchmark
+    local_hf_prefix: data/raw/hf/TechWolf__skill-extraction-
+    esco_version_of_labels: "1.1.0"
+
+  synthetic_esco:
+    description: 138k generated job-ad sentences paired with the ESCO skill they describe (bi-encoder training data)
+    hf: TechWolf/Synthetic-ESCO-skill-sentences
+    license: CC BY 4.0
+    local: data/raw/hf/TechWolf__Synthetic-ESCO-skill-sentences
+    expected_rows: 138260
+
+  esco:
+    description: European Skills, Competences, Qualifications and Occupations classification
+    version: "1.1.0"
+    language: en
+    download_page: https://esco.ec.europa.eu/en/use-esco/download
+    local: data/raw/esco/1.1.0/en
+    expected_skills_approx: 13900
+    acknowledgment: "This service uses the ESCO classification of the European Commission."
+
+  djinni_jobs:
+    description: 141,897 English IT job postings from the Djinni job board (Ukraine, 2020-2023)
+    hf: lang-uk/recruitment-dataset-job-descriptions-english
+    license: MIT
+    local: data/raw/hf/lang-uk__recruitment-dataset-job-descriptions-english
+    expected_rows: 141897
+
+  djinni_cvs:
+    description: ~210k anonymised English candidate profiles from Djinni
+    hf: lang-uk/recruitment-dataset-candidate-profiles-english
+    license: MIT
+    local: data/raw/hf/lang-uk__recruitment-dataset-candidate-profiles-english
+    expected_rows_approx: 210000
+    min_cv_chars: 300
+
+  live_jobs:
+    description: One daily snapshot of open-apply-jobs (postings scraped from company career pages)
+    hf: edwarddgao/open-apply-jobs
+    license: MIT packaging; posting text belongs to the employers (never committed)
+    local: data/raw/live_jobs
+    title_filter: data/AI/ML roles (regex in scripts/download_assets.py)
+
+  onet:
+    description: O*NET 31.0 (optional, not used unless downloaded manually)
+    url: https://www.onetcenter.org/database.html
+    used: false
+
+paths:
+  processed: data/processed
+  labels: data/labels
+  demo: data/demo
+  results: results
+  figures: reports/figures
+  models: models
+  chroma: chroma
+  logs: logs

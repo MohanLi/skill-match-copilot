@@ -1,0 +1,65 @@
+# Model + training + LLM configuration. Every results file records the values used.
+seed: 42
+device: auto            # cuda > mps > cpu
+
+p1_extract:
+  base_model: models/base/jobbert-base-cased     # jjzha/jobbert-base-cased (BERT pretrained on job ads)
+  fallback_base_model: bert-base-cased
+  label_scheme: auto    # 'merged' (O,B-SKILL,I-SKILL,B-KNOW,I-KNOW) if skill/knowledge token overlap < 1%, else 'separate'
+  max_length: 128
+  learning_rate: 3.0e-5
+  num_train_epochs: 4
+  per_device_train_batch_size: 16
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  seeds: [42, 43, 44]   # seed 42 runs first; the others are added when compute allows
+  label_first_subtoken_only: true
+  llm_subset_size: null # null = full test set; set e.g. 1000 if budget is tight (seed 42 subset)
+
+p2_normalize:
+  base_encoder: models/base/all-MiniLM-L6-v2
+  context_model: models/base/ConTeXT-Skill-Extraction-base
+  num_train_epochs: 1
+  per_device_train_batch_size: 64
+  learning_rate: 2.0e-5
+  warmup_ratio: 0.1
+  val_fraction: 0.05
+  max_seq_length: 64
+  retrieve_k_grid: [10, 30, 50]
+  nil_threshold_grid_start: 0.20
+  nil_threshold_grid_stop: 0.80
+  nil_threshold_grid_step: 0.02
+  esco_version: "1.1.0"
+
+p3_agent:
+  n_cvs: 30
+  jobs_per_cv: 10          # 4 same category, 3 related, 3 random
+  n_categories: 10
+  silver_n_cvs: 1000
+  candidate_k: 30
+  top_n: 10
+  max_agent_steps: 12
+
+index:
+  embedding_model: models/p2_biencoder   # falls back to base_encoder if not trained yet
+  djinni_sample_size: 6000
+  chunk_chars: 1200
+
+llm:
+  provider: anthropic
+  # Model ids are verified against GET /v1/models at first use (src/utils/llm.py) and recorded in logs.
+  bulk: claude-haiku-5-5            # P1 few-shot extractor, P2 retrieve-then-LLM selector
+  agent: claude-haiku-5-5           # both P3 agent arms use the same model
+  agent_ablation: claude-sonnet-5-5 # small Sonnet ablation on the labelled set if budget allows
+  label_primary: claude-opus-5-5    # gold-standard fit labels (primary rater)
+  label_second: claude-sonnet-5-5   # second rater for agreement statistics
+  temperature: 0.0
+  max_tokens: 1024
+  cache_dir: .cache/llm
+  log_path: logs/llm_calls.jsonl
+  budget_usd: 25.0
+  # USD per 1M tokens; refreshed from Anthropic's pricing page when verified. Used only for cost reporting.
+  prices_per_mtok:
+    claude-haiku-5-5:  {input: 1.00, output: 5.00}
+    claude-sonnet-5-5: {input: 3.00, output: 15.00}
+    claude-opus-5-5:   {input: 5.00, output: 25.00}

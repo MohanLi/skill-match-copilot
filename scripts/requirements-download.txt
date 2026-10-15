@@ -1,0 +1,6 @@
+# Minimal requirements for scripts/download_assets.py (runs on your Mac, not in the project env)
+huggingface_hub>=0.25
+pyarrow>=15
+duckdb>=1.0
+requests>=2.31
+tqdm>=4.66
