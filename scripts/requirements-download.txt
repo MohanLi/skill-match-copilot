@@ -1,6 +1,11 @@
-# Minimal requirements for scripts/download_assets.py (runs on your Mac, not in the project env)
+# Minimal requirements for scripts/download_assets.py (runs on your Mac, not in the project env).
+# Install with prebuilt wheels only (never compile):
+#   pip install --upgrade pip && pip install --only-binary=:all: -r scripts/requirements-download.txt
+# duckdb is optional (faster live-jobs step); if it has no wheel for your Mac, install the other four and
+# the script falls back to pyarrow automatically.
 huggingface_hub>=0.25
 pyarrow>=15
-duckdb>=1.0
 requests>=2.31
 tqdm>=4.66
+pandas>=2.0
+duckdb>=1.0

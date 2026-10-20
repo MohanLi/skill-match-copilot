@@ -174,8 +174,66 @@ def download_esco() -> None:
 
 
 # -------------------------------------------------------------------- live jobs
+def _live_jobs_pyarrow(snap_dir: Path, date: str, title_regex: str) -> None:
+    """Fallback without DuckDB: pyarrow + pandas over the locally downloaded partition."""
+    import pyarrow.dataset as ds
+
+    files = sorted(snap_dir.glob(f"data/date={date}/**/*.parquet")) or sorted(snap_dir.rglob("*.parquet"))
+    dset = ds.dataset([str(f) for f in files], format="parquet")
+    cols = dset.schema.names
+    log(f"live jobs (pyarrow fallback): columns = {cols}")
+    title_col = next((c for c in cols if c.lower() == "title"), next((c for c in cols if "title" in c.lower()), cols[0]))
+    desc_col = next((c for c in cols if "description" in c.lower()), None)
+    stats: dict = {"snapshot_date": date, "columns": cols, "n_rows": 0}
+    import pandas as pd
+    import numpy as np
+
+    kept, sample_parts, title_counts, lens = [], [], {}, []
+    by_cat: dict = {}
+    rng = np.random.default_rng(42)
+    pat = re.compile(title_regex, re.I)
+    for batch in dset.to_batches(batch_size=50_000):
+        df = batch.to_pandas()
+        stats["n_rows"] += len(df)
+        titles = df[title_col].astype(str)
+        for t, n in titles.value_counts().items():
+            title_counts[t] = title_counts.get(t, 0) + int(n)
+        for c in cols:
+            lc = c.lower()
+            if lc in {"source", "ats", "provider", "platform", "remote", "employment_type", "department"} or lc.endswith("_source"):
+                vc = df[c].astype(str).value_counts()
+                d = by_cat.setdefault(c, {})
+                for k, n in vc.items():
+                    d[k] = d.get(k, 0) + int(n)
+            if "salary" in lc or "compensation" in lc:
+                stats[f"nonnull_{c}"] = stats.get(f"nonnull_{c}", 0) + int(df[c].notna().sum())
+        if desc_col:
+            lens.append(df[desc_col].astype(str).str.len().to_numpy())
+        kept.append(df[titles.str.contains(pat, na=False)])
+        take = max(1, int(len(df) * 20000 / max(stats["n_rows"], 1)))
+        sample_parts.append(df.sample(n=min(len(df), max(take, 200)), random_state=int(rng.integers(0, 1 << 31))))
+    for c, d in by_cat.items():
+        stats[f"rows_by_{c}"] = dict(sorted(d.items(), key=lambda kv: -kv[1])[:50])
+    stats["top_titles"] = dict(sorted(title_counts.items(), key=lambda kv: -kv[1])[:100])
+    if lens:
+        allv = np.concatenate(lens)
+        stats["description_length_quantiles_chars"] = dict(zip(["p05", "p25", "p50", "p75", "p95"], [float(x) for x in np.quantile(allv, [0.05, 0.25, 0.5, 0.75, 0.95])]))
+    filtered = pd.concat(kept, ignore_index=True) if kept else pd.DataFrame(columns=cols)
+    filtered.to_parquet(LIVE_DIR / f"live_jobs_{date}_ai_data.parquet", index=False)
+    stats["n_rows_ai_data_filter"] = int(len(filtered))
+    sample = pd.concat(sample_parts, ignore_index=True)
+    sample = sample.sample(n=min(20000, len(sample)), random_state=42)
+    sample.to_parquet(LIVE_DIR / f"live_jobs_{date}_sample20k.parquet", index=False)
+    (LIVE_DIR / f"live_jobs_{date}_stats.json").write_text(json.dumps(stats, indent=2, default=str))
+    (LIVE_DIR / "snapshot_date.txt").write_text(date)
+    log(f"live jobs: {stats['n_rows']:,} postings in snapshot; {len(filtered):,} data/AI/ML postings kept; 20k sample + stats written")
+
+
 def download_live_jobs() -> None:
-    import duckdb
+    try:
+        import duckdb  # optional: faster, and the only way to query the snapshot remotely
+    except ImportError:
+        duckdb = None
     from huggingface_hub import HfApi, snapshot_download
 
     LIVE_DIR.mkdir(parents=True, exist_ok=True)
@@ -202,16 +260,24 @@ def download_live_jobs() -> None:
         total = 0
     log(f"live jobs: snapshot size ~{human(total) if total else 'unknown'}")
 
-    con = duckdb.connect()
     if total and total <= LIVE_MAX_DOWNLOAD_BYTES:
         snap_dir = LIVE_DIR / "snapshot"
         snapshot_download(repo_id=LIVE_REPO, repo_type="dataset", local_dir=str(snap_dir),
                           allow_patterns=[f"data/date={date}/*", f"data/date={date}/**"], max_workers=4)
+        if duckdb is None:
+            _live_jobs_pyarrow(snap_dir, date, LIVE_TITLE_REGEX)
+            return
         src = f"read_parquet('{snap_dir.as_posix()}/data/date={date}/**/*.parquet', hive_partitioning=1, union_by_name=true)"
     else:
+        if duckdb is None:
+            log("live jobs: snapshot is large/unknown and duckdb is not installed; skipping (pip install duckdb to enable remote querying)")
+            return
         log("live jobs: snapshot is large/unknown; querying it remotely via DuckDB httpfs (this can take a while)")
+        con = duckdb.connect()
         con.sql("INSTALL httpfs; LOAD httpfs;")
         src = f"read_parquet('hf://datasets/{LIVE_REPO}/data/date={date}/**/*.parquet', hive_partitioning=1, union_by_name=true)"
+    if "con" not in locals():
+        con = duckdb.connect()
 
     cols = [r[0] for r in con.sql(f"DESCRIBE SELECT * FROM {src}").fetchall()]
     log(f"live jobs: columns = {cols}")
