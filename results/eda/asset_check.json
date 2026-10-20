@@ -1,0 +1,106 @@
+[
+  {
+    "dataset": "SkillSpan (GitHub json)",
+    "status": "OK",
+    "found": {
+      "train": 4800,
+      "dev": 3174,
+      "test": 3569
+    },
+    "expected": {
+      "train": 4800,
+      "dev": 3174,
+      "test": 3569
+    }
+  },
+  {
+    "dataset": "Skill-Extraction-benchmark (GitHub csv)",
+    "status": "OK",
+    "found": {
+      "house/test": 891,
+      "house/validation": 231,
+      "tech/test": 1164,
+      "tech/validation": 293,
+      "techwolf/test": 588
+    },
+    "expected": "tech test 1,164 phrases / 425 sentences"
+  },
+  {
+    "dataset": "ESCO 1.1.0 skills",
+    "status": "OK",
+    "found": 13891,
+    "expected": 13900
+  },
+  {
+    "dataset": "Synthetic ESCO skill sentences",
+    "status": "OK",
+    "found": 138260,
+    "expected": 138260
+  },
+  {
+    "dataset": "djinni_jobs",
+    "status": "OK",
+    "found": 141897,
+    "expected": 141897
+  },
+  {
+    "dataset": "djinni_cvs",
+    "status": "OK",
+    "found": 210250,
+    "expected": 210000
+  },
+  {
+    "dataset": "open-apply-jobs snapshot 2026-10-20",
+    "status": "OK",
+    "found": {
+      "snapshot_rows": 1162694,
+      "ai_data_rows": 21157
+    },
+    "expected": "one daily snapshot"
+  },
+  {
+    "dataset": "model jobbert-base-cased",
+    "status": "OK",
+    "found": [
+      ".cache",
+      ".gitattributes",
+      "README.md",
+      "config.json",
+      "model.safetensors",
+      "special_tokens_map.json",
+      "tokenizer_config.json",
+      "vocab.txt"
+    ],
+    "expected": "config + weights"
+  },
+  {
+    "dataset": "model all-MiniLM-L6-v2",
+    "status": "OK",
+    "found": [
+      ".cache",
+      ".gitattributes",
+      "1_Pooling",
+      "README.md",
+      "config.json",
+      "config_sentence_transformers.json",
+      "data_config.json",
+      "model.safetensors"
+    ],
+    "expected": "config + weights"
+  },
+  {
+    "dataset": "model ConTeXT-Skill-Extraction-base",
+    "status": "OK",
+    "found": [
+      ".cache",
+      ".gitattributes",
+      "1_Pooling",
+      "README.md",
+      "config.json",
+      "config_sentence_transformers.json",
+      "model.safetensors",
+      "modules.json"
+    ],
+    "expected": "config + weights"
+  }
+]

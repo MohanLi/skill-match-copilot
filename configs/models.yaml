@@ -53,13 +53,14 @@ llm:
   agent_ablation: claude-sonnet-5-5 # small Sonnet ablation on the labelled set if budget allows
   label_primary: claude-opus-5-5    # gold-standard fit labels (primary rater)
   label_second: claude-sonnet-5-5   # second rater for agreement statistics
-  temperature: 0.0
+  temperature: 0.0   # recorded for provenance only: the Claude 5.x API no longer accepts sampling parameters
   max_tokens: 1024
   cache_dir: .cache/llm
   log_path: logs/llm_calls.jsonl
   budget_usd: 25.0
-  # USD per 1M tokens; refreshed from Anthropic's pricing page when verified. Used only for cost reporting.
+  # USD per 1M tokens, verified on platform.claude.com/docs/en/about-claude/pricing (2026-10-20). Used for cost reporting.
+  # (Haiku 5.5 price applies to prompts up to 100k tokens; all our prompts are far below that.)
   prices_per_mtok:
-    claude-haiku-5-5:  {input: 1.00, output: 5.00}
-    claude-sonnet-5-5: {input: 3.00, output: 15.00}
-    claude-opus-5-5:   {input: 5.00, output: 25.00}
+    claude-haiku-5-5:  {input: 0.10, output: 0.50}
+    claude-sonnet-5-5: {input: 2.00, output: 10.00}
+    claude-opus-5-5:   {input: 4.00, output: 20.00}

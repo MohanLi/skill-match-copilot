@@ -253,7 +253,9 @@ class LLMClient:
         if status["remaining_usd"] <= 0:
             raise BudgetExceeded(f"LLM budget exhausted: {status}")
 
-        kwargs: dict[str, Any] = dict(model=model_id, max_tokens=max_tokens, temperature=temperature, messages=messages)
+        # Claude 5.x models reject sampling parameters ("`temperature` is deprecated for this model"); the configured
+        # value stays in the cache key for provenance but is not sent. Reproducibility comes from the on-disk cache.
+        kwargs: dict[str, Any] = dict(model=model_id, max_tokens=max_tokens, messages=messages)
         if system:
             kwargs["system"] = system
         if tools:

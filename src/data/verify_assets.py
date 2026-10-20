@@ -30,7 +30,7 @@ def main() -> None:
 
     # benchmark
     bm = esco_benchmark.load_all()
-    rows.append({"dataset": "Skill-Extraction-benchmark (GitHub csv)", "status": "OK" if len(bm) > 3000 else "MISMATCH", "found": bm.groupby(["subset", "split"]).size().to_dict(), "expected": "tech test 1,164 phrases / 425 sentences"})
+    rows.append({"dataset": "Skill-Extraction-benchmark (GitHub csv)", "status": "OK" if len(bm) > 3000 else "MISMATCH", "found": {f"{a}/{b}": int(n) for (a, b), n in bm.groupby(["subset", "split"]).size().items()}, "expected": "tech test 1,164 phrases / 425 sentences"})
     schema += ["## Skill-Extraction-benchmark (`data/raw/github/Skill-Extraction-benchmark/data/*.csv`)", "", "Columns: `sentence`, `span`, `sub_span`, `label` (ESCO 1.1.0 preferred label | 'LABEL NOT PRESENT' | 'UNDERSPECIFIED'); `techwolf_test_annotations.csv` has only `sentence`, `label`.", f"Rows per file: {bm.groupby(['subset', 'split']).size().to_dict()}", ""]
 
     # ESCO
