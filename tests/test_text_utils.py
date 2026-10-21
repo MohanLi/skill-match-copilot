@@ -30,3 +30,28 @@ def test_pii_scrub():
     assert "[PHONE]" in r.text and "[EMAIL]" in r.text and "[URL]" in r.text and "[HANDLE]" in r.text
     assert r.counts["email"] == 1 and r.counts["url"] == 1 and r.counts["phone"] == 1
     assert "2019-2022" in scrub("Worked 2019-2022 on 3 projects").text  # year ranges are not phones
+
+
+def test_strip_html_handles_escaped_html():
+    # Greenhouse feeds deliver the posting body as escaped HTML
+    raw = "&lt;div class=&quot;content&quot;&gt;&lt;p&gt;&lt;strong&gt;About us:&lt;/strong&gt; We build AI&amp;nbsp;tools.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Python&lt;/li&gt;&lt;li&gt;SQL&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+    text = strip_html(raw)
+    assert "<" not in text and "&lt;" not in text
+    assert text.splitlines()[0].startswith("About us: We build AI tools.")
+    assert "Python" in text.splitlines() and "SQL" in text.splitlines()
+    # plain text with entities and comparison signs is left intact
+    assert strip_html("Strong communication &amp; planning; a < b and c > d") == "Strong communication & planning; a < b and c > d"
+
+
+def test_champion_encoder_resolution(tmp_path, monkeypatch):
+    from src.p2_normalize import normalizer as nm
+
+    monkeypatch.setattr(nm, "models_cfg", lambda: {"p2_normalize": {"champion_encoder": "does/not/exist", "base_encoder": "models/base/all-MiniLM-L6-v2"}})
+    monkeypatch.setattr(nm, "ROOT", tmp_path)
+    (tmp_path / "models" / "base" / "all-MiniLM-L6-v2").mkdir(parents=True)
+    assert nm.resolve_encoder() == tmp_path / "models" / "base" / "all-MiniLM-L6-v2"  # falls through to the base encoder
+    (tmp_path / "models" / "p2_biencoder").mkdir()
+    assert nm.resolve_encoder() == tmp_path / "models" / "p2_biencoder"  # in-house model beats the base encoder
+    (tmp_path / "does" / "not" / "exist").mkdir(parents=True)
+    assert nm.resolve_encoder() == tmp_path / "does" / "not" / "exist"  # configured champion wins when present
+    assert nm.resolve_encoder(str(tmp_path / "models" / "base" / "all-MiniLM-L6-v2")) == tmp_path / "models" / "base" / "all-MiniLM-L6-v2"  # explicit path first

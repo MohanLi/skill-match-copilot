@@ -81,7 +81,7 @@ else:
 # ## 3. Retrieve-then-LLM selections (Problem 2 challenger)
 
 # %%
-rtl = [p for p in (ROOT / "results/p2").glob("rtl_calls_test_k*.jsonl")]
+rtl = sorted((ROOT / "results/p2").glob("rtl_context_calls_test_k*.jsonl")) or sorted((ROOT / "results/p2").glob("rtl_calls_test_k*.jsonl"))  # challenger (ConTeXT retriever) first
 if rtl:
     r = pd.DataFrame(read_jsonl(str(rtl[0].relative_to(ROOT))))
     r["n_sel"] = r["selected"].str.len(); r["n_invalid"] = r["invalid"].map(lambda x: len(x) if isinstance(x, list) else 0)
