@@ -152,7 +152,7 @@ that do not occur verbatim in the sentence).
 What the numbers say:
 
 * **The fine-tuned tagger wins on every metric**, by +0.19 strict F1 for skills and +0.10 for knowledge
-  over the LLM, and it is 5–6× less likely to invent a span on an empty sentence (5–7 vs 25–30 false
+  over the LLM, and it is 4–6× less likely to invent a span on an empty sentence (5–7 vs 25–30 false
   spans per 100 empty sentences). The LLM's errors are mostly *boundary* errors ("CI infrastructure
   pipelines" for the gold "CI") and *spurious* spans in boilerplate (`results/p1/errors_test.csv`).
 * The LLM's recall is competitive (0.68 on knowledge) but its precision is not: it returns 1,831 knowledge
@@ -207,10 +207,10 @@ that it is not in ESCO. Two evaluations:
 | **ConTeXT (published)** | **0.675** | 0.548 |
 | Retrieve-then-LLM on ConTeXT, k=50 | 0.625 | **0.558** |
 
-Fine-tuning on synthetic pairs is worth +0.10 MAP over the zero-shot encoder after a single CPU epoch — the
+Fine-tuning on synthetic pairs is worth +0.08–0.10 MAP over the zero-shot encoder on validation (+0.06–0.08 on test) after a single CPU epoch — the
 validation loss was still falling (0.283 → 0.260), so more epochs would narrow the gap to ConTeXT, which is
-the same idea trained at full scale. **Champion = ConTeXT** (best validation MAP, free, 20 ms per phrase on
-CPU); **challenger = ConTeXT + Haiku re-ranking with k=50**. The in-house encoder is kept as the
+the same idea trained at full scale. **Champion = ConTeXT** (best validation MAP, free, ≈ 30 ms per phrase in
+batches on two CPU threads); **challenger = ConTeXT + Haiku re-ranking with k=50**. The in-house encoder is kept as the
 reproducible, fully-owned alternative (`champion_encoder` in `configs/models.yaml` switches it in).
 
 **Test** — `results/p2/workrb_test.csv`:
@@ -224,7 +224,8 @@ reproducible, fully-owned alternative (`champion_encoder` in `configs/models.yam
 | **ConTeXT (champion)** | 0.536 | 0.423 | 0.460 | **0.739** | **0.631** | — |
 | Retrieve-then-LLM on ConTeXT, k=50 (challenger) | **0.537** | **0.443** | **0.479** | 0.721 | 0.622 | $0.10 |
 
-* The ordering found on validation holds on all three test sets. Every dense model beats BM25 by a wide
+* The ordering found on validation holds on the test sets, with one swap: the LLM re-ranker on ConTeXT edges
+  ahead of plain ConTeXT by 0.001–0.02 MAP. Every dense model beats BM25 by a wide
   margin — ESCO labels are verb phrases, and a phrase like "k8s" shares no token with "Kubernetes".
 * **LLM re-ranking helps a weak retriever a lot (+0.09 MAP on the in-house encoder) and a strong one
   barely (+0.00 to +0.02 MAP on ConTeXT, with lower RP@10 and MRR)**. It costs $0.11 per 1,000 sentences
@@ -240,15 +241,15 @@ the in-house encoder; figures `p2_nil_threshold_sweep`, `p2_nil_results`):
 |---|---|---|---|---|---|---|---|
 | ConTeXT | top-1, no reject (reference) | 0.338 | — | 0.583 | 0.286 | — | — |
 | ConTeXT | **cosine threshold 0.64 (champion)** | **0.604** | 0.679 (0.64 / 0.72) | 0.516 | 0.495 | **0.619** (0.53 / 0.74) | free |
-| ConTeXT | top-10 + Haiku decides (challenger) | 0.584 | **0.697** (0.71 / 0.69) | 0.510 | **0.515** | 0.584 (0.63 / 0.55) | $0.13 / 1,000 phrases, 1.1 s |
+| ConTeXT | top-10 + Haiku decides (challenger) | 0.584 | **0.697** (0.71 / 0.69) | 0.510 | **0.515** | 0.584 (0.63 / 0.55) | $0.12 / 1,000 phrases, 1.1 s |
 | in-house MiniLM | cosine threshold 0.70 | 0.578 | 0.660 (0.56 / 0.80) | 0.418 | 0.496 | 0.609 (0.47 / 0.87) | free |
-| in-house MiniLM | top-10 + Haiku decides | 0.605 | 0.722 (0.70 / 0.75) | 0.502 | 0.529 | 0.617 (0.62 / 0.61) | $0.13 / 1,000 phrases |
+| in-house MiniLM | top-10 + Haiku decides | 0.605 | 0.722 (0.70 / 0.75) | 0.502 | 0.529 | 0.617 (0.62 / 0.61) | $0.12 / 1,000 phrases |
 
 * Without a reject option, a top-1 linker is right on only 34 % (TECH) / 29 % (HOUSE) of phrases, because
   42 % / 36 % of them have no ESCO label at all. A single cosine threshold, tuned on the TECH *validation*
-  spans (`p2_nil_threshold_sweep`), nearly doubles joint accuracy (0.60 / 0.50) at zero cost.
+  spans (`p2_nil_threshold_sweep`), nearly doubles joint accuracy (0.60 / 0.49) at zero cost.
 * With the stronger ConTeXT encoder, the threshold and the LLM decision are a wash: the LLM is more precise
-  about rejecting (0.71 vs 0.64 NIL precision on TECH) but rejects less often, and it costs $0.13 per
+  about rejecting (0.71 vs 0.64 NIL precision on TECH) but rejects less often, and it costs $0.12 per
   1,000 phrases plus a second of latency. The LLM's advantage is larger on the weaker in-house encoder —
   the same pattern as in the ranking task.
 * Accuracy on the mappable phrases drops when a threshold is applied (0.58 → 0.52 on TECH): the price of
@@ -277,7 +278,7 @@ fixed pool of 10 indexed postings each (4 from the same category, 3 from a relat
   is mostly *partial fit above non-fit*; we therefore report Precision@3 and MRR both with "strong" and
   with "partial or better" as the relevance threshold, and nDCG@10 (graded) over the 28 pools that contain
   at least one relevant job.
-* Cost of the gold set: $7.28 (Opus $4.52, Sonnet $2.40, adjudication $0.36); ~15 minutes wall time. A
+* Cost of the gold set: $7.42 (Opus $4.52, Sonnet $2.40, adjudication $0.50 incl. six JSON-repair calls); about 10 minutes wall time. A
   1,000-CV *silver* evaluation (relevance = same job category, over the whole 6,000-posting index) checks
   that the conclusions hold at scale. Limitation (decision 6): labels are model-made, not human-made; the
   labelling kit (`data/processed/labeling_sheet.xlsx`) exists so that a human pass can replace them.
@@ -298,7 +299,7 @@ prompts and the same on-disk cache:
 "strong fit" and with "partial or better" as relevance; *coverage* (share of the 10 pool jobs the agent actually
 ranked — unranked jobs are appended in baseline order); **faithfulness** = share of matched/missing-skill claims
 whose quotes are verbatim in the resume/posting *and* name the skill (automatic checker,
-`src/p3_agent/faithfulness.py`, 20 unit tests); LLM calls, tokens, cost and latency per resume.
+`src/p3_agent/faithfulness.py`, 21 unit tests); LLM calls, tokens, cost and latency per resume.
 
 **Results on the gold pools** (`results/p3/metrics_agent.csv`, figures `p3_ranking_quality_agent`,
 `p3_hallucination_agent`, `p3_efficiency_agent`):
@@ -317,8 +318,8 @@ What the numbers say:
   it puts a partial-or-better fit at or next to the top for almost every resume (MRR 0.98). The planner→matcher pipeline, which
   asks one LLM call to order all ten candidates at once, is no better than the embedding baseline (0.887):
   reading each posting with `get_job` + `compare_skills` and scoring it step by step is what buys the +0.07.
-  Per category (`results/p3/per_cv_agent.csv`) the single agent wins or ties everywhere; the pipeline loses to
-  the baseline on "Other", Node.js and QA, where its one-shot matcher misorders the low-fit tail.
+  Per category (`results/p3/per_cv_agent.csv`) the single agent wins or ties in nine of ten categories (QA
+  Automation: 0.867 vs 0.873); the pipeline loses to the baseline on "Other", Node.js, QA and QA Automation, where its one-shot matcher misorders the low-fit tail.
 * **Faithfulness.** Without a verifier, **about one claim in six is unsupported** — 17.8 % for both the ReAct
   agent and the matcher. The reasons (`results/p3/failures_agent.csv`) are mostly naming, not fabrication:
   the skill is not named in the quoted text (`skill_not_in_quotes`, 75 of 172 single-agent cases) or a
@@ -328,10 +329,10 @@ What the numbers say:
   ~15 % fewer claims and +$0.002 per resume.
 * **Combination.** Because the verifier is a post-processor, it composes with either orchestration: *single
   ReAct agent + verifier* keeps the best ranking **and** reaches 0 % unsupported claims. It is the
-  champion for the product; the planner→matcher→verifier pipeline is the cheaper fallback (half the input
-  tokens, since it never re-reads the conversation).
+  champion for the product; the planner→matcher→verifier pipeline is the cheaper fallback (a quarter of the
+  input tokens and 40 % of the cost, since it never re-reads the conversation).
 * **Cost and latency.** Everything is cheap at Haiku prices — the whole 30-resume evaluation of five arms cost
-  under $1 — but latency is 20–30 s per resume for the agentic arms versus 0.7 s for the baseline, which is
+  under $1 — but latency is 13–30 s per resume for the agentic arms versus 0.7 s for the baseline, which is
   why the baseline remains the first-pass ranker in the API and the agent is invoked for the top-k only.
 
 **Model ablation** — the same evaluation on the first 12 CVs with `claude-sonnet-5-5`
@@ -376,20 +377,21 @@ See `docs/architecture.md` for the diagram and the maintenance plan. In brief:
 * **Monitoring**: `drift_report.py` tracks the NOT_IN_ESCO share (new skills), the similarity of new
   postings to the tagger's training distribution, the unsupported-claim rate of agent answers (alert above
   2 %), and feeds frequent unmapped phrases into a human review queue (`results/monitoring/emerging_skills.csv`).
-* **Spend**: LLM cost of the whole project ≈ $14.3 of the $25 budget (`logs/llm_calls.jsonl`): gold labels $7.3, Sonnet ablation $2.4, everything else (P1 extractor, P2 re-ranking and reject decisions, Haiku agents, silver set) ≈ $3.5.
+* **Spend**: LLM cost of the whole project ≈ $14.3 of the $25 budget (`logs/llm_calls.jsonl`): gold labels $7.4, Sonnet ablation $2.3, everything else with Haiku (P1 extractor, P2 re-ranking and reject decisions, agents, silver set) ≈ $4.6.
 
 ---
 
 ## 7. Conclusion
 
 * **Extraction (P1).** A 110M-parameter tagger fine-tuned for an hour on CPU beats a frontier LLM used
-  few-shot by 0.10–0.19 strict F1, over-extracts 5× less and never paraphrases, whereas 7 % of the LLM's
+  few-shot by 0.10–0.19 strict F1, over-extracts 4–6× less and never paraphrases, whereas 7 % of the LLM's
   "extractions" are not in the text. For span extraction that must quote evidence, the small supervised
   model is the right tool; the LLM is the better *reader* only when recall matters more than precision.
 * **Normalization (P2).** Dense retrieval is mandatory (BM25 is 2× worse on verb-phrase labels);
-  fine-tuning on synthetic pairs pays off (+0.10 MAP after one CPU epoch) but the published ConTeXT encoder,
+  fine-tuning on synthetic pairs pays off (+0.06–0.10 MAP after one CPU epoch) but the published ConTeXT encoder,
   trained on the same recipe at scale, is the champion (MAP 0.54 / 0.42 / 0.46). LLM re-ranking only pays
-  on a weak retriever (+0.09 MAP) and adds ≤ 0.02 on a strong one at 50× the latency. The reject option is a
+  on a weak retriever (+0.09 MAP) and adds ≤ 0.02 on a strong one at about a second per phrase instead of
+  tens of milliseconds. The reject option is a
   first-class problem — 37–43 % of real phrases are not in ESCO — and a single tuned cosine threshold
   nearly doubles joint accuracy for free.
 * **Matching (P3).** Step-by-step tool use (ReAct) ranks better than a one-shot planner→matcher pipeline
@@ -417,7 +419,7 @@ human-labelled subset to validate the LLM labels; newer ESCO; prompt-cached agen
 python scripts/download_assets.py        # on a machine that reaches huggingface.co (Kevin's Mac)
 python scripts/import_transfer.py        # in the build workspace
 scripts/run_stages.sh                    # resumable: every stage writes logs/runs/<stage>.done
-python -m pytest tests                   # 31 tests
+python -m pytest tests                   # 33 tests
 ```
 
 Every results table has a `.meta.json` sibling with the git commit, timestamp and configuration; every
