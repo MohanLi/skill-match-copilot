@@ -2,7 +2,7 @@
 
 Each slide lists its figure(s) from `reports/figures/` (PNG for slides, HTML to demo interactively), the
 one-sentence message, and speaker notes. Timings add up to 14 min, leaving a minute for the hand-over.
-P3 numbers are filled in from `results/p3/` (see `REPORT.md` §5) once the agent evaluation has finished.
+Every number is traceable to `results/` (see `REPORT.md`).
 
 | # | Slide | Figure(s) | Time |
 |--:|-------|-----------|-----:|
@@ -16,8 +16,8 @@ P3 numbers are filled in from `results/p3/` (see `REPORT.md` §5) once the agent
 | 8 | P1 — tagger vs few-shot LLM | `p1_f1_comparison_test`, `p1_false_positives_test` | 1:30 |
 | 9 | P2 — normalizing to ESCO: 5 approaches | `p2_workrb_map_test` | 1:30 |
 | 10 | P2 — the reject option ("not in ESCO") | `p2_nil_results`, `p2_nil_threshold_sweep` | 1:00 |
-| 11 | P3 — agents: single ReAct vs planner/verifier | `p3_*` results figure, one trace screenshot | 1:30 |
-| 12 | P3 — faithfulness: every claim is a quote | `p3_*faithfulness*` figure + one annotated example | 1:00 |
+| 11 | P3 — agents: single ReAct vs planner/verifier | `p3_ranking_quality_agent`, `p3_efficiency_agent`, one trace | 1:30 |
+| 12 | P3 — faithfulness: every claim is a quote | `p3_hallucination_agent`, `eda05_rater_agreement`, `p3_silver_eval` | 1:00 |
 | 13 | Model ops: serving, cache, drift, review queue | `ops_dashboard` | 1:00 |
 | 14 | Conclusions, limitations, what we would do next | — | 0:40 |
 
@@ -73,20 +73,33 @@ selector over the top-10 is 0.58 / 0.52 with higher NIL precision but lower reca
 deployed; the LLM is a fallback for low-confidence phrases.
 
 ### 11. P3 — agents
-*(fill from `results/p3/metrics_*.csv`)*: nDCG@10 / P@3 / MRR for baseline, single ReAct, multi-agent
-with and without the verifier; cost and latency per resume; tool calls per run. Show one trace.
+Figure `p3_ranking_quality_agent` (and `p3_efficiency_agent`). Same tools, same Haiku model, 30 CVs × 10
+labelled jobs: embedding baseline nDCG 0.89 → planner→retriever→matcher pipeline 0.89 → single ReAct agent
+0.96. Step-by-step reading of each posting (get_job + compare_skills) is what buys the +0.07; the one-shot
+matcher is no better than cosine similarity. Cost: $0.003–0.010 per resume, 20–30 s. Show one trace from
+`results/p3/traces/single_verified_agent/` (tool calls → final JSON).
 
-### 12. P3 — faithfulness
-*(fill)*: share of claims supported verbatim per approach; what the verifier dropped; one annotated
-example with the quote highlighted in the posting. Gold labels: Opus + Sonnet, weighted κ = … .
+### 12. P3 — faithfulness: every claim is a quote
+Figure `p3_hallucination_agent` + one annotated example. Without a verifier, 17.8 % of matched/missing-skill
+claims are unsupported — for both arms, and 23 % with Sonnet: model size does not fix it. The verifier
+(deterministic quote check + one repair call per flagged job) flags 5.6 claims per resume, repairs 1.1,
+drops 4.6 → **0 % unsupported**, at +$0.002. Because it is a post-processor it composes with the ReAct
+agent: **single agent + verifier = nDCG 0.96 and 0 % unsupported claims** (champion). Gold labels: Opus +
+Sonnet, 91 % agreement, linear κ = 0.83, 27 adjudicated. Silver check on 1,000 CVs (`p3_silver_eval`):
+both agents +0.04–0.05 nDCG over the baseline on the same 60 CVs.
 
 ### 13. Model ops
-FastAPI + Streamlit, Docker; LLM wrapper with cache/log/budget; daily ingest into Chroma; drift report
-(NOT_IN_ESCO share, similarity to training data, unsupported-claim rate) and the emerging-skills review
-queue. Total LLM spend for the project: $… of $25.
+Figure `ops_dashboard`. FastAPI + Streamlit, Docker; one LLM wrapper with cache / JSONL log / budget stop
+(every number in the report is reproducible from the cache); daily ingest into Chroma; drift report
+(NOT_IN_ESCO share, similarity of new postings to the tagger's training data, unsupported-claim rate with a
+2 % alert) and the emerging-skills review queue (`results/monitoring/emerging_skills.csv`). Total LLM spend
+for the whole project: ≈ $14 of the $25 budget (gold labels $7.3, Sonnet ablation $2.4).
 
 ### 14. Conclusions
-Small supervised models win extraction when evidence must be verbatim; dense retrieval + a learned
-threshold wins normalization; LLM re-ranking only pays on weak retrievers; agents need a verifier to be
-trustworthy (… % unsupported claims without it). Limitations: one seed, LLM-made labels, ESCO 1.1.0, partial
-live coverage. Next: more epochs/seeds, human labels for 100 pairs, newer ESCO.
+Small supervised models win extraction when evidence must be verbatim (tagger +0.19 F1 over few-shot Haiku,
+5× fewer false spans, 0 % paraphrase vs 7 %); dense retrieval + a tuned threshold wins normalization
+(ConTeXT MAP 0.54, reject option doubles joint accuracy); LLM re-ranking only pays on weak retrievers;
+agents need a verifier to be trustworthy (18 % unsupported claims without it, 0 % with it) and step-by-step
+tool use beats a one-shot matcher for ranking. Limitations: one seed / 4 epochs, LLM-made labels (κ 0.83),
+30 labelled CVs, ESCO 1.1.0, 53 % live coverage. Next: more seeds/epochs, 100 human-labelled pairs, newer
+ESCO, prompt caching for latency.
