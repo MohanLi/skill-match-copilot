@@ -39,3 +39,4 @@ lxml
 rank-bm25
 pytest
 accelerate
+openpyxl
