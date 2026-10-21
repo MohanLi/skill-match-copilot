@@ -43,3 +43,6 @@ venv/
 results/p3/traces/
 results/p3/_old/
 data/processed/labeling_sheet.xlsx
+
+# --- project environment (uv venv skill-match-env) ---
+skill-match-env/
