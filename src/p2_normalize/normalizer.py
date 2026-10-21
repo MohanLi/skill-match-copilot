@@ -1,5 +1,7 @@
-"""Problem 2 champion as a service: phrase → ESCO skill (or NOT_IN_ESCO) with the fine-tuned bi-encoder
-and the threshold tuned by nil_eval.py. ESCO embeddings are cached on disk next to the model."""
+"""Problem 2 champion as a service: phrase → ESCO skill (or NOT_IN_ESCO) with the champion bi-encoder and the
+cosine threshold tuned by nil_eval.py for that encoder. The champion is `p2_normalize.champion_encoder` in
+configs/models.yaml (chosen on WorkRB validation MAP, see results/p2/workrb_val.csv); it falls back to the
+in-house fine-tuned model (models/p2_biencoder) and then to the base encoder. ESCO embeddings are cached on disk."""
 from __future__ import annotations
 
 import json
@@ -15,16 +17,26 @@ from ..utils.config import ROOT, cpu_threads, models_cfg
 NIL = "NOT_IN_ESCO"
 
 
+def resolve_encoder(encoder_path: str | None = None) -> Path:
+    """Champion encoder path: explicit arg > configs champion_encoder > models/p2_biencoder > base encoder."""
+    cfg = models_cfg()["p2_normalize"]
+    cands = [Path(encoder_path)] if encoder_path else []
+    if cfg.get("champion_encoder"):
+        cands.append(ROOT / cfg["champion_encoder"])
+    cands += [ROOT / "models" / "p2_biencoder", ROOT / cfg["base_encoder"]]
+    for c in cands:
+        if c.exists():
+            return c
+    return cands[-1]
+
+
 class Normalizer:
     def __init__(self, encoder_path: str | None = None, threshold: float | None = None, k: int = 10):
         from sentence_transformers import SentenceTransformer
 
         cfg = models_cfg()["p2_normalize"]
         torch.set_num_threads(cpu_threads())
-        cand = Path(encoder_path) if encoder_path else ROOT / "models" / "p2_biencoder"
-        if not cand.exists():
-            cand = ROOT / cfg["base_encoder"]
-        self.encoder_path = str(cand)
+        self.encoder_path = str(resolve_encoder(encoder_path))
         self.model = SentenceTransformer(self.encoder_path, device="cpu")
         self.model.max_seq_length = cfg["max_seq_length"]
         self.k = k
@@ -33,9 +45,14 @@ class Normalizer:
         self.V = self._esco_embeddings()
 
     def _tuned_threshold(self) -> float:
+        """Threshold from nil_eval.py — only if it was tuned for *this* encoder; otherwise a conservative default."""
         meta = ROOT / "results" / "p2" / "nil_threshold_sweep.csv.meta.json"
         if meta.exists():
-            return float(json.loads(meta.read_text()).get("best_threshold", 0.5))
+            d = json.loads(meta.read_text())
+            if Path(str(d.get("encoder", ""))).name == Path(self.encoder_path).name:
+                return float(d.get("best_threshold", 0.5))
+            print(f"[normalizer] WARNING: NIL threshold in {meta.name} was tuned for {Path(str(d.get('encoder', ''))).name}, "
+                  f"not {Path(self.encoder_path).name}; using 0.5 — run `python -m src.p2_normalize.nil_eval --llm`", flush=True)
         return 0.5
 
     def _esco_embeddings(self) -> torch.Tensor:

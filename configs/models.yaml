@@ -19,6 +19,10 @@ p1_extract:
 p2_normalize:
   base_encoder: models/base/all-MiniLM-L6-v2
   context_model: models/base/ConTeXT-Skill-Extraction-base
+  # Champion encoder deployed in the normaliser/index/agent. Chosen on WorkRB *validation* MAP (results/p2/workrb_val.csv):
+  # ConTeXT 0.675/0.548 (Tech/House) > retrieve-then-LLM on fine-tuned MiniLM 0.641/0.535 > fine-tuned MiniLM 0.538/0.413.
+  # Set to models/p2_biencoder to deploy the in-house model instead (then re-run nil_eval to re-tune the threshold).
+  champion_encoder: models/base/ConTeXT-Skill-Extraction-base
   num_train_epochs: 1
   per_device_train_batch_size: 64
   learning_rate: 2.0e-5
@@ -41,7 +45,10 @@ p3_agent:
   max_agent_steps: 12
 
 index:
-  embedding_model: models/p2_biencoder   # falls back to base_encoder if not trained yet
+  # Job-text / query embeddings for the Chroma index (src/index/embedder.py). General-purpose sentence encoder at 256
+  # tokens — the skill-phrase encoders above are tuned for 64-token phrases, not for whole postings and resume summaries.
+  text_embedding_model: models/base/all-MiniLM-L6-v2
+  text_max_seq_length: 256
   djinni_sample_size: 6000
   live_sample_size: 4000     # most recent data/AI/ML postings indexed for the demo (CPU budget)
   chunk_chars: 1200

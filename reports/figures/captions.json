@@ -1,218 +1,218 @@
 {
-  "eda01_sentences_by_split_source": {
-    "caption": "SkillSpan: sentences per split (train 4,800 / dev 3,174 / test 3,569), coloured by source (tech vs house).",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 1,
-    "updated": "2026-10-15"
-  },
-  "eda01_tokens_per_sentence": {
-    "caption": "Tokens per sentence by source; 99% of sentences are shorter than the 128-token training limit.",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 2,
-    "updated": "2026-10-15"
-  },
-  "eda01_span_length_hist": {
-    "caption": "Span length distribution (tokens): skill spans are multi-word verb phrases (median 4), knowledge spans are mostly 1–2 tokens.",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 3,
-    "updated": "2026-10-15"
-  },
-  "eda01_top_skill_phrases": {
-    "caption": "The 30 most frequent skill phrases in the training split — dominated by soft skills ('communication skills', 'team player').",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 4,
-    "updated": "2026-10-15"
-  },
-  "eda01_top_knowledge_phrases": {
-    "caption": "The 30 most frequent knowledge phrases in the training split — programming languages, frameworks and degrees.",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 5,
-    "updated": "2026-10-15"
-  },
-  "eda01_pos_patterns": {
-    "caption": "Part-of-speech patterns of spans: skills are VERB+… phrases or NOUN+NOUN ('communication skills'); knowledge is PROPN/NOUN heads.",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 6,
-    "updated": "2026-10-15"
-  },
-  "eda01_ngrams_tech_vs_house": {
-    "caption": "Top bigrams per source: tech postings are about software development, experience and flexible working; house postings mix application boilerplate ('further information', 'please contact') with business domains ('supply chain', 'project management').",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 7,
-    "updated": "2026-10-15"
-  },
-  "eda01_entities": {
-    "caption": "spaCy entity labels in SkillSpan sentences: ORG/GPE are mostly scrubbed to placeholders; DATE and CARDINAL ('3+ years') dominate what remains.",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 8,
-    "updated": "2026-10-15"
-  },
-  "eda01_tagged_example": {
-    "caption": "A SkillSpan sentence with its merged BIO tags (blue = skill, orange = knowledge).",
-    "source": "notebooks/01_eda_skillspan",
-    "order": 9,
-    "updated": "2026-10-15"
-  },
-  "eda02_label_status_by_subset": {
-    "caption": "Label status per benchmark subset: in TECH ads about 43% of annotated skill phrases cannot be mapped to ESCO (mostly LABEL NOT PRESENT) and 37% in HOUSE — the gap the 'not in ESCO' detector targets; TECHWOLF has sentence-level ESCO labels only.",
-    "source": "notebooks/02_eda_esco_benchmark",
-    "order": 10,
-    "updated": "2026-10-15"
-  },
-  "eda02_top_esco_labels": {
-    "caption": "The most frequent ESCO target skills: a long tail — the top 25 skills cover only a small share of phrases, so retrieval must handle thousands of rare labels.",
-    "source": "notebooks/02_eda_esco_benchmark",
-    "order": 11,
-    "updated": "2026-10-15"
-  },
-  "eda02_esco_label_length": {
-    "caption": "Token length of the ~13.9k ESCO skill labels: most are 2–5-word verb phrases ('manage musical staff'), which is why a bi-encoder (not keyword match) is needed.",
-    "source": "notebooks/02_eda_esco_benchmark",
-    "order": 12,
-    "updated": "2026-10-15"
-  },
-  "eda02_sentence_length": {
-    "caption": "Sentence length per subset: TECH sentences are shortest (median ~10 tokens), HOUSE sentences the longest (median 15–18 tokens).",
-    "source": "notebooks/02_eda_esco_benchmark",
-    "order": 13,
-    "updated": "2026-10-15"
-  },
-  "eda02_spans_per_sentence": {
-    "caption": "Number of annotated skill phrases per sentence: most sentences carry 1–3 phrases; a few list-style sentences carry 10+.",
-    "source": "notebooks/02_eda_esco_benchmark",
-    "order": 14,
-    "updated": "2026-10-15"
-  },
-  "eda02_unmapped_terms": {
-    "caption": "Phrases annotators could not map to ESCO 1.1.0: concrete frameworks, tools and platforms (ReactJS, Docker, Django, Spring, Azure, Node.js…) — exactly the vocabulary a job-matching product must track outside the taxonomy.",
-    "source": "notebooks/02_eda_esco_benchmark",
-    "order": 15,
-    "updated": "2026-10-15"
-  },
-  "p1_f1_comparison_test": {
-    "caption": "Problem 1: strict and loose span F1 per approach and span type on the SkillSpan test split (identical sentence set for all approaches; tagger = mean over seeds).",
-    "source": "src/p1_extract/evaluate.py",
-    "order": 16,
-    "updated": "2026-10-20"
-  },
-  "p1_false_positives_test": {
-    "caption": "Problem 1: over-extraction on sentences without any gold span (headers, benefits) — how often each approach invents a span where annotators found none.",
-    "source": "src/p1_extract/evaluate.py",
-    "order": 17,
-    "updated": "2026-10-20"
-  },
-  "p1_f1_by_source_test": {
-    "caption": "Problem 1: strict span F1 split by posting source (tech vs house) — the domain gap each approach suffers.",
-    "source": "src/p1_extract/evaluate.py",
-    "order": 18,
-    "updated": "2026-10-20"
-  },
-  "p2_workrb_map_val": {
-    "caption": "Problem 2: WorkRB MAP per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/run_workrb.py",
-    "order": 19,
-    "updated": "2026-10-20"
-  },
-  "p2_workrb_rp10_val": {
-    "caption": "Problem 2: WorkRB RP@10 per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/run_workrb.py",
-    "order": 20,
-    "updated": "2026-10-20"
-  },
-  "p2_workrb_mrr_val": {
-    "caption": "Problem 2: WorkRB MRR per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/run_workrb.py",
-    "order": 21,
-    "updated": "2026-10-20"
-  },
-  "p2_workrb_map_test": {
-    "caption": "Problem 2: WorkRB MAP per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/run_workrb.py",
-    "order": 22,
-    "updated": "2026-10-20"
-  },
-  "p2_workrb_rp10_test": {
-    "caption": "Problem 2: WorkRB RP@10 per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/run_workrb.py",
-    "order": 23,
-    "updated": "2026-10-20"
-  },
-  "p2_workrb_mrr_test": {
-    "caption": "Problem 2: WorkRB MRR per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/run_workrb.py",
-    "order": 24,
-    "updated": "2026-10-20"
-  },
-  "p2_nil_threshold_sweep": {
-    "caption": "Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.",
-    "source": "src/p2_normalize/nil_eval.py",
-    "order": 25,
-    "updated": "2026-10-20"
-  },
-  "p2_nil_results": {
-    "caption": "'Not in ESCO' detection on TECH and HOUSE test spans: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded bi-encoder (champion) vs retrieve-then-LLM (challenger).",
-    "source": "src/p2_normalize/nil_eval.py",
-    "order": 26,
-    "updated": "2026-10-20"
-  },
-  "eda03_missing_values": {
-    "caption": "Djinni: share of missing/empty values per field for job postings and candidate profiles (CV free-text fields such as 'Looking For' and 'Highlights' are often empty).",
-    "source": "notebooks/03_eda_djinni",
-    "order": 27,
-    "updated": "2026-10-20"
-  },
-  "eda04_postings_by_source": {
-    "caption": "Live snapshot: number of postings per applicant-tracking-system source (Ashby, Greenhouse, Lever, …).",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 28,
-    "updated": "2026-10-20"
-  },
-  "eda04_salary_missingness": {
-    "caption": "Salary availability in the live snapshot: most postings leave compensation fields empty.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 29,
-    "updated": "2026-10-20"
-  },
-  "eda04_top_titles": {
-    "caption": "Most frequent job titles across the whole live snapshot.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 30,
-    "updated": "2026-10-20"
-  },
-  "eda04_departments": {
-    "caption": "Live snapshot sample: distribution of department.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 31,
-    "updated": "2026-10-20"
-  },
-  "eda04_employment_type": {
-    "caption": "Live snapshot sample: distribution of employment type.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 32,
-    "updated": "2026-10-20"
-  },
-  "eda04_description_length": {
-    "caption": "Length of live postings after HTML stripping (postings with text only): median 668 words — several times longer than a Djinni posting.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 33,
-    "updated": "2026-10-20"
-  },
-  "eda04_posting_dates": {
-    "caption": "Posting dates in the sample: the snapshot contains postings that are still open, so dates spread over several months with a recent peak.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 34,
-    "updated": "2026-10-20"
-  },
-  "eda04_ai_role_families": {
-    "caption": "The live demo index: data/AI/ML postings grouped into role families by title pattern.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 35,
-    "updated": "2026-10-20"
-  },
-  "eda04_description_coverage_by_source": {
-    "caption": "Only the Greenhouse, Ashby, Lever, Rippling and Gem feeds return posting bodies; Workday and SmartRecruiters listings are title-only, so the live index can only cover postings with text.",
-    "source": "notebooks/04_eda_live_jobs",
-    "order": 36,
-    "updated": "2026-10-20"
-  }
+ "eda01_sentences_by_split_source": {
+  "caption": "SkillSpan: sentences per split (train 4,800 / dev 3,174 / test 3,569), coloured by source (tech vs house).",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 1,
+  "updated": "2026-10-15"
+ },
+ "eda01_tokens_per_sentence": {
+  "caption": "Tokens per sentence by source; 99% of sentences are shorter than the 128-token training limit.",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 2,
+  "updated": "2026-10-15"
+ },
+ "eda01_span_length_hist": {
+  "caption": "Span length distribution (tokens): skill spans are multi-word verb phrases (median 4), knowledge spans are mostly 1–2 tokens.",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 3,
+  "updated": "2026-10-15"
+ },
+ "eda01_top_skill_phrases": {
+  "caption": "The 30 most frequent skill phrases in the training split — dominated by soft skills ('communication skills', 'team player').",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 4,
+  "updated": "2026-10-15"
+ },
+ "eda01_top_knowledge_phrases": {
+  "caption": "The 30 most frequent knowledge phrases in the training split — programming languages, frameworks and degrees.",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 5,
+  "updated": "2026-10-15"
+ },
+ "eda01_pos_patterns": {
+  "caption": "Part-of-speech patterns of spans: skills are VERB+… phrases or NOUN+NOUN ('communication skills'); knowledge is PROPN/NOUN heads.",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 6,
+  "updated": "2026-10-15"
+ },
+ "eda01_ngrams_tech_vs_house": {
+  "caption": "Top bigrams per source: tech postings are about software development, experience and flexible working; house postings mix application boilerplate ('further information', 'please contact') with business domains ('supply chain', 'project management').",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 7,
+  "updated": "2026-10-15"
+ },
+ "eda01_entities": {
+  "caption": "spaCy entity labels in SkillSpan sentences: ORG/GPE are mostly scrubbed to placeholders; DATE and CARDINAL ('3+ years') dominate what remains.",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 8,
+  "updated": "2026-10-15"
+ },
+ "eda01_tagged_example": {
+  "caption": "A SkillSpan sentence with its merged BIO tags (blue = skill, orange = knowledge).",
+  "source": "notebooks/01_eda_skillspan",
+  "order": 9,
+  "updated": "2026-10-15"
+ },
+ "eda02_label_status_by_subset": {
+  "caption": "Label status per benchmark subset: in TECH ads about 43% of annotated skill phrases cannot be mapped to ESCO (mostly LABEL NOT PRESENT) and 37% in HOUSE — the gap the 'not in ESCO' detector targets; TECHWOLF has sentence-level ESCO labels only.",
+  "source": "notebooks/02_eda_esco_benchmark",
+  "order": 10,
+  "updated": "2026-10-15"
+ },
+ "eda02_top_esco_labels": {
+  "caption": "The most frequent ESCO target skills: a long tail — the top 25 skills cover only a small share of phrases, so retrieval must handle thousands of rare labels.",
+  "source": "notebooks/02_eda_esco_benchmark",
+  "order": 11,
+  "updated": "2026-10-15"
+ },
+ "eda02_esco_label_length": {
+  "caption": "Token length of the ~13.9k ESCO skill labels: most are 2–5-word verb phrases ('manage musical staff'), which is why a bi-encoder (not keyword match) is needed.",
+  "source": "notebooks/02_eda_esco_benchmark",
+  "order": 12,
+  "updated": "2026-10-15"
+ },
+ "eda02_sentence_length": {
+  "caption": "Sentence length per subset: TECH sentences are shortest (median ~10 tokens), HOUSE sentences the longest (median 15–18 tokens).",
+  "source": "notebooks/02_eda_esco_benchmark",
+  "order": 13,
+  "updated": "2026-10-15"
+ },
+ "eda02_spans_per_sentence": {
+  "caption": "Number of annotated skill phrases per sentence: most sentences carry 1–3 phrases; a few list-style sentences carry 10+.",
+  "source": "notebooks/02_eda_esco_benchmark",
+  "order": 14,
+  "updated": "2026-10-15"
+ },
+ "eda02_unmapped_terms": {
+  "caption": "Phrases annotators could not map to ESCO 1.1.0: concrete frameworks, tools and platforms (ReactJS, Docker, Django, Spring, Azure, Node.js…) — exactly the vocabulary a job-matching product must track outside the taxonomy.",
+  "source": "notebooks/02_eda_esco_benchmark",
+  "order": 15,
+  "updated": "2026-10-15"
+ },
+ "p1_f1_comparison_test": {
+  "caption": "Problem 1: strict and loose span F1 per approach and span type on the SkillSpan test split (identical sentence set for all approaches; tagger = mean over seeds).",
+  "source": "src/p1_extract/evaluate.py",
+  "order": 16,
+  "updated": "2026-10-20"
+ },
+ "p1_false_positives_test": {
+  "caption": "Problem 1: over-extraction on sentences without any gold span (headers, benefits) — how often each approach invents a span where annotators found none.",
+  "source": "src/p1_extract/evaluate.py",
+  "order": 17,
+  "updated": "2026-10-20"
+ },
+ "p1_f1_by_source_test": {
+  "caption": "Problem 1: strict span F1 split by posting source (tech vs house) — the domain gap each approach suffers.",
+  "source": "src/p1_extract/evaluate.py",
+  "order": 18,
+  "updated": "2026-10-20"
+ },
+ "p2_workrb_map_val": {
+  "caption": "Problem 2: WorkRB MAP per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/run_workrb.py",
+  "order": 19,
+  "updated": "2026-10-20"
+ },
+ "p2_workrb_rp10_val": {
+  "caption": "Problem 2: WorkRB RP@10 per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/run_workrb.py",
+  "order": 20,
+  "updated": "2026-10-20"
+ },
+ "p2_workrb_mrr_val": {
+  "caption": "Problem 2: WorkRB MRR per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/run_workrb.py",
+  "order": 21,
+  "updated": "2026-10-20"
+ },
+ "p2_workrb_map_test": {
+  "caption": "Problem 2: WorkRB MAP per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/run_workrb.py",
+  "order": 22,
+  "updated": "2026-10-20"
+ },
+ "p2_workrb_rp10_test": {
+  "caption": "Problem 2: WorkRB RP@10 per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/run_workrb.py",
+  "order": 23,
+  "updated": "2026-10-20"
+ },
+ "p2_workrb_mrr_test": {
+  "caption": "Problem 2: WorkRB MRR per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/run_workrb.py",
+  "order": 24,
+  "updated": "2026-10-20"
+ },
+ "eda03_missing_values": {
+  "caption": "Djinni: share of missing/empty values per field for job postings and candidate profiles (CV free-text fields such as 'Looking For' and 'Highlights' are often empty).",
+  "source": "notebooks/03_eda_djinni",
+  "order": 27,
+  "updated": "2026-10-20"
+ },
+ "eda04_postings_by_source": {
+  "caption": "Live snapshot: number of postings per applicant-tracking-system source (Ashby, Greenhouse, Lever, …).",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 28,
+  "updated": "2026-10-20"
+ },
+ "eda04_salary_missingness": {
+  "caption": "Salary availability in the live snapshot: most postings leave compensation fields empty.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 29,
+  "updated": "2026-10-20"
+ },
+ "eda04_top_titles": {
+  "caption": "Most frequent job titles across the whole live snapshot.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 30,
+  "updated": "2026-10-20"
+ },
+ "eda04_departments": {
+  "caption": "Live snapshot sample: distribution of department.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 31,
+  "updated": "2026-10-20"
+ },
+ "eda04_employment_type": {
+  "caption": "Live snapshot sample: distribution of employment type.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 32,
+  "updated": "2026-10-20"
+ },
+ "eda04_description_length": {
+  "caption": "Length of live postings after HTML stripping (postings with text only): median 668 words — several times longer than a Djinni posting.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 33,
+  "updated": "2026-10-20"
+ },
+ "eda04_posting_dates": {
+  "caption": "Posting dates in the sample: the snapshot contains postings that are still open, so dates spread over several months with a recent peak.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 34,
+  "updated": "2026-10-20"
+ },
+ "eda04_ai_role_families": {
+  "caption": "The live demo index: data/AI/ML postings grouped into role families by title pattern.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 35,
+  "updated": "2026-10-20"
+ },
+ "eda04_description_coverage_by_source": {
+  "caption": "Only the Greenhouse, Ashby, Lever, Rippling and Gem feeds return posting bodies; Workday and SmartRecruiters listings are title-only, so the live index can only cover postings with text.",
+  "source": "notebooks/04_eda_live_jobs",
+  "order": 36,
+  "updated": "2026-10-20"
+ },
+ "p2_nil_threshold_sweep_p2_biencoder": {
+  "caption": "Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.",
+  "source": "src/p2_normalize/nil_eval.py",
+  "order": 25,
+  "updated": "2026-10-20"
+ },
+ "p2_nil_results_p2_biencoder": {
+  "caption": "'Not in ESCO' detection on TECH and HOUSE test spans: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded in-house fine-tuned MiniLM bi-encoder vs retrieve-then-LLM (challenger).",
+  "source": "src/p2_normalize/nil_eval.py",
+  "order": 26,
+  "updated": "2026-10-20"
+ }
 }

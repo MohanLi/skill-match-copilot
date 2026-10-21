@@ -1,4 +1,4 @@
-"""Build the job indexes: clean → extract (P1 champion) → normalize (P2 champion) → embed → Chroma.
+"""Build the job indexes: clean → extract (P1 champion) → normalize (P2 champion) → embed (all-MiniLM-L6-v2, 256 tokens) → Chroma.
 
   python -m src.index.build_job_index --pool djinni --sample 6000      # evaluation pool (stratified by category)
   python -m src.index.build_job_index --pool live                      # this week's data/AI/ML postings
@@ -90,7 +90,7 @@ def main() -> None:
                 "n_skill_phrases": len(ex["skills"]), "n_knowledge_phrases": len(ex["knowledge"]), "n_esco": len(nm["esco_skills"]), "n_not_in_esco": len(nm["not_in_esco"]),
             }
             docs.append(doc)
-        emb = normalizer.embed([f"{d['title']}. {d['text'][:1500]}" for d in docs])
+        emb = index.embed([f"{d['title']}. {d['text'][:1500]}" for d in docs])
         index.upsert(docs, emb)
         rows_out += [{k: v for k, v in d.items() if k != "text"} for d in docs]
         print(f"  indexed {min(b + args.batch, len(todo))}/{len(todo)}  ({(time.time()-t0)/60:.1f} min)", flush=True)

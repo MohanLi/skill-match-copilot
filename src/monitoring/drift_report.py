@@ -45,12 +45,11 @@ def similarity_to_training(df: pd.DataFrame, n: int = 400) -> float | None:
     """Mean cosine between live posting embeddings and their nearest SkillSpan training sentence."""
     try:
         from ..data import skillspan as ss
-        from ..p2_normalize.normalizer import get_normalizer
+        from ..index.embedder import get_text_embedder
         from ..index.store import JobIndex
 
-        nm = get_normalizer()
         train = [" ".join(r["tokens"]) for r in ss.load_split("train") if 5 <= len(r["tokens"]) <= 40][:3000]
-        T = np.array(nm.embed(train))
+        T = np.array(get_text_embedder().embed(train))  # same encoder as the stored job embeddings
         idx = JobIndex("live_jobs" if (df["source"] == "live").all() else "djinni_jobs")
         ids = df["job_id"].head(n).tolist()
         E = np.array(idx.col.get(ids=ids, include=["embeddings"])["embeddings"])

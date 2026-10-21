@@ -1,6 +1,6 @@
 """Chroma-backed job index (one collection per job pool: djinni_jobs, live_jobs).
 
-Each job is stored once: id, document = cleaned text (title + description), embedding = bi-encoder
+Each job is stored once: id, document = cleaned text (title + description), embedding = all-MiniLM-L6-v2 text embedding (src/index/embedder.py)
 vector of 'title. description[:1500]', metadata = title, company, category, exp_years, english_level,
 published, source, url, esco_skills ('|'-joined), raw_skills ('|'-joined), n_chars."""
 from __future__ import annotations
@@ -31,9 +31,9 @@ class JobIndex:
     @property
     def embed(self):
         if self._embed is None:
-            from ..p2_normalize.normalizer import get_normalizer
+            from .embedder import get_text_embedder
 
-            self._embed = get_normalizer().embed
+            self._embed = get_text_embedder().embed
         return self._embed
 
     def count(self) -> int:

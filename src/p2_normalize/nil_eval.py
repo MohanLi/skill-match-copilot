@@ -48,7 +48,8 @@ def score(df: pd.DataFrame, pred_col: str) -> dict[str, float]:
 def main() -> None:
     cfg = models_cfg()["p2_normalize"]
     ap = argparse.ArgumentParser()
-    ap.add_argument("--encoder", default=str(ROOT / "models" / "p2_biencoder"))
+    ap.add_argument("--encoder", default=None, help="encoder path (default: the champion from configs/models.yaml, see normalizer.resolve_encoder)")
+    ap.add_argument("--tag", default="", help="suffix for the output files, e.g. --tag p2_biencoder → results/p2/nil_p2_biencoder.csv")
     ap.add_argument("--llm", action="store_true", help="also run the LLM challenger")
     ap.add_argument("--k", type=int, default=10)
     ap.add_argument("--subsets", nargs="*", default=["tech", "house"])
@@ -57,7 +58,11 @@ def main() -> None:
 
     from sentence_transformers import SentenceTransformer
 
-    enc_path = args.encoder if os.path.exists(args.encoder) else str(ROOT / cfg["base_encoder"])
+    from .normalizer import resolve_encoder
+
+    enc_path = str(resolve_encoder(args.encoder))
+    suffix = f"_{args.tag}" if args.tag else ""
+    print(f"encoder: {enc_path}")
     model = SentenceTransformer(enc_path, device="cpu")
     model.max_seq_length = cfg["max_seq_length"]
     vocab = esco.vocabulary()
@@ -88,7 +93,7 @@ def main() -> None:
     sweep_df = pd.DataFrame(sweep)
     best = sweep_df.sort_values(["joint_accuracy", "nil_f1"], ascending=False).iloc[0]
     th_best = float(best["threshold"])
-    write_results(sweep_df.round(4), "results/p2/nil_threshold_sweep.csv", meta={"encoder": enc_path, "tuned_on": "tech_validation", "best_threshold": th_best})
+    write_results(sweep_df.round(4), f"results/p2/nil_threshold_sweep{suffix}.csv", meta={"encoder": enc_path, "tuned_on": "tech_validation", "best_threshold": th_best})
     print(f"best threshold on tech_validation: {th_best:.2f} (joint acc {best['joint_accuracy']:.3f}, NIL F1 {best['nil_f1']:.3f})")
 
     rows, examples = [], []
@@ -128,9 +133,9 @@ def main() -> None:
                 examples.append({"subset": s, "sentence": r["sentence"], "span": r["span"], "gold": r["label"], "encoder_pred": r["pred_encoder"], "encoder_score": round(float(r["top1_score"]), 3), "llm_pred": r["pred_llm"], "llm_reason": r["llm_reason"]})
 
     res = pd.DataFrame(rows)
-    write_results(res.round(4), "results/p2/nil.csv", meta={"encoder": enc_path, "threshold": th_best, "k": args.k, "tuned_on": "tech_validation"})
+    write_results(res.round(4), f"results/p2/nil{suffix}.csv", meta={"encoder": enc_path, "threshold": th_best, "k": args.k, "tuned_on": "tech_validation"})
     if examples:
-        write_results(pd.DataFrame(examples), "results/p2/nil_disagreements.csv")
+        write_results(pd.DataFrame(examples), f"results/p2/nil_disagreements{suffix}.csv")
     print(res.round(3).to_string())
 
     os.environ["SMC_SOURCE"] = "src/p2_normalize/nil_eval.py"
@@ -146,12 +151,12 @@ def main() -> None:
     fig.add_trace(go.Scatter(x=sweep_df["threshold"], y=sweep_df["acc_on_mapped_phrases"], mode="lines", name="accuracy on mapped phrases"))
     fig.add_vline(x=th_best, line_dash="dot", line_color=viz.INK["muted"], annotation_text=f"chosen {th_best:.2f}", annotation_position="top left")
     fig.update_layout(title="'Not in ESCO' threshold sweep on tech_validation (bi-encoder cosine to the best ESCO skill)", xaxis_title="cosine threshold", yaxis_title="score", yaxis_range=[0, 1])
-    viz.save_fig(fig, "p2_nil_threshold_sweep", "Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.")
+    viz.save_fig(fig, f"p2_nil_threshold_sweep{suffix}", "Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.")
     m = res.melt(id_vars=["approach", "subset"], value_vars=["joint_accuracy", "nil_f1", "acc_on_mapped_phrases"], var_name="metric", value_name="value")
     fig2 = px.bar(m, x="metric", y="value", color="approach", facet_col="subset", barmode="group", text=m["value"].map(lambda v: f"{v:.2f}"), title="'Not in ESCO' detection on the test spans")
     fig2.update_traces(textposition="outside")
     fig2.update_layout(yaxis_range=[0, 1], legend_title_text="", xaxis_title="")
-    viz.save_fig(fig2, "p2_nil_results", "'Not in ESCO' detection on TECH and HOUSE test spans: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded bi-encoder (champion) vs retrieve-then-LLM (challenger).")
+    viz.save_fig(fig2, f"p2_nil_results{suffix}", "'Not in ESCO' detection on TECH and HOUSE test spans: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded bi-encoder (champion) vs retrieve-then-LLM (challenger).")
 
 
 if __name__ == "__main__":

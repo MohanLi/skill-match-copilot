@@ -17,7 +17,7 @@ run_stage() {
   return $rc
 }
 
-ALL=(p1_eval p2_val_baselines p2_train_biencoder p2_val_ours p2_val_rtl p2_test_all p2_nil eda03 eda04 index_djinni index_live p3_pairs p3_labels p3_eval p3_eval_sonnet p3_silver eda04_post drift eda05)
+ALL=(p1_eval p2_val_baselines p2_train_biencoder p2_val_ours p2_val_rtl p2_test_all p2_nil p2_val_rtl_context p2_test_rtl_context p2_nil_context eda03 eda04 index_djinni index_live p3_pairs p3_labels p3_eval p3_eval_sonnet p3_silver eda04_post drift eda05)
 STAGES=("$@"); [ ${#STAGES[@]} -eq 0 ] && STAGES=("${ALL[@]}")
 
 for s in "${STAGES[@]}"; do
@@ -28,7 +28,10 @@ for s in "${STAGES[@]}"; do
     p2_val_ours)        run_stage $s python -m src.p2_normalize.run_workrb --split val --models ours ;;
     p2_val_rtl)         run_stage $s python -m src.p2_normalize.run_workrb --split val --models rtl --k 10 30 50 ;;
     p2_test_all)        run_stage $s python -m src.p2_normalize.run_workrb --split test --models bm25 minilm context ours rtl --k 50 --force ;;
-    p2_nil)             run_stage $s python -m src.p2_normalize.nil_eval --llm ;;
+    p2_nil)             run_stage $s python -m src.p2_normalize.nil_eval --llm --encoder models/p2_biencoder --tag p2_biencoder ;;
+    p2_val_rtl_context) run_stage $s python -m src.p2_normalize.run_workrb --split val --models rtl_context --k 10 30 50 ;;
+    p2_test_rtl_context) run_stage $s python -m src.p2_normalize.run_workrb --split test --models rtl_context --k 50 ;;
+    p2_nil_context)     run_stage $s python -m src.p2_normalize.nil_eval --llm ;;
     eda03)              run_stage $s python scripts/nb.py notebooks/src/03_eda_djinni.py ;;
     eda04)              run_stage $s python scripts/nb.py notebooks/src/04_eda_live_jobs.py ;;
     index_djinni)       run_stage $s python -m src.index.build_job_index --pool djinni ;;

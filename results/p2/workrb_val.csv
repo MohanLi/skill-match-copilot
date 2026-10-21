@@ -1,15 +1,15 @@
 model_key,k,model,task,split,map,rp@10,mrr,n_queries,eval_time_s,esco_source,llm_cost_usd,llm_calls,run_utc
-bm25,,BM25-lower,Skill Extraction Tech,val,0.4236,0.5482,0.5134,75,1.2,esco_csv,0.0,0,2026-10-21T01:37:35Z
-bm25,,BM25-lower,Skill Extraction House,val,0.2643,0.3866,0.3134,61,1.8,esco_csv,0.0,0,2026-10-21T01:37:35Z
+bm25,,BM25 (lexical baseline),Skill Extraction Tech,val,0.4236,0.5482,0.5134,75,1.2,esco_csv,0.0,0,2026-10-21T01:37:35Z
+bm25,,BM25 (lexical baseline),Skill Extraction House,val,0.2643,0.3866,0.3134,61,1.8,esco_csv,0.0,0,2026-10-21T01:37:35Z
 minilm,,all-MiniLM-L6-v2 (zero-shot bi-encoder),Skill Extraction Tech,val,0.434,0.6649,0.5296,75,14.1,esco_csv,0.0,0,2026-10-21T01:37:50Z
 minilm,,all-MiniLM-L6-v2 (zero-shot bi-encoder),Skill Extraction House,val,0.3372,0.5593,0.4405,61,0.5,esco_csv,0.0,0,2026-10-21T01:37:50Z
-context,,ConTeXT-Skill-Extraction-base,Skill Extraction Tech,val,0.6752,0.8616,0.7582,75,97.2,esco_csv,0.0,0,2026-10-21T01:41:09Z
-context,,ConTeXT-Skill-Extraction-base,Skill Extraction House,val,0.5475,0.7514,0.6858,61,102.3,esco_csv,0.0,0,2026-10-21T01:41:09Z
-ours,,Fine-tuned MiniLM on synthetic ESCO pairs (champion),Skill Extraction Tech,val,0.5375,0.7227,0.6404,75,13.7,esco_csv,0.0,0,2026-10-21T02:18:44Z
-ours,,Fine-tuned MiniLM on synthetic ESCO pairs (champion),Skill Extraction House,val,0.4132,0.6153,0.5478,61,0.5,esco_csv,0.0,0,2026-10-21T02:18:44Z
-rtl,10.0,Retrieve-then-LLM (challenger) k=10,Skill Extraction Tech,val,0.5648,0.7227,0.6682,75,34.3,esco_csv,0.0084,136,2026-10-21T02:19:47Z
-rtl,10.0,Retrieve-then-LLM (challenger) k=10,Skill Extraction House,val,0.4959,0.6153,0.626,61,13.6,esco_csv,0.0084,136,2026-10-21T02:19:47Z
-rtl,30.0,Retrieve-then-LLM (challenger) k=30,Skill Extraction Tech,val,0.6122,0.7616,0.6906,75,19.5,esco_csv,0.0116,136,2026-10-21T02:20:23Z
-rtl,30.0,Retrieve-then-LLM (challenger) k=30,Skill Extraction House,val,0.5335,0.6811,0.6563,61,16.1,esco_csv,0.0116,136,2026-10-21T02:20:23Z
-rtl,50.0,Retrieve-then-LLM (challenger) k=50,Skill Extraction Tech,val,0.6412,0.8316,0.7109,75,20.9,esco_csv,0.0149,136,2026-10-21T02:21:02Z
-rtl,50.0,Retrieve-then-LLM (challenger) k=50,Skill Extraction House,val,0.5347,0.7044,0.6477,61,18.3,esco_csv,0.0149,136,2026-10-21T02:21:02Z
+context,,"ConTeXT-match (TechWolf, published model; champion)",Skill Extraction Tech,val,0.6752,0.8616,0.7582,75,97.2,esco_csv,0.0,0,2026-10-21T01:41:09Z
+context,,"ConTeXT-match (TechWolf, published model; champion)",Skill Extraction House,val,0.5475,0.7514,0.6858,61,102.3,esco_csv,0.0,0,2026-10-21T01:41:09Z
+ours,,Fine-tuned MiniLM on synthetic ESCO pairs (in-house),Skill Extraction Tech,val,0.5375,0.7227,0.6404,75,13.7,esco_csv,0.0,0,2026-10-21T02:18:44Z
+ours,,Fine-tuned MiniLM on synthetic ESCO pairs (in-house),Skill Extraction House,val,0.4132,0.6153,0.5478,61,0.5,esco_csv,0.0,0,2026-10-21T02:18:44Z
+rtl,10.0,Retrieve-then-LLM on fine-tuned MiniLM k=10,Skill Extraction Tech,val,0.5648,0.7227,0.6682,75,34.3,esco_csv,0.0084,136,2026-10-21T02:19:47Z
+rtl,10.0,Retrieve-then-LLM on fine-tuned MiniLM k=10,Skill Extraction House,val,0.4959,0.6153,0.626,61,13.6,esco_csv,0.0084,136,2026-10-21T02:19:47Z
+rtl,30.0,Retrieve-then-LLM on fine-tuned MiniLM k=30,Skill Extraction Tech,val,0.6122,0.7616,0.6906,75,19.5,esco_csv,0.0116,136,2026-10-21T02:20:23Z
+rtl,30.0,Retrieve-then-LLM on fine-tuned MiniLM k=30,Skill Extraction House,val,0.5335,0.6811,0.6563,61,16.1,esco_csv,0.0116,136,2026-10-21T02:20:23Z
+rtl,50.0,Retrieve-then-LLM on fine-tuned MiniLM k=50,Skill Extraction Tech,val,0.6412,0.8316,0.7109,75,20.9,esco_csv,0.0149,136,2026-10-21T02:21:02Z
+rtl,50.0,Retrieve-then-LLM on fine-tuned MiniLM k=50,Skill Extraction House,val,0.5347,0.7044,0.6477,61,18.3,esco_csv,0.0149,136,2026-10-21T02:21:02Z

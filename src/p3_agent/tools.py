@@ -93,7 +93,7 @@ class ToolBox:
         k = max(1, min(int(k or 10), 50))
         if self.pool_ids:
             pool = self._pool()
-            q = np.array(self.normalizer.embed([str(query)])[0])
+            q = np.array(self.index.embed([str(query)])[0])
             sims = pool["emb"] @ q
             order = np.argsort(-sims)[:k]
             hits = [{"job_id": pool["ids"][i], "score": round(float(sims[i]), 4), **(pool["metas"][i] or {}), "text": pool["docs"][i]} for i in order]

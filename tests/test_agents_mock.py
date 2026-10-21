@@ -66,12 +66,15 @@ class FakeCol:
 
 
 class FakeIndex:
-    """Mimics the JobIndex API used by ToolBox (col.get with embeddings, get, get_many, search)."""
+    """Mimics the JobIndex API used by ToolBox (col.get with embeddings, embed, get, get_many, search)."""
 
     def __init__(self):
         self.jobs = {jid: {"job_id": jid, "title": j["title"], "category": j["category"], "company": "ACME", "esco_skills": "|".join(j["esco"]), "raw_skills": "|".join(j["raw"]), "text": j["text"]} for jid, j in JOBS.items()}
         self.emb = {jid: fake_vec(j["title"] + ". " + j["text"]) for jid, j in JOBS.items()}
         self.col = FakeCol(self.jobs, self.emb)
+
+    def embed(self, texts):
+        return [fake_vec(t) for t in texts]
 
     def get(self, job_id):
         return self.jobs.get(job_id)
