@@ -23,10 +23,14 @@ from ..utils.io import read_jsonl, write_json, write_results
 
 
 def _period(s: pd.Series, freq: str) -> pd.Series:
+    """Period label: week start date for weekly series ('2026-10-05'), '2020Q1' for quarterly."""
     from ..data.live_jobs import parse_dates
 
     d = parse_dates(s)
-    return d.dt.to_period(freq).astype(str)
+    per = d.dt.to_period(freq)
+    if freq.startswith("W"):
+        return per.dt.start_time.dt.strftime("%Y-%m-%d").where(d.notna(), "NaT")
+    return per.astype(str)
 
 
 def load_indexed(pool: str) -> pd.DataFrame | None:
@@ -94,6 +98,7 @@ def main() -> None:
     if live is not None and len(live):
         v = live.copy()
         v["period"] = _period(v["published"], "W")
+        v["category"] = v["category"].fillna("").astype(str).str.strip().replace("", "(no department)")
         vol = v.groupby(["period", "category"]).size().reset_index(name="postings")
         vol = vol[vol["category"].isin(v["category"].value_counts().head(6).index)]
     report["volume_by_category_live"] = vol.to_dict("records") if len(vol) else []
@@ -135,18 +140,23 @@ def main() -> None:
         fig.add_trace(go.Scatter(x=nil_live["period"], y=nil_live["nil_share"], mode="lines+markers", name="live snapshot (weekly)", line=dict(color=viz.PALETTE[1])), row=1, col=1)
     if series:
         s = pd.DataFrame(series)
-        fig.add_trace(go.Bar(x=s["day"], y=s["unsupported_rate"], name="unsupported-claim rate", marker_color=[viz.STATUS["critical"] if v > args.alert else viz.PALETTE[0] for v in s["unsupported_rate"]]), row=1, col=2)
+        s["label"] = s["day"].astype(str).str.replace("eval:agent:", "eval Haiku · ", regex=False).str.replace("eval:sonnet:", "eval Sonnet · ", regex=False)
+        fig.add_trace(go.Bar(x=s["label"], y=s["unsupported_rate"], name="unsupported-claim rate", text=s["unsupported_rate"].map(lambda v: f"{v:.1%}"), textposition="outside",
+                             marker_color=[viz.STATUS["critical"] if v > args.alert else viz.PALETTE[0] for v in s["unsupported_rate"]]), row=1, col=2)
         fig.add_hline(y=args.alert, line_dash="dot", line_color=viz.STATUS["critical"], row=1, col=2)
+        fig.update_xaxes(type="category", row=1, col=2)
     if len(vol):
         for i, (cat, g) in enumerate(vol.groupby("category")):
             fig.add_trace(go.Bar(x=g["period"], y=g["postings"], name=str(cat)[:30], marker_color=viz.PALETTE[i % 8]), row=2, col=1)
     if len(emerging):
         e = emerging.head(12).iloc[::-1]
         fig.add_trace(go.Bar(x=e["count"], y=e["phrase"], orientation="h", name="NOT in ESCO", marker_color=viz.PALETTE[1]), row=2, col=2)
-    fig.update_layout(title="Model Ops dashboard — drift and hallucination monitoring", height=820, barmode="stack", legend=dict(orientation="h", y=-0.08))
+    fig.update_layout(title="Model Ops dashboard — drift and hallucination monitoring", height=900, barmode="stack", legend=dict(orientation="h", y=-0.12, x=0), margin=dict(b=150))
     fig.update_yaxes(tickformat=".0%", row=1, col=1)
-    fig.update_yaxes(tickformat=".0%", row=1, col=2)
-    viz.save_fig(fig, "ops_dashboard", "Model Ops dashboard: share of phrases outside ESCO per period (new skills), unsupported-claim rate with the alert line, posting volume by category and the emerging-skills review queue.", height=820)
+    fig.update_yaxes(tickformat=".0%", range=[0, max(0.05, float(pd.DataFrame(series)["unsupported_rate"].max()) * 1.3) if series else 0.05], row=1, col=2)
+    fig.update_xaxes(type="category", row=1, col=1)
+    fig.update_xaxes(type="category", row=2, col=1)
+    viz.save_fig(fig, "ops_dashboard", "Model Ops dashboard: share of phrases outside ESCO per period (new skills), unsupported-claim rate per evaluation run and API day with the 2 % alert line, live posting volume by department and the emerging-skills review queue.", height=900)
     print(json.dumps({k: v for k, v in report.items() if k not in ("nil_share_live_weekly", "nil_share_djinni_quarterly", "volume_by_category_live", "unsupported_claim_rate", "emerging_skills_top")}, indent=1))
     print("alerts:", report["alerts"])
 

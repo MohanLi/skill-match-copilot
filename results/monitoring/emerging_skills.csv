@@ -1,41 +1,41 @@
 phrase,count,best_esco,score
-aws,136,cloud technologies,0.4307
-dbt,122,DB2,0.6153
-snowflake,103,snowboard,0.5962
-pytorch,102,pneumatics,0.374
-hands-on,85,use hand tools,0.408
-llms,78,Litmos,0.5077
-gcp,77,general surgery,0.5127
-ci/cd,76,CA Datacom/DB,0.3964
-llm,75,Litmos,0.4842
-monitoring,74,environmental management monitors,0.6219
-observability,67,observe matter,0.4836
-bigquery,67,analyse big data,0.5458
-databricks,62,data warehouse,0.5453
-and,61,perform multiple tasks at the same time,0.2516
-experimentation,56,conduct experiments on animals,0.5705
-rag,55,rinse cloth articles,0.4153
-kubernetes,54,deploy cloud resource,0.4308
-apis,49,develop with cloud services,0.361
-ownership,49,property law,0.5193
-version control,48,maintain a central project repository,0.5489
-mlops,47,ML (computer programming),0.5653
-azure,47,cloud technologies,0.4044
-validation,45,validate raw materials,0.5245
-reliability,42,assess reliability of data,0.5896
-retrieval,41,ICT recovery techniques,0.5467
-tableau,39,arrange tables,0.5525
-phd,39,supervise doctoral students,0.5186
-cursor,37,operate nibbling equipment,0.3549
-kafka,36,literary theory,0.4245
-terraform,36,maintain terrazzo,0.5231
-pandas,36,animal species,0.364
-governance,36,internet governance,0.6397
-dagster,36,GameSalad,0.3212
-agentic,35,principles of artificial intelligence,0.3534
-claude code,35,French,0.5228
-looker,34,analyse images,0.3586
-tensorflow,33,deep learning,0.4379
-fintech,32,financial engineering,0.6125
-scikit-learn,32,machine learning,0.4501
-redshift,32,coordinate shifts,0.3471
+aws,363,cloud technologies,0.4307
+ci/cd,248,CA Datacom/DB,0.3964
+pytorch,246,pneumatics,0.374
+snowflake,235,snowboard,0.5962
+databricks,223,data warehouse,0.5453
+dbt,212,DB2,0.6153
+monitoring,209,environmental management monitors,0.6219
+hands-on,200,use hand tools,0.408
+azure,197,cloud technologies,0.4044
+llms,177,Litmos,0.5077
+and,173,perform multiple tasks at the same time,0.2516
+gcp,162,general surgery,0.5127
+observability,155,observe matter,0.4836
+kubernetes,147,deploy cloud resource,0.4308
+tableau,146,arrange tables,0.5525
+validation,144,validate raw materials,0.5245
+generative ai,136,principles of artificial intelligence,0.462
+tensorflow,135,deep learning,0.4379
+attention to detail,131,attend to detail,0.5356
+governance,128,internet governance,0.6397
+llm,127,Litmos,0.4842
+experimentation,126,conduct experiments on animals,0.5705
+bigquery,126,analyse big data,0.5458
+reliability,121,assess reliability of data,0.5896
+git,119,maintain a central project repository,0.4425
+rag,114,rinse cloth articles,0.4153
+curious,111,demonstrate curiosity,0.5254
+apis,106,develop with cloud services,0.361
+degree,103,teach further education,0.4758
+kafka,98,literary theory,0.4245
+version control,96,maintain a central project repository,0.5489
+terraform,95,maintain terrazzo,0.5231
+development,93,development delays,0.6338
+looker,89,analyse images,0.3586
+mlops,88,ML (computer programming),0.5653
+scikit-learn,84,machine learning,0.4501
+bachelor's degree,84,teach further education,0.3575
+claude code,82,French,0.5228
+optimization,81,optimise production,0.5722
+genai,81,Japanese,0.3896

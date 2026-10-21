@@ -384,7 +384,7 @@
     "updated": "2026-10-21"
   },
   "ops_dashboard": {
-    "caption": "Model Ops dashboard: share of phrases outside ESCO per period (new skills), unsupported-claim rate with the alert line, posting volume by category and the emerging-skills review queue.",
+    "caption": "Model Ops dashboard: share of phrases outside ESCO per period (new skills), unsupported-claim rate per evaluation run and API day with the 2 % alert line, live posting volume by department and the emerging-skills review queue.",
     "source": "src/monitoring/drift_report.py",
     "order": 65,
     "updated": "2026-10-21"

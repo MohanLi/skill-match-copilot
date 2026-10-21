@@ -108,8 +108,12 @@ Four public datasets and one live feed (`docs/data_schema.md` has the verified c
   data science (4,545), ML engineering (3,122) and data analysis (1,838) (`eda04_ai_role_families`).
 * **Only 31 % of postings carry a description** (53 % of the data/AI/ML subset): the Greenhouse, Ashby,
   Lever, Rippling and Gem feeds return the body, Workday (9 %) and SmartRecruiters (3 %) listings are
-  title-only (`eda04_description_coverage_by_source`). The live index therefore covers the 11,288 data/AI/ML
-  postings with text, and coverage of Workday-heavy employers is a known gap for the ops plan.
+  title-only (`eda04_description_coverage_by_source`). The live index can therefore only draw on the 11,288
+  data/AI/ML postings with text (it keeps the 2,000 most recent), and coverage of Workday-heavy employers is a
+  known gap for the ops plan. A second feed quirk mattered: Greenhouse, Lever and Workday stamp postings with a
+  date only, Ashby and Gem with a full timestamp; pandas' default parser silently kept one format and dropped
+  the other, which first produced an Ashby-only "most recent" index — fixed with an ISO-8601 parser
+  (`src/data/live_jobs.parse_dates`) and a rebuild (`eda04_posting_dates`).
 * Postings with text are long — median 668 words, IQR 457–881 (`eda04_description_length`) — and
   HTML-formatted; Greenhouse delivers *escaped* HTML (`&lt;p&gt;`), which the cleaner now unescapes before
   parsing. Compensation fields are filled for 3.9 % of postings and the remote flag for 7 %, so the matcher
@@ -365,19 +369,41 @@ over-generalisation an auditor would reject.
 
 ## 6. Model ops
 
-See `docs/architecture.md` for the diagram and the maintenance plan. In brief:
+See `docs/architecture.md` for the diagram and the maintenance plan; the pieces below all exist and were
+exercised end to end (`results/monitoring/`, figure `ops_dashboard`).
 
-* **Serving**: FastAPI (`src/api/app.py`: `/extract`, `/normalize`, `/search`, `/match`, `/health`) and a
-  Streamlit demo (`src/ui/app.py`); `Dockerfile` builds the service. Models load once at start-up.
-* **LLM layer**: one wrapper (`src/utils/llm.py`) with an on-disk cache keyed by (model, prompt version,
-  input), a JSONL log with tokens, latency and cost per call, and a hard budget stop. Prompts are versioned
-  files; a prompt change re-runs the fixed evaluation sets before it is merged.
-* **Index refresh**: `daily_ingest.py` re-pulls the live snapshot and upserts new postings into Chroma
-  (idempotent; `0 6 * * *`).
-* **Monitoring**: `drift_report.py` tracks the NOT_IN_ESCO share (new skills), the similarity of new
-  postings to the tagger's training distribution, the unsupported-claim rate of agent answers (alert above
-  2 %), and feeds frequent unmapped phrases into a human review queue (`results/monitoring/emerging_skills.csv`).
-* **Spend**: LLM cost of the whole project ≈ $14.3 of the $25 budget (`logs/llm_calls.jsonl`): gold labels $7.4, Sonnet ablation $2.3, everything else with Haiku (P1 extractor, P2 re-ranking and reject decisions, agents, silver set) ≈ $4.6.
+* **Serving.** FastAPI (`src/api/app.py`: `/extract`, `/normalize`, `/search`, `/match`, `/health`) and a
+  Streamlit demo (`src/ui/app.py`); `Dockerfile` builds the service. Models load once at start-up. Smoke test
+  on the live index with the synthetic resume (`data/demo/synthetic_resume.md`, mode `single_verified`): five
+  ranked October-2026 ML postings, 19 of 19 claims supported by verbatim quotes, 10 LLM calls, $0.019,
+  40 s of model latency (`logs/requests.jsonl`).
+* **LLM layer.** One wrapper (`src/utils/llm.py`) with an on-disk cache keyed by (model, prompt version,
+  input), a JSONL log with tokens, latency and cost per call, per-model thinking controls, a retry when a
+  thinking block eats the output budget, a salvage path for truncated JSON, and a hard budget stop.
+  Prompts are versioned files (`prompts/`); the two prompt changes made during the project (matcher v2,
+  verifier v2) were each followed by a re-run of the fixed evaluation set, which the cache makes almost free.
+* **Index refresh.** `daily_ingest.py` re-pulls the live snapshot and `build_job_index --pool live --prune`
+  keeps the 2,000 most recent data/AI/ML postings with text (`0 6 * * *`); a build is idempotent and
+  resumable (about 8 s per posting on two CPU cores). The index currently holds postings from 5–20 October
+  2026 across all seven ATS sources.
+* **Monitoring** (`drift_report.py`, weekly): 
+  * *new-skill drift* — share of extracted phrases that are NOT in ESCO: 56–59 % on Djinni 2020–2023, rising
+    slowly, and **60–64 %** on this October's AI/ML postings — the live vocabulary is drifting away from the
+    2022 taxonomy;
+  * *distribution drift* — mean nearest-neighbour cosine of indexed postings to the tagger's SkillSpan
+    training sentences: 0.60 (Djinni) vs 0.54 (live), i.e. the live postings are further from the training
+    data, which is where extra tagger spot checks go first;
+  * *hallucination* — unsupported-claim rate per evaluation run and per API day against the **2 % alert**:
+    the unverified arms trip it (17.8 %, 22.8 % with Sonnet), the verified arms and the API traffic sit at 0 %;
+  * *review queue* — `results/monitoring/emerging_skills.csv`: the most frequent phrases outside ESCO in the
+    live index are exactly the modern data stack — **aws, ci/cd, pytorch, snowflake, databricks, dbt, azure,
+    llms, gcp, observability, kubernetes, tableau, generative ai, tensorflow, bigquery, git** — whose nearest
+    ESCO labels are nonsense ("snowflake → snowboard", "pytorch → pneumatics", "gcp → general surgery"), the
+    strongest argument in the project for the reject option and for a human-curated custom skill list. The
+    queue also exposes tagger noise to clean up ("hands-on", "and", "ownership").
+* **Spend**: LLM cost of the whole project ≈ $14.3 of the $25 budget (`logs/llm_calls.jsonl`): gold labels
+  $7.4, Sonnet ablation $2.3, everything else with Haiku (P1 extractor, P2 re-ranking and reject decisions,
+  agents, silver set, smoke tests) ≈ $4.6.
 
 ---
 
