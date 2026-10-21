@@ -150,13 +150,17 @@ def main() -> None:
     fig.add_trace(go.Scatter(x=sweep_df["threshold"], y=sweep_df["nil_f1"], mode="lines", name="F1 of the 'not in ESCO' decision"))
     fig.add_trace(go.Scatter(x=sweep_df["threshold"], y=sweep_df["acc_on_mapped_phrases"], mode="lines", name="accuracy on mapped phrases"))
     fig.add_vline(x=th_best, line_dash="dot", line_color=viz.INK["muted"], annotation_text=f"chosen {th_best:.2f}", annotation_position="top left")
-    fig.update_layout(title="'Not in ESCO' threshold sweep on tech_validation (bi-encoder cosine to the best ESCO skill)", xaxis_title="cosine threshold", yaxis_title="score", yaxis_range=[0, 1])
-    viz.save_fig(fig, f"p2_nil_threshold_sweep{suffix}", "Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.")
+    enc_name = os.path.basename(enc_path)
+    fig.update_layout(title=f"'Not in ESCO' threshold sweep on tech_validation — cosine of {enc_name} to the best ESCO skill", xaxis_title="cosine threshold", yaxis_title="score", yaxis_range=[0, 1])
+    viz.save_fig(fig, f"p2_nil_threshold_sweep{suffix}", f"Tuning the 'not in ESCO' cosine threshold of the {enc_name} encoder on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.")
     m = res.melt(id_vars=["approach", "subset"], value_vars=["joint_accuracy", "nil_f1", "acc_on_mapped_phrases"], var_name="metric", value_name="value")
-    fig2 = px.bar(m, x="metric", y="value", color="approach", facet_col="subset", barmode="group", text=m["value"].map(lambda v: f"{v:.2f}"), title="'Not in ESCO' detection on the test spans")
+    m["metric"] = m["metric"].map({"joint_accuracy": "joint accuracy", "nil_f1": "F1 of the 'not in ESCO' decision", "acc_on_mapped_phrases": "accuracy on mapped phrases"})
+    fig2 = px.bar(m, x="metric", y="value", color="approach", facet_col="subset", barmode="group", text=m["value"].map(lambda v: f"{v:.2f}"),
+                  title=f"'Not in ESCO' detection on the test spans — {enc_name} encoder, threshold {th_best:.2f}")
     fig2.update_traces(textposition="outside")
-    fig2.update_layout(yaxis_range=[0, 1], legend_title_text="", xaxis_title="")
-    viz.save_fig(fig2, f"p2_nil_results{suffix}", "'Not in ESCO' detection on TECH and HOUSE test spans: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded bi-encoder (champion) vs retrieve-then-LLM (challenger).")
+    fig2.update_layout(yaxis_range=[0, 1], legend_title_text="", xaxis_title="", yaxis_title="score")
+    fig2.update_xaxes(title_text="")
+    viz.save_fig(fig2, f"p2_nil_results{suffix}", f"'Not in ESCO' detection on TECH and HOUSE test spans with the {enc_name} encoder: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded encoder (champion) vs retrieve-then-LLM over its top-10 (challenger).")
 
 
 if __name__ == "__main__":

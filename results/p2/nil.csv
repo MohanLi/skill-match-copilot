@@ -1,0 +1,7 @@
+approach,subset,threshold,encoder,n,n_nil_true,acc_on_mapped_phrases,joint_accuracy,nil_precision,nil_recall,nil_f1,recall_at_k_on_mapped,llm_cost_usd,llm_latency_ms_median
+bi-encoder + threshold (champion),tech,0.64,ConTeXT-Skill-Extraction-base,1164,490,0.5163,0.604,0.6396,0.7245,0.6794,0.8501,,
+"bi-encoder top-1, no NIL (reference)",tech,,ConTeXT-Skill-Extraction-base,1164,490,0.5831,0.3376,0.0,0.0,0.0,,,
+bi-encoder + threshold (champion),house,0.64,ConTeXT-Skill-Extraction-base,891,323,0.3574,0.4949,0.5336,0.7368,0.619,0.8257,,
+"bi-encoder top-1, no NIL (reference)",house,,ConTeXT-Skill-Extraction-base,891,323,0.4489,0.2862,0.0,0.0,0.0,,,
+retrieve top-10 + LLM (challenger),tech,,ConTeXT-Skill-Extraction-base,1164,490,0.5104,0.5842,0.7089,0.6857,0.6971,0.8501,0.1334,1149.15
+retrieve top-10 + LLM (challenger),house,,ConTeXT-Skill-Extraction-base,891,323,0.4982,0.5152,0.6286,0.5449,0.5837,0.8257,0.1062,1191.3

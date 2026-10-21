@@ -72,9 +72,9 @@
     "tech": 0.432,
     "techwolf": 0.0
   },
-  "esco_vocab_size": 13896,
-  "esco_source": "benchmark_label_list",
-  "benchmark_labels_in_vocab_share": 0.9972,
+  "esco_vocab_size": 13891,
+  "esco_source": "esco_csv",
+  "benchmark_labels_in_vocab_share": 1.0,
   "distinct_esco_skills_used": 768,
   "esco_coverage_share": 0.0553,
   "top25_coverage_of_phrases": 0.2388,

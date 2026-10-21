@@ -1,0 +1,42 @@
+model_name: Retrieve-then-LLM on ConTeXT (challenger) k=50
+model_class: RetrieveThenLLM
+model_kwargs: {}
+task_configs:
+- name: Skill Extraction Tech
+  languages:
+  - en
+  split: test
+  class: LocalTechSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from technical text descriptions in the TECH subset
+    of CAREER.
+- name: Skill Extraction House
+  languages:
+  - en
+  split: test
+  class: LocalHouseSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from general text descriptions in the HOUSE subset of
+    CAREER.
+- name: Skill Extraction TechWolf
+  languages:
+  - en
+  split: test
+  class: LocalTechWolfSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from text descriptions in a generic distribution of
+    job descriptions.
+languages:
+- en
+custom_metrics: null
+output_folder: /home/claude/skill-match-copilot/results/p2/workrb_runs/test/rtl_context_k50
+checkpoint_enabled: true
+checkpoint_frequency: per_task
+created_at: '2026-10-21T03:24:26.526397+00:00'
+description: ''

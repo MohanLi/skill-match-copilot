@@ -1,6 +1,6 @@
 {
   "file": "results/p2/workrb_val.csv",
-  "rows": 14,
+  "rows": 20,
   "columns": [
     "model_key",
     "k",
@@ -17,8 +17,8 @@
     "llm_calls",
     "run_utc"
   ],
-  "created_utc": "2026-10-21T02:21:02Z",
-  "git_commit": "3855465",
+  "created_utc": "2026-10-21T03:24:10Z",
+  "git_commit": "13b433b",
   "split": "val",
   "esco_source": "esco_csv",
   "tasks": {

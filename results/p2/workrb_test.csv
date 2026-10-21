@@ -14,3 +14,6 @@ ours,,Fine-tuned MiniLM on synthetic ESCO pairs (in-house),Skill Extraction Tech
 rtl,50.0,Retrieve-then-LLM on fine-tuned MiniLM k=50,Skill Extraction Tech,test,0.5155,0.699,0.6004,338,95.0,esco_csv,0.1005,926,2026-10-21T02:33:17Z
 rtl,50.0,Retrieve-then-LLM on fine-tuned MiniLM k=50,Skill Extraction House,test,0.4207,0.5896,0.5453,262,75.1,esco_csv,0.1005,926,2026-10-21T02:33:17Z
 rtl,50.0,Retrieve-then-LLM on fine-tuned MiniLM k=50,Skill Extraction TechWolf,test,0.452,0.5852,0.552,326,85.7,esco_csv,0.1005,926,2026-10-21T02:33:17Z
+rtl_context,50.0,Retrieve-then-LLM on ConTeXT (challenger) k=50,Skill Extraction Tech,test,0.5371,0.7212,0.6217,338,214.8,esco_csv,0.1027,926,2026-10-21T03:30:59Z
+rtl_context,50.0,Retrieve-then-LLM on ConTeXT (challenger) k=50,Skill Extraction House,test,0.4431,0.651,0.5516,262,80.8,esco_csv,0.1027,926,2026-10-21T03:30:59Z
+rtl_context,50.0,Retrieve-then-LLM on ConTeXT (challenger) k=50,Skill Extraction TechWolf,test,0.4786,0.6613,0.5689,326,97.5,esco_csv,0.1027,926,2026-10-21T03:30:59Z

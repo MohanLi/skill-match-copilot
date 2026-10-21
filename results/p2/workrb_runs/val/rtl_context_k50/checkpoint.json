@@ -1,0 +1,117 @@
+{
+  "config": {
+    "model_name": "Retrieve-then-LLM on ConTeXT (challenger) k=50",
+    "model_class": "RetrieveThenLLM",
+    "model_kwargs": {},
+    "task_configs": [
+      {
+        "name": "Skill Extraction Tech",
+        "languages": [
+          "en"
+        ],
+        "split": "val",
+        "class": "LocalTechSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER."
+      },
+      {
+        "name": "Skill Extraction House",
+        "languages": [
+          "en"
+        ],
+        "split": "val",
+        "class": "LocalHouseSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER."
+      }
+    ],
+    "languages": [
+      "en"
+    ],
+    "custom_metrics": null,
+    "output_folder": "/home/claude/skill-match-copilot/results/p2/workrb_runs/val/rtl_context_k50",
+    "checkpoint_enabled": true,
+    "checkpoint_frequency": "per_task",
+    "created_at": "2026-10-21T03:23:24.922927+00:00",
+    "description": ""
+  },
+  "last_updated": 1792553050.2069523,
+  "last_updated_iso": "2026-10-21T03:24:10.206956+00:00",
+  "results": {
+    "task_results": {
+      "Skill Extraction Tech": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+          "split": "val"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 23.141520738601685,
+            "metrics_dict": {
+              "map": 0.624663915998463,
+              "rp@10": 0.8226666666666667,
+              "mrr": 0.7141003983097517
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      },
+      "Skill Extraction House": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+          "split": "val"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 22.14123558998108,
+            "metrics_dict": {
+              "map": 0.5576246941609356,
+              "rp@10": 0.7601092896174864,
+              "mrr": 0.6550741002113378
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model_name": "Retrieve-then-LLM on ConTeXT (challenger) k=50",
+      "total_evaluation_time": 0.0,
+      "timestamp": 1792553004.9229448,
+      "num_tasks": 2,
+      "languages": [
+        "Language.EN"
+      ],
+      "resumed_from_checkpoint": false,
+      "language_aggregation_mode": "monolingual_only",
+      "replayed_from_workrb_version": null
+    },
+    "key_metrics_by_task_group": {
+      "rank_skill_extraction": [
+        "map",
+        "rp@10",
+        "mrr"
+      ]
+    }
+  }
+}

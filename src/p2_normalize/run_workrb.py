@@ -75,7 +75,13 @@ def main() -> None:
     ap.add_argument("--models", nargs="+", default=["bm25", "minilm", "context", "ours", "rtl"])
     ap.add_argument("--k", nargs="*", type=int, default=[30])
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--plot-only", action="store_true", help="re-draw the figures from the existing results CSV")
     args = ap.parse_args()
+
+    if args.plot_only:
+        df = pd.read_csv(ROOT / f"results/p2/workrb_{args.split}.csv")
+        plot_results(df, args.split, {"esco_source": str(df["esco_source"].iloc[0])})
+        return
 
     import workrb
 
@@ -110,6 +116,15 @@ def main() -> None:
     write_results(df, out_csv, meta={"split": args.split, "esco_source": esco_info["esco_source"], "tasks": sizes})
     print(df.assign(k=df["k"].fillna(0)).pivot_table(index=["model_key", "k", "model"], columns="task", values="map").round(3).to_string())
 
+    plot_results(df, args.split, esco_info)
+
+
+FAMILY = {"bm25": "lexical baseline", "minilm": "dense encoder, zero-shot", "ours": "dense encoder, in-house fine-tuned",
+          "context": "dense encoder, published (champion)", "rtl": "retrieve-then-LLM re-ranking", "rtl_context": "retrieve-then-LLM re-ranking (challenger)"}
+
+
+def plot_results(df: pd.DataFrame, split: str, esco_info: dict) -> None:
+    """One horizontal-bar panel per task, models sorted by their mean score, coloured by approach family."""
     os.environ["SMC_SOURCE"] = "src/p2_normalize/run_workrb.py"
     import plotly.express as px
 
@@ -118,12 +133,21 @@ def main() -> None:
     viz.setup()
     plot = df.copy()
     plot["task"] = plot["task"].str.replace("Skill Extraction ", "")
+    plot["family"] = plot["model_key"].map(FAMILY).fillna(plot["model_key"])
+    tasks = [t for t in ("Tech", "House", "TechWolf") if t in set(plot["task"])]
     for metric in ("map", "rp@10", "mrr"):
-        fig = px.bar(plot, x="task", y=metric, color="model", barmode="group", text=plot[metric].map(lambda v: f"{v:.2f}"),
-                     title=f"Problem 2 — WorkRB {metric.upper()} on the {args.split} split (ESCO 1.1.0, {'official' if esco_info['esco_source']=='esco_csv' else 'stand-in'} vocabulary)")
-        fig.update_traces(textposition="outside")
-        fig.update_layout(yaxis_range=[0, 1], xaxis_title="", legend_title_text="")
-        viz.save_fig(fig, f"p2_workrb_{metric.replace('@','')}_{args.split}", f"Problem 2: WorkRB {metric.upper()} per task on the {args.split} split — lexical and dense baselines, the in-house fine-tuned MiniLM, the published ConTeXT encoder (champion) and retrieve-then-LLM re-ranking (challenger).")
+        order = plot.groupby("model")[metric].mean().sort_values(ascending=False).index.tolist()
+        fig = px.bar(plot, y="model", x=metric, color="family", facet_col="task", orientation="h", text=plot[metric].map(lambda v: f"{v:.2f}"),
+                     category_orders={"model": order, "task": tasks, "family": list(dict.fromkeys(FAMILY.values()))},
+                     title=f"Problem 2 — WorkRB {metric.upper()} on the {split} split (ESCO 1.1.0, {'official' if esco_info.get('esco_source') == 'esco_csv' else 'stand-in'} vocabulary)")
+        fig.update_traces(textposition="outside", cliponaxis=False)
+        fig.update_xaxes(range=[0, 1.0], title_text=metric.upper(), matches=None)
+        fig.update_yaxes(title_text="", showticklabels=False)  # px already places the first category (best model) at the top
+        fig.update_yaxes(showticklabels=True, col=1)
+        fig.update_layout(legend_title_text="", height=180 + 34 * len(order), bargap=0.25)
+        viz.save_fig(fig, f"p2_workrb_{metric.replace('@','')}_{split}",
+                     f"Problem 2: WorkRB {metric.upper()} per task on the {split} split — lexical and dense baselines, the in-house fine-tuned MiniLM, "
+                     f"the published ConTeXT encoder (champion) and retrieve-then-LLM re-ranking (challenger).", width=1400, height=180 + 34 * len(order))
 
 
 if __name__ == "__main__":

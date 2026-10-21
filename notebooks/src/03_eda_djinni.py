@@ -7,7 +7,7 @@
 # CV texts are PII-scrubbed (e-mails, phones, URLs, handles) before any use.
 
 # %%
-import json, os, re, collections, random
+import json, os, re, collections, random, pathlib
 import numpy as np, pandas as pd
 import plotly.express as px, plotly.graph_objects as go
 os.environ["SMC_SOURCE"] = "notebooks/03_eda_djinni"
@@ -108,12 +108,12 @@ fig
 # ## 4. Postings per month by category (2020–2023)
 
 # %%
-jobs["month"] = pd.to_datetime(jobs["published"], errors="coerce").dt.to_period("M").astype(str)
+jobs["month"] = pd.to_datetime(jobs["published"], errors="coerce", utc=True).dt.to_period("M").astype(str)
 top8 = top_cats.head(8).index
 pm = jobs[jobs["category"].isin(top8) & (jobs["month"] != "NaT")].groupby(["month", "category"]).size().reset_index(name="postings")
 fig = px.line(pm, x="month", y="postings", color="category", title="Job postings per month for the 8 largest categories (2020–2023)")
 fig.update_layout(xaxis_title="", yaxis_title="postings")
-viz.save_fig(fig, "eda03_postings_per_month", "Monthly job postings per category on Djinni, 2020–2023 — the 2022 collapse and partial recovery are visible in every category.")
+viz.save_fig(fig, "eda03_postings_per_month", "Monthly job postings per category on Djinni, 2020–2023: growth through 2021, a steady decline through 2022 and a partial recovery in 2023 (the last month of the dataset is incomplete).")
 fig
 
 # %% [markdown]
@@ -137,23 +137,21 @@ plt.show()
 # ## 6. Embedding map (UMAP) of 5,000 postings and 5,000 profiles, and category similarity
 
 # %%
-from sentence_transformers import SentenceTransformer
 import umap
-enc_path = ROOT / "models" / "p2_biencoder"
-enc_path = enc_path if enc_path.exists() else ROOT / models_cfg()["p2_normalize"]["base_encoder"]
-model = SentenceTransformer(str(enc_path), device="cpu"); model.max_seq_length = 256
+from src.index.embedder import get_text_embedder   # the same text encoder the job index uses (all-MiniLM-L6-v2, 256 tokens)
+embedder = get_text_embedder(); enc_path = pathlib.Path(embedder.model_path)
 top10 = top_cats.head(10).index.tolist()
 js = jobs[jobs["category"].isin(top10)].sample(n=5000, random_state=42)
 cs = cvs[cvs["category"].isin(top10) & (cvs["n_chars"] >= 300)].sample(n=5000, random_state=42)
-E = model.encode((js["title"] + ". " + js["description"].str[:1200]).tolist() + cs["text"].str[:1500].tolist(), batch_size=64, normalize_embeddings=True, show_progress_bar=False)
+E = np.array(embedder.embed((js["title"] + ". " + js["description"].str[:1200]).tolist() + cs["text"].str[:1500].tolist()))
 emb2 = umap.UMAP(n_neighbors=15, min_dist=0.1, metric="cosine", random_state=42).fit_transform(E)
 um = pd.DataFrame({"x": emb2[:, 0], "y": emb2[:, 1], "category": js["category"].tolist() + cs["category"].tolist(), "type": ["job posting"] * len(js) + ["candidate profile"] * len(cs),
                    "label": (js["title"].str[:60]).tolist() + (cs["title"].str[:60]).tolist()})
-fig = px.scatter(um, x="x", y="y", color="category", facet_col="type", hover_data={"label": True, "x": False, "y": False}, opacity=0.55, title="UMAP of bi-encoder embeddings: 5,000 postings and 5,000 profiles, coloured by category")
+fig = px.scatter(um, x="x", y="y", color="category", facet_col="type", hover_data={"label": True, "x": False, "y": False}, opacity=0.55, title="UMAP of text embeddings: 5,000 postings and 5,000 profiles, coloured by category")
 fig.update_traces(marker=dict(size=4, line=dict(width=0)))
 fig.update_layout(height=620, xaxis_title="", yaxis_title="")
 fig.update_xaxes(showticklabels=False, showgrid=False); fig.update_yaxes(showticklabels=False, showgrid=False)
-viz.save_fig(fig, "eda03_umap_market_map", "Market map: UMAP projection of bi-encoder embeddings for 5,000 job postings and 5,000 candidate profiles (10 largest categories) — categories form clear clusters, and profiles occupy the same regions as postings.", height=620)
+viz.save_fig(fig, "eda03_umap_market_map", "Market map: UMAP projection of all-MiniLM-L6-v2 embeddings for 5,000 job postings and 5,000 candidate profiles (10 largest categories) — categories form clear clusters, and profiles occupy the same regions as postings.", height=620)
 fig
 
 # %%

@@ -1,0 +1,19 @@
+{
+  "file": "results/p2/nil_threshold_sweep.csv",
+  "rows": 31,
+  "columns": [
+    "threshold",
+    "n",
+    "n_nil_true",
+    "acc_on_mapped_phrases",
+    "joint_accuracy",
+    "nil_precision",
+    "nil_recall",
+    "nil_f1"
+  ],
+  "created_utc": "2026-10-21T03:33:20Z",
+  "git_commit": "13b433b",
+  "encoder": "/home/claude/skill-match-copilot/models/base/ConTeXT-Skill-Extraction-base",
+  "tuned_on": "tech_validation",
+  "best_threshold": 0.64
+}

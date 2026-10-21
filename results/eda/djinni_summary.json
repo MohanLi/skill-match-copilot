@@ -1,0 +1,272 @@
+{
+  "rows": {
+    "jobs": 141897,
+    "cvs": 210250
+  },
+  "source_columns": {
+    "jobs": [
+      "Position",
+      "Long Description",
+      "Company Name",
+      "Exp Years",
+      "Primary Keyword",
+      "English Level",
+      "Published",
+      "Long Description_lang",
+      "id",
+      "__index_level_0__"
+    ],
+    "cvs": [
+      "Position",
+      "Moreinfo",
+      "Looking For",
+      "Highlights",
+      "Primary Keyword",
+      "English Level",
+      "Experience Years",
+      "CV",
+      "CV_lang",
+      "id",
+      "__index_level_0__"
+    ]
+  },
+  "missing": {
+    "jobs": [
+      {
+        "field": "title",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "description",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "company",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "category",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "exp_years",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "english_level",
+        "missing_or_empty": 7539,
+        "share": 0.0531
+      },
+      {
+        "field": "published",
+        "missing_or_empty": 0,
+        "share": 0.0
+      }
+    ],
+    "cvs": [
+      {
+        "field": "title",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "category",
+        "missing_or_empty": 43,
+        "share": 0.0002
+      },
+      {
+        "field": "exp_years",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "english_level",
+        "missing_or_empty": 485,
+        "share": 0.0023
+      },
+      {
+        "field": "moreinfo",
+        "missing_or_empty": 0,
+        "share": 0.0
+      },
+      {
+        "field": "looking_for",
+        "missing_or_empty": 108196,
+        "share": 0.5146
+      },
+      {
+        "field": "highlights",
+        "missing_or_empty": 104722,
+        "share": 0.4981
+      },
+      {
+        "field": "cv",
+        "missing_or_empty": 0,
+        "share": 0.0
+      }
+    ]
+  },
+  "duplicates": {
+    "jobs": 0,
+    "cvs": 0
+  },
+  "words": {
+    "jobs_median": 234.0,
+    "cvs_median": 227.0,
+    "cvs_under_300_chars_share": 0.0087
+  },
+  "top_categories_jobs": {
+    "JavaScript": 17903,
+    "Java": 8712,
+    "DevOps": 7979,
+    ".NET": 7826,
+    "Other": 7536,
+    "QA Automation": 7047,
+    "Marketing": 6933,
+    "QA": 6774,
+    "Node.js": 6416,
+    "PHP": 5740
+  },
+  "cvs_per_posting_top10": {
+    "JavaScript": 1.9,
+    "Java": 1.32,
+    "DevOps": 0.52,
+    ".NET": 1.2,
+    "Other": 0.72,
+    "QA Automation": 0.82,
+    "Marketing": 1.3,
+    "QA": 3.7,
+    "Node.js": 0.76,
+    "PHP": 1.21
+  },
+  "pii_removed_total": 14830,
+  "encoder_for_umap": "all-MiniLM-L6-v2",
+  "cvs_with_all_four_fields_share": 0.3407,
+  "category_similarity_top10": {
+    "JavaScript": {
+      "JavaScript": 1.0,
+      "Java": 0.811,
+      "DevOps": 0.706,
+      ".NET": 0.79,
+      "Other": 0.817,
+      "QA Automation": 0.688,
+      "Marketing": 0.652,
+      "QA": 0.687,
+      "Node.js": 0.921,
+      "PHP": 0.799
+    },
+    "Java": {
+      "JavaScript": 0.811,
+      "Java": 1.0,
+      "DevOps": 0.788,
+      ".NET": 0.785,
+      "Other": 0.841,
+      "QA Automation": 0.77,
+      "Marketing": 0.676,
+      "QA": 0.741,
+      "Node.js": 0.815,
+      "PHP": 0.753
+    },
+    "DevOps": {
+      "JavaScript": 0.706,
+      "Java": 0.788,
+      "DevOps": 1.0,
+      ".NET": 0.776,
+      "Other": 0.78,
+      "QA Automation": 0.762,
+      "Marketing": 0.586,
+      "QA": 0.7,
+      "Node.js": 0.755,
+      "PHP": 0.712
+    },
+    ".NET": {
+      "JavaScript": 0.79,
+      "Java": 0.785,
+      "DevOps": 0.776,
+      ".NET": 1.0,
+      "Other": 0.835,
+      "QA Automation": 0.734,
+      "Marketing": 0.646,
+      "QA": 0.706,
+      "Node.js": 0.775,
+      "PHP": 0.737
+    },
+    "Other": {
+      "JavaScript": 0.817,
+      "Java": 0.841,
+      "DevOps": 0.78,
+      ".NET": 0.835,
+      "Other": 1.0,
+      "QA Automation": 0.775,
+      "Marketing": 0.876,
+      "QA": 0.791,
+      "Node.js": 0.776,
+      "PHP": 0.801
+    },
+    "QA Automation": {
+      "JavaScript": 0.688,
+      "Java": 0.77,
+      "DevOps": 0.762,
+      ".NET": 0.734,
+      "Other": 0.775,
+      "QA Automation": 1.0,
+      "Marketing": 0.612,
+      "QA": 0.933,
+      "Node.js": 0.686,
+      "PHP": 0.654
+    },
+    "Marketing": {
+      "JavaScript": 0.652,
+      "Java": 0.676,
+      "DevOps": 0.586,
+      ".NET": 0.646,
+      "Other": 0.876,
+      "QA Automation": 0.612,
+      "Marketing": 1.0,
+      "QA": 0.637,
+      "Node.js": 0.618,
+      "PHP": 0.663
+    },
+    "QA": {
+      "JavaScript": 0.687,
+      "Java": 0.741,
+      "DevOps": 0.7,
+      ".NET": 0.706,
+      "Other": 0.791,
+      "QA Automation": 0.933,
+      "Marketing": 0.637,
+      "QA": 1.0,
+      "Node.js": 0.653,
+      "PHP": 0.682
+    },
+    "Node.js": {
+      "JavaScript": 0.921,
+      "Java": 0.815,
+      "DevOps": 0.755,
+      ".NET": 0.775,
+      "Other": 0.776,
+      "QA Automation": 0.686,
+      "Marketing": 0.618,
+      "QA": 0.653,
+      "Node.js": 1.0,
+      "PHP": 0.771
+    },
+    "PHP": {
+      "JavaScript": 0.799,
+      "Java": 0.753,
+      "DevOps": 0.712,
+      ".NET": 0.737,
+      "Other": 0.801,
+      "QA Automation": 0.654,
+      "Marketing": 0.663,
+      "QA": 0.682,
+      "Node.js": 0.771,
+      "PHP": 1.0
+    }
+  }
+}
