@@ -1,0 +1,178 @@
+{
+ "approach": "embedding_baseline",
+ "ranking": [
+  {
+   "job_id": "djinni-job-26476",
+   "rank": 1,
+   "fit_score": 59.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-25470",
+   "rank": 2,
+   "fit_score": 56.5,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-77954",
+   "rank": 3,
+   "fit_score": 53.2,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-121973",
+   "rank": 4,
+   "fit_score": 44.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-117580",
+   "rank": 5,
+   "fit_score": 40.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-120888",
+   "rank": 6,
+   "fit_score": 36.4,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-36138",
+   "rank": 7,
+   "fit_score": 36.2,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-36253",
+   "rank": 8,
+   "fit_score": 34.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-104002",
+   "rank": 9,
+   "fit_score": 31.4,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-118180",
+   "rank": 10,
+   "fit_score": 27.4,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  }
+ ],
+ "trace": [],
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cost_usd": 0.0,
+ "latency_ms": 0.0,
+ "tool_calls": 1,
+ "error": null,
+ "wall_ms": 815.0,
+ "pool": [
+  {
+   "job_id": "djinni-job-36138",
+   "label": 0,
+   "title": "Fullstack developer (MERN mongo express react node)"
+  },
+  {
+   "job_id": "djinni-job-120888",
+   "label": 0,
+   "title": "Senior Network Engineer"
+  },
+  {
+   "job_id": "djinni-job-117580",
+   "label": 0,
+   "title": "Senior Java Engineer (based in Poland)"
+  },
+  {
+   "job_id": "djinni-job-104002",
+   "label": 0,
+   "title": "SAP Specialist"
+  },
+  {
+   "job_id": "djinni-job-36253",
+   "label": 0,
+   "title": "Full Stack Developer (.NET+JS)"
+  },
+  {
+   "job_id": "djinni-job-26476",
+   "label": 0,
+   "title": "DevOps Expert"
+  },
+  {
+   "job_id": "djinni-job-77954",
+   "label": 0,
+   "title": "Middle/Senior devops"
+  },
+  {
+   "job_id": "djinni-job-118180",
+   "label": 0,
+   "title": "Senior Java Solution Architect (Ukraine, Poland - Wroclaw)"
+  },
+  {
+   "job_id": "djinni-job-25470",
+   "label": 0,
+   "title": "DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-121973",
+   "label": 0,
+   "title": "Senior PHP Developer in ElasticSearch team"
+  }
+ ],
+ "metrics": {
+  "approach": "baseline",
+  "cv_id": "djinni-cv-27425",
+  "cv_category": "DevOps",
+  "ndcg10": null,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.0,
+  "mrr_rel1": null,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 0,
+  "coverage": 1.0,
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "llm_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "latency_ms": 0.0,
+  "wall_ms": 815.0,
+  "tool_calls": 1,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}"
+ },
+ "faithfulness": {
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "reasons": {}
+ }
+}

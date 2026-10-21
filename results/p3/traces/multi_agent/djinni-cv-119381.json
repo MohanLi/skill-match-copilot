@@ -1,0 +1,616 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-67616",
+   "rank": 1,
+   "fit_score": 78.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "Hi i am interested in Node.js",
+     "job_quote": "2+ years Node.js experience"
+    },
+    {
+     "skill": "NestJS",
+     "resume_quote": "Now i am use in Nest js framework for work",
+     "job_quote": "JS-framework — NestJS, Express"
+    },
+    {
+     "skill": "REST API",
+     "resume_quote": "I had one and half a year experience in REST API application",
+     "job_quote": "Experience in work with REST API(json, xml)"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "experience in working with Docker, NestJs, GraphqQL, TypeORM, MySQL",
+     "job_quote": "MySQL/MongoDB"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TypeScript",
+     "job_quote": "2+ years Node.js experience — ES, TypeScript"
+    },
+    {
+     "skill": "Design patterns (OOP, MVC, SOLID)",
+     "job_quote": "Design Patterns such as: OOP, MVC, SOLID, DRY, KISS is advantage"
+    }
+   ],
+   "summary": "Strong match on the core stack: Node.js, NestJS, REST APIs and MySQL all appear in both resume and posting. Seniority is a concern since the role asks for a middle level and the candidate has about 1.5 years of experience, and TypeScript is a stated requirement that is not on the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-36350",
+   "rank": 2,
+   "fit_score": 74.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "Hi i am interested in Node.js",
+     "job_quote": "Deep knowledge of JavaScript Node.js, Nest js, React js"
+    },
+    {
+     "skill": "NestJS",
+     "resume_quote": "Now i am use in Nest js framework for work",
+     "job_quote": "Full Stack Developer (Node.js/Nest.js)"
+    },
+    {
+     "skill": "JavaScript",
+     "resume_quote": "For develop i use this stack: Node.js, CRUD application",
+     "job_quote": "Deep knowledge of JavaScript Node.js, Nest js, React js"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React",
+     "job_quote": "Deep knowledge of JavaScript Node.js, Nest js, React js"
+    }
+   ],
+   "summary": "Requires more than 1 year of development experience, which the candidate's one and a half years meets. Node.js and NestJS match directly, and the role is a Full Stack position that also needs React, which the resume does not mention.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-36458",
+   "rank": 3,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "Hi i am interested in Node.js",
+     "job_quote": "2+ year commercial experience with Node.JS, Express.JS"
+    },
+    {
+     "skill": "Docker",
+     "resume_quote": "experience in working with Docker",
+     "job_quote": "Unedrstanding of Docker technology"
+    },
+    {
+     "skill": "REST API",
+     "resume_quote": "I had one and half a year experience in REST API application",
+     "job_quote": "Experience with Rest API, Swagger, Redis"
+    },
+    {
+     "skill": "Unit tests",
+     "resume_quote": "Unit tests, GitHub Actions, Puppeteer",
+     "job_quote": "Develop and perform unit tests and useful code documentation"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "MySQL, GIT, Unit tests",
+     "job_quote": "Experience with Mercurial and/or GIT"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TypeScript",
+     "job_quote": "Experience with TypeScript"
+    },
+    {
+     "skill": "VueJS",
+     "job_quote": "1+ year commercial experience in building web applications using VueJS and Vuex"
+    }
+   ],
+   "summary": "A full-stack role where the backend Node.js and Docker requirements line up with the resume, along with REST API, unit testing and Git. The frontend requirement for Vue.js and Vuex is not covered, and the posting asks for 2+ years of Node.js experience, which is above the candidate's level.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-36044",
+   "rank": 4,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "For develop i use this stack: Node.js, CRUD application",
+     "job_quote": "Deep knowledge in PHP, JavaScript, CSS"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "experience in working with Docker, NestJs, GraphqQL, TypeORM, MySQL",
+     "job_quote": "Knowledge in Bootstrap, Webpack, MySQL4"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP",
+     "job_quote": "Deep knowledge in PHP, JavaScript, CSS"
+    }
+   ],
+   "summary": "The stack is PHP and Symfony rather than Node.js, and the role requires at least 3 years of experience, which exceeds the candidate's background. Only JavaScript and MySQL overlap.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-135164",
+   "rank": 5,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "Hi i am interested in Node.js",
+     "job_quote": "Experience with JavaScript/ Node.js"
+    },
+    {
+     "skill": "MongoDB",
+     "resume_quote": "relation database like postgres altho not relation database MongoDB",
+     "job_quote": "Experience with MongoDB, UI test automation"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React/Angular/Vue",
+     "job_quote": "Experience with UI frameworks such as React/ Angular/ Vue."
+    }
+   ],
+   "summary": "This is a Tech Lead role requiring 5+ years of experience and leadership of development teams, which the candidate does not have. Node.js and MongoDB overlap, but the seniority gap makes it a weak fit.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-111951",
+   "rank": 6,
+   "fit_score": 15.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "React",
+     "job_quote": "JavaScript, React, TypeScript"
+    }
+   ],
+   "summary": "A Senior Frontend role requiring 5+ years of web development and React, TypeScript proficiency. The candidate's backend-focused profile and seniority level do not match, with only Docker and Node.js as nice-to-have overlaps.",
+   "dropped": [
+    {
+     "skill": "Docker",
+     "reason": "job_quote_not_found"
+    },
+    {
+     "skill": "Node.js",
+     "reason": "job_quote_not_found"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-52163",
+   "rank": 7,
+   "fit_score": 14.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "For develop i use this stack: Node.js, CRUD application",
+     "job_quote": "3+ years of relevant professional experience using at least one of the JS main frameworks"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "VueJS",
+     "job_quote": "VueJS"
+    }
+   ],
+   "summary": "A frontend-oriented JS role asking for 3+ years with a JS framework and strong Webpack, Highcharts and SCSS knowledge. The candidate's backend profile and experience level are not a good match.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-74370",
+   "rank": 8,
+   "fit_score": 10.0,
+   "matched_skills": [
+    {
+     "skill": "GraphQL",
+     "resume_quote": "experience in working with Docker, NestJs, GraphqQL",
+     "job_quote": "Hasura GraphQL"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP",
+     "job_quote": "3+ years of PHP"
+    }
+   ],
+   "summary": "A PHP/Laravel role requiring 3+ years of PHP, which the candidate does not have. GraphQL is the only overlap, so the fit is poor.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-95520",
+   "rank": 9,
+   "fit_score": 8.0,
+   "matched_skills": [
+    {
+     "skill": "PostgreSQL",
+     "resume_quote": "relation database like postgres",
+     "job_quote": "Knowledge in SQL-like language (Advantage for PostgreSQL and HQL/JPQL)."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TypeScript",
+     "job_quote": "TypeScript"
+    }
+   ],
+   "summary": "A QA Automation role focused on test design and gaming products, not backend development. The candidate's experience with unit tests and Puppeteer is only loosely related, so the fit is weak.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "backend (Node.js / NestJS REST & GraphQL APIs)",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior Node.js Developer",
+     "Junior Backend Developer (Node.js)",
+     "Node.js Backend Engineer",
+     "NestJS Developer",
+     "Junior Backend Developer (NestJS / TypeScript)"
+    ],
+    "must_have_skills": [
+     "Node.js",
+     "NestJS",
+     "REST API",
+     "TypeScript",
+     "TypeORM",
+     "MySQL",
+     "Docker",
+     "GraphQL",
+     "Git",
+     "Unit testing"
+    ],
+    "nice_to_have_skills": [
+     "PostgreSQL",
+     "MongoDB",
+     "GitHub Actions",
+     "Puppeteer",
+     "Web scraping / parsing",
+     "CI/CD",
+     "Microservices integration"
+    ],
+    "search_queries": [
+     "Junior Node.js developer NestJS REST API TypeORM MySQL",
+     "NestJS backend developer Docker GraphQL",
+     "Node.js backend engineer TypeScript PostgreSQL Docker",
+     "Junior backend developer Node.js REST API GitHub Actions",
+     "NestJS GraphQL TypeORM remote junior"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Junior Node.js developer NestJS REST API TypeORM MySQL",
+    "NestJS backend developer Docker GraphQL",
+    "Node.js backend engineer TypeScript PostgreSQL Docker",
+    "Junior backend developer Node.js REST API GitHub Actions",
+    "NestJS GraphQL TypeORM remote junior",
+    "Junior Node.js Developer",
+    "Junior Backend Developer (Node.js)",
+    "Node.js Backend Engineer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "3 part software",
+     "Make clone of medium site",
+     "make parser for web site"
+    ],
+    "knowledge": [
+     "Back-end",
+     "REST API application",
+     "Node.js",
+     "CRUD",
+     "Docker",
+     "NestJs",
+     "GraphqQL",
+     "TypeORM",
+     "MySQL",
+     "GIT",
+     "Unit tests",
+     "GitHub Actions",
+     "Puppeteer",
+     "js",
+     "docker",
+     "relation database",
+     "postgres",
+     "altho",
+     "MongoDB"
+    ],
+    "esco_skills": [
+     "JavaScript",
+     "MySQL",
+     "PostgreSQL",
+     "create puppets",
+     "database",
+     "dock operations",
+     "perform software unit testing"
+    ],
+    "not_in_esco": [
+     "3 part software",
+     "Make clone of medium site",
+     "make parser for web site",
+     "Back-end",
+     "REST API application",
+     "Node.js",
+     "CRUD",
+     "NestJs",
+     "GraphqQL",
+     "TypeORM",
+     "GIT",
+     "GitHub Actions",
+     "altho",
+     "MongoDB"
+    ]
+   },
+   "ms": 3516.4
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 9,
+   "ms": 11372.9
+  },
+  {
+   "node": "verifier",
+   "flagged": 7,
+   "repaired": 5,
+   "dropped": 2,
+   "ms": 8619.5
+  }
+ ],
+ "llm_calls": 5,
+ "input_tokens": 15758,
+ "output_tokens": 5621,
+ "cost_usd": 0.004386,
+ "latency_ms": 21979.4,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 7,
+ "verifier_repaired": 5,
+ "verifier_dropped": 2,
+ "plan": {
+  "role_family": "backend (Node.js / NestJS REST & GraphQL APIs)",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior Node.js Developer",
+   "Junior Backend Developer (Node.js)",
+   "Node.js Backend Engineer",
+   "NestJS Developer",
+   "Junior Backend Developer (NestJS / TypeScript)"
+  ],
+  "must_have_skills": [
+   "Node.js",
+   "NestJS",
+   "REST API",
+   "TypeScript",
+   "TypeORM",
+   "MySQL",
+   "Docker",
+   "GraphQL",
+   "Git",
+   "Unit testing"
+  ],
+  "nice_to_have_skills": [
+   "PostgreSQL",
+   "MongoDB",
+   "GitHub Actions",
+   "Puppeteer",
+   "Web scraping / parsing",
+   "CI/CD",
+   "Microservices integration"
+  ],
+  "search_queries": [
+   "Junior Node.js developer NestJS REST API TypeORM MySQL",
+   "NestJS backend developer Docker GraphQL",
+   "Node.js backend engineer TypeScript PostgreSQL Docker",
+   "Junior backend developer Node.js REST API GitHub Actions",
+   "NestJS GraphQL TypeORM remote junior"
+  ]
+ },
+ "wall_ms": 23512.2,
+ "pool": [
+  {
+   "job_id": "djinni-job-52163",
+   "label": 0,
+   "title": "JS Developer"
+  },
+  {
+   "job_id": "djinni-job-67616",
+   "label": 1,
+   "title": "Middle Back-End (Node.js) Web Developer"
+  },
+  {
+   "job_id": "djinni-job-95520",
+   "label": 0,
+   "title": "QA Automation Engineer"
+  },
+  {
+   "job_id": "djinni-job-36044",
+   "label": 0,
+   "title": "Fullstack Developer (JavaScriprt / PHP) (Hamburg)"
+  },
+  {
+   "job_id": "djinni-job-135164",
+   "label": 0,
+   "title": "Tech Lead Full-stack Node.js #2963"
+  },
+  {
+   "job_id": "djinni-job-36458",
+   "label": 1,
+   "title": "FullStack Developer (NodeJS+Vue)"
+  },
+  {
+   "job_id": "djinni-job-111951",
+   "label": 0,
+   "title": "Senior Frontend Developer"
+  },
+  {
+   "job_id": "djinni-job-36350",
+   "label": 1,
+   "title": "Full Stack Developer (Node.js/Nest.js)"
+  },
+  {
+   "job_id": "djinni-job-35602",
+   "label": 0,
+   "title": "Full Stack Developer"
+  },
+  {
+   "job_id": "djinni-job-74370",
+   "label": 0,
+   "title": "Middle PHP Developer (Laravel)"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-119381",
+  "cv_category": "Node.js",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 0.9,
+  "n_claims": 30,
+  "n_supported": 30,
+  "hallucination_rate": 0.0,
+  "llm_calls": 5,
+  "input_tokens": 15758,
+  "output_tokens": 5621,
+  "cost_usd": 0.004386,
+  "latency_ms": 21979.4,
+  "wall_ms": 23512.2,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 7,
+  "verifier_repaired": 5,
+  "verifier_dropped": 2
+ },
+ "faithfulness": {
+  "n_claims": 30,
+  "n_supported": 30,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-67616",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-36350",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-36458",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 5,
+    "n_matched_supported": 5,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-36044",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-135164",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-111951",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-52163",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-74370",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-95520",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

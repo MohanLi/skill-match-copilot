@@ -1,0 +1,668 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-50601",
+   "rank": 1,
+   "fit_score": 72.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java SE, Java ,Spring Framework, Hibernate ORM",
+     "job_quote": "Strong knowledge of Java 8, Spring (Spring Boot, Web, Data, Security)"
+    },
+    {
+     "skill": "Spring Framework",
+     "resume_quote": "Java ,Spring Framework, Hibernate ORM",
+     "job_quote": "Frameworks/libraries: Spring, Hibernate, Flyway, Quartz"
+    },
+    {
+     "skill": "Hibernate ORM",
+     "resume_quote": "Spring Framework, Hibernate ORM, Maven",
+     "job_quote": "Hands-on experience with RDBMS and ORM (Hibernate)"
+    },
+    {
+     "skill": "JUnit",
+     "resume_quote": "Maven, JUnit, Tomcat, C#",
+     "job_quote": "Tests: JUnit, Mockito, AssertJ"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "LINQ, Entity Framework, MySQL, MS SQL",
+     "job_quote": "Databases: MySQL, Redis"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Microservices",
+     "job_quote": "Microservices engagement"
+    },
+    {
+     "skill": "RESTful services",
+     "job_quote": "Good notion of RESTful services"
+    }
+   ],
+   "summary": "Strong backend match on Java, Spring, Hibernate, JUnit and MySQL, the core stack the candidate lists. The role requires 3+ years, above the candidate's junior level, and asks for AWS and Microservices experience the resume does not show.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-55666",
+   "rank": 2,
+   "fit_score": 65.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java SE, Java ,Spring Framework, Hibernate ORM",
+     "job_quote": "demonstrated fluency in Java"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "LINQ, Entity Framework, MySQL, MS SQL",
+     "job_quote": "MySQL"
+    },
+    {
+     "skill": "Apache Tomcat",
+     "resume_quote": "JUnit, Tomcat, C#, .NET Framework",
+     "job_quote": "one or more web application servers (WebLogic, WebSphere, JBoss, Tomcat, etc.)"
+    },
+    {
+     "skill": "REST-based web services",
+     "resume_quote": "OOP, REST, MVC, Java SE",
+     "job_quote": "development and integration of REST-based web services"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "JavaScript",
+     "job_quote": "developing/designing Java and JavaScript based UI components"
+    },
+    {
+     "skill": "AJAX",
+     "job_quote": "Experienced using JSF, ExtJS, Dojo, Bootstrap, jQuery, AJAX, and other J2EE technologies"
+    }
+   ],
+   "summary": "Good Java and Tomcat overlap with junior-level seniority fit, and the role is explicitly Junior/Middle. The UI-side JavaScript and AJAX requirements are absent from the resume, which lowers the score.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-49592",
+   "rank": 3,
+   "fit_score": 60.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java SE, Java ,Spring Framework, Hibernate ORM",
+     "job_quote": "3+ years of experience with Java development"
+    },
+    {
+     "skill": "Spring framework",
+     "resume_quote": "Java ,Spring Framework, Hibernate ORM",
+     "job_quote": "Proficient in Spring framework"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "LINQ, Entity Framework, MySQL, MS SQL",
+     "job_quote": "Experienced with MySQL, MongoDB, and Redis"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "TFS, Git, MS Visual Studio",
+     "job_quote": "preferably with Git"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "MongoDB",
+     "job_quote": "Experienced with MySQL, MongoDB, and Redis"
+    },
+    {
+     "skill": "Amazon Web Services",
+     "job_quote": "Familiarity with Amazon Web Services"
+    }
+   ],
+   "summary": "Solid overlap on Java, Spring, MySQL and Git, but the posting asks for 3+ years and a senior-leaning software design background. Requirements for MongoDB, Redis and AWS are not met by the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-79044",
+   "rank": 4,
+   "fit_score": 48.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java SE, Java ,Spring Framework, Hibernate ORM",
+     "job_quote": "2+ years experience with Java"
+    },
+    {
+     "skill": "JUnit",
+     "resume_quote": "Maven, JUnit, Tomcat, C#",
+     "job_quote": "JUnit"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SpringBoot",
+     "job_quote": "Java SpringBoot"
+    },
+    {
+     "skill": "Spring Security",
+     "job_quote": "Experience with SpringBoot, Spring Security"
+    },
+    {
+     "skill": "REST/SOAP services",
+     "job_quote": "Understanding REST/SOAP services (e.g. JAX-RS or JAX-WS)"
+    }
+   ],
+   "summary": "Java and JUnit match, and the 2+ years requirement is near the candidate's experience. However, the role is Middle/Senior, lists Kubernetes and Azure, and the resume does not mention SpringBoot or Spring Security.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-71812",
+   "rank": 5,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "REST",
+     "resume_quote": "OOP, REST, MVC, Java SE",
+     "job_quote": "Experience with REST and third-party API integrations"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "TFS, Git, MS Visual Studio",
+     "job_quote": "Full cycle of live system development"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Node.js",
+     "job_quote": "Expert knowledge of and experience with Node.js, JavaScript (ES6+)"
+    },
+    {
+     "skill": "JavaScript",
+     "job_quote": "Expert knowledge of and experience with Node.js, JavaScript (ES6+)"
+    }
+   ],
+   "summary": "The core stack is Node.js and JavaScript with Meteor, which the candidate lacks, and the role is Middle level with 3+ years required. Only REST and Git overlap.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-120730",
+   "rank": 6,
+   "fit_score": 25.0,
+   "matched_skills": [
+    {
+     "skill": ".NET",
+     "resume_quote": "2 years experience of working as C# developer",
+     "job_quote": "4+ years of development experience using the .NET platform"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "numerical methods",
+     "job_quote": "Knowledge of numerical methods, optimization problems."
+    },
+    {
+     "skill": "computational geometry",
+     "job_quote": "R&D activities in the field of computational geometry"
+    }
+   ],
+   "summary": "The .NET platform overlaps with the candidate's C# background, but the role requires 4+ years and specialised numerical methods and computational geometry knowledge the resume does not show.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-86533",
+   "rank": 7,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "operations management",
+     "job_quote": "As an Operations Manager (m/f/x) Russia, you will be responsible for smooth operations"
+    }
+   ],
+   "summary": "Operations management and e-commerce logistics are unrelated to the candidate's software development background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-64810",
+   "rank": 8,
+   "fit_score": 8.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "MySQL, MS SQL",
+     "job_quote": "SQL"
+    }
+   ],
+   "missing_skills": [],
+   "summary": "This is a manual QA role focused on test procedures and checklists, which does not match the candidate's development experience, and the only overlap is generic SQL.",
+   "dropped": [
+    {
+     "skill": "software testing",
+     "reason": "skill_not_in_job: the job text names manual testing, not 'software testing'; the quote 'Manual testing uses extensive tooling and services' does not name the skill as written, and the claim is a 'missing' skill that the resume's lack of testing experience was not established as a gap for this skill. Dropped to avoid an unsupported claim."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-108933",
+   "rank": 9,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "A senior copywriting and content marketing role with no overlap with the candidate's software development skills.",
+   "dropped": [
+    {
+     "skill": "copywriting",
+     "reason": "job_quote_not_found"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-16971",
+   "rank": 10,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "A financial-markets email content writing role unrelated to the candidate's software development background.",
+   "dropped": [
+    {
+     "skill": "copywriting",
+     "reason": "skill_not_in_job: the job text names a 'content writer' role but never names 'copywriting' as a skill, so the flagged claim cannot be supported with verbatim text and is dropped."
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "backend / Java web development",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior Java Developer",
+     "Junior Backend Developer",
+     "Java Software Engineer (Junior)",
+     "Junior Java Developer - Highload Services",
+     "Junior .NET / C# Developer (Java-transition)",
+     "Junior Software Engineer - Machine Learning Platform"
+    ],
+    "must_have_skills": [
+     "Java SE",
+     "Spring Framework",
+     "Hibernate ORM",
+     "REST APIs",
+     "OOP",
+     "MVC",
+     "Maven",
+     "JUnit",
+     "MySQL",
+     "Git"
+    ],
+    "nice_to_have_skills": [
+     "C#",
+     ".NET Framework",
+     "ASP.NET MVC",
+     "Entity Framework",
+     "LINQ",
+     "MS SQL",
+     "Tomcat",
+     "IntelliJ IDEA",
+     "TFS",
+     "WPF"
+    ],
+    "search_queries": [
+     "junior Java developer Spring Hibernate REST",
+     "junior backend developer Java Spring MySQL highload",
+     "junior Java developer game development",
+     "junior software engineer Java machine learning data science",
+     "junior C# .NET developer ASP.NET MVC Entity Framework"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "junior Java developer Spring Hibernate REST",
+    "junior backend developer Java Spring MySQL highload",
+    "junior Java developer game development",
+    "junior software engineer Java machine learning data science",
+    "junior C# .NET developer ASP.NET MVC Entity Framework",
+    "Junior Java Developer",
+    "Junior Backend Developer",
+    "Java Software Engineer (Junior)"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "Highload web services"
+    ],
+    "knowledge": [
+     "C#",
+     "BS in",
+     "computer science",
+     "master's degree",
+     "CS",
+     "OOP",
+     "REST",
+     "MVC",
+     "Java SE",
+     "Java",
+     "Spring Framework",
+     "Hibernate",
+     "ORM",
+     "Maven",
+     "JUnit",
+     "Tomcat",
+     ". NET Framework",
+     "ASP.NET MVC",
+     "WPF",
+     "LINQ"
+    ],
+    "esco_skills": [
+     "ASP.NET",
+     "Apache Maven",
+     "Apache Tomcat",
+     "C#",
+     "Java (computer programming)",
+     "LINQ",
+     "MySQL",
+     "SQL Server",
+     "Visual Studio .NET",
+     "computer science",
+     "customer relationship management",
+     "data analytics",
+     "machine learning",
+     "promote balance between rest and activity",
+     "software frameworks",
+     "use content management system software"
+    ],
+    "not_in_esco": [
+     "Highload web services",
+     "BS in",
+     "master's degree",
+     "OOP",
+     "MVC",
+     "Spring Framework",
+     "Hibernate",
+     "ORM",
+     "JUnit",
+     "WPF",
+     "Entity Framework",
+     "TFS",
+     "Git",
+     "Intellij IDEA",
+     "web services"
+    ]
+   },
+   "ms": 13549.9
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 11274.8
+  },
+  {
+   "node": "verifier",
+   "flagged": 5,
+   "repaired": 2,
+   "dropped": 3,
+   "ms": 7425.1
+  }
+ ],
+ "llm_calls": 6,
+ "input_tokens": 18034,
+ "output_tokens": 5141,
+ "cost_usd": 0.004374,
+ "latency_ms": 20516.7,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 5,
+ "verifier_repaired": 2,
+ "verifier_dropped": 3,
+ "plan": {
+  "role_family": "backend / Java web development",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior Java Developer",
+   "Junior Backend Developer",
+   "Java Software Engineer (Junior)",
+   "Junior Java Developer - Highload Services",
+   "Junior .NET / C# Developer (Java-transition)",
+   "Junior Software Engineer - Machine Learning Platform"
+  ],
+  "must_have_skills": [
+   "Java SE",
+   "Spring Framework",
+   "Hibernate ORM",
+   "REST APIs",
+   "OOP",
+   "MVC",
+   "Maven",
+   "JUnit",
+   "MySQL",
+   "Git"
+  ],
+  "nice_to_have_skills": [
+   "C#",
+   ".NET Framework",
+   "ASP.NET MVC",
+   "Entity Framework",
+   "LINQ",
+   "MS SQL",
+   "Tomcat",
+   "IntelliJ IDEA",
+   "TFS",
+   "WPF"
+  ],
+  "search_queries": [
+   "junior Java developer Spring Hibernate REST",
+   "junior backend developer Java Spring MySQL highload",
+   "junior Java developer game development",
+   "junior software engineer Java machine learning data science",
+   "junior C# .NET developer ASP.NET MVC Entity Framework"
+  ]
+ },
+ "wall_ms": 32253.4,
+ "pool": [
+  {
+   "job_id": "djinni-job-16971",
+   "label": 0,
+   "title": "Content Writer"
+  },
+  {
+   "job_id": "djinni-job-108933",
+   "label": 0,
+   "title": "Senior Copywriter"
+  },
+  {
+   "job_id": "djinni-job-50601",
+   "label": 1,
+   "title": "Java Engineer (AdTech)"
+  },
+  {
+   "job_id": "djinni-job-71812",
+   "label": 0,
+   "title": "Middle JavaScript Full Stack Engineer (Node.js + Meteor), Communication Services"
+  },
+  {
+   "job_id": "djinni-job-64810",
+   "label": 0,
+   "title": "Manual QA Engineer (Middle/Senior)"
+  },
+  {
+   "job_id": "djinni-job-79044",
+   "label": 1,
+   "title": "Middle/Senior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-49592",
+   "label": 1,
+   "title": "Java Developer"
+  },
+  {
+   "job_id": "djinni-job-120730",
+   "label": 0,
+   "title": "Senior .NET Engineer with 3D Modelling Skills, Dental Scanner Solutions"
+  },
+  {
+   "job_id": "djinni-job-86533",
+   "label": 0,
+   "title": "Operations Manager"
+  },
+  {
+   "job_id": "djinni-job-55666",
+   "label": 1,
+   "title": "Junior/Middle Software Engineer (Java+JS)"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-84559",
+  "cv_category": "Java",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 1.0,
+  "n_claims": 33,
+  "n_supported": 33,
+  "hallucination_rate": 0.0,
+  "llm_calls": 6,
+  "input_tokens": 18034,
+  "output_tokens": 5141,
+  "cost_usd": 0.004374,
+  "latency_ms": 20516.700000000004,
+  "wall_ms": 32253.4,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 5,
+  "verifier_repaired": 2,
+  "verifier_dropped": 3
+ },
+ "faithfulness": {
+  "n_claims": 33,
+  "n_supported": 33,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-50601",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 5,
+    "n_matched_supported": 5,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-55666",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-49592",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-79044",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-71812",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-120730",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-86533",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-64810",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-108933",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-16971",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

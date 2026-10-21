@@ -29,9 +29,37 @@ single,djinni-cv-84559,unsupported_claim,1.0,0.09756097560975607,"{""skill_not_i
 single,djinni-cv-87548,unsupported_claim,0.973,0.14893617021276595,"{""skill_not_in_quotes"": 2, ""skill_not_in_job"": 5}"
 single,djinni-cv-9058,unsupported_claim,,0.25,"{""skill_not_in_job"": 3}"
 single,djinni-cv-90969,unsupported_claim,0.983,0.16666666666666663,"{""skill_not_in_job"": 3, ""skill_not_in_quotes"": 1, ""job_quote_not_found"": 1}"
-multi,djinni-cv-70150,missed_strong_fit,0.981,0.0,{}
-multi,djinni-cv-7960,wrong_top1,0.743,0.0,{}
-multi,djinni-cv-90969,wrong_top1,0.805,0.0,{}
-multi_noverify,djinni-cv-70150,missed_strong_fit,0.981,0.0,{}
-multi_noverify,djinni-cv-7960,wrong_top1,0.743,0.0,{}
-multi_noverify,djinni-cv-90969,wrong_top1,0.805,0.0,{}
+multi,djinni-cv-119860,wrong_top1,0.699,0.0,{}
+multi,djinni-cv-145696,wrong_top1,0.648,0.0,{}
+multi,djinni-cv-70150,missed_strong_fit,0.928,0.0,{}
+multi,djinni-cv-7960,wrong_top1,0.827,0.0,{}
+multi,djinni-cv-90969,wrong_top1,0.821,0.0,{}
+multi_noverify,djinni-cv-105449,unsupported_claim,1.0,0.21875,"{""skill_not_in_job"": 4, ""skill_not_in_quotes"": 3}"
+multi_noverify,djinni-cv-109824,unsupported_claim,1.0,0.15000000000000002,"{""skill_not_in_job"": 2, ""skill_present_in_resume"": 1}"
+multi_noverify,djinni-cv-119381,unsupported_claim,1.0,0.21875,"{""job_quote_not_found"": 5, ""skill_not_in_quotes"": 1, ""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-119860,"wrong_top1,unsupported_claim",0.699,0.05882352941176472,"{""skill_not_in_job"": 1, ""job_quote_not_found"": 1}"
+multi_noverify,djinni-cv-120581,unsupported_claim,0.957,0.33333333333333337,"{""skill_not_in_quotes"": 3, ""skill_not_in_job"": 1, ""skill_present_in_resume"": 3}"
+multi_noverify,djinni-cv-124531,unsupported_claim,0.651,0.3571428571428571,"{""skill_not_in_job"": 4, ""skill_not_in_quotes"": 6}"
+multi_noverify,djinni-cv-143738,unsupported_claim,0.971,0.3448275862068966,"{""skill_present_in_resume"": 5, ""skill_not_in_quotes"": 4, ""skill_not_in_job"": 1, ""job_quote_not_found"": 2}"
+multi_noverify,djinni-cv-145696,"wrong_top1,unsupported_claim",0.648,0.2195121951219512,"{""skill_not_in_job"": 4, ""skill_present_in_resume"": 1, ""skill_not_in_quotes"": 3, ""resume_quote_not_found"": 1}"
+multi_noverify,djinni-cv-161393,unsupported_claim,1.0,0.125,"{""resume_quote_not_found"": 1, ""skill_not_in_quotes"": 1}"
+multi_noverify,djinni-cv-164185,unsupported_claim,1.0,0.25,"{""skill_not_in_quotes"": 2, ""resume_quote_not_found"": 1, ""skill_not_in_job"": 5, ""job_quote_not_found"": 1}"
+multi_noverify,djinni-cv-188695,unsupported_claim,1.0,0.28,"{""skill_not_in_job"": 2, ""skill_not_in_quotes"": 5}"
+multi_noverify,djinni-cv-27425,unsupported_claim,,0.2142857142857143,"{""skill_not_in_job"": 3}"
+multi_noverify,djinni-cv-28678,unsupported_claim,1.0,0.19354838709677424,"{""skill_not_in_job"": 5, ""skill_not_in_quotes"": 1}"
+multi_noverify,djinni-cv-28988,unsupported_claim,1.0,0.3571428571428571,"{""skill_not_in_quotes"": 6, ""skill_not_in_job"": 4, ""job_quote_not_found"": 5}"
+multi_noverify,djinni-cv-47119,unsupported_claim,0.687,0.07692307692307687,"{""skill_not_in_job"": 2, ""skill_not_in_quotes"": 1}"
+multi_noverify,djinni-cv-48345,unsupported_claim,0.993,0.12,"{""job_quote_not_found"": 1, ""skill_not_in_job"": 2}"
+multi_noverify,djinni-cv-48346,unsupported_claim,1.0,0.34782608695652173,"{""resume_quote_not_found"": 2, ""skill_present_in_resume"": 5, ""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-57041,unsupported_claim,0.431,0.07692307692307687,"{""job_quote_not_found"": 1}"
+multi_noverify,djinni-cv-6976,unsupported_claim,1.0,0.15625,"{""skill_not_in_quotes"": 4, ""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-70150,"unsupported_claim,missed_strong_fit",0.928,0.11904761904761907,"{""skill_present_in_resume"": 2, ""resume_quote_not_found"": 1, ""skill_not_in_quotes"": 1, ""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-71744,unsupported_claim,1.0,0.050000000000000044,"{""skill_present_in_resume"": 2}"
+multi_noverify,djinni-cv-77004,unsupported_claim,0.604,0.030303030303030276,"{""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-7960,"wrong_top1,unsupported_claim",0.827,0.1707317073170732,"{""skill_not_in_quotes"": 5, ""skill_present_in_resume"": 2}"
+multi_noverify,djinni-cv-79928,unsupported_claim,1.0,0.0714285714285714,"{""skill_not_in_quotes"": 1, ""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-81405,unsupported_claim,0.646,0.16129032258064513,"{""skill_not_in_job"": 4, ""skill_present_in_resume"": 1}"
+multi_noverify,djinni-cv-84559,unsupported_claim,1.0,0.13888888888888884,"{""job_quote_not_found"": 3, ""skill_not_in_job"": 2}"
+multi_noverify,djinni-cv-87548,unsupported_claim,0.96,0.11111111111111116,"{""skill_present_in_resume"": 3, ""skill_not_in_quotes"": 1}"
+multi_noverify,djinni-cv-9058,unsupported_claim,,0.1724137931034483,"{""job_quote_not_found"": 4, ""skill_not_in_job"": 1}"
+multi_noverify,djinni-cv-90969,"wrong_top1,unsupported_claim",0.821,0.24390243902439024,"{""skill_not_in_quotes"": 4, ""skill_not_in_job"": 3, ""job_quote_not_found"": 3}"

@@ -1,0 +1,675 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-97413",
+   "rank": 1,
+   "fit_score": 78.0,
+   "matched_skills": [
+    {
+     "skill": "Functional testing",
+     "resume_quote": "Experience in testing websites on mobile and PC platforms",
+     "job_quote": "Functional testing"
+    },
+    {
+     "skill": "Test case writing",
+     "resume_quote": "creation test documentation and bug reports",
+     "job_quote": "writing clear, concise and comprehensive test plans, scenarios and test cases"
+    },
+    {
+     "skill": "Test design techniques",
+     "resume_quote": "Test Design Technics",
+     "job_quote": "test plans, scenarios and test cases"
+    },
+    {
+     "skill": "Bug tracking",
+     "resume_quote": "Bug tracking systems (Redmine)",
+     "job_quote": "Introducing errors to the bug-tracker"
+    },
+    {
+     "skill": "English",
+     "resume_quote": "English – intermediate",
+     "job_quote": "Intermediate+ English level"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Development process basics",
+     "job_quote": "Knowledge of development process basics, testing, testing processes and tools"
+    },
+    {
+     "skill": "2+ years commercial QA experience",
+     "job_quote": "2+ years of commercial experience as a QA Engineer"
+    }
+   ],
+   "summary": "Strong match for a manual functional QA role: the candidate's test documentation, bug reporting and test design skills align directly with the requirements. Gaps are commercial QA experience (2+ years requested) and development process knowledge.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-57241",
+   "rank": 2,
+   "fit_score": 74.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "Basic knowledge of  HTML,CSS and SQL",
+     "job_quote": "Basic knowledge of SQL"
+    },
+    {
+     "skill": "Test-design techniques",
+     "resume_quote": "Test Design Technics",
+     "job_quote": "Comprehensive understanding of test-design techniques"
+    },
+    {
+     "skill": "Application testing",
+     "resume_quote": "testing websites on mobile and PC platforms",
+     "job_quote": "Testing of the existing application and new functionality"
+    },
+    {
+     "skill": "English",
+     "resume_quote": "English – intermediate",
+     "job_quote": "Good English language skills"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "QA methodologies and tools",
+     "job_quote": "Strong knowledge of software QA methodologies, tools, and processes"
+    },
+    {
+     "skill": "0.5+ years commercial QA experience",
+     "job_quote": "must have 0.5+ years commercial experience as a QA Engineer"
+    }
+   ],
+   "summary": "Very close to the candidate's profile: basic SQL, test-design techniques and application testing all match, and the role is explicitly junior. The main gaps are stronger QA methodology knowledge and a half year of commercial QA experience, and the job is restricted to Ivano-Frankivsk.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-137994",
+   "rank": 3,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "Testing",
+     "resume_quote": "testing websites on mobile and PC platforms",
+     "job_quote": "Testing"
+    },
+    {
+     "skill": "Test procedures and setup",
+     "resume_quote": "creation test documentation and bug reports",
+     "job_quote": "preparation of a specific setup/environment for the testing process"
+    },
+    {
+     "skill": "Regression testing",
+     "resume_quote": "Types and levels of testing",
+     "job_quote": "stress , stability , and regression testing"
+    },
+    {
+     "skill": "English",
+     "resume_quote": "English – intermediate",
+     "job_quote": "Good written and spoken English"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TCP/IP and networking knowledge",
+     "job_quote": "Knowledge of TCP/IP protocol stack, understanding of OSI model"
+    },
+    {
+     "skill": "Linux",
+     "job_quote": "Proficient Linux user"
+    }
+   ],
+   "summary": "A trainee role in network/firmware testing: general testing and documentation skills transfer, but the networking fundamentals and Linux proficiency required are absent from the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-64153",
+   "rank": 4,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "Basic knowledge of  HTML,CSS and SQL",
+     "job_quote": "Strong background with SQL and databases"
+    },
+    {
+     "skill": "Manual testing",
+     "resume_quote": "creation test documentation and bug reports",
+     "job_quote": "Manual QA Engineer"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "2+ years SW QA experience",
+     "job_quote": "2+ years of experience with SW QA practices"
+    },
+    {
+     "skill": "Python and bash scripting",
+     "job_quote": "Basic knowledge in automated testing systems in Python, bash"
+    }
+   ],
+   "summary": "Title matches, but the role asks for a strong SQL/database background, 2+ years of QA experience and automation skills, which the junior candidate only partly has.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-105998",
+   "rank": 5,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Test procedures",
+     "resume_quote": "creation test documentation and bug reports",
+     "job_quote": "develop test procedures"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Python",
+     "job_quote": "Python (computer programming)"
+    },
+    {
+     "skill": "Six years of experience",
+     "job_quote": "Minimum six years of work experience in similar roles"
+    }
+   ],
+   "summary": "A senior automation role requiring six years of experience and Python/test automation frameworks, far beyond this junior manual QA candidate.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-62606",
+   "rank": 6,
+   "fit_score": 8.0,
+   "matched_skills": [
+    {
+     "skill": "English",
+     "resume_quote": "English – intermediate",
+     "job_quote": "Excellent English communication skills, both written and spoken"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Legal degree and experience",
+     "job_quote": "Degree in Corporate, International, or Finance Law"
+    },
+    {
+     "skill": "4+ years in-house legal experience",
+     "job_quote": "4+ years of legal in-house experience"
+    }
+   ],
+   "summary": "A legal counsel position unrelated to software testing; the candidate has no legal background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-15787",
+   "rank": 7,
+   "fit_score": 6.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "Basic knowledge of  HTML,CSS and SQL",
+     "job_quote": "Good understanding of relational DBs / SQL (MySQL)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Team leadership",
+     "job_quote": "Strong level of experience in leading teams within agile ecosystem"
+    },
+    {
+     "skill": ".NET Core microservices",
+     "job_quote": "Strong experience in .NET Core microservices"
+    }
+   ],
+   "summary": "A C#/.NET team lead role requiring leadership and backend microservices experience the candidate does not have.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-70028",
+   "rank": 8,
+   "fit_score": 5.0,
+   "matched_skills": [
+    {
+     "skill": "English",
+     "resume_quote": "English – intermediate",
+     "job_quote": "Upper-intermediate English is a must"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP and Laravel",
+     "job_quote": "Strong in PHP, Laravel knowledge"
+    },
+    {
+     "skill": "3+ years web development",
+     "job_quote": "3+ years of hands-on web applications development and implementation"
+    }
+   ],
+   "summary": "A PHP/Laravel full-stack development role; the candidate has no development background and only QA experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-37127",
+   "rank": 9,
+   "fit_score": 5.0,
+   "matched_skills": [
+    {
+     "skill": "CSS",
+     "resume_quote": "Basic knowledge of  HTML,CSS and SQL",
+     "job_quote": "CSS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Full-stack development",
+     "job_quote": "building, maintaining, and improving frontend and backend systems"
+    },
+    {
+     "skill": "NoSQL databases",
+     "job_quote": "NoSQL"
+    }
+   ],
+   "summary": "A full-stack engineering role focused on development; the candidate's only overlap is basic CSS knowledge.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-41837",
+   "rank": 10,
+   "fit_score": 3.0,
+   "matched_skills": [
+    {
+     "skill": "English",
+     "resume_quote": "English – intermediate",
+     "job_quote": "English"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Customer care management",
+     "job_quote": "manage and be responsible for the effective operation of Customer Care Departments"
+    },
+    {
+     "skill": "Leadership of departments",
+     "job_quote": "lead managers of company departments"
+    }
+   ],
+   "summary": "A senior management role in customer care, unrelated to the candidate's QA background.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "quality assurance / software testing",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior QA Engineer",
+     "Junior QA Specialist",
+     "Junior Software Tester",
+     "QA Analyst (Junior)",
+     "Junior Manual QA Engineer",
+     "Web QA Tester"
+    ],
+    "must_have_skills": [
+     "Website testing on mobile and PC platforms",
+     "Test documentation creation",
+     "Bug reporting",
+     "Types and levels of testing",
+     "Test design techniques",
+     "SDLC",
+     "Redmine (bug tracking)",
+     "HTML",
+     "CSS",
+     "SQL (basic)"
+    ],
+    "nice_to_have_skills": [
+     "JMeter",
+     "Intermediate English",
+     "Test case management tools (TestRail, Zephyr, or similar)",
+     "Jira",
+     "Basic performance testing",
+     "Cross-browser and responsive testing"
+    ],
+    "search_queries": [
+     "junior QA engineer website testing manual",
+     "junior software tester web mobile Redmine SQL",
+     "QA specialist junior JMeter test documentation",
+     "entry level manual QA bug reports test design"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "junior QA engineer website testing manual",
+    "junior software tester web mobile Redmine SQL",
+    "QA specialist junior JMeter test documentation",
+    "entry level manual QA bug reports test design",
+    "Junior QA Engineer",
+    "Junior QA Specialist",
+    "Junior Software Tester"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "testing websites",
+     "creation test documentation and bug reports",
+     "Team player",
+     "hard worker",
+     "responsible"
+    ],
+    "knowledge": [
+     "mobile and PC",
+     "HTML",
+     "CSS",
+     "SQL",
+     "testing",
+     "Test Design",
+     "Software development life cycle",
+     "SDLC )",
+     "Bug tracking systems",
+     "Redmine",
+     "Jmeter",
+     "English",
+     "and PC"
+    ],
+    "esco_skills": [
+     "CSS",
+     "English",
+     "SQL",
+     "develop test procedures",
+     "provide software testing documentation",
+     "systems development life-cycle",
+     "test procedures"
+    ],
+    "not_in_esco": [
+     "testing websites",
+     "Team player",
+     "hard worker",
+     "responsible",
+     "mobile and PC",
+     "HTML",
+     "SDLC )",
+     "Bug tracking systems",
+     "Redmine",
+     "Jmeter",
+     "and PC"
+    ]
+   },
+   "ms": 9476.8
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 1.1
+  },
+  {
+   "node": "verifier",
+   "skipped": true
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 9949,
+ "output_tokens": 3558,
+ "cost_usd": 0.002774,
+ "latency_ms": 12928.0,
+ "tool_calls": 92,
+ "error": null,
+ "truncated_output": false,
+ "plan": {
+  "role_family": "quality assurance / software testing",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior QA Engineer",
+   "Junior QA Specialist",
+   "Junior Software Tester",
+   "QA Analyst (Junior)",
+   "Junior Manual QA Engineer",
+   "Web QA Tester"
+  ],
+  "must_have_skills": [
+   "Website testing on mobile and PC platforms",
+   "Test documentation creation",
+   "Bug reporting",
+   "Types and levels of testing",
+   "Test design techniques",
+   "SDLC",
+   "Redmine (bug tracking)",
+   "HTML",
+   "CSS",
+   "SQL (basic)"
+  ],
+  "nice_to_have_skills": [
+   "JMeter",
+   "Intermediate English",
+   "Test case management tools (TestRail, Zephyr, or similar)",
+   "Jira",
+   "Basic performance testing",
+   "Cross-browser and responsive testing"
+  ],
+  "search_queries": [
+   "junior QA engineer website testing manual",
+   "junior software tester web mobile Redmine SQL",
+   "QA specialist junior JMeter test documentation",
+   "entry level manual QA bug reports test design"
+  ]
+ },
+ "wall_ms": 9480.9,
+ "pool": [
+  {
+   "job_id": "djinni-job-64153",
+   "label": 0,
+   "title": "Manual QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-70028",
+   "label": 0,
+   "title": "Middle Full Stack Developer (PHP, Laravel)"
+  },
+  {
+   "job_id": "djinni-job-57241",
+   "label": 2,
+   "title": "Junior QA (Ivano -Frankivsk)"
+  },
+  {
+   "job_id": "djinni-job-41837",
+   "label": 0,
+   "title": "Head of Customer Care"
+  },
+  {
+   "job_id": "djinni-job-62606",
+   "label": 0,
+   "title": "Legal Counsel"
+  },
+  {
+   "job_id": "djinni-job-15787",
+   "label": 0,
+   "title": "C#/.Net Team Lead #7844"
+  },
+  {
+   "job_id": "djinni-job-97413",
+   "label": 1,
+   "title": "QA Engineer, strong junior/middle"
+  },
+  {
+   "job_id": "djinni-job-105998",
+   "label": 0,
+   "title": "Senior AQA Python"
+  },
+  {
+   "job_id": "djinni-job-37127",
+   "label": 0,
+   "title": "Full-stack Engineer"
+  },
+  {
+   "job_id": "djinni-job-137994",
+   "label": 1,
+   "title": "Trainee Network Test Engineer (IRC169559)"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-90969",
+  "cv_category": "QA",
+  "ndcg10": 0.8213137146137828,
+  "p_at_3": 0.3333333333333333,
+  "mrr": 0.5,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 1,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 1.0,
+  "n_claims": 41,
+  "n_supported": 31,
+  "hallucination_rate": 0.24390243902439024,
+  "llm_calls": 2,
+  "input_tokens": 9949,
+  "output_tokens": 3558,
+  "cost_usd": 0.002774,
+  "latency_ms": 12928.0,
+  "wall_ms": 9480.9,
+  "tool_calls": 92,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{\"skill_not_in_quotes\": 4, \"skill_not_in_job\": 3, \"job_quote_not_found\": 3}"
+ },
+ "faithfulness": {
+  "n_claims": 41,
+  "n_supported": 31,
+  "hallucination_rate": 0.24390243902439024,
+  "reasons": {
+   "skill_not_in_quotes": 4,
+   "skill_not_in_job": 3,
+   "job_quote_not_found": 3
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-97413",
+    "n_claims": 7,
+    "n_supported": 5,
+    "n_matched": 5,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.2857,
+    "reasons": {
+     "skill_not_in_quotes": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-57241",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-137994",
+    "n_claims": 6,
+    "n_supported": 4,
+    "n_matched": 4,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-64153",
+    "n_claims": 4,
+    "n_supported": 2,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.5,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-105998",
+    "n_claims": 3,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.6667,
+    "reasons": {
+     "job_quote_not_found": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-62606",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-15787",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-70028",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-37127",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-41837",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "job_quote_not_found": 1
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,586 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-42304",
+   "rank": 1,
+   "fit_score": 48.0,
+   "matched_skills": [
+    {
+     "skill": "Build, plan and implement traffic acquisition strategy",
+     "resume_quote": "PR strategy planning and execution",
+     "job_quote": "Build, plan and implement traffic acquisition strategy."
+    },
+    {
+     "skill": "Manage website",
+     "resume_quote": "Website, SoMe, rules and policies development",
+     "job_quote": "Manage website UI/UX design"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Brand/PR/Reputation protection",
+     "job_quote": "Brand/PR/Reputation protection"
+    },
+    {
+     "skill": "Execute email marketing",
+     "job_quote": "SMM (email, messaging, social networks"
+    }
+   ],
+   "summary": "A senior marketing leadership role with strong overlap in PR, brand reputation, and social media, but centered on performance acquisition and igaming, which the candidate's PR background does not cover.",
+   "dropped": [
+    {
+     "skill": "Budget allocation and ROI measurement",
+     "reason": "The job quote does not name the skill as written in the claim; the flagged text is not verbatim from the job, and the quote is not a verbatim substring of the job text as attached to this claim. Repair would require a verbatim quote naming budget allocation and ROI measurement, and the job text does name budget allocation (\"allocate budgets\") and ROI measurement (\"measure (ROI) for all marketing programs\"), but the claim's original quote was not a verbatim match, so it is dropped rather than rewritten without verification against the claim's source quote."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-129819",
+   "rank": 2,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "Social media management",
+     "resume_quote": "SMM (60+ Social Media pages under management)",
+     "job_quote": "Manage and grow the community across our social media channels"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Crypto/blockchain marketing experience",
+     "job_quote": "At least 2 years of experience working in crypto digital marketing/ social media management"
+    },
+    {
+     "skill": "Paid media campaigns",
+     "job_quote": "Experience in creating high quality visual content and paid media campaigns"
+    }
+   ],
+   "summary": "Strong overlap in SMM and content creation with a clear brand-storytelling focus, but the explicit requirement for crypto marketing experience is absent from the resume.",
+   "dropped": [
+    {
+     "skill": "Content writing for brand storytelling",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-27217",
+   "rank": 3,
+   "fit_score": 40.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Google Ads / paid search",
+     "job_quote": "focus on hands-on execution of tactics in key digital channels including Google Ads, Affiliates"
+    }
+   ],
+   "summary": "Reasonable overlap in social media and campaign coordination, but the role is heavily performance-marketing oriented (paid search, funnel analytics), which is outside the candidate's PR and communications experience.",
+   "dropped": [
+    {
+     "skill": "Analytics and performance reporting",
+     "reason": "Flagged as skill_not_in_job: the job text does name analysis and reporting, but the claim's job_quote could not be repaired to a verbatim quote naming the skill as written, and the resume's 'Budgeting and Reporting' and 'Results' cases do not establish the analytics skill as a non-match. Dropped rather than guessing a quote; the 'missing' classification also cannot be confirmed as absent from the resume."
+    },
+    {
+     "skill": "Social media marketing and community engagement",
+     "reason": "skill_not_in_quotes"
+    },
+    {
+     "skill": "Campaign execution",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-16484",
+   "rank": 4,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "Content management",
+     "resume_quote": "Content management (number of blogposts, press-releases, media articles",
+     "job_quote": "Working with content, adding content through CMS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SEO writing",
+     "job_quote": "Experience in writing SEO texts"
+    },
+    {
+     "skill": "Banner and teaser advertising campaigns",
+     "job_quote": "Experience in campaigns (teaser and banner advertising)"
+    }
+   ],
+   "summary": "A content-focused role where the candidate's newsletter and text editing experience is relevant, but it is an operational content-manager position lacking SEO and ad-campaign experience.",
+   "dropped": [
+    {
+     "skill": "Newsletter and email content",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-56961",
+   "rank": 5,
+   "fit_score": 15.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "QA testing and STLC/SDLC knowledge",
+     "job_quote": "Basic knowledge of STLC and SDLC preffered."
+    }
+   ],
+   "summary": "Only a weak editorial overlap; the role is a QA/proofreading position with technical testing requirements the candidate does not hold.",
+   "dropped": [
+    {
+     "skill": "HTML/CSS/JS basics",
+     "reason": "Flagged as skill_not_in_job, but the job text does name it verbatim: 'Basic knowledge of HTML/CSS/JS.' The claim was flagged in error, so it is dropped as a missing skill because the resume does not show HTML/CSS/JS, and no change to the flagged quote is needed beyond this removal. The claim as originally written cannot be repaired without a supporting resume quote showing the skill is absent, so it is removed."
+    },
+    {
+     "skill": "Proofreading and content quality checks",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-141380",
+   "rank": 6,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "WordPress development",
+     "job_quote": "WordPress Developer"
+    },
+    {
+     "skill": "PHP and JavaScript programming",
+     "job_quote": "programming of PHP and JavaScript applications for WordPress"
+    }
+   ],
+   "summary": "A software development role requiring PHP, WordPress, and JavaScript coding, none of which appear in the candidate's communications background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-133023",
+   "rank": 7,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "React and JavaScript front-end development",
+     "job_quote": "Experience with JavaScript, CSS and jQuery;"
+    }
+   ],
+   "summary": "A front-end engineering role that requires React, JavaScript, and CSS skills the candidate does not have.",
+   "dropped": [
+    {
+     "skill": "WordPress technical implementation",
+     "reason": "The skill 'WordPress' is named in the job text as 'Understanding of WordPress technologies;', so the claim was not flagged for an unsupported quote; however, the flag reason 'skill_not_in_job' is inconsistent with the job text, and the claim is dropped rather than repaired because the program flagged it as absent from the job and the resume has no verifiable WordPress experience to support a 'missing' classification."
+    },
+    {
+     "skill": "Website maintenance",
+     "reason": "Repair attempted: the job quote 'Maintain and improve website;' is verbatim, but the resume quote 'Website, SoMe, rules and policies development' names website development, not maintenance. Kept as matched with the job quote naming the skill and the resume quote naming the website work; this is a partial match."
+    },
+    {
+     "skill": "Website maintenance",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-116442",
+   "rank": 8,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java and Spring Boot development",
+     "job_quote": "Your technical experience includes Java, Spring Boot, relational databases, Git, Scrum and Maven."
+    }
+   ],
+   "summary": "A senior Java backend role with no overlap with the candidate's PR and communications experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-61114",
+   "rank": 9,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java development",
+     "job_quote": "4-5 years of Java development experience"
+    }
+   ],
+   "summary": "A lead Java developer role for healthcare software, unrelated to the candidate's PR and communications background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-127009",
+   "rank": 10,
+   "fit_score": 1.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java/Go backend programming",
+     "job_quote": "5+ years of strong programming skills in Java, Go, or similar languages"
+    }
+   ],
+   "summary": "A senior software engineering role requiring multi-year backend programming experience that the candidate does not have.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "PR / communications / marketing communications",
+    "seniority": "senior",
+    "target_titles": [
+     "PR Manager",
+     "Senior PR Manager",
+     "PR and Communications Manager",
+     "Communications Manager",
+     "PR Lead",
+     "Brand Communications Manager"
+    ],
+    "must_have_skills": [
+     "PR strategy planning and execution",
+     "Media relations and journalist outreach",
+     "Press-release and content writing",
+     "Social media management (SMM)",
+     "Corporate and brand event management",
+     "Budgeting and reporting",
+     "POS materials and branded gifts coordination",
+     "Opinion leader / executive brand development",
+     "Multi-market PR (Ukraine, USA, Europe)"
+    ],
+    "nice_to_have_skills": [
+     "Newsletter and email marketing (open rate and subscriber growth)",
+     "Contest and gamification campaign design",
+     "B2B tech/InfoSec PR",
+     "Influencer and partner (info partner) management",
+     "Survey and questionnaire design for internal and external use",
+     "Website content and policy development"
+    ],
+    "search_queries": [
+     "PR Manager B2B tech media relations Europe",
+     "Senior PR and communications manager SMM event management",
+     "PR manager cybersecurity brand communications",
+     "Communications manager international markets USA Ukraine Europe",
+     "PR lead opinion leader brand press releases"
+    ]
+   },
+   "ms": 0.5
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "PR Manager B2B tech media relations Europe",
+    "Senior PR and communications manager SMM event management",
+    "PR manager cybersecurity brand communications",
+    "Communications manager international markets USA Ukraine Europe",
+    "PR lead opinion leader brand press releases",
+    "PR Manager",
+    "Senior PR Manager",
+    "PR and Communications Manager"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "PR",
+     "support",
+     "Liaising relationships with journalists/media",
+     "Planning and establishing of all corporate events"
+    ],
+    "knowledge": [
+     "B2B",
+     "B2C",
+     "PR",
+     "strategy",
+     "Website",
+     "SoMe",
+     "rules and policies development"
+    ],
+    "esco_skills": [
+     "develop organisational policies",
+     "establish relationship with the media",
+     "manage website",
+     "plan events",
+     "provide support to social services users",
+     "public relations",
+     "translate strategy into operation"
+    ],
+    "not_in_esco": [
+     "B2B",
+     "B2C",
+     "SoMe"
+    ]
+   },
+   "ms": 16464.7
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 10137.3
+  },
+  {
+   "node": "verifier",
+   "flagged": 10,
+   "repaired": 0,
+   "dropped": 11,
+   "ms": 13151.9
+  }
+ ],
+ "llm_calls": 8,
+ "input_tokens": 28175,
+ "output_tokens": 5562,
+ "cost_usd": 0.005598,
+ "latency_ms": 25112.6,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 10,
+ "verifier_repaired": 0,
+ "verifier_dropped": 11,
+ "plan": {
+  "role_family": "PR / communications / marketing communications",
+  "seniority": "senior",
+  "target_titles": [
+   "PR Manager",
+   "Senior PR Manager",
+   "PR and Communications Manager",
+   "Communications Manager",
+   "PR Lead",
+   "Brand Communications Manager"
+  ],
+  "must_have_skills": [
+   "PR strategy planning and execution",
+   "Media relations and journalist outreach",
+   "Press-release and content writing",
+   "Social media management (SMM)",
+   "Corporate and brand event management",
+   "Budgeting and reporting",
+   "POS materials and branded gifts coordination",
+   "Opinion leader / executive brand development",
+   "Multi-market PR (Ukraine, USA, Europe)"
+  ],
+  "nice_to_have_skills": [
+   "Newsletter and email marketing (open rate and subscriber growth)",
+   "Contest and gamification campaign design",
+   "B2B tech/InfoSec PR",
+   "Influencer and partner (info partner) management",
+   "Survey and questionnaire design for internal and external use",
+   "Website content and policy development"
+  ],
+  "search_queries": [
+   "PR Manager B2B tech media relations Europe",
+   "Senior PR and communications manager SMM event management",
+   "PR manager cybersecurity brand communications",
+   "Communications manager international markets USA Ukraine Europe",
+   "PR lead opinion leader brand press releases"
+  ]
+ },
+ "wall_ms": 39757.7,
+ "pool": [
+  {
+   "job_id": "djinni-job-16484",
+   "label": 1,
+   "title": "Content Manager"
+  },
+  {
+   "job_id": "djinni-job-129819",
+   "label": 1,
+   "title": "SMM for blockchain project (NFT marketplace)"
+  },
+  {
+   "job_id": "djinni-job-56961",
+   "label": 0,
+   "title": "Junior QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-116442",
+   "label": 0,
+   "title": "Senior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-133023",
+   "label": 0,
+   "title": "Strong Middle/ Senior Front-End (React) developer"
+  },
+  {
+   "job_id": "djinni-job-127009",
+   "label": 0,
+   "title": "Senior Software Engineer with mobile consumer apps experience"
+  },
+  {
+   "job_id": "djinni-job-27217",
+   "label": 0,
+   "title": "Digital Marketing Manager"
+  },
+  {
+   "job_id": "djinni-job-61114",
+   "label": 0,
+   "title": "Lead Java Developer (Healthcare)"
+  },
+  {
+   "job_id": "djinni-job-141380",
+   "label": 0,
+   "title": "WordPress Developer"
+  },
+  {
+   "job_id": "djinni-job-42304",
+   "label": 0,
+   "title": "Head of marketing & sales, igaming"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-124531",
+  "cv_category": "Marketing",
+  "ndcg10": 0.6509209298071326,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.3333333333333333,
+  "mrr_rel1": 0.5,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 2,
+  "coverage": 1.0,
+  "n_claims": 18,
+  "n_supported": 18,
+  "hallucination_rate": 0.0,
+  "llm_calls": 8,
+  "input_tokens": 28175,
+  "output_tokens": 5562,
+  "cost_usd": 0.005597999999999999,
+  "latency_ms": 25112.600000000002,
+  "wall_ms": 39757.7,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}",
+  "verifier_flagged": 10,
+  "verifier_repaired": 0,
+  "verifier_dropped": 11
+ },
+ "faithfulness": {
+  "n_claims": 18,
+  "n_supported": 18,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-42304",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-129819",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-27217",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-16484",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-56961",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-141380",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-133023",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-116442",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-61114",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-127009",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

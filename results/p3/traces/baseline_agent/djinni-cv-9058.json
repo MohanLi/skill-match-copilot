@@ -1,0 +1,178 @@
+{
+ "approach": "embedding_baseline",
+ "ranking": [
+  {
+   "job_id": "djinni-job-111613",
+   "rank": 1,
+   "fit_score": 44.6,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-128853",
+   "rank": 2,
+   "fit_score": 43.9,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-14768",
+   "rank": 3,
+   "fit_score": 41.3,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-116292",
+   "rank": 4,
+   "fit_score": 35.7,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-610",
+   "rank": 5,
+   "fit_score": 35.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-118582",
+   "rank": 6,
+   "fit_score": 35.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-79968",
+   "rank": 7,
+   "fit_score": 32.7,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-87220",
+   "rank": 8,
+   "fit_score": 32.3,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-38702",
+   "rank": 9,
+   "fit_score": 27.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-14594",
+   "rank": 10,
+   "fit_score": 26.5,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  }
+ ],
+ "trace": [],
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cost_usd": 0.0,
+ "latency_ms": 0.0,
+ "tool_calls": 1,
+ "error": null,
+ "wall_ms": 864.3,
+ "pool": [
+  {
+   "job_id": "djinni-job-118582",
+   "label": 0,
+   "title": "Senior/Lead JavaScript Full Stack Engineer"
+  },
+  {
+   "job_id": "djinni-job-128853",
+   "label": 0,
+   "title": "SEO expert with Google Analytics"
+  },
+  {
+   "job_id": "djinni-job-610",
+   "label": 0,
+   "title": "3D planner"
+  },
+  {
+   "job_id": "djinni-job-111613",
+   "label": 0,
+   "title": "Senior Financial Analyst (Web 3.0 project)"
+  },
+  {
+   "job_id": "djinni-job-14594",
+   "label": 0,
+   "title": "Chief Financial Officer"
+  },
+  {
+   "job_id": "djinni-job-14768",
+   "label": 0,
+   "title": "Chief Operating Officer (COO)/Operations Manager"
+  },
+  {
+   "job_id": "djinni-job-87220",
+   "label": 0,
+   "title": "Performance Marketer (Genesis Investments)"
+  },
+  {
+   "job_id": "djinni-job-79968",
+   "label": 0,
+   "title": "Middle/Senior PHP Developer (only in GE, LT, UZ, HU)"
+  },
+  {
+   "job_id": "djinni-job-38702",
+   "label": 0,
+   "title": "Fullstack PHP+Angular Developer"
+  },
+  {
+   "job_id": "djinni-job-116292",
+   "label": 0,
+   "title": "Senior Java developer"
+  }
+ ],
+ "metrics": {
+  "approach": "baseline",
+  "cv_id": "djinni-cv-9058",
+  "cv_category": "Other",
+  "ndcg10": null,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.0,
+  "mrr_rel1": null,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 0,
+  "coverage": 1.0,
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "llm_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "latency_ms": 0.0,
+  "wall_ms": 864.3,
+  "tool_calls": 1,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}"
+ },
+ "faithfulness": {
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "reasons": {}
+ }
+}

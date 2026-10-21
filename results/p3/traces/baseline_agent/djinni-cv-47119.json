@@ -1,0 +1,178 @@
+{
+ "approach": "embedding_baseline",
+ "ranking": [
+  {
+   "job_id": "djinni-job-36747",
+   "rank": 1,
+   "fit_score": 69.4,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-72565",
+   "rank": 2,
+   "fit_score": 67.6,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-99239",
+   "rank": 3,
+   "fit_score": 61.5,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-71827",
+   "rank": 4,
+   "fit_score": 60.8,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-70281",
+   "rank": 5,
+   "fit_score": 55.8,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-111855",
+   "rank": 6,
+   "fit_score": 48.4,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-120942",
+   "rank": 7,
+   "fit_score": 41.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-54336",
+   "rank": 8,
+   "fit_score": 39.8,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-27839",
+   "rank": 9,
+   "fit_score": 39.6,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-26435",
+   "rank": 10,
+   "fit_score": 31.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  }
+ ],
+ "trace": [],
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cost_usd": 0.0,
+ "latency_ms": 0.0,
+ "tool_calls": 1,
+ "error": null,
+ "wall_ms": 159.8,
+ "pool": [
+  {
+   "job_id": "djinni-job-71827",
+   "label": 1,
+   "title": "Middle JavaScript(React) Developer"
+  },
+  {
+   "job_id": "djinni-job-36747",
+   "label": 0,
+   "title": "Full Stack Developer (React.Js\\Node.Js)"
+  },
+  {
+   "job_id": "djinni-job-111855",
+   "label": 0,
+   "title": "Senior Front-end Developer"
+  },
+  {
+   "job_id": "djinni-job-54336",
+   "label": 1,
+   "title": "Junior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-27839",
+   "label": 0,
+   "title": "Drupal Developer"
+  },
+  {
+   "job_id": "djinni-job-120942",
+   "label": 0,
+   "title": "Senior Node.js"
+  },
+  {
+   "job_id": "djinni-job-26435",
+   "label": 0,
+   "title": "DevOps Engineer with Kubernetes and Helm Charts Experience"
+  },
+  {
+   "job_id": "djinni-job-72565",
+   "label": 1,
+   "title": "Middle/Middle+ Front-end Developer Job Description"
+  },
+  {
+   "job_id": "djinni-job-70281",
+   "label": 0,
+   "title": "Middle Full Stack .Net Developer"
+  },
+  {
+   "job_id": "djinni-job-99239",
+   "label": 0,
+   "title": "React Native developer"
+  }
+ ],
+ "metrics": {
+  "approach": "baseline",
+  "cv_id": "djinni-cv-47119",
+  "cv_category": "JavaScript",
+  "ndcg10": 0.6462302129493455,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.3333333333333333,
+  "mrr_rel1": 0.5,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 1.0,
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "llm_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "latency_ms": 0.0,
+  "wall_ms": 159.8,
+  "tool_calls": 1,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}"
+ },
+ "faithfulness": {
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "reasons": {}
+ }
+}

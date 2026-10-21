@@ -1,0 +1,628 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-56284",
+   "rank": 1,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "Facebook Ads",
+     "resume_quote": "Launching advertising campaigns on Facebook.",
+     "job_quote": "experience with Microsoft / Facebook Ads"
+    },
+    {
+     "skill": "Google Docs",
+     "resume_quote": "Google Docs",
+     "job_quote": "working with databases / Microsoft Office / Google Docs / Sheets"
+    },
+    {
+     "skill": "Analytical tools",
+     "resume_quote": "Working with Tableau/AppsFlyer/Amplitude/SensorTower.",
+     "job_quote": "Experience working with analytical tools"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Google Ads",
+     "job_quote": "experience with Google Ads"
+    }
+   ],
+   "summary": "This is the only paid-ads role in the pool. The candidate's paid social experience and analytics tooling fit, but the role centres on Google Ads, which the resume doesn't mention, and it is junior for a Middle UA manager."
+  },
+  {
+   "job_id": "djinni-job-129860",
+   "rank": 2,
+   "fit_score": 50.0,
+   "matched_skills": [
+    {
+     "skill": "TikTok/Facebook social channels",
+     "resume_quote": "Launch and management of TikTok campaigns (W2A, SKAN).",
+     "job_quote": "Facebook, LinkedIn, Twitter, TikTok from 1 year"
+    },
+    {
+     "skill": "Marketing strategy",
+     "resume_quote": "Development of a marketing strategy.",
+     "job_quote": "Develop and implement a social media marketing strategy"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Copywriting",
+     "job_quote": "Excellent copywriting skills"
+    },
+    {
+     "skill": "Gaming industry experience",
+     "job_quote": "Gaming experience and understanding of game industry specifics is a must"
+    }
+   ],
+   "summary": "The role is organic social media management for games, not paid acquisition. It shares the TikTok and Facebook channels and marketing strategy, but the gaming requirement and copywriting focus are gaps."
+  },
+  {
+   "job_id": "djinni-job-129112",
+   "rank": 3,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Marketing strategy",
+     "resume_quote": "Development of a marketing strategy.",
+     "job_quote": "Experience implementing a complete SEO strategy"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SEO experience",
+     "job_quote": "General work experience as an SEO specialist — 3+ years"
+    },
+    {
+     "skill": "Google Sheets",
+     "job_quote": "Google Sheets, Microsoft Excel, Open Office"
+    }
+   ],
+   "summary": "This is adjacent digital marketing, but the work is SEO and link building, which the candidate has never done. Only the strategy and analytics mindset carry over."
+  },
+  {
+   "job_id": "djinni-job-135560",
+   "rank": 4,
+   "fit_score": 15.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "WordPress",
+     "job_quote": "Good knowledge of WordPress"
+    },
+    {
+     "skill": "HTML/CSS",
+     "job_quote": "HTML, CSS — basic knowledge"
+    }
+   ],
+   "summary": "This is a technical email-marketing role focused on websites, WordPress and email service providers. The candidate has no overlapping technical skills."
+  },
+  {
+   "job_id": "djinni-job-1563",
+   "rank": 5,
+   "fit_score": 6.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Node.js",
+     "job_quote": "Strong knowledge of Node JS and server-side frameworks (Preferable NestJS)"
+    }
+   ],
+   "summary": "This is a backend engineering role in AdTech. The domain is related but the skills are not, and the candidate has no software development background."
+  },
+  {
+   "job_id": "djinni-job-48739",
+   "rank": 6,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "Java Architect"
+    }
+   ],
+   "summary": "This is a Java architecture role in an unrelated role family."
+  },
+  {
+   "job_id": "djinni-job-24362",
+   "rank": 7,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "DevOps",
+     "job_quote": "DevOps Engineer"
+    }
+   ],
+   "summary": "This is a DevOps engineering role in an unrelated role family."
+  },
+  {
+   "job_id": "djinni-job-76054",
+   "rank": 8,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "QA engineering",
+     "job_quote": "Middle QA Engineer, Financial Services"
+    }
+   ],
+   "summary": "This is a QA engineering role in financial services, unrelated to the candidate's marketing background."
+  },
+  {
+   "job_id": "djinni-job-54244",
+   "rank": 9,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "Junior Java Developer"
+    }
+   ],
+   "summary": "This is a junior Java development role, unrelated to the candidate's profile."
+  },
+  {
+   "job_id": "djinni-job-137681",
+   "rank": 10,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "Trainee Java Engineer"
+    }
+   ],
+   "summary": "This is a Java trainee programme, unrelated to the candidate's profile."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting the resume's skills and running several searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Media Buyer. Appflame (Taimi) - Middle User Acquisition Manager. PlantIn (Genesis) - User Acquisition Manager. Launch and management of Facebook campaigns (W2A, SKAN). Launch and management of TikTok campaigns (W2A, SKAN). Launch and management of UNITY. Working with Tableau/AppsFlyer/Amplitude/SensorTower. Strong knowledge of metrics - CPM, CPC, App Store click rate, CTR, CPI, CPA, i2l, CR, LTV, ROMI. Oh Yes Beauty - Marketing Manager: Creation of advertising layouts. Launching advertising campaigns on Facebook. Cooperation with bloggers. Solidcare - Personal Marketing Assistant: Development of a marketing strategy. Management of the franchise project."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Media Buyer Facebook TikTok user acquisition mobile app",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "User Acquisition Manager AppsFlyer SKAN performance marketing",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Performance marketing manager paid social campaigns ROMI LTV analytics",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.012844
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Media Buyer. Appflame (Taimi) - Middle User Acquisition Manager. PlantIn (Genesis) - User Acquisition Manager. Launch and management of Facebook campaigns (W2A, SKAN). Launch and management of TikTok campaigns (W2A, SKAN). Launch and management of UNITY. Working with Tableau/AppsFlyer/Amplitude/SensorTower. Strong knowledge of metrics - CPM, CPC, App Store click rate, CTR, CPI, CPA, i2l, CR, LTV, ROMI. Oh Yes Beauty - Marketing Manager: Creation of advertising layouts. Launching advertising campaigns on Facebook. Cooperation with bloggers. Solidcare - Personal Marketing Assistant: Development of a marketing strategy. Management of the franchise project."
+   },
+   "output_preview": "{\"skills\": [\"Launch\", \"management of Facebook campaigns\", \"Launching advertising campaigns\", \"Development of a marketing strategy\"], \"knowledge\": [\"W2A\", \"SKAN\", \"Tableau/AppsFlyer/Amplitude/SensorTower\", \"metrics\", \"CPM\", \"CPC\", \"App Store click rate\", \"CTR\", \"CPI\", \"CPA\", \"i2l\", \"CR\", \"LTV\", \"ROMI\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Media Buyer Facebook TikTok user acquisition mobile app",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-129860\", \"title\": \"SMM manager\", \"company\": \"MadRabbit\", \"category\": \"Marketing\", \"score\": 0.2861, \"esco_skills\": [\"English\", \"Gamemaker Studio\", \"brainstorm ideas\", \"collaborate in company's daily operations \", \"create digital content\", \"graphics editor software\", \"keep up to date on product knowledge\", \"marketing management\", \"perform copywriting\", \"promote social awareness\", \"social media marketing techniques\", \"toys and games industry\"], \"snippet\": \"SMM manager\\nWhat do you need for this position:\\r\\n- Advanced English\\r\\n- 2+ years of experience in marketing \\r\\n- "
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "User Acquisition Manager AppsFlyer SKAN performance marketing",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-129860\", \"title\": \"SMM manager\", \"company\": \"MadRabbit\", \"category\": \"Marketing\", \"score\": 0.3752, \"esco_skills\": [\"English\", \"Gamemaker Studio\", \"brainstorm ideas\", \"collaborate in company's daily operations \", \"create digital content\", \"graphics editor software\", \"keep up to date on product knowledge\", \"marketing management\", \"perform copywriting\", \"promote social awareness\", \"social media marketing techniques\", \"toys and games industry\"], \"snippet\": \"SMM manager\\nWhat do you need for this position:\\r\\n- Advanced English\\r\\n- 2+ years of experience in marketing \\r\\n- "
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Performance marketing manager paid social campaigns ROMI LTV analytics",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-129860\", \"title\": \"SMM manager\", \"company\": \"MadRabbit\", \"category\": \"Marketing\", \"score\": 0.4191, \"esco_skills\": [\"English\", \"Gamemaker Studio\", \"brainstorm ideas\", \"collaborate in company's daily operations \", \"create digital content\", \"graphics editor software\", \"keep up to date on product knowledge\", \"marketing management\", \"perform copywriting\", \"promote social awareness\", \"social media marketing techniques\", \"toys and games industry\"], \"snippet\": \"SMM manager\\nWhat do you need for this position:\\r\\n- Advanced English\\r\\n- 2+ years of experience in marketing \\r\\n- "
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The pool is the same 10 jobs. I'll pull the full text of the marketing-related ones to get verbatim quotes.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-129860"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-56284"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-135560"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-129112"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-1563"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.027422
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-129860"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-129860\", \"title\": \"SMM manager\", \"company\": \"MadRabbit\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"SMM manager\\nWhat do you need for this position:\\r\\n- Advanced English\\r\\n- 2+ years of experience in marketing \\r\\n- Hands-on experience working with SMM tools and most popular social -medias such as Instagram, Facebook, LinkedIn, Twitter, TikTok from 1 year \\r\\n- Experience with products for the US/European/Asian market will be an advantage\\r\\n- Gaming experience and understanding of game industry specifics is a must\\r\\n- Excellent copywriting skills\\r\\n- Experience wi"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-56284"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-56284\", \"title\": \"Junior PPC specialist\", \"company\": \"Shopping Cart Elite\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Junior PPC specialist\\n**What You'll Be Doing:**\\r\\n🟢 working with Google Adwords accounts\\r\\n🟢 analysis and independent decision-making during the day \\r\\n\\r\\n**Requirements:**\\r\\n✅ experience with Google Ads\\r\\n✅ Experience working with analytical tools\\r\\n\\r\\n**ARE YOU THE PERSON WE'RE LOOKING FOR? SEND YOUR CV NOW!**\\r\\n\\r\\n**Big plus**\\r\\n🔷 experience with Microsoft / Facebook Ads\\r\\n🔷 working with databases / Microsoft Office / Google Docs / Shee"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-135560"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-135560\", \"title\": \"Technical Email Marketing Specialist\", \"company\": \"AgileEngine\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Technical Email Marketing Specialist\\nWe use a cutting-edge methodology and best-in-class software to implement a highly tuned scalable process. We collect statistics, do A/B testing, run analytics, and automate activities to leave humans more time for creativity and fun.\\r\\nIf you like a challenging environment where you’re working with the best and are encouraged to learn and experiment every day, there’s no better place — guaranteed!\\r\\n\\r\\n"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-129112"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-129112\", \"title\": \"SEO Specialist\", \"company\": \"SE Ranking\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"SEO Specialist\\n**Необходимые навыки**\\r\\nGeneral work experience as an SEO specialist — 3+ years\\r\\nExperience working with the semantic core: collecting, updating/expanding, clustering\\r\\nLink building experience: developing a strategy, selecting donors, supervising/managing link builders and outreach specialists\\r\\nExperience creating technical assignments (for developers, copywriters, link builders, etc.)\\r\\nExperience implementing a complete SEO strategy\\r\\nUnde"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-1563"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-1563\", \"title\": \"Advanced Software Engineer - Node.js for Media and AdTech project\", \"company\": \"Innovecs\", \"category\": \"Node.js\", \"url\": \"\", \"text\": \"Advanced Software Engineer - Node.js for Media and AdTech project\\n**REQUIREMENTS:**\\r\\n\\r\\n- At least 5 years of “hands-on” backend experience in software development.\\r\\n- Strong knowledge of Node JS and server-side frameworks (Preferable NestJS)\\r\\n- Understanding the nature of asynchronous programming and its quirks and workarounds.\\r\\n- Strong understanding of MICROSERVICES\\r\\n- Understanding of scalable AWS applicati"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Facebook Ads",
+       "TikTok campaigns",
+       "Tableau",
+       "AppsFlyer",
+       "Google Docs",
+       "marketing strategy",
+       "marketing metrics",
+       "advertising campaigns"
+      ],
+      "job_skills": [
+       "Google Ads",
+       "analytical tools",
+       "Microsoft / Facebook Ads",
+       "Google Docs",
+       "Sheets",
+       "databases"
+      ]
+     }
+    }
+   ],
+   "cached": false,
+   "cost_usd": 0.042624
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Facebook Ads",
+     "TikTok campaigns",
+     "Tableau",
+     "AppsFlyer",
+     "Google Docs",
+     "marketing strategy",
+     "marketing metrics",
+     "advertising campaigns"
+    ],
+    "job_skills": [
+     "Google Ads",
+     "analytical tools",
+     "Microsoft / Facebook Ads",
+     "Google Docs",
+     "Sheets",
+     "databases"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Microsoft / Facebook Ads\", \"Google Docs\"], \"missing\": [\"Google Ads\", \"analytical tools\", \"Sheets\", \"databases\"], \"extra\": [\"TikTok campaigns\", \"Tableau\", \"AppsFlyer\", \"marketing strategy\", \"marketing metrics\", \"advertising campaigns\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "The ranking below covers all 10 jobs in the pool. Only the first two are in the candidate's role family, and the pool has no real mobile user-acquisition or media-buyer role.\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-56284\", \"rank\": 1, \"fit_score\": 62,\n   \"matched_skills\": [\n     {\"skill\": \"Facebook Ads\", \"resume_quote\": \"Launching advertising campaigns on Facebook.\", \"job_quote\": \"experience with Microsoft / Facebook Ads\"},\n     {\"skill\": \"Google Docs\", \"resume_quote\": \"Google Docs\", \"job_quote\": \"working with databases / Microsoft Office / Google Docs / Sheets\"},\n     {\"skill\": \"Analytical tools\", \"resume_quote\": \"Working with Tableau/AppsFlyer/Amplitude/SensorTower.\", \"job_quote\": \"Experience working with analytical tools\"}\n   ],\n   \"missing_skills\": [\n     {\"skill\": \"Google Ads\", \"job_quote\": \"experience with Google Ads\"}\n   ],\n   \"summary\": \"This is the only paid-ads role in the pool. The candidate's paid social experience and analytics tooling fit, but the role centres on Google Ads, which the resume doesn't mention, and it is junior for a Middle UA manager.\"},\n  {\"job_id\": \"djinni-job-129860\", \"rank\": 2, \"fit_score\": 50,\n   \"matched_skills\": [\n     {\"skill\": \"TikTok/Facebook social channels\", \"resume_quote\": \"Launch and management of TikTok campaigns (W2A, SKAN).\", \"job_quote\": \"Facebook, LinkedIn, Twitter, TikTok from 1 year\"},\n     {\"skill\": \"Marketing strategy\", \"resume_quote\": \"Development of a marketing strategy.\", \"job_quote\": \"Develop and implement a socia",
+   "tool_uses": [],
+   "cached": false,
+   "cost_usd": 0.058084
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 52667,
+ "output_tokens": 3564,
+ "cost_usd": 0.140974,
+ "latency_ms": 26031.3,
+ "tool_calls": 10,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 24702.5,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-54244",
+   "label": 0,
+   "title": "Junior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-129860",
+   "label": 1,
+   "title": "SMM manager"
+  },
+  {
+   "job_id": "djinni-job-24362",
+   "label": 0,
+   "title": "DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-56284",
+   "label": 1,
+   "title": "Junior PPC specialist"
+  },
+  {
+   "job_id": "djinni-job-129112",
+   "label": 0,
+   "title": "SEO Specialist"
+  },
+  {
+   "job_id": "djinni-job-48739",
+   "label": 0,
+   "title": "Java Architect"
+  },
+  {
+   "job_id": "djinni-job-137681",
+   "label": 0,
+   "title": "Trainee Java Engineer"
+  },
+  {
+   "job_id": "djinni-job-1563",
+   "label": 0,
+   "title": "Advanced Software Engineer - Node.js for Media and AdTech project"
+  },
+  {
+   "job_id": "djinni-job-76054",
+   "label": 0,
+   "title": "Middle QA Engineer, Financial Services"
+  },
+  {
+   "job_id": "djinni-job-135560",
+   "label": 0,
+   "title": "Technical Email Marketing Specialist"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-109824",
+  "cv_category": "Marketing",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 2,
+  "coverage": 1.0,
+  "n_claims": 19,
+  "n_supported": 16,
+  "hallucination_rate": 0.1578947368421053,
+  "llm_calls": 4,
+  "input_tokens": 52667,
+  "output_tokens": 3564,
+  "cost_usd": 0.140974,
+  "latency_ms": 26031.300000000003,
+  "wall_ms": 24702.5,
+  "tool_calls": 10,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{\"skill_present_in_resume\": 1, \"skill_not_in_quotes\": 1, \"skill_not_in_job\": 1}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 19,
+  "n_supported": 16,
+  "hallucination_rate": 0.1578947368421053,
+  "reasons": {
+   "skill_present_in_resume": 1,
+   "skill_not_in_quotes": 1,
+   "skill_not_in_job": 1
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-56284",
+    "n_claims": 4,
+    "n_supported": 3,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 1,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.25,
+    "reasons": {
+     "skill_present_in_resume": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-129860",
+    "n_claims": 4,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.25,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-129112",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-135560",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-1563",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-48739",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-24362",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-76054",
+    "n_claims": 1,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 0,
+    "hallucination_rate": 1.0,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-54244",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-137681",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,641 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-99239",
+   "rank": 1,
+   "fit_score": 78.0,
+   "matched_skills": [
+    {
+     "skill": "React Native",
+     "resume_quote": "React.js, TypeScript, JS, HTML5, SCSS, and Redux",
+     "job_quote": "Experience with React Native"
+    },
+    {
+     "skill": "Redux",
+     "resume_quote": "React.js, TypeScript, JS, HTML5, SCSS, and Redux",
+     "job_quote": "Experience with Redux"
+    },
+    {
+     "skill": "HTML5",
+     "resume_quote": "React.js, TypeScript, JS, HTML5, SCSS, and Redux",
+     "job_quote": "Advanced knowledge of HTML5, CSS3, and SASS/LESS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "ReactJS (3+ years)",
+     "job_quote": "3+ years experience with ReactJS"
+    },
+    {
+     "skill": "SASS/LESS",
+     "job_quote": "Advanced knowledge of HTML5, CSS3, and SASS/LESS"
+    }
+   ],
+   "summary": "Strong overlap in React, Redux, and HTML5 with a React-centric front-end role, but it asks for 4+ years of experience and mobile (React Native) work, which the candidate only partly shows. Note that the compare_skills output lists ReactJS as matched, but the job's explicit experience requirement is not met by the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-72565",
+   "rank": 2,
+   "fit_score": 72.0,
+   "matched_skills": [
+    {
+     "skill": "React.js",
+     "resume_quote": "projects with such technologies as React.js, TypeScript",
+     "job_quote": "deep experience and expertise in React.js"
+    },
+    {
+     "skill": "TypeScript",
+     "resume_quote": "React.js, TypeScript, JS, HTML5",
+     "job_quote": "proficiency in Javascript/Typescript"
+    },
+    {
+     "skill": "Algorithms and data structures",
+     "resume_quote": "solved a lot of algorithmic tasks",
+     "job_quote": "data structures and algorithms"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "CSS preprocessors (Sass)",
+     "job_quote": "has strong experience CSS preprocessors"
+    }
+   ],
+   "summary": "Good React and TypeScript alignment with a front-end focus, but the role is Middle/Middle+ and asks for deeper architecture, databases/APIs, and strong algorithmic expertise than a junior candidate shows. The resume does list SCSS, which is close to the CSS-preprocessor requirement, so that gap is smaller than the tool output suggests.",
+   "dropped": [
+    {
+     "skill": "Modern ECMAScript / async JavaScript depth",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-71827",
+   "rank": 3,
+   "fit_score": 68.0,
+   "matched_skills": [
+    {
+     "skill": "React",
+     "resume_quote": "projects on React which you can find out on my GitHub",
+     "job_quote": "React JS"
+    },
+    {
+     "skill": "JavaScript",
+     "resume_quote": "React.js, TypeScript, JS, HTML5",
+     "job_quote": "Core JavaScript including ES6"
+    },
+    {
+     "skill": "HTML/CSS",
+     "resume_quote": "HTML5, SCSS",
+     "job_quote": "Strong HTML / CSS abilities"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "2+ years of JavaScript development",
+     "job_quote": "2+ years of experience with Javascript development"
+    },
+    {
+     "skill": "English (verbal and written)",
+     "job_quote": "good level of English verbal and written skills"
+    }
+   ],
+   "summary": "Very close to the candidate's React and JavaScript profile, though it asks for 2+ years of commercial JavaScript experience and strong ES6 coding skills that the resume does not clearly demonstrate. The job is Middle-level, so this is a stretch for a junior candidate, but the core stack matches well.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-36747",
+   "rank": 4,
+   "fit_score": 58.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "React.js, TypeScript, JS, HTML5",
+     "job_quote": "Extensive experience with JavaScript, React, HTML/CSS"
+    },
+    {
+     "skill": "React",
+     "resume_quote": "several projects on React",
+     "job_quote": "A deep understanding of React component life cycles"
+    },
+    {
+     "skill": "Node.js",
+     "resume_quote": "worked with such technologies as Node.js",
+     "job_quote": "Knowledge of backend technologies such as Node.js"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "4+ years of software engineering experience",
+     "job_quote": "4+ years of software engineering experience"
+    },
+    {
+     "skill": "Webpack",
+     "job_quote": "Experience working with Webpack"
+    }
+   ],
+   "summary": "The stack overlaps with React, JavaScript, and Node.js, but this is a senior full-stack role requiring 4+ years, team leadership, and high-load experience. Fit is limited mainly by seniority.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-120942",
+   "rank": 5,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "React.js, TypeScript, JS, HTML5",
+     "job_quote": "4+ years of experience with JavaScript language and Node JS"
+    },
+    {
+     "skill": "Node.js",
+     "resume_quote": "worked with such technologies as Node.js",
+     "job_quote": "4+ years of experience with JavaScript language and Node JS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "4+ years of Node.js experience",
+     "job_quote": "4+ years of experience with JavaScript language and Node JS"
+    },
+    {
+     "skill": "Server maintenance and deployment",
+     "job_quote": "Server maintenance and deployment experience"
+    }
+   ],
+   "summary": "A senior back-end Node.js role with heavy server, scalability, and deployment requirements that go well beyond the candidate's front-end-leaning background. Only a partial JavaScript/Node overlap.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-111855",
+   "rank": 6,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "React.js, TypeScript, JS, HTML5",
+     "job_quote": "Javascript"
+    },
+    {
+     "skill": "TypeScript",
+     "resume_quote": "React.js, TypeScript, JS, HTML5",
+     "job_quote": "TypeScript"
+    },
+    {
+     "skill": "React",
+     "resume_quote": "projects on React which you can find out on my GitHub",
+     "job_quote": "React"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile development",
+     "job_quote": "Passionate about engineering practices like agile"
+    }
+   ],
+   "summary": "The React, TypeScript, and JavaScript stack matches well, but the role is Senior and requires 5+ years of experience and team-leadership responsibilities. Seniority is the main barrier.",
+   "dropped": [
+    {
+     "skill": "Senior-level experience (5+ years)",
+     "reason": "The job text states 'Minimum 5 years of experience in writing excellent Javascript', which names a JavaScript requirement, not a general senior-level skill; the resume does not state any years of experience, so no verbatim text supports this as a standalone skill, and the claim was dropped rather than repaired."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-54336",
+   "rank": 7,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "React.js",
+     "resume_quote": "projects on React which you can find out on my GitHub",
+     "job_quote": "understanding of Frontend technologies like React.js"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "proficiency in Java with a programming experience"
+    },
+    {
+     "skill": "Spring Boot",
+     "job_quote": "knowledge of Spring Boot framework"
+    }
+   ],
+   "summary": "The role is a Java back-end position; the candidate's only overlap is React as a nice-to-have frontend partner technology. Not a good fit for the candidate's profile.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-70281",
+   "rank": 8,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "worked with such technologies as Node.js",
+     "job_quote": "Experience with NodeJS(Typescript)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C#/.NET Core",
+     "job_quote": "Experience with C#/.NET Core"
+    },
+    {
+     "skill": "Angular",
+     "job_quote": "Experience with Client-Side Angular framework"
+    }
+   ],
+   "summary": "A Middle .NET full-stack role centred on C#/.NET Core and Angular, which the candidate does not have. Only the optional Node.js/TypeScript experience overlaps.",
+   "dropped": [
+    {
+     "skill": "TypeScript / Node.js",
+     "reason": "Original matched claim combined TypeScript and Node.js; the job quote names NodeJS(Typescript) but the resume quote names only Node.js, with no verbatim resume text naming TypeScript alongside Node.js in that quote. Repaired to Node.js only, as the resume quote supports, so the TypeScript portion is dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-27839",
+   "rank": 9,
+   "fit_score": 10.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "PHP / Drupal",
+     "job_quote": "Excellent programming skills in core PHP are required"
+    },
+    {
+     "skill": "Backend development",
+     "job_quote": "Agile development of software components with a focus on backend development"
+    }
+   ],
+   "summary": "A PHP/Drupal backend role with no overlap with the candidate's JavaScript and React background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-26435",
+   "rank": 10,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Kubernetes / Helm",
+     "job_quote": "Design, implement, and manage Kubernetes-based infrastructure."
+    },
+    {
+     "skill": "GitOps / DevOps",
+     "job_quote": "Implement GitOps principles for infrastructure and deployment processes."
+    }
+   ],
+   "summary": "A DevOps infrastructure role centred on Kubernetes, Helm, and GitOps, none of which appear in the candidate's resume. Not a fit.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "frontend / full stack web development",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior Frontend Developer",
+     "Frontend Developer",
+     "Junior Full Stack Developer",
+     "React Developer",
+     "Junior React Developer"
+    ],
+    "must_have_skills": [
+     "React.js",
+     "TypeScript",
+     "JavaScript",
+     "HTML5",
+     "SCSS",
+     "Redux",
+     "responsive / adaptive layout",
+     "cross-browser compatibility"
+    ],
+    "nice_to_have_skills": [
+     "Node.js",
+     "SQL",
+     "Git / GitHub",
+     "algorithms and data structures",
+     "pixel-perfect UI implementation"
+    ],
+    "search_queries": [
+     "junior frontend developer React TypeScript",
+     "React developer Redux TypeScript remote",
+     "junior full stack developer Node.js React",
+     "frontend developer HTML5 SCSS responsive layout"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "junior frontend developer React TypeScript",
+    "React developer Redux TypeScript remote",
+    "junior full stack developer Node.js React",
+    "frontend developer HTML5 SCSS responsive layout",
+    "Junior Frontend Developer",
+    "Frontend Developer",
+    "Junior Full Stack Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "solved",
+     "lot of algorithmic tasks",
+     "making pixel-perfect , cross – browser , and adaptive layouts"
+    ],
+    "knowledge": [
+     "React.js",
+     "TypeScript",
+     "JS",
+     "HTML5",
+     "SCSS",
+     "Redux",
+     "Node.js",
+     "SQL",
+     "React"
+    ],
+    "esco_skills": [
+     "JSSS",
+     "JavaScript",
+     "SQL",
+     "TypeScript",
+     "algorithms"
+    ],
+    "not_in_esco": [
+     "solved",
+     "making pixel-perfect , cross – browser , and adaptive layouts",
+     "React.js",
+     "HTML5",
+     "Redux",
+     "Node.js",
+     "React"
+    ]
+   },
+   "ms": 9954.5
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 12457.1
+  },
+  {
+   "node": "verifier",
+   "flagged": 3,
+   "repaired": 0,
+   "dropped": 3,
+   "ms": 6902.0
+  }
+ ],
+ "llm_calls": 5,
+ "input_tokens": 15526,
+ "output_tokens": 5355,
+ "cost_usd": 0.004229,
+ "latency_ms": 20758.0,
+ "tool_calls": 92,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 3,
+ "verifier_repaired": 0,
+ "verifier_dropped": 3,
+ "plan": {
+  "role_family": "frontend / full stack web development",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior Frontend Developer",
+   "Frontend Developer",
+   "Junior Full Stack Developer",
+   "React Developer",
+   "Junior React Developer"
+  ],
+  "must_have_skills": [
+   "React.js",
+   "TypeScript",
+   "JavaScript",
+   "HTML5",
+   "SCSS",
+   "Redux",
+   "responsive / adaptive layout",
+   "cross-browser compatibility"
+  ],
+  "nice_to_have_skills": [
+   "Node.js",
+   "SQL",
+   "Git / GitHub",
+   "algorithms and data structures",
+   "pixel-perfect UI implementation"
+  ],
+  "search_queries": [
+   "junior frontend developer React TypeScript",
+   "React developer Redux TypeScript remote",
+   "junior full stack developer Node.js React",
+   "frontend developer HTML5 SCSS responsive layout"
+  ]
+ },
+ "wall_ms": 29317.2,
+ "pool": [
+  {
+   "job_id": "djinni-job-71827",
+   "label": 1,
+   "title": "Middle JavaScript(React) Developer"
+  },
+  {
+   "job_id": "djinni-job-36747",
+   "label": 0,
+   "title": "Full Stack Developer (React.Js\\Node.Js)"
+  },
+  {
+   "job_id": "djinni-job-111855",
+   "label": 0,
+   "title": "Senior Front-end Developer"
+  },
+  {
+   "job_id": "djinni-job-54336",
+   "label": 1,
+   "title": "Junior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-27839",
+   "label": 0,
+   "title": "Drupal Developer"
+  },
+  {
+   "job_id": "djinni-job-120942",
+   "label": 0,
+   "title": "Senior Node.js"
+  },
+  {
+   "job_id": "djinni-job-26435",
+   "label": 0,
+   "title": "DevOps Engineer with Kubernetes and Helm Charts Experience"
+  },
+  {
+   "job_id": "djinni-job-72565",
+   "label": 1,
+   "title": "Middle/Middle+ Front-end Developer Job Description"
+  },
+  {
+   "job_id": "djinni-job-70281",
+   "label": 0,
+   "title": "Middle Full Stack .Net Developer"
+  },
+  {
+   "job_id": "djinni-job-99239",
+   "label": 0,
+   "title": "React Native developer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-47119",
+  "cv_category": "JavaScript",
+  "ndcg10": 0.6871475159848289,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 0.5,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 1.0,
+  "n_claims": 37,
+  "n_supported": 37,
+  "hallucination_rate": 0.0,
+  "llm_calls": 5,
+  "input_tokens": 15526,
+  "output_tokens": 5355,
+  "cost_usd": 0.004229000000000001,
+  "latency_ms": 20758.0,
+  "wall_ms": 29317.2,
+  "tool_calls": 92,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}",
+  "verifier_flagged": 3,
+  "verifier_repaired": 0,
+  "verifier_dropped": 3
+ },
+ "faithfulness": {
+  "n_claims": 37,
+  "n_supported": 37,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-99239",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-72565",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-71827",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-36747",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-120942",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-111855",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-54336",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-70281",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-27839",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-26435",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

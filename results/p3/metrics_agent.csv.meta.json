@@ -24,8 +24,8 @@
     "errors",
     "approach_label"
   ],
-  "created_utc": "2026-10-21T08:17:51Z",
-  "git_commit": "236cb7c",
+  "created_utc": "2026-10-21T08:55:16Z",
+  "git_commit": "ca05d45",
   "model": "agent",
   "labels": "data/labels/final.csv",
   "n_cvs": 30

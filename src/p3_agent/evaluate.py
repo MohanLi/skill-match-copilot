@@ -25,7 +25,8 @@ from .multi_agent import MultiAgent
 from .single_agent import SingleAgent
 from .tools import ToolBox
 
-LABELS = {"baseline": "Embedding baseline (no LLM)", "single": "Single ReAct agent (champion)", "multi": "Multi-agent + verifier (challenger)", "multi_noverify": "Multi-agent without verifier (ablation)"}
+LABELS = {"baseline": "Embedding baseline (no LLM)", "single": "Single ReAct agent", "multi": "Planner→Retriever→Matcher→Verifier", "multi_noverify": "Planner→Retriever→Matcher (no verifier)",
+          "single_verified": "Single ReAct agent + Verifier"}
 
 
 def ndcg_at_k(ranked_labels: list[int], all_labels: list[int], k: int = 10) -> float | None:
@@ -59,6 +60,10 @@ def make_approach(key: str, tb: ToolBox, model: str):
         return MultiAgent(tb, model=model)
     if key == "multi_noverify":
         return MultiAgent(tb, model=model, use_verifier=False, task="p3_multi_agent_noverify")
+    if key == "single_verified":
+        from .verified import VerifiedSingleAgent
+
+        return VerifiedSingleAgent(tb, model=model)
     raise ValueError(key)
 
 
@@ -120,6 +125,12 @@ def main() -> None:
             print(f"[{key}] {n}/{len(cv_ids)} {cv}: nDCG {rec['ndcg10'] if rec['ndcg10'] is None else round(rec['ndcg10'], 3)} P@3 {rec['p_at_3']:.2f} halluc {rec['hallucination_rate']} cost ${run.cost_usd:.3f} ({(time.time()-t_app)/60:.1f} min)", flush=True)
 
     df = pd.DataFrame(per_cv)
+    prev_f = ROOT / f"results/p3/per_cv_{tag}.csv"
+    if prev_f.exists():  # keep approaches evaluated earlier under the same tag (e.g. adding one arm later)
+        prev = pd.read_csv(prev_f)
+        prev = prev[~prev["approach"].isin(set(df["approach"]))]
+        if len(prev):
+            df = pd.concat([prev, df], ignore_index=True)
     write_results(df, f"results/p3/per_cv_{tag}.csv", meta={"model": args.model, "n_cvs": len(cv_ids)})
     agg = df.groupby("approach").agg(
         n_cvs=("cv_id", "nunique"), n_cvs_with_relevant=("ndcg10", "count"), ndcg10=("ndcg10", "mean"), ndcg10_std=("ndcg10", "std"), p_at_3=("p_at_3", "mean"), mrr=("mrr", "mean"),

@@ -1,0 +1,589 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-9091",
+   "rank": 1,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "MySQL",
+     "resume_quote": "Stack: Laravel, Mysql, Nginx, MongoDB",
+     "job_quote": "Strong knowledge of MySQL: migrations, queries performance optimization techniques"
+    }
+   ],
+   "missing_skills": [],
+   "summary": "Strong role-family and framework overlap: the candidate has Yii2 experience on Dts.edu.az, which the resume lists but the matcher cannot cite as a match because the job's Yii 2 requirement is not quoted verbatim in the resume. The ESCO comparison also misses PHP and RabbitMQ, so the score is moderate.",
+   "dropped": [
+    {
+     "skill": "Yii 2",
+     "reason": "skill_present_in_resume: the resume names Yii2 in 'Stack: Yii2, Mysql, css, jquery.', so it is not missing"
+    },
+    {
+     "skill": "PHP",
+     "reason": "skill_present_in_resume: the resume names php in 'OpenCart (php)', so it is not missing"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-87956",
+   "rank": 2,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "PostgreSQL",
+     "resume_quote": "PostgreSql",
+     "job_quote": "Postgres"
+    },
+    {
+     "skill": "Nginx",
+     "resume_quote": "Nginx",
+     "job_quote": "Linux, Nginx;"
+    },
+    {
+     "skill": "GitLab",
+     "resume_quote": "Gitlab (with CI/CD)",
+     "job_quote": "Git, GitLab;"
+    },
+    {
+     "skill": "MongoDB",
+     "resume_quote": "MongoDB",
+     "job_quote": "MongoDB"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Symfony",
+     "job_quote": "Symfony framework, Symfony components"
+    }
+   ],
+   "summary": "Same PHP-centric stack family with several database and infrastructure matches, but the role is a payments-focused backend position that requires PHP 7+ and Symfony, which the resume does not show; the candidate's PHP work is implied by Laravel and Yii2 rather than stated outright.",
+   "dropped": [
+    {
+     "skill": "PHP",
+     "reason": "Flagged as skill_present_in_resume: PHP appears in the resume (\"OpenCart (php)\" in the Vitrage.az project and \"Yii2\" as a PHP framework in the Dts.edu.az project), so it is not a missing skill. No verbatim job text supports keeping it as missing."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-121965",
+   "rank": 3,
+   "fit_score": 50.0,
+   "matched_skills": [
+    {
+     "skill": "Laravel",
+     "resume_quote": "Laravel, Mysql, Nginx, MongoDB",
+     "job_quote": "8+ years industry experience in PHP-Laravel"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Years of Laravel experience (8+)",
+     "job_quote": "8+ years industry experience in PHP-Laravel"
+    },
+    {
+     "skill": "Agile / Scrum",
+     "job_quote": "We work in an Agile / Scrum format"
+    }
+   ],
+   "summary": "Laravel is the exact framework, but the role asks for 8+ years of PHP-Laravel experience, which the resume's project timeline does not evidence, and the ESCO comparison returned no matched skills, so the fit is partial.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-141359",
+   "rank": 4,
+   "fit_score": 30.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "WordPress",
+     "job_quote": "2+ years of WordPress Developer;"
+    }
+   ],
+   "summary": "PHP and JavaScript are relevant, but the role centres on WordPress theme and plugin development, which does not appear in the resume.",
+   "dropped": [
+    {
+     "skill": "PHP",
+     "reason": "skill_present_in_resume: PHP appears in the resume (Yii2 and OpenCart (php) experience), so it is not a missing skill. Dropped as a missing claim; no verbatim job-based repair applies because the resume contains PHP experience."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-71109",
+   "rank": 5,
+   "fit_score": 15.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "Deep experience with Java"
+    },
+    {
+     "skill": "Spring Boot",
+     "job_quote": "Good practical experience with Spring Boot and Git"
+    }
+   ],
+   "summary": "A Java/Spring role with no overlap with the candidate's PHP, Laravel, and Vue.js background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-118619",
+   "rank": 6,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "Microservices architecture",
+     "resume_quote": "microservice architecture",
+     "job_quote": "Understanding the sense of microservices architecture"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C# / .NET",
+     "job_quote": "Strong knowledge of C# programming language and .NET platform"
+    }
+   ],
+   "summary": "A .NET pre-sales lead role; the only shared item is general microservices exposure, and the role's core requirement is C#/.NET, which is absent from the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-19321",
+   "rank": 7,
+   "fit_score": 10.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "A customer technical operations role centred on platform configuration and customer support, with little overlap with full stack development.",
+   "dropped": [
+    {
+     "skill": "SQL",
+     "reason": "Flagged as skill_present_in_resume: the resume lists Mysql (Abelohost, Bestcomp group, Professional IT) and PostgreSql (Mashin.al), so SQL is not missing. Claim dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-17020",
+   "rank": 8,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Copywriting",
+     "job_quote": "Write clear marketing copy to promote our products/services."
+    }
+   ],
+   "summary": "A content writing role that does not align with the candidate's software development experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-130199",
+   "rank": 9,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Social media marketing",
+     "job_quote": "Using social media marketing tools to create and maintain the company's brand"
+    }
+   ],
+   "summary": "A social media marketing role; the candidate has no marketing background, so the only overlap is the minor analytics tool reference.",
+   "dropped": [
+    {
+     "skill": "Google Analytics",
+     "reason": "resume_quote_not_found: 'Google Analytics' does not appear verbatim in the resume, and the resume contains no text naming it, so the matched claim cannot be supported and is dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-15970",
+   "rank": 10,
+   "fit_score": 4.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "A community manager and online teaching role with no technical development requirements that the candidate's profile covers.",
+   "dropped": [
+    {
+     "skill": "Community management",
+     "reason": "Flagged skill_not_in_job: the quote 'We are looking for a natural community leader to join us' does not name community management as a skill. Job text names community-building only in other forms (e.g., 'You've built significant communities.' and 'Experience curating content for online communities'), and the claim is a 'missing' skill, meaning it would require the skill to appear in the job text as a requirement and be absent from the resume. The resume does not contain community management experience, but the job's own wording is not a verbatim naming of the skill, so no exact verbatim quote supports the claim as stated. Dropped rather than repaired to avoid an unsupported claim."
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "full stack web development (PHP/Laravel + Vue.js)",
+    "seniority": "middle",
+    "target_titles": [
+     "Full Stack Developer",
+     "Full Stack Engineer",
+     "Laravel Developer",
+     "Senior Full Stack Developer (PHP/Vue)",
+     "Web Application Developer"
+    ],
+    "must_have_skills": [
+     "Laravel",
+     "PHP",
+     "Vue.js",
+     "Nuxt.js",
+     "MySQL",
+     "PostgreSQL",
+     "MongoDB",
+     "Nginx",
+     "SCSS",
+     "jQuery",
+     "Git (GitLab/Bitbucket) CI/CD"
+    ],
+    "nice_to_have_skills": [
+     "Quasar.js",
+     "Yii2",
+     "OpenCart",
+     "Apache",
+     "Figma",
+     "Microservice architecture",
+     "1C integration",
+     "Trello",
+     "REST API integration"
+    ],
+    "search_queries": [
+     "Full Stack Developer Laravel Vue.js remote",
+     "Laravel Vue.js Nuxt developer MySQL PostgreSQL",
+     "PHP Laravel full stack developer microservices GitLab CI/CD",
+     "Full Stack Developer PHP Yii2 jQuery remote Europe",
+     "Laravel Developer Vue.js e-commerce marketplace"
+    ]
+   },
+   "ms": 0.4
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Full Stack Developer Laravel Vue.js remote",
+    "Laravel Vue.js Nuxt developer MySQL PostgreSQL",
+    "PHP Laravel full stack developer microservices GitLab CI/CD",
+    "Full Stack Developer PHP Yii2 jQuery remote Europe",
+    "Laravel Developer Vue.js e-commerce marketplace",
+    "Full Stack Developer",
+    "Full Stack Engineer",
+    "Laravel Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [],
+    "knowledge": [
+     "Mysql",
+     "Nginx",
+     "MongoDB",
+     "Quasar.js",
+     "vue.js",
+     "Gitlab",
+     "CI/CD )",
+     "Figma",
+     "Trello",
+     "scss",
+     "microservice architecture",
+     "Nuxt.js",
+     "Bitbucket",
+     "PostgreSql",
+     "OpenCart",
+     ")",
+     "Apache",
+     "css",
+     "jquery",
+     "Yii2"
+    ],
+    "esco_skills": [
+     "CSS",
+     "JSSS",
+     "MySQL",
+     "PostgreSQL"
+    ],
+    "not_in_esco": [
+     "Nginx",
+     "MongoDB",
+     "Quasar.js",
+     "vue.js",
+     "Gitlab",
+     "CI/CD )",
+     "Figma",
+     "Trello",
+     "microservice architecture",
+     "Nuxt.js",
+     "Bitbucket",
+     "OpenCart",
+     ")",
+     "Apache",
+     "jquery",
+     "Yii2"
+    ]
+   },
+   "ms": 12488.7
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 8482.0
+  },
+  {
+   "node": "verifier",
+   "flagged": 8,
+   "repaired": 1,
+   "dropped": 7,
+   "ms": 13344.8
+  }
+ ],
+ "llm_calls": 8,
+ "input_tokens": 26714,
+ "output_tokens": 4704,
+ "cost_usd": 0.005022,
+ "latency_ms": 23898.2,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 8,
+ "verifier_repaired": 1,
+ "verifier_dropped": 7,
+ "plan": {
+  "role_family": "full stack web development (PHP/Laravel + Vue.js)",
+  "seniority": "middle",
+  "target_titles": [
+   "Full Stack Developer",
+   "Full Stack Engineer",
+   "Laravel Developer",
+   "Senior Full Stack Developer (PHP/Vue)",
+   "Web Application Developer"
+  ],
+  "must_have_skills": [
+   "Laravel",
+   "PHP",
+   "Vue.js",
+   "Nuxt.js",
+   "MySQL",
+   "PostgreSQL",
+   "MongoDB",
+   "Nginx",
+   "SCSS",
+   "jQuery",
+   "Git (GitLab/Bitbucket) CI/CD"
+  ],
+  "nice_to_have_skills": [
+   "Quasar.js",
+   "Yii2",
+   "OpenCart",
+   "Apache",
+   "Figma",
+   "Microservice architecture",
+   "1C integration",
+   "Trello",
+   "REST API integration"
+  ],
+  "search_queries": [
+   "Full Stack Developer Laravel Vue.js remote",
+   "Laravel Vue.js Nuxt developer MySQL PostgreSQL",
+   "PHP Laravel full stack developer microservices GitLab CI/CD",
+   "Full Stack Developer PHP Yii2 jQuery remote Europe",
+   "Laravel Developer Vue.js e-commerce marketplace"
+  ]
+ },
+ "wall_ms": 34319.5,
+ "pool": [
+  {
+   "job_id": "djinni-job-15970",
+   "label": 0,
+   "title": "Community Manager at Teech!"
+  },
+  {
+   "job_id": "djinni-job-19321",
+   "label": 0,
+   "title": "Customer Technical Operations"
+  },
+  {
+   "job_id": "djinni-job-9091",
+   "label": 1,
+   "title": "Backend PHP Engineer"
+  },
+  {
+   "job_id": "djinni-job-118619",
+   "label": 0,
+   "title": "Senior/Lead .NET Developer (Pre-Sales)"
+  },
+  {
+   "job_id": "djinni-job-121965",
+   "label": 1,
+   "title": "Senior PHP Developer for Pallo"
+  },
+  {
+   "job_id": "djinni-job-71109",
+   "label": 0,
+   "title": "Middle Java Developer"
+  },
+  {
+   "job_id": "djinni-job-87956",
+   "label": 1,
+   "title": "PHP Developer for payment team"
+  },
+  {
+   "job_id": "djinni-job-130199",
+   "label": 0,
+   "title": "Social Media Manager / SMM"
+  },
+  {
+   "job_id": "djinni-job-141359",
+   "label": 1,
+   "title": "WordPress Developer"
+  },
+  {
+   "job_id": "djinni-job-17020",
+   "label": 0,
+   "title": "Content Writer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-48346",
+  "cv_category": "PHP",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 1.0,
+  "n_claims": 16,
+  "n_supported": 16,
+  "hallucination_rate": 0.0,
+  "llm_calls": 8,
+  "input_tokens": 26714,
+  "output_tokens": 4704,
+  "cost_usd": 0.005022,
+  "latency_ms": 23898.2,
+  "wall_ms": 34319.5,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 8,
+  "verifier_repaired": 1,
+  "verifier_dropped": 7
+ },
+ "faithfulness": {
+  "n_claims": 16,
+  "n_supported": 16,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-9091",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-87956",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-121965",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-141359",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-71109",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-118619",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-19321",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-17020",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-130199",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-15970",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,637 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-128853",
+   "rank": 1,
+   "fit_score": 38.0,
+   "matched_skills": [
+    {
+     "skill": "website optimization tools",
+     "resume_quote": "Workday Studio",
+     "job_quote": "Experience with website optimization tools"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "web analytics",
+     "job_quote": "Deep knowledge of Google analytics"
+    },
+    {
+     "skill": "write routine reports",
+     "job_quote": "Tracking KPIs and producing useful reports for management"
+    }
+   ],
+   "summary": "Closest in spirit to a reporting role: the job asks for KPI tracking and management reporting, which the candidate's report-building work covers. However, it is a marketing/SEO role centred on Google Analytics, CMS, and HTML/CSS, none of which appear in the resume, so the fit is weak.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-111613",
+   "rank": 2,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "reporting",
+     "resume_quote": "developing Custom Reports\\Dashboards within the system",
+     "job_quote": "Experience with reporting (P&L; CashFlow; Balance; management reporting; basic financial analytics)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "financial analysis",
+     "job_quote": "In-depth knowledge of financial analysis and intelligence"
+    },
+    {
+     "skill": "use accounting systems",
+     "job_quote": "Understanding of accounting principles (experience with accounting software will be a plus)"
+    }
+   ],
+   "summary": "Shares the reporting and dashboard-building component, but the core of the role is financial management, accounting, tax, and FATF compliance, and the candidate has no finance background. Partial overlap only.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-79968",
+   "rank": 3,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "configuration management",
+     "resume_quote": "maintenance, support, and optimization functionality within Project and Time tracking domain",
+     "job_quote": "Project configuration management"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP",
+     "job_quote": "3+ years of professional software development experience using PHP (both 7.x and 8.x)"
+    },
+    {
+     "skill": "DevOps",
+     "job_quote": "Demonstrated excellence in programming, debugging, architecture, and DevOps"
+    }
+   ],
+   "summary": "A backend PHP development role; the candidate's experience is in ERP configuration and BI reporting rather than professional PHP software engineering. The only match is a weak generic term.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-116292",
+   "rank": 4,
+   "fit_score": 20.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "ETL, BEX, ABAP, SAPUI5, MSSQL",
+     "job_quote": "Experience with databases (SQL)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java (computer programming)",
+     "job_quote": "Strong hands-on experience with Java 8 or higher"
+    },
+    {
+     "skill": "Spring framework",
+     "job_quote": "Spring framework"
+    }
+   ],
+   "summary": "A Java-based enterprise development role. The candidate has SQL and ABAP exposure but no Java experience, so only the general SQL skill transfers.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-38702",
+   "rank": 5,
+   "fit_score": 15.0,
+   "matched_skills": [
+    {
+     "skill": "develop",
+     "resume_quote": "developing reports based on SAP Analysis",
+     "job_quote": "develop"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP",
+     "job_quote": "3+ years of experience working with PHP"
+    },
+    {
+     "skill": "Angular",
+     "job_quote": "2 + years of experience with Angular"
+    }
+   ],
+   "summary": "A full-stack PHP and Angular role; the candidate has neither stack. The only overlap is the generic verb 'develop', which is not a meaningful skill match.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-118582",
+   "rank": 6,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "integration",
+     "resume_quote": "developing Integration apps based on Workday Studio",
+     "job_quote": "Integrate third parties"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Node.js/React/TypeScript",
+     "job_quote": "5+ years of experience with Node.js, Nest.js, React.js"
+    },
+    {
+     "skill": "Microservice architecture",
+     "job_quote": "Experience with Microservice architecture"
+    }
+   ],
+   "summary": "A senior JavaScript full-stack engineering role. The integration experience is conceptually adjacent through Workday Studio, but the required JavaScript, microservice, and cloud stack is absent from the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-87220",
+   "rank": 7,
+   "fit_score": 10.0,
+   "matched_skills": [
+    {
+     "skill": "mentor and support marketing specialists",
+     "resume_quote": "writing user guides, writing technical specifications",
+     "job_quote": "mentor and support marketing specialists"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "web analytics",
+     "job_quote": "web analytics"
+    },
+    {
+     "skill": "implement marketing strategies",
+     "job_quote": "implement marketing strategies"
+    }
+   ],
+   "summary": "A performance marketing role for a venture fund's growth team. The candidate has no marketing background, and the matched phrase is a loose mentoring overlap with no real evidence of marketing work.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-14594",
+   "rank": 8,
+   "fit_score": 8.0,
+   "matched_skills": [
+    {
+     "skill": "support the Executive team",
+     "resume_quote": "Lead SAP ERP (SD) specialist",
+     "job_quote": "support the Executive team"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "financial management",
+     "job_quote": "oversee all financial activities and support the Executive team in financial planning and control"
+    },
+    {
+     "skill": "mergers and acquisitions",
+     "job_quote": "Proven experience in Merger & Acquisition and startup fundraising"
+    }
+   ],
+   "summary": "A CFO role requiring M&A and fundraising experience the candidate lacks. The only match is a generic phrase about supporting executives.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-14768",
+   "rank": 9,
+   "fit_score": 6.0,
+   "matched_skills": [
+    {
+     "skill": "system",
+     "resume_quote": "Workday ERP Configuration Profesional",
+     "job_quote": "system"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "lead a team",
+     "job_quote": "lead a team"
+    },
+    {
+     "skill": "results-based management",
+     "job_quote": "High-performance result oriented managers"
+    }
+   ],
+   "summary": "A COO/operations management role focused on company-wide strategy and team leadership. The candidate's experience is hands-on technical, and the only match is the generic word 'system'.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-610",
+   "rank": 10,
+   "fit_score": 4.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "REVIT",
+     "job_quote": "PLANT 3D/ NAVISWORKS/ REVIT"
+    },
+    {
+     "skill": "PIPING planning",
+     "job_quote": "Experience with PIPING planning and designing"
+    }
+   ],
+   "summary": "A 3D engineering-design role requiring CAD tools such as Plant 3D, Navisworks, and Revit. The candidate has no matching design or CAD experience.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "BI / reporting and enterprise ERP analytics",
+    "seniority": "senior",
+    "target_titles": [
+     "BI Developer",
+     "Report Designer",
+     "SAP BW Developer",
+     "Workday Report Developer",
+     "ERP Reporting Analyst",
+     "Workday Extend Developer"
+    ],
+    "must_have_skills": [
+     "SAP BW",
+     "SAP BEx Query Designer",
+     "SAP Analysis for Microsoft Excel / SAP Analytics",
+     "ABAP",
+     "ETL processes",
+     "Workday Custom Reports and Dashboards",
+     "Workday Studio",
+     "SAP SD (Sales and Distribution)",
+     "MS SQL",
+     "Business requirements analysis"
+    ],
+    "nice_to_have_skills": [
+     "Workday Extend",
+     "SAPUI5",
+     "SAP Business Workflow",
+     "Workday Project and Time Tracking",
+     "SmartVista / SAP ERP integration",
+     "Technical specification and user guide writing"
+    ],
+    "search_queries": [
+     "BI Developer SAP BW BEx ABAP",
+     "Workday report developer Workday Studio",
+     "SAP BW ETL SAP Analysis report designer",
+     "Workday Extend developer integration",
+     "SAP SD business analyst BW reporting"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "BI Developer SAP BW BEx ABAP",
+    "Workday report developer Workday Studio",
+    "SAP BW ETL SAP Analysis report designer",
+    "Workday Extend developer integration",
+    "SAP SD business analyst BW reporting",
+    "BI Developer",
+    "Report Designer",
+    "SAP BW Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "maintenance",
+     "developing Integration apps",
+     "developing Custom Reports \\ Dashboards",
+     "support",
+     "optimization",
+     "developing reports",
+     "writing user guides",
+     "writing technical specifications",
+     "business",
+     "Implementation",
+     "BW",
+     "Implementation of Workday Project and Time Tracking functionality"
+    ],
+    "knowledge": [
+     "SAP",
+     "Workday",
+     "ERP",
+     "Configuration",
+     "Project and Time tracking",
+     "Workday Studio",
+     "Workday Extend",
+     "business requirements",
+     "ETL",
+     "BEX",
+     "ABAP",
+     "SAPUI5",
+     "MSSQL",
+     "business processes",
+     "Workflow",
+     "SAP ERP",
+     "SAP BW",
+     "BW",
+     "Workday Project and Time Tracking",
+     "Studio"
+    ],
+    "esco_skills": [
+     "ABAP",
+     "SAP Data Services",
+     "SQL Server",
+     "analyse business requirements",
+     "assess studio production",
+     "business model",
+     "business processes",
+     "develop reporting software",
+     "maintenance operations",
+     "manage standard enterprise resource planning system",
+     "manage workflow processes",
+     "project configuration management",
+     "provide support to social services users",
+     "write up a list of technical specifications",
+     "writing style guides"
+    ],
+    "not_in_esco": [
+     "developing Integration apps",
+     "developing Custom Reports \\ Dashboards",
+     "optimization",
+     "Implementation",
+     "BW",
+     "Implementation of Workday Project and Time Tracking functionality",
+     "Workday",
+     "Project and Time tracking",
+     "Workday Studio",
+     "Workday Extend",
+     "ETL",
+     "BEX",
+     "SAPUI5",
+     "SAP BW",
+     "BW",
+     "Workday Project and Time Tracking"
+    ]
+   },
+   "ms": 12298.0
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 1.0
+  },
+  {
+   "node": "verifier",
+   "skipped": true
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 10252,
+ "output_tokens": 3166,
+ "cost_usd": 0.002608,
+ "latency_ms": 12756.1,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "plan": {
+  "role_family": "BI / reporting and enterprise ERP analytics",
+  "seniority": "senior",
+  "target_titles": [
+   "BI Developer",
+   "Report Designer",
+   "SAP BW Developer",
+   "Workday Report Developer",
+   "ERP Reporting Analyst",
+   "Workday Extend Developer"
+  ],
+  "must_have_skills": [
+   "SAP BW",
+   "SAP BEx Query Designer",
+   "SAP Analysis for Microsoft Excel / SAP Analytics",
+   "ABAP",
+   "ETL processes",
+   "Workday Custom Reports and Dashboards",
+   "Workday Studio",
+   "SAP SD (Sales and Distribution)",
+   "MS SQL",
+   "Business requirements analysis"
+  ],
+  "nice_to_have_skills": [
+   "Workday Extend",
+   "SAPUI5",
+   "SAP Business Workflow",
+   "Workday Project and Time Tracking",
+   "SmartVista / SAP ERP integration",
+   "Technical specification and user guide writing"
+  ],
+  "search_queries": [
+   "BI Developer SAP BW BEx ABAP",
+   "Workday report developer Workday Studio",
+   "SAP BW ETL SAP Analysis report designer",
+   "Workday Extend developer integration",
+   "SAP SD business analyst BW reporting"
+  ]
+ },
+ "wall_ms": 12302.2,
+ "pool": [
+  {
+   "job_id": "djinni-job-118582",
+   "label": 0,
+   "title": "Senior/Lead JavaScript Full Stack Engineer"
+  },
+  {
+   "job_id": "djinni-job-128853",
+   "label": 0,
+   "title": "SEO expert with Google Analytics"
+  },
+  {
+   "job_id": "djinni-job-610",
+   "label": 0,
+   "title": "3D planner"
+  },
+  {
+   "job_id": "djinni-job-111613",
+   "label": 0,
+   "title": "Senior Financial Analyst (Web 3.0 project)"
+  },
+  {
+   "job_id": "djinni-job-14594",
+   "label": 0,
+   "title": "Chief Financial Officer"
+  },
+  {
+   "job_id": "djinni-job-14768",
+   "label": 0,
+   "title": "Chief Operating Officer (COO)/Operations Manager"
+  },
+  {
+   "job_id": "djinni-job-87220",
+   "label": 0,
+   "title": "Performance Marketer (Genesis Investments)"
+  },
+  {
+   "job_id": "djinni-job-79968",
+   "label": 0,
+   "title": "Middle/Senior PHP Developer (only in GE, LT, UZ, HU)"
+  },
+  {
+   "job_id": "djinni-job-38702",
+   "label": 0,
+   "title": "Fullstack PHP+Angular Developer"
+  },
+  {
+   "job_id": "djinni-job-116292",
+   "label": 0,
+   "title": "Senior Java developer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-9058",
+  "cv_category": "Other",
+  "ndcg10": null,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.0,
+  "mrr_rel1": null,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 0,
+  "coverage": 1.0,
+  "n_claims": 29,
+  "n_supported": 24,
+  "hallucination_rate": 0.1724137931034483,
+  "llm_calls": 2,
+  "input_tokens": 10252,
+  "output_tokens": 3166,
+  "cost_usd": 0.002608,
+  "latency_ms": 12756.1,
+  "wall_ms": 12302.2,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{\"job_quote_not_found\": 4, \"skill_not_in_job\": 1}"
+ },
+ "faithfulness": {
+  "n_claims": 29,
+  "n_supported": 24,
+  "hallucination_rate": 0.1724137931034483,
+  "reasons": {
+   "job_quote_not_found": 4,
+   "skill_not_in_job": 1
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-128853",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-111613",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-79968",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "job_quote_not_found": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-116292",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-38702",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-118582",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-87220",
+    "n_claims": 3,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.6667,
+    "reasons": {
+     "job_quote_not_found": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-14594",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-14768",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "job_quote_not_found": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-610",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

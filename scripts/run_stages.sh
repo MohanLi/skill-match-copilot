@@ -17,7 +17,7 @@ run_stage() {
   return $rc
 }
 
-ALL=(p1_eval p2_val_baselines p2_train_biencoder p2_val_ours p2_val_rtl p2_test_all p2_nil p2_val_rtl_context p2_test_rtl_context p2_nil_context eda03 eda04 index_djinni index_live p3_pairs p3_labels p3_eval p3_eval_sonnet p3_silver eda04_post drift eda05)
+ALL=(p1_eval p2_val_baselines p2_train_biencoder p2_val_ours p2_val_rtl p2_test_all p2_nil p2_val_rtl_context p2_test_rtl_context p2_nil_context eda03 eda04 index_djinni index_live p3_pairs p3_labels p3_eval p3_eval_verified p3_eval_sonnet p3_silver eda04_post drift eda05)
 STAGES=("$@"); [ ${#STAGES[@]} -eq 0 ] && STAGES=("${ALL[@]}")
 
 for s in "${STAGES[@]}"; do
@@ -40,6 +40,7 @@ for s in "${STAGES[@]}"; do
     p3_labels)          run_stage $s python -m src.p3_agent.label_pairs ;;
     p3_eval)            run_stage $s python -m src.p3_agent.evaluate --approaches baseline single multi multi_noverify ;;
     p3_eval_sonnet)     run_stage $s python -m src.p3_agent.evaluate --approaches single multi --model agent_ablation --tag sonnet --limit 12 ;;  # Sonnet is ~20x Haiku per run: 12 CVs keep it under the budget
+    p3_eval_verified)   run_stage $s python -m src.p3_agent.evaluate --approaches single_verified ;;
     p3_silver)          run_stage $s python -m src.p3_agent.silver_eval --agents-n 60 ;;
     eda04_post)         run_stage $s python scripts/nb.py notebooks/src/04_eda_live_jobs.py ;;
     drift)              run_stage $s python -m src.monitoring.drift_report ;;

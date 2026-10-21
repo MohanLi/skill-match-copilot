@@ -1,0 +1,585 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-22287",
+   "rank": 1,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "MySQL",
+     "resume_quote": "MySQL(basic)",
+     "job_quote": "Experienced in Database Testing and using various DBMS tools including Mode analytics, MySQL and performing complex queries."
+    },
+    {
+     "skill": "Jenkins",
+     "resume_quote": "Jenkins.",
+     "job_quote": "Expertise in Test Automation Frameworks using Jenkins, Java, Maven, TestNG."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java (computer programming)",
+     "job_quote": "Expertise in Test Automation Frameworks using Jenkins, Java, Maven, TestNG."
+    }
+   ],
+   "summary": "Strong automation-testing role with a data focus; the candidate matches on MySQL and Jenkins and is a close title match, but the Java, Appium/Selenium, mobile and AWS requirements are gaps, and the role is more data-engineering oriented.",
+   "dropped": [
+    {
+     "skill": "SQL",
+     "reason": "Flagged as skill_present_in_resume. The resume does not name SQL on its own; its only related text is 'MySQL(basic)', which is already covered by the matched MySQL claim. A 'missing' claim for SQL is therefore unsupported and was dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-129198",
+   "rank": 2,
+   "fit_score": 48.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "A QA role requiring test documentation, bug investigation and automation scripting, which overlaps well with the candidate's regression and bug-reporting background, though it asks for more years of experience and Linux/Docker skills the resume lacks.",
+   "dropped": [
+    {
+     "skill": "Test execution and reporting",
+     "reason": "Neither quote names test execution and reporting; the job quote concerns test documentation, which the resume does not mention."
+    },
+    {
+     "skill": "SQL",
+     "reason": "Flagged as missing but SQL appears in the resume as 'MySQL(basic)', so it is not missing."
+    },
+    {
+     "skill": "Automation scripting",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-105889",
+   "rank": 3,
+   "fit_score": 44.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Python (computer programming)",
+     "job_quote": "Good experience and knowledge of Python;"
+    },
+    {
+     "skill": "Continuous integration",
+     "job_quote": "Experience with continuous integration and source control systems;"
+    }
+   ],
+   "summary": "A senior automation role whose core activities (automation scripts, testing processes, quality metrics) match the candidate's experience, but it requires Python and microservice experience, and the candidate's seniority is below the 5+ years requested.",
+   "dropped": [
+    {
+     "skill": "Test automation",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-4808",
+   "rank": 4,
+   "fit_score": 34.0,
+   "matched_skills": [
+    {
+     "skill": "Quality engineering",
+     "resume_quote": "Performing regression analysis and creating bug reports.",
+     "job_quote": "Significant Quality/Test Engineering experience"
+    }
+   ],
+   "missing_skills": [],
+   "summary": "A QA role focused on Java, big data and API automation with heavy data and infrastructure work; the candidate's C#/Telerik stack and lack of Java and Hadoop knowledge make it a weaker match.",
+   "dropped": [
+    {
+     "skill": "Java",
+     "reason": "Flagged as skill_present_in_resume. The resume lists Java-related tools (Telerik, MSpec, Jenkins, JavaScript) but does not mention Java itself, so the claim that Java is missing is not contradicted by the resume. However, the job's 'Experienced Java Programming' quote is verbatim, so this could be repaired rather than dropped only if the flag is treated as a false positive. Under the rules, the program flagged it as present in the resume, and the resume text contains no Java skill, so I am dropping it to avoid keeping an unverifiable claim."
+    },
+    {
+     "skill": "SQL",
+     "reason": "Flagged as skill_present_in_resume. The resume lists 'MySQL(basic)', which is an SQL database, so SQL is present in the resume and is not a missing skill. The claim cannot be kept as missing."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-127662",
+   "rank": 5,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "Test automation",
+     "resume_quote": "Writing and maintaining existing test scripts.",
+     "job_quote": "building and maintaining test automation frameworks for UI, API, and mobile functional automation"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Selenium/Postman/SoapUI/Cypress",
+     "job_quote": "Experienced with at least two of the following tools Selenium, Postman, SoapUI, Protractor, Cypress."
+    }
+   ],
+   "summary": "A senior test automation role building API and Web UI frameworks; the candidate has general automation experience, but the role calls for a senior level and specific tooling (Selenium, Postman, SoapUI, Cypress) the resume doesn't show, and C# is only partially relevant.",
+   "dropped": [
+    {
+     "skill": "C#",
+     "reason": "The claim was marked missing, but C# appears in the resume's own text (\"Writing and maintaining existing test scripts\" does not name it, but the resume's position line \"QA Automation Engineer C#\" does), so it is not a missing skill. Dropped rather than kept as missing."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-56946",
+   "rank": 6,
+   "fit_score": 26.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Mobile and IoT testing",
+     "job_quote": "Hands-on experience/knowledge or desire to test (means knowledge too, though) IoT and Mobile products;"
+    },
+    {
+     "skill": "English",
+     "job_quote": "Good verbal and written communication in English (Upper-intermediate or higher);"
+    }
+   ],
+   "summary": "A junior manual-leaning QA role centred on mobile, firmware and hardware testing; it overlaps only on bug reporting and regression, and its emphasis on mobile/IoT and manual testing is far from the candidate's C# automation profile.",
+   "dropped": [
+    {
+     "skill": "Test management and bug reporting",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-110369",
+   "rank": 7,
+   "fit_score": 12.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Ansible",
+     "job_quote": "Ansible"
+    },
+    {
+     "skill": "Python (computer programming)",
+     "job_quote": "Python"
+    }
+   ],
+   "summary": "A senior DevOps role centred on Kubernetes, Google Cloud and infrastructure as code, with no meaningful overlap with the candidate's test-automation experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-68689",
+   "rank": 8,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "Jenkins",
+     "resume_quote": "Jenkins.",
+     "job_quote": "Knowledge of Ansible, Puppet, Jenkins, Nginx"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Terraform",
+     "job_quote": "Knowledge of AWS techniques and technologies (ASGs, VPCs, access control, security management) and Terraform"
+    },
+    {
+     "skill": "AWS",
+     "job_quote": "Knowledge of AWS techniques and technologies"
+    }
+   ],
+   "summary": "A DevOps engineering role on AWS with Terraform and Ansible; the only overlap is Jenkins, so the fit with the candidate's QA automation profile is weak.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-31297",
+   "rank": 9,
+   "fit_score": 10.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "JavaScript(basic)",
+     "job_quote": "JS [ ES5, ES6 ]"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Reactjs",
+     "job_quote": "Reactjs"
+    },
+    {
+     "skill": "CSS",
+     "job_quote": "CSS [ SCSS ]"
+    }
+   ],
+   "summary": "A front-end development role requiring React and Redux; the candidate only has basic JavaScript and no front-end framework experience, so the match is weak.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-125358",
+   "rank": 10,
+   "fit_score": 6.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Ruby on Rails",
+     "job_quote": "All the work will be within the technical environment of React and Ruby on Rails."
+    },
+    {
+     "skill": "React",
+     "job_quote": "All the work will be within the technical environment of React and Ruby on Rails."
+    }
+   ],
+   "summary": "A full-stack React and Ruby on Rails product role with no overlap with the candidate's C# and test-automation background.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "QA automation / software test engineering",
+    "seniority": "middle",
+    "target_titles": [
+     "QA Automation Engineer",
+     "Software Developer in Test (SDET)",
+     "Test Automation Engineer",
+     "C# Test Automation Engineer",
+     "QA Engineer (Automation)"
+    ],
+    "must_have_skills": [
+     "C#",
+     "Test automation frameworks (Telerik)",
+     "MSpec",
+     "Regression testing",
+     "Bug reporting / defect analysis",
+     "Jenkins (CI/CD)",
+     "Test script writing and maintenance",
+     "Test suite refactoring and framework consolidation"
+    ],
+    "nice_to_have_skills": [
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Agile estimation and sprint planning",
+     "Mentoring / tutoring"
+    ],
+    "search_queries": [
+     "QA Automation Engineer C# Telerik",
+     "Software Developer in Test C# MSpec",
+     "Test Automation Engineer C# Jenkins regression",
+     "SDET C# remote flexible hours",
+     "QA Automation C# MySQL JavaScript"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "QA Automation Engineer C# Telerik",
+    "Software Developer in Test C# MSpec",
+    "Test Automation Engineer C# Jenkins regression",
+    "SDET C# remote flexible hours",
+    "QA Automation C# MySQL JavaScript",
+    "QA Automation Engineer",
+    "Software Developer in Test (SDET)",
+    "Test Automation Engineer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "Writing and maintaining existing test scripts",
+     "Performing regression analysis",
+     "creating bug reports",
+     "Took part in estimation and planning meetings",
+     "Improving existing tests and whole suites"
+    ],
+    "knowledge": [
+     "Telerik",
+     "MSpec",
+     "MySQL",
+     "jQuery",
+     "JavaScript",
+     "Jenkins",
+     "Merge frameworks"
+    ],
+    "esco_skills": [
+     "JavaScript",
+     "MySQL",
+     "create incident reports"
+    ],
+    "not_in_esco": [
+     "Writing and maintaining existing test scripts",
+     "Performing regression analysis",
+     "Took part in estimation and planning meetings",
+     "Improving existing tests and whole suites",
+     "Telerik",
+     "MSpec",
+     "jQuery",
+     "Jenkins",
+     "Merge frameworks"
+    ]
+   },
+   "ms": 10128.9
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 10193.5
+  },
+  {
+   "node": "verifier",
+   "flagged": 10,
+   "repaired": 1,
+   "dropped": 9,
+   "ms": 12523.4
+  }
+ ],
+ "llm_calls": 8,
+ "input_tokens": 19339,
+ "output_tokens": 5571,
+ "cost_usd": 0.004719,
+ "latency_ms": 24333.5,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 10,
+ "verifier_repaired": 1,
+ "verifier_dropped": 9,
+ "plan": {
+  "role_family": "QA automation / software test engineering",
+  "seniority": "middle",
+  "target_titles": [
+   "QA Automation Engineer",
+   "Software Developer in Test (SDET)",
+   "Test Automation Engineer",
+   "C# Test Automation Engineer",
+   "QA Engineer (Automation)"
+  ],
+  "must_have_skills": [
+   "C#",
+   "Test automation frameworks (Telerik)",
+   "MSpec",
+   "Regression testing",
+   "Bug reporting / defect analysis",
+   "Jenkins (CI/CD)",
+   "Test script writing and maintenance",
+   "Test suite refactoring and framework consolidation"
+  ],
+  "nice_to_have_skills": [
+   "MySQL",
+   "JavaScript",
+   "jQuery",
+   "Agile estimation and sprint planning",
+   "Mentoring / tutoring"
+  ],
+  "search_queries": [
+   "QA Automation Engineer C# Telerik",
+   "Software Developer in Test C# MSpec",
+   "Test Automation Engineer C# Jenkins regression",
+   "SDET C# remote flexible hours",
+   "QA Automation C# MySQL JavaScript"
+  ]
+ },
+ "wall_ms": 32849.5,
+ "pool": [
+  {
+   "job_id": "djinni-job-31297",
+   "label": 0,
+   "title": "Front-end developer"
+  },
+  {
+   "job_id": "djinni-job-110369",
+   "label": 0,
+   "title": "Senior DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-22287",
+   "label": 1,
+   "title": "Data Test Engineer (Automation)"
+  },
+  {
+   "job_id": "djinni-job-129198",
+   "label": 1,
+   "title": "Server QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-125358",
+   "label": 0,
+   "title": "Senior React + RoR Engineer (Australia)"
+  },
+  {
+   "job_id": "djinni-job-4808",
+   "label": 0,
+   "title": "AQA with Java (Poland, Romania, Azerbaijan)"
+  },
+  {
+   "job_id": "djinni-job-56946",
+   "label": 1,
+   "title": "Junior QA engineer"
+  },
+  {
+   "job_id": "djinni-job-127662",
+   "label": 0,
+   "title": "Senior Test Automation Engineer"
+  },
+  {
+   "job_id": "djinni-job-105889",
+   "label": 1,
+   "title": "Senior AQA Engineer"
+  },
+  {
+   "job_id": "djinni-job-68689",
+   "label": 0,
+   "title": "Middle DevOps Engineer, Global Recorded Music Company"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-143738",
+  "cv_category": "QA Automation",
+  "ndcg10": 0.9709286432396581,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 1.0,
+  "n_claims": 20,
+  "n_supported": 20,
+  "hallucination_rate": 0.0,
+  "llm_calls": 8,
+  "input_tokens": 19339,
+  "output_tokens": 5571,
+  "cost_usd": 0.004718999999999999,
+  "latency_ms": 24333.5,
+  "wall_ms": 32849.5,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 10,
+  "verifier_repaired": 1,
+  "verifier_dropped": 9
+ },
+ "faithfulness": {
+  "n_claims": 20,
+  "n_supported": 20,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-22287",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-129198",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-105889",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-4808",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-127662",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-56946",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-110369",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-68689",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-31297",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-125358",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

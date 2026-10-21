@@ -1,0 +1,770 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-64453",
+   "rank": 1,
+   "fit_score": 84.0,
+   "matched_skills": [
+    {
+     "skill": "manual testing",
+     "resume_quote": "manual black-box testing",
+     "job_quote": "Manual testing: desktop (Windows, iOS, Android)"
+    },
+    {
+     "skill": "SQL",
+     "resume_quote": "SQL;",
+     "job_quote": "Familiar with DB & SQL procedures (select, update, join)"
+    },
+    {
+     "skill": "REST API testing",
+     "resume_quote": "REST API testing",
+     "job_quote": "REST API Testing"
+    },
+    {
+     "skill": "product regression testing",
+     "resume_quote": "regression testing",
+     "job_quote": "Product regression testing"
+    },
+    {
+     "skill": "bug tracking",
+     "resume_quote": "Experience in working with bug-tracking systems",
+     "job_quote": "Search, record and track software bugs"
+    },
+    {
+     "skill": "checklists",
+     "resume_quote": "developing/maintaining checklists",
+     "job_quote": "QA documentation development and support: test cases, checklists, etc."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile/Scrum",
+     "job_quote": "Experience working in an Agile/Scrum development process"
+    },
+    {
+     "skill": "test documentation",
+     "job_quote": "Experience in writing clear, concise and comprehensive test documentation"
+    }
+   ],
+   "summary": "Strongest overlap: manual testing, SQL, REST API testing, regression and bug tracking align directly with the resume. The role requires 2+ years of manual testing, so the candidate's 1+ year is a seniority gap; Agile/Scrum experience is not on the resume."
+  },
+  {
+   "job_id": "djinni-job-132263",
+   "rank": 2,
+   "fit_score": 80.0,
+   "matched_skills": [
+    {
+     "skill": "API testing",
+     "resume_quote": "REST API testing",
+     "job_quote": "Experience working with Postman or similar tool for testing API requests"
+    },
+    {
+     "skill": "SQL",
+     "resume_quote": "SQL;",
+     "job_quote": "Knowledge of MySQL"
+    },
+    {
+     "skill": "manual testing",
+     "resume_quote": "manual black-box testing",
+     "job_quote": "Strong Junior Manual QA Engineer"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Postman",
+     "job_quote": "Experience working with Postman or similar tool for testing API requests"
+    },
+    {
+     "skill": "web testing",
+     "job_quote": "Good experience in web testing"
+    },
+    {
+     "skill": "Linux",
+     "job_quote": "Experience/ knowledge of Linux"
+    }
+   ],
+   "summary": "Junior role requiring 1+ years of QA, which matches the candidate's experience level closely. Core manual, API and SQL skills align; Postman and web testing experience are gaps."
+  },
+  {
+   "job_id": "djinni-job-119223",
+   "rank": 3,
+   "fit_score": 66.0,
+   "matched_skills": [
+    {
+     "skill": "manual testing",
+     "resume_quote": "manual black-box testing",
+     "job_quote": "Senior Manual QA Engineer for Edde, US"
+    },
+    {
+     "skill": "test case design",
+     "resume_quote": "test case design and execution",
+     "job_quote": "Create test cases and write test documentation (test plans, test reports)."
+    },
+    {
+     "skill": "bug tracking",
+     "resume_quote": "Experience in working with bug-tracking systems",
+     "job_quote": "Report and manage defects in Jira."
+    },
+    {
+     "skill": "API testing",
+     "resume_quote": "REST API testing",
+     "job_quote": "Experience in working with API testing tools (e.g.Postman)."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Jira",
+     "job_quote": "Report and manage defects in Jira."
+    },
+    {
+     "skill": "test planning and estimating",
+     "job_quote": "Experience in test planning and estimating."
+    },
+    {
+     "skill": "Postman",
+     "job_quote": "Experience in working with API testing tools (e.g.Postman)."
+    }
+   ],
+   "summary": "Good functional overlap, but the posting is titled Senior and requires 4+ years of web and mobile testing, well above the candidate's level. Part-time (20 hours/week) arrangement."
+  },
+  {
+   "job_id": "djinni-job-105950",
+   "rank": 4,
+   "fit_score": 58.0,
+   "matched_skills": [
+    {
+     "skill": "functional and non-functional testing",
+     "resume_quote": "functional and non-functional testing",
+     "job_quote": "Ideally have experience in both: functional and non-functional testing in an agile environment"
+    },
+    {
+     "skill": "regression testing",
+     "resume_quote": "regression testing",
+     "job_quote": "Perform thorough regression testing"
+    },
+    {
+     "skill": "work independently",
+     "resume_quote": "Team player but also able to work independently",
+     "job_quote": "Working independently as well as with the team"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Selenium",
+     "job_quote": "Automated QA: Selenium+Ruby for UI, Postman for API."
+    },
+    {
+     "skill": "Ruby",
+     "job_quote": "Automated QA: Selenium+Ruby for UI, Postman for API."
+    },
+    {
+     "skill": "Agile",
+     "job_quote": "comfortable with all parts of an agile development process (6+ years)"
+    }
+   ],
+   "summary": "Senior automation role requiring 6+ years of QA and Selenium/Ruby automation, which the candidate lacks. Overlap is limited to functional/non-functional and regression testing."
+  },
+  {
+   "job_id": "djinni-job-75682",
+   "rank": 5,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "API testing",
+     "resume_quote": "REST API testing",
+     "job_quote": "API testing"
+    },
+    {
+     "skill": "bug tracking",
+     "resume_quote": "Experience in working with bug-tracking systems",
+     "job_quote": "Bug Tracking: Jira"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile (Scrum, Kanban)",
+     "job_quote": "Software development process: Agile (Scrum, Kanban)"
+    },
+    {
+     "skill": "web and desktop testing",
+     "job_quote": "Web and desktop testing"
+    }
+   ],
+   "summary": "Middle-level role requiring 4+ years of QA engineering and leadership-level work, so seniority is a significant mismatch. Only API testing and bug tracking overlap clearly."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting the skills from the resume and running searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: QA Engineer\n\nExperience: - 1+ years of working experience in manual black-box testing, test case design and execution, bug tracking and reporting, developing/maintaining checklists, functional and non-functional testing, regression testing, usability;\n- Knowledge of QA methodologies;\n- SQL;\n- Experience in working with bug-tracking systems; \n- REST API testing;\n- Self-motivator, quick learner, strong attentive to details and punctuality, hard-working and result oriented, communicative and proactive;\n- Ability to work within tight deadlines;\n- Team player but also able to work independently.\n\nHighlights: implementation of one of the testing projects (project for accounting)."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "QA Engineer manual testing test case design bug tracking",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "QA tester SQL REST API testing regression functional testing",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "junior quality assurance engineer black-box testing usability checklists",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000516
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: QA Engineer\n\nExperience: - 1+ years of working experience in manual black-box testing, test case design and execution, bug tracking and reporting, developing/maintaining checklists, functional and non-functional testing, regression testing, usability;\n- Knowledge of QA methodologies;\n- SQL;\n- Experience in working with bug-tracking systems; \n- REST API testing;\n- Self-motivator, quick learner, strong attentive to details and punctuality, hard-working and result oriented, communicative and proactive;\n- Ability to work within tight deadlines;\n- Team player but also able to work independently.\n\nHighlights: implementation of one of the testing projects (project for accounting)."
+   },
+   "output_preview": "{\"skills\": [\"developing/maintaining checklists\", \"working with bug-tracking systems\", \"Self-motivator\", \"quick learner\", \"attentive to details and\", \"punctuality\", \"hard-working\", \"result oriented\", \"communicative\", \"proactive\", \"work within tight deadlines\", \"Team player\", \"work independently\"], \"knowledge\": [\"manual black-box testing\", \"test case design and execution\", \"bug tracking and reporting\", \"functional and non-functional testing\", \"regression testing\", \"usability\", \"QA methodologies\", \"SQL\", \"bug-tracking\", \"REST API\", \"testing\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "QA Engineer manual testing test case design bug tracking",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-64453\", \"title\": \"Manual QA Engineer\", \"company\": \"Storypoint\", \"category\": \"QA\", \"score\": 0.4968, \"esco_skills\": [\"Agile development\", \"English\", \"SQL\", \"comply with checklists\", \"coordinate communication within a team\", \"debug software\", \"implement front-end website design\", \"provide software testing documentation\", \"quality assurance procedures\", \"report test findings\", \"search databases\", \"test procedures\", \"web programming\"], \"snippet\": \"Manual QA Engineer\\nRequirements:\\r\\n\\r\\nExperience and strong skills in manual testing is a must (2+ years)\\r\\nExperience in wri"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "QA tester SQL REST API testing regression functional testing",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-64453\", \"title\": \"Manual QA Engineer\", \"company\": \"Storypoint\", \"category\": \"QA\", \"score\": 0.4696, \"esco_skills\": [\"Agile development\", \"English\", \"SQL\", \"comply with checklists\", \"coordinate communication within a team\", \"debug software\", \"implement front-end website design\", \"provide software testing documentation\", \"quality assurance procedures\", \"report test findings\", \"search databases\", \"test procedures\", \"web programming\"], \"snippet\": \"Manual QA Engineer\\nRequirements:\\r\\n\\r\\nExperience and strong skills in manual testing is a must (2+ years)\\r\\nExperience in wri"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "junior quality assurance engineer black-box testing usability checklists",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-132263\", \"title\": \"Strong Junior Manual QA Engineer\", \"company\": \"Stairway Soft\", \"category\": \"QA\", \"score\": 0.5498, \"esco_skills\": [\"MySQL\", \"Samurai Web Testing Framework\", \"advise on learning methods\", \"automation technology\"], \"snippet\": \"Strong Junior Manual QA Engineer\\nRequirements: \\r\\n•  1 + years of experience as a QA\\r\\n•  Good experience in web testing\\r\\n•  Experience working with Postman or similar tool for testing API requests\\r\\n•  Knowledge of browsers developers tools and test httprequests\\r\\n•  Understanding of client and server \"}, {\"job_id\": \"djinni"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The candidate pool is the same 10 jobs across all searches. Next I'll pull full text for the most relevant QA postings and compare skills.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-132263"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-64453"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-119223"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-75682"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-105950"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.00136
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-132263"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-132263\", \"title\": \"Strong Junior Manual QA Engineer\", \"company\": \"Stairway Soft\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Strong Junior Manual QA Engineer\\nRequirements: \\r\\n•  1 + years of experience as a QA\\r\\n•  Good experience in web testing\\r\\n•  Experience working with Postman or similar tool for testing API requests\\r\\n•  Knowledge of browsers developers tools and test httprequests\\r\\n•  Understanding of client and server side layers and logic\\r\\n\\r\\nWill be a plus:\\r\\n• Experience/ knowledge of Linux\\r\\n• Knowledge of MySQL\\r\\n• Experience/ knowledge of creating st"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-64453"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-64453\", \"title\": \"Manual QA Engineer\", \"company\": \"Storypoint\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Manual QA Engineer\\nRequirements:\\r\\n\\r\\nExperience and strong skills in manual testing is a must (2+ years)\\r\\nExperience in writing clear, concise and comprehensive test documentation\\r\\nFamiliar with DB & SQL procedures (select, update, join)\\r\\nR&D Background in QA Processes\\r\\nGood understanding and experience in testing of client-server architecture\\r\\nFamiliar with Internet Technologies\\r\\nExperience working in an Agile/Scrum development process\\r\\nEnglish Interme"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-119223"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-119223\", \"title\": \"Senior Manual QA Engineer for Edde, US\", \"company\": \"GT\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Senior Manual QA Engineer for Edde, US\\n**About the project:**\\r\\nEdde is dedicated to driving disruption and innovation in the transportation market in SE Asia, bringing a sustainable and affordable solution to the Scooter (Moped) market. **Edde's mission** is to create an app, which provides a simple one-stop shop for people to finance and run electric scooters, eventually replacing the mass use of similar petrol-driven vehicles.\\r\\n\\r\\n**About the role:**"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-75682"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-75682\", \"title\": \"Middle QA engineer\", \"company\": \"Boosty Labs\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Middle QA engineer\\n**MUST HAVE**\\r\\n\\r\\n- 4+ years of QA engineering\\r\\n- 1+ year of QA leadership is a plus- \\r\\n- Improvements of QA workflows\\r\\n- Web and desktop testing\\r\\n - API testing\\r\\n \\r\\n**Experience**\\r\\n\\r\\n- Software development process: Agile (Scrum, Kanban)\\r\\n-  Bug Tracking: Jira\\r\\n- Desktop platforms: Windows;  MacOS\\r\\n- Development tools:  Swagger; Confluence\", \"esco_skills\": [\"Agile development\", \"test procedures\"], \"raw_skills\": [\"QA engineeri"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-105950"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-105950\", \"title\": \"Senior AQA Engineer (Selenium+Ruby, Postman)\", \"company\": \"Volia Software\", \"category\": \"QA Automation\", \"url\": \"\", \"text\": \"Senior AQA Engineer (Selenium+Ruby, Postman)\\nUS Company is searching for Senior Automation Quality Assurance specialist into the team of 5-6 developers. Interesting project (6+ months with option of prolongation), full-time, an official contract. Remote work (or in any of 3 existing offices in Ukraine & Poland).\\r\\n\\r\\nThe project is development one of the features of Supply Chain Risk Management platform that consists of many i"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "Let me run comparisons on the strongest candidates and also check the remaining postings.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "manual black-box testing",
+       "test case design and execution",
+       "bug tracking and reporting",
+       "developing/maintaining checklists",
+       "functional and non-functional testing",
+       "regression testing",
+       "usability",
+       "QA methodologies",
+       "SQL",
+       "bug-tracking systems",
+       "REST API testing",
+       "attentive to details",
+       "work within tight deadlines",
+       "team player",
+       "work independently"
+      ],
+      "job_skills": [
+       "manual testing",
+       "web testing",
+       "API testing",
+       "Postman",
+       "MySQL",
+       "stress tests",
+       "Linux",
+       "test case",
+       "checklists",
+       "SQL",
+       "bug tracking",
+       "REST API testing",
+       "product regression testing",
+       "client-server architecture testing",
+       "test documentation",
+       "Agile/Scrum",
+       "English",
+       "Jira",
+       "test planning and estimating",
+       "API testing tools",
+       "iOS/Android testing"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "manual black-box testing",
+       "test case design and execution",
+       "bug tracking and reporting",
+       "developing/maintaining checklists",
+       "functional and non-functional testing",
+       "regression testing",
+       "usability",
+       "QA methodologies",
+       "SQL",
+       "bug-tracking systems",
+       "REST API testing",
+       "attentive to details",
+       "work within tight deadlines",
+       "team player",
+       "work independently"
+      ],
+      "job_skills": [
+       "manual testing",
+       "test case",
+       "bug tracking",
+       "API testing",
+       "Postman",
+       "Jira",
+       "test planning and estimating",
+       "test documentation",
+       "checklists",
+       "regression testing",
+       "functional and non-functional testing",
+       "Selenium",
+       "Ruby",
+       "Agile",
+       "SQL"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "manual black-box testing",
+       "test case design and execution",
+       "bug tracking and reporting",
+       "developing/maintaining checklists",
+       "functional and non-functional testing",
+       "regression testing",
+       "SQL",
+       "bug-tracking systems",
+       "REST API testing",
+       "work independently"
+      ],
+      "job_skills": [
+       "manual testing",
+       "test case",
+       "bug tracking",
+       "Jira",
+       "API testing",
+       "Swagger",
+       "Agile",
+       "Scrum",
+       "Kanban",
+       "web testing",
+       "desktop testing",
+       "QA leadership"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.002125
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "manual black-box testing",
+     "test case design and execution",
+     "bug tracking and reporting",
+     "developing/maintaining checklists",
+     "functional and non-functional testing",
+     "regression testing",
+     "usability",
+     "QA methodologies",
+     "SQL",
+     "bug-tracking systems",
+     "REST API testing",
+     "attentive to details",
+     "work within tight deadlines",
+     "team player",
+     "work independently"
+    ],
+    "job_skills": [
+     "manual testing",
+     "web testing",
+     "API testing",
+     "Postman",
+     "MySQL",
+     "stress tests",
+     "Linux",
+     "test case",
+     "checklists",
+     "SQL",
+     "bug tracking",
+     "REST API testing",
+     "product regression testing",
+     "client-server architecture testing",
+     "test documentation",
+     "Agile/Scrum",
+     "English",
+     "Jira",
+     "test planning and estimating",
+     "API testing tools",
+     "iOS/Android testing"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"manual testing\", \"API testing\", \"test case\", \"checklists\", \"SQL\", \"bug tracking\", \"REST API testing\", \"product regression testing\"], \"missing\": [\"web testing\", \"Postman\", \"MySQL\", \"stress tests\", \"Linux\", \"client-server architecture testing\", \"test documentation\", \"Agile/Scrum\", \"English\", \"Jira\", \"test planning and estimating\", \"API testing tools\", \"iOS/Android testing\"], \"extra\": [\"functional and non-functional testing\", \"usability\", \"QA methodologies\", \"attentive to details\", \"work within tight deadlines\", \"team player\", \"work independently\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "manual black-box testing",
+     "test case design and execution",
+     "bug tracking and reporting",
+     "developing/maintaining checklists",
+     "functional and non-functional testing",
+     "regression testing",
+     "usability",
+     "QA methodologies",
+     "SQL",
+     "bug-tracking systems",
+     "REST API testing",
+     "attentive to details",
+     "work within tight deadlines",
+     "team player",
+     "work independently"
+    ],
+    "job_skills": [
+     "manual testing",
+     "test case",
+     "bug tracking",
+     "API testing",
+     "Postman",
+     "Jira",
+     "test planning and estimating",
+     "test documentation",
+     "checklists",
+     "regression testing",
+     "functional and non-functional testing",
+     "Selenium",
+     "Ruby",
+     "Agile",
+     "SQL"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"manual testing\", \"test case\", \"bug tracking\", \"API testing\", \"checklists\", \"regression testing\", \"functional and non-functional testing\", \"SQL\"], \"missing\": [\"Postman\", \"Jira\", \"test planning and estimating\", \"test documentation\", \"Selenium\", \"Ruby\", \"Agile\"], \"extra\": [\"usability\", \"QA methodologies\", \"attentive to details\", \"work within tight deadlines\", \"team player\", \"work independently\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "manual black-box testing",
+     "test case design and execution",
+     "bug tracking and reporting",
+     "developing/maintaining checklists",
+     "functional and non-functional testing",
+     "regression testing",
+     "SQL",
+     "bug-tracking systems",
+     "REST API testing",
+     "work independently"
+    ],
+    "job_skills": [
+     "manual testing",
+     "test case",
+     "bug tracking",
+     "Jira",
+     "API testing",
+     "Swagger",
+     "Agile",
+     "Scrum",
+     "Kanban",
+     "web testing",
+     "desktop testing",
+     "QA leadership"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"manual testing\", \"test case\", \"bug tracking\", \"API testing\"], \"missing\": [\"Jira\", \"Swagger\", \"Agile\", \"Scrum\", \"Kanban\", \"web testing\", \"desktop testing\", \"QA leadership\"], \"extra\": [\"developing/maintaining checklists\", \"functional and non-functional testing\", \"regression testing\", \"SQL\", \"work independently\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "Based on the evidence, here is the ranking. I'm ranking the 7 unique jobs in the pool; the remaining 3 (DevOps, PPC Marketing, .NET, Full-stack, Financial Manager) are off-role and ranked below QA postings.\n\nQuote checks: the resume-side quotes below are verbatim from the resume (\"manual black-box testing\", \"REST API testing\", \"SQL\", \"Experience in working with bug-tracking systems\", \"Knowledge of QA methodologies\", \"test case design and execution\", \"regression testing\", \"1+ years of working experience in manual black-box testing\"). The job-side quotes are copied from the fetched posting texts.\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-64453\", \"rank\": 1, \"fit_score\": 84,\n    \"matched_skills\": [\n      {\"skill\": \"manual testing\", \"resume_quote\": \"manual black-box testing\", \"job_quote\": \"Manual testing: desktop (Windows, iOS, Android)\"},\n      {\"skill\": \"SQL\", \"resume_quote\": \"SQL;\", \"job_quote\": \"Familiar with DB & SQL procedures (select, update, join)\"},\n      {\"skill\": \"REST API testing\", \"resume_quote\": \"REST API testing\", \"job_quote\": \"REST API Testing\"},\n      {\"skill\": \"product regression testing\", \"resume_quote\": \"regression testing\", \"job_quote\": \"Product regression testing\"},\n      {\"skill\": \"bug tracking\", \"resume_quote\": \"Experience in working with bug-tracking systems\", \"job_quote\": \"Search, record and track software bugs\"},\n      {\"skill\": \"checklists\", \"resume_quote\": \"developing/maintaining checklists\", \"job_quote\": \"QA documentation development and support",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.003025
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 49749,
+ "output_tokens": 4103,
+ "cost_usd": 0.007026,
+ "latency_ms": 17293.7,
+ "tool_calls": 12,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 5399.8,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-30238",
+   "label": 0,
+   "title": "Financial Manager"
+  },
+  {
+   "job_id": "djinni-job-23613",
+   "label": 0,
+   "title": "DevOps"
+  },
+  {
+   "job_id": "djinni-job-132263",
+   "label": 2,
+   "title": "Strong Junior Manual QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-114309",
+   "label": 0,
+   "title": "Senior Full-stack Engineer (Unity/Node.js) to the gamedev company from London"
+  },
+  {
+   "job_id": "djinni-job-119223",
+   "label": 0,
+   "title": "Senior Manual QA Engineer for Edde, US"
+  },
+  {
+   "job_id": "djinni-job-75682",
+   "label": 1,
+   "title": "Middle QA engineer"
+  },
+  {
+   "job_id": "djinni-job-72739",
+   "label": 0,
+   "title": "Middle .NET"
+  },
+  {
+   "job_id": "djinni-job-64453",
+   "label": 1,
+   "title": "Manual QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-105950",
+   "label": 0,
+   "title": "Senior AQA Engineer (Selenium+Ruby, Postman)"
+  },
+  {
+   "job_id": "djinni-job-89053",
+   "label": 0,
+   "title": "PPC Marketing Manager"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-145696",
+  "cv_category": "QA",
+  "ndcg10": 0.7939234660462212,
+  "p_at_3": 0.3333333333333333,
+  "mrr": 0.5,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 1,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 0.5,
+  "n_claims": 31,
+  "n_supported": 31,
+  "hallucination_rate": 0.0,
+  "llm_calls": 4,
+  "input_tokens": 49749,
+  "output_tokens": 4103,
+  "cost_usd": 0.007026,
+  "latency_ms": 17293.7,
+  "wall_ms": 5399.8,
+  "tool_calls": 12,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 31,
+  "n_supported": 31,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-64453",
+    "n_claims": 8,
+    "n_supported": 8,
+    "n_matched": 6,
+    "n_matched_supported": 6,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-132263",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-119223",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-105950",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-75682",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

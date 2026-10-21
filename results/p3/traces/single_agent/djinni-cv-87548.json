@@ -1,0 +1,1280 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-55448",
+   "rank": 1,
+   "fit_score": 72.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "PHP (OOP, MVC), WordPress, Laravel (basic)",
+     "job_quote": "Experience with PHP 7+ development"
+    },
+    {
+     "skill": "Front-end (HTML5, CSS/LESS, JavaScript, jQuery)",
+     "resume_quote": "HTML 5, LESS/SASS (BEM+SMACSS)",
+     "job_quote": "Good knowledge of HTML, HTML5, CSS/LESS, JavaScript, jQuery"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "MySQL(+PDO)",
+     "job_quote": "Good knowledge of MySql (MariaDB)"
+    },
+    {
+     "skill": "Linux",
+     "resume_quote": "Linux basic administration and LAMP setup",
+     "job_quote": "Linux knowledge is a plus"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Yii2",
+     "job_quote": "Yii2 knowledge is a plus"
+    },
+    {
+     "skill": "AWS cloud services",
+     "job_quote": "Experience with AWS cloud services is a plus"
+    },
+    {
+     "skill": "Microservices",
+     "job_quote": "Experience with microservices is a plus"
+    }
+   ],
+   "summary": "Strong stack overlap for a junior/middle PHP role on a high-traffic greetings website, with front-end (HTML5/CSS/jQuery) and MySQL matching the resume. Yii2 and AWS are gaps, but the role explicitly accepts junior/middle candidates."
+  },
+  {
+   "job_id": "djinni-job-87928",
+   "rank": 2,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "PHP (OOP, MVC), WordPress, Laravel (basic)",
+     "job_quote": "Experience with PHP 7.4"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "MySQL(+PDO)",
+     "job_quote": "Experience with MySQL, Linux, GIT"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "Composer/ Git experience",
+     "job_quote": "Experience with MySQL, Linux, GIT"
+    },
+    {
+     "skill": "Code review",
+     "resume_quote": "Code review preferrably",
+     "job_quote": "Regular code reviews"
+    },
+    {
+     "skill": "3rd party integration",
+     "resume_quote": "3rd party API integration",
+     "job_quote": "Integrating software components with third-party services"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Yii2",
+     "job_quote": "Strong knowledge of Yii2"
+    },
+    {
+     "skill": "Vue",
+     "job_quote": "JavaScript (Vue,jQuery), HTML/CSS"
+    }
+   ],
+   "summary": "Remote PHP role offering regular code reviews and third-party integration, both preferred by the candidate. It requires Yii2 and is less front-end focused than the candidate would like."
+  },
+  {
+   "job_id": "djinni-job-122215",
+   "rank": 3,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "PHP (OOP, MVC), WordPress, Laravel (basic)",
+     "job_quote": "Good knowledge of PHP Symfony"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "MySQL(+PDO)",
+     "job_quote": "Database systems such as MySQL or MongoDB"
+    },
+    {
+     "skill": "Code review",
+     "resume_quote": "Code review preferrably",
+     "job_quote": "Ensuring high software quality and application performance through testing and code reviews"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "Composer/ Git experience",
+     "job_quote": "Experience with version control systems (GIT)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Symfony",
+     "job_quote": "Good knowledge of PHP Symfony"
+    },
+    {
+     "skill": "Doctrine ORM",
+     "job_quote": "the use of ORMs (Doctrine) are standard practices for you"
+    },
+    {
+     "skill": "CI/CD",
+     "job_quote": "Experience with version control systems (GIT) and deployment processes (CI/CD)"
+    }
+   ],
+   "summary": "Senior-level Symfony role at a large enterprise platform with code review and quality focus. Good for PHP growth, but the seniority and Symfony requirements exceed a junior profile."
+  },
+  {
+   "job_id": "djinni-job-114737",
+   "rank": 4,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "PHP (OOP, MVC), WordPress, Laravel (basic)",
+     "job_quote": "Solid PHP (5+) knowledge."
+    },
+    {
+     "skill": "SQL",
+     "resume_quote": "MySQL(+PDO)",
+     "job_quote": "Knowledge and hands-on experience with SQL."
+    },
+    {
+     "skill": "Code review",
+     "resume_quote": "Code review preferrably",
+     "job_quote": "Code review."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Team leadership",
+     "job_quote": "Technically lead a team"
+    },
+    {
+     "skill": "Azure",
+     "job_quote": "Knowledge of MS Azure would be a big plus"
+    }
+   ],
+   "summary": "Senior full-stack PHP role that requires leading a team and 4+ years of experience, well above the candidate's junior level. It includes code review and PHP/JS work."
+  },
+  {
+   "job_id": "djinni-job-36986",
+   "rank": 5,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "C# basics",
+     "job_quote": "C# (ASP.NET, WPF) - strongly preferred"
+    },
+    {
+     "skill": "JavaScript",
+     "resume_quote": "vanillaJS/AJAX, jQuery",
+     "job_quote": "JavaScript"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "ASP.NET",
+     "job_quote": "C# (ASP.NET, WPF) - strongly preferred"
+    },
+    {
+     "skill": "Unit and integration testing",
+     "job_quote": "Writing unit and integration tests"
+    }
+   ],
+   "summary": "A .NET/C# and ReactJS team on finance-related products. The candidate's C# basics are only a partial match, and there is no PHP."
+  },
+  {
+   "job_id": "djinni-job-8815",
+   "rank": 6,
+   "fit_score": 28.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "C# basics",
+     "job_quote": "Strong C# knowledge"
+    },
+    {
+     "skill": "SOLID principles",
+     "resume_quote": "SOLID and DRY principles",
+     "job_quote": "Familiarity with Design patterns and SOLID principles"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": ".NET / ASP.NET Core",
+     "job_quote": "Knowledge of ASP.NET Core 3.1"
+    },
+    {
+     "skill": "Web API / REST",
+     "job_quote": "Experience with Web services development (REST, Web.Api)"
+    },
+    {
+     "skill": "Entity Framework",
+     "job_quote": "Familiarity with SQL database & Entity Framework"
+    }
+   ],
+   "summary": "Senior .NET game backend role with 3+ years required. It matches the SOLID focus and the C# interest, but the stack and seniority are far from the candidate's PHP profile."
+  },
+  {
+   "job_id": "djinni-job-117864",
+   "rank": 7,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "vanillaJS/AJAX, jQuery",
+     "job_quote": "3+ years' experience in building large Javascript applications"
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "MySQL(+PDO)",
+     "job_quote": "RDBMS (MySQL, PostgreSQL, etc.)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Node.js",
+     "job_quote": "At least 2 years of experience with Node.js"
+    },
+    {
+     "skill": "AWS",
+     "job_quote": "AWS knowledge is required (EC2, Lambda, RDS, Cloudwatch)"
+    },
+    {
+     "skill": "MongoDB",
+     "job_quote": "Experience in NoSQL databases (including MongoDB)"
+    }
+   ],
+   "summary": "Senior Node.js role requiring 3+ years and AWS. The only overlaps are general JavaScript and MySQL, so the fit is weak."
+  },
+  {
+   "job_id": "djinni-job-112738",
+   "rank": 8,
+   "fit_score": 18.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript front-end",
+     "resume_quote": "vanillaJS/AJAX, jQuery",
+     "job_quote": "JS, React.js, TypeScript, GraphQL, Next.js."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React / TypeScript",
+     "job_quote": "at least 4+ years in React and Typescript;"
+    },
+    {
+     "skill": "Upper-intermediate English",
+     "job_quote": "Upper-intermediate + level of English;"
+    }
+   ],
+   "summary": "Senior React/TypeScript frontend role requiring 4+ years in React. The candidate's PHP and AngularJS background does not align."
+  },
+  {
+   "job_id": "djinni-job-30547",
+   "rank": 9,
+   "fit_score": 10.0,
+   "matched_skills": [
+    {
+     "skill": "Code review",
+     "resume_quote": "Code review preferrably",
+     "job_quote": "Conducting code reviews and providing constructive feedback"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Flutter / mobile development",
+     "job_quote": "3+ years experience in mobile development"
+    },
+    {
+     "skill": "Team leadership",
+     "job_quote": "Leading a team of frontend developers in building mobile applications using Flutter"
+    }
+   ],
+   "summary": "Senior mobile (Flutter) leadership role with no overlap with the candidate's PHP/web stack beyond code review."
+  },
+  {
+   "job_id": "djinni-job-16779",
+   "rank": 10,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Content marketing / copywriting",
+     "job_quote": "At least two years of experience writing copy, developing content, editing, and proofing."
+    }
+   ],
+   "summary": "Marketing role with no technical overlap with the candidate's PHP developer profile."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting skills from the resume and running searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Junior PHP Developer. Back-end: PHP (OOP, MVC), WordPress, Laravel (basic), XML/XSLT, 3rd party API integration, C# basics. Front-end: vanillaJS/AJAX, jQuery, AngularJS, Gulp workflow. HTML layout: HTML 5, LESS/SASS (BEM+SMACSS), Twitter Bootstrap, flexbox, responsive design, Photoshop basics. Databases: MySQL(+PDO). Server: Linux basic administration and LAMP setup (DigitalOcean). Other: Composer/ Git experience, PhpStorm 10, touch typing. Looking for: Laravel and Angular. Code review. Interesting highload projects based on SOLID and DRY principles. Highlights: company's self-written PHP+Angular framework; WordPress theme and plugins; e-commerce customization; 3rd party API integration (Gmaps, Quickpay, Dropbox, Hotelspider); MQL4 scripts; MVC pet projects."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Junior PHP developer Laravel Angular",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "PHP MVC OOP back-end developer highload SOLID DRY code review",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "PHP Angular full-stack developer MySQL third-party API integration",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000643
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Junior PHP Developer. Back-end: PHP (OOP, MVC), WordPress, Laravel (basic), XML/XSLT, 3rd party API integration, C# basics. Front-end: vanillaJS/AJAX, jQuery, AngularJS, Gulp workflow. HTML layout: HTML 5, LESS/SASS (BEM+SMACSS), Twitter Bootstrap, flexbox, responsive design, Photoshop basics. Databases: MySQL(+PDO). Server: Linux basic administration and LAMP setup (DigitalOcean). Other: Composer/ Git experience, PhpStorm 10, touch typing. Looking for: Laravel and Angular. Code review. Interesting highload projects based on SOLID and DRY principles. Highlights: company's self-written PHP+Angular framework; WordPress theme and plugins; e-commerce customization; 3rd party API integration (Gmaps, Quickpay, Dropbox, Hotelspider); MQL4 scripts; MVC pet projects."
+   },
+   "output_preview": "{\"skills\": [], \"knowledge\": [\"OOP\", \"MVC )\", \"WordPress\", \"Laravel\", \"XML/XSLT\", \"3rd party API integration\", \"C#\", \"vanillaJS/AJAX\", \"jQuery\", \"AngularJS\", \"Gulp workflow\", \"layout\", \"HTML 5\", \"LESS/SASS\", \"BEM+\", \"SMACSS )\", \"Twitter\", \"Bootstrap\", \"flexbox\", \"responsive design\", \"Photoshop basics\", \"MySQL (\", \"PDO )\", \"Linux basic administration\", \"LAMP setup\", \"DigitalOcean )\", \"Composer /\", \"Git\", \"PhpStorm 10\", \"touch typing\", \"Angular\", \"SOLID\", \"DRY\", \"PHP+\", \"and plugins\", \"e-commerce\", \"party API integration\", \"Gmaps\", \"Quickpay\", \"Dropbox\", \"Hotelspider\", \"MQL4 scripts\", \"MVC pet pr"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Junior PHP developer Laravel Angular",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-87928\", \"title\": \"PHP Developer (Czech Republic)\", \"company\": \"MoveUp\", \"category\": \"PHP\", \"score\": 0.4688, \"esco_skills\": [\"CSS\", \"English\", \"JavaScript\", \"MySQL\", \"PHP\", \"integrate system components\"], \"snippet\": \"PHP Developer (Czech Republic)\\nAbout the Project\\r\\nWe are an ISP billing software framework created for Internet service providers and network administrators, providing useful functions such as billing, invoicing, central configuration and monitoring of equipment, hotspot billing, client portals, and\"}, {\"job_id\": \"djinni-job-122215\", \"title\": \"Senior PHP "
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "PHP MVC OOP back-end developer highload SOLID DRY code review",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-114737\", \"title\": \"Senior FullStack PHP/JS Developer\", \"company\": \"GlobalLogic\", \"category\": \"PHP\", \"score\": 0.4226, \"esco_skills\": [\"Internet of Things\", \"JavaScript\", \"PHP\", \"SQL\", \"architectural design\", \"estimate duration of work\", \"lead a team\", \"negotiate price\", \"provide technical documentation\", \"software architecture models\", \"web programming\"], \"snippet\": \"Senior FullStack PHP/JS Developer\\nThe client is one of the world's leading providers of elevators, escalators, and moving walks.\\n\\nThe client is one of the world's leading providers of elevators, escalator"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "PHP Angular full-stack developer MySQL third-party API integration",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-87928\", \"title\": \"PHP Developer (Czech Republic)\", \"company\": \"MoveUp\", \"category\": \"PHP\", \"score\": 0.4428, \"esco_skills\": [\"CSS\", \"English\", \"JavaScript\", \"MySQL\", \"PHP\", \"integrate system components\"], \"snippet\": \"PHP Developer (Czech Republic)\\nAbout the Project\\r\\nWe are an ISP billing software framework created for Internet service providers and network administrators, providing useful functions such as billing, invoicing, central configuration and monitoring of equipment, hotspot billing, client portals, and\"}, {\"job_id\": \"djinni-job-114737\", \"title\": \"Senior Full"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The searches returned the same 10 distinct jobs, so the candidate pool is fixed. I'll pull full postings for the most relevant PHP roles to verify quotes.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-55448"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-87928"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-122215"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-114737"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-36986"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-117864"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-112738"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-8815"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-30547"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-16779"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.00156
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-55448"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-55448\", \"title\": \"Junior/Middle PHP developer\", \"company\": \"InterLogic\", \"category\": \"PHP\", \"url\": \"\", \"text\": \"Junior/Middle PHP developer\\n**REQUIREMENTS**\\r\\nExperience with PHP 7+ development\\r\\nExperience with front-end development, ability to implement pixel-perfect markup\\r\\nGood knowledge of HTML, HTML5, CSS/LESS, JavaScript, jQuery\\r\\nGood knowledge of MySql (MariaDB)\\r\\nGood understanding of UX/UI design, ability to make own decisions\\r\\nGood written and verbal communication skills\\r\\nGood written English level\\r\\n**NICE TO HAVE SKILLS**\\r\\nLinux knowledge is a"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-87928"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-87928\", \"title\": \"PHP Developer (Czech Republic)\", \"company\": \"MoveUp\", \"category\": \"PHP\", \"url\": \"\", \"text\": \"PHP Developer (Czech Republic)\\nAbout the Project\\r\\nWe are an ISP billing software framework created for Internet service providers and network administrators, providing useful functions such as billing, invoicing, central configuration and monitoring of equipment, hotspot billing, client portals, and much more. The main advantage is how the system can be customized. We provide an easy way to create additional modules or integrate it with 3rd-party software sol"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-122215"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-122215\", \"title\": \"Senior PHP (Symfony) Developer\", \"company\": \"EPAM\", \"category\": \"PHP\", \"url\": \"\", \"text\": \"Senior PHP (Symfony) Developer\\nYour tasks:\\r\\nTaking responsibility for the (further) development and implementation of the various PHP backends of our international online platforms (project examples: jobs.lidl.de, lidl.co.uk, lidl.ch, prezero.com, etc.)\\r\\nParticipation in the design of a modern and flexible overall architecture\\r\\nEnsuring high software quality and application performance through testing and code reviews\\r\\nEvaluation of new tools and technol"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-114737"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-114737\", \"title\": \"Senior FullStack PHP/JS Developer\", \"company\": \"GlobalLogic\", \"category\": \"PHP\", \"url\": \"\", \"text\": \"Senior FullStack PHP/JS Developer\\nThe client is one of the world's leading providers of elevators, escalators, and moving walks.\\n\\nThe client is one of the world's leading providers of elevators, escalators, and moving walks, as well as maintenance and modernization services. The project is intended to implement a modern IoT solution involving Azure Cloud and Elevator built-in display. \\r\\n\\r\\nRequirements\\r\\n4+ years of commercial experience as a Ful"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-36986"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-36986\", \"title\": \"Full Stack Developer (United Arab Emirates)\", \"company\": \"Luxoft\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Full Stack Developer (United Arab Emirates)\\nThe Client uses many different bespoke and existing products and platforms to run the business.\\r\\nOur team is small but growing fast, now it consists of several ReactJS and C# developers.\\r\\n\\r\\nResponsibilities are (but not limited to) -\\r\\n• Participate in requirements clarification and sprint planning sessions\\r\\n• Design technical solution\\r\\n• Writing unit and integration tests\\r\\n• Support Q"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-117864"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-117864\", \"title\": \"Senior JavaScript Developer (Node.js)\", \"company\": \"Exadel\", \"category\": \"Node.js\", \"url\": \"\", \"text\": \"Senior JavaScript Developer (Node.js)\\n**Requirements:**\\r\\n• 3+ years’ experience in building large Javascript applications\\r\\n• At least 2 years of experience with Node.js\\r\\n• Knowledge of frameworks available for Node.js (such as Express, Node-RED, Device.js, and Cylon.js)\\r\\n• Knowledge of Authorization (passport.js, roles), OAuth2 protocol, Express.js/hapi.js/nest.js\\r\\n• Experience with processes threads, child_process, cluster\\r\\n• Experience"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-112738"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-112738\", \"title\": \"Senior Frontend Engineer\", \"company\": \"Launch Labs\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Senior Frontend Engineer\\nLaunch Labs are seeking a highly **skilled and experienced Senior Frontend Engineer** to join our dynamic team for an exciting new project, which offers the unique opportunity to build from scratch, work with complex logic, as well as create a stunning user-friendly UI that can handle tons of data. Your work will play a crucial role in shaping the future of healthcare, enabling you to make a lasting impact on the lives of countle"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-8815"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-8815\", \"title\": \"Back-End .NET Developer (Suits)\", \"company\": \"Genesis ( Suits)\", \"category\": \".NET\", \"url\": \"\", \"text\": \"Back-End .NET Developer (Suits)\\nYour tasks will be:\\r\\n— Design and implement backend services for our game. We build our system from scratch as microservices in AWS cloud;\\r\\n— Discuss and decide the roadmap for our product with the whole team. We have a startup culture here!\\r\\n— Optimize services performance to keep response latency low. We have lots of content and game experience must be smooth;\\r\\n— Develop an easy way for our artists to create "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-30547"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-30547\", \"title\": \"Flutter Developer\", \"company\": \"JetSoftPro\", \"category\": \"Other\", \"url\": \"\", \"text\": \"Flutter Developer\\nProject Overview:\\r\\nYou will own the web and native mobile applications for various products, including a Customer Dashboard and Account Management App. You will spend your time with the frontend developer team designing the development strategy, application framework, and technical specs required to deliver the products on time. You will also work closely with the Product, Design, Science, and Backend teams to ensure the product is delivered to spe"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-16779"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-16779\", \"title\": \"Content Marketing Manager / Inbound (English)\", \"company\": \"Rocket Effect\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Content Marketing Manager / Inbound (English)\\n**Responsibilities**\\r\\n\\r\\nCreation of content to market our internal and clients' projects (B2B and B2C). This includes, but is not limited to: website copy, online ads, email, social media, print, surveys, assessments, training guides, etc.\\r\\n\\r\\nCollaborate with internal team to work on content.\\r\\n\\r\\nPartner with the marketing team to develop and maintain successful campaigns.\\r\\n\\"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll compare the resume against the most relevant postings to confirm the matches.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "PHP",
+       "OOP",
+       "MVC",
+       "WordPress",
+       "Laravel",
+       "XML/XSLT",
+       "3rd party API integration",
+       "C#",
+       "JavaScript",
+       "AJAX",
+       "jQuery",
+       "AngularJS",
+       "Gulp",
+       "HTML5",
+       "LESS",
+       "SASS",
+       "Bootstrap",
+       "responsive design",
+       "MySQL",
+       "PDO",
+       "Linux",
+       "LAMP",
+       "Composer",
+       "Git",
+       "Code review"
+      ],
+      "job_skills": [
+       "PHP 7+ development",
+       "front-end development",
+       "HTML5",
+       "CSS/LESS",
+       "JavaScript",
+       "jQuery",
+       "MySql",
+       "Linux",
+       "Yii2",
+       "AWS",
+       "microservices",
+       "code review",
+       "UX/UI design"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "PHP",
+       "OOP",
+       "MVC",
+       "WordPress",
+       "Laravel",
+       "XML/XSLT",
+       "3rd party API integration",
+       "C#",
+       "JavaScript",
+       "AJAX",
+       "jQuery",
+       "AngularJS",
+       "Gulp",
+       "HTML5",
+       "LESS",
+       "SASS",
+       "Bootstrap",
+       "responsive design",
+       "MySQL",
+       "PDO",
+       "Linux",
+       "LAMP",
+       "Composer",
+       "Git",
+       "Code review"
+      ],
+      "job_skills": [
+       "PHP 7.4",
+       "Yii2",
+       "MySQL",
+       "Linux",
+       "GIT",
+       "Nginx",
+       "JavaScript",
+       "Vue",
+       "jQuery",
+       "HTML/CSS",
+       "integrating software components with third-party services",
+       "code reviews"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "PHP",
+       "OOP",
+       "MVC",
+       "WordPress",
+       "Laravel",
+       "XML/XSLT",
+       "3rd party API integration",
+       "C#",
+       "JavaScript",
+       "AJAX",
+       "jQuery",
+       "AngularJS",
+       "Gulp",
+       "HTML5",
+       "LESS",
+       "SASS",
+       "Bootstrap",
+       "responsive design",
+       "MySQL",
+       "PDO",
+       "Linux",
+       "LAMP",
+       "Composer",
+       "Git",
+       "Code review"
+      ],
+      "job_skills": [
+       "PHP",
+       "Symfony",
+       "MySQL",
+       "MongoDB",
+       "Doctrine",
+       "HTML",
+       "CSS",
+       "JavaScript",
+       "Webpack",
+       "Twig",
+       "unit testing",
+       "code reviews",
+       "GIT",
+       "CI/CD",
+       "clean code"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "PHP",
+       "OOP",
+       "MVC",
+       "WordPress",
+       "Laravel",
+       "XML/XSLT",
+       "3rd party API integration",
+       "C#",
+       "JavaScript",
+       "AJAX",
+       "jQuery",
+       "AngularJS",
+       "Gulp",
+       "HTML5",
+       "LESS",
+       "SASS",
+       "Bootstrap",
+       "responsive design",
+       "MySQL",
+       "PDO",
+       "Linux",
+       "LAMP",
+       "Composer",
+       "Git",
+       "Code review"
+      ],
+      "job_skills": [
+       "PHP 5+",
+       "JS",
+       "HTML",
+       "SQL",
+       "Azure",
+       "application architecture design",
+       "code review",
+       "lead a team"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "PHP",
+       "OOP",
+       "MVC",
+       "WordPress",
+       "Laravel",
+       "XML/XSLT",
+       "3rd party API integration",
+       "C#",
+       "JavaScript",
+       "AJAX",
+       "jQuery",
+       "AngularJS",
+       "Gulp",
+       "HTML5",
+       "LESS",
+       "SASS",
+       "Bootstrap",
+       "responsive design",
+       "MySQL",
+       "PDO",
+       "Linux",
+       "LAMP",
+       "Composer",
+       "Git",
+       "Code review",
+       "SOLID",
+       "DRY"
+      ],
+      "job_skills": [
+       "C#",
+       ".NET",
+       "ASP.NET Core",
+       "Entity Framework",
+       "SQL database",
+       "REST",
+       "Web API",
+       "SOLID principles",
+       "design patterns",
+       "CI/CD",
+       "third-parties integration",
+       "Docker",
+       "Unity",
+       "games"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.00321
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "PHP",
+     "OOP",
+     "MVC",
+     "WordPress",
+     "Laravel",
+     "XML/XSLT",
+     "3rd party API integration",
+     "C#",
+     "JavaScript",
+     "AJAX",
+     "jQuery",
+     "AngularJS",
+     "Gulp",
+     "HTML5",
+     "LESS",
+     "SASS",
+     "Bootstrap",
+     "responsive design",
+     "MySQL",
+     "PDO",
+     "Linux",
+     "LAMP",
+     "Composer",
+     "Git",
+     "Code review"
+    ],
+    "job_skills": [
+     "PHP 7+ development",
+     "front-end development",
+     "HTML5",
+     "CSS/LESS",
+     "JavaScript",
+     "jQuery",
+     "MySql",
+     "Linux",
+     "Yii2",
+     "AWS",
+     "microservices",
+     "code review",
+     "UX/UI design"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"PHP 7+ development\", \"HTML5\", \"JavaScript\", \"jQuery\", \"MySql\", \"Linux\", \"code review\"], \"missing\": [\"front-end development\", \"CSS/LESS\", \"Yii2\", \"AWS\", \"microservices\", \"UX/UI design\"], \"extra\": [\"OOP\", \"MVC\", \"WordPress\", \"Laravel\", \"XML/XSLT\", \"3rd party API integration\", \"C#\", \"AJAX\", \"AngularJS\", \"Gulp\", \"LESS\", \"SASS\", \"Bootstrap\", \"responsive design\", \"PDO\", \"LAMP\", \"Composer\", \"Git\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "PHP",
+     "OOP",
+     "MVC",
+     "WordPress",
+     "Laravel",
+     "XML/XSLT",
+     "3rd party API integration",
+     "C#",
+     "JavaScript",
+     "AJAX",
+     "jQuery",
+     "AngularJS",
+     "Gulp",
+     "HTML5",
+     "LESS",
+     "SASS",
+     "Bootstrap",
+     "responsive design",
+     "MySQL",
+     "PDO",
+     "Linux",
+     "LAMP",
+     "Composer",
+     "Git",
+     "Code review"
+    ],
+    "job_skills": [
+     "PHP 7.4",
+     "Yii2",
+     "MySQL",
+     "Linux",
+     "GIT",
+     "Nginx",
+     "JavaScript",
+     "Vue",
+     "jQuery",
+     "HTML/CSS",
+     "integrating software components with third-party services",
+     "code reviews"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"PHP 7.4\", \"MySQL\", \"Linux\", \"GIT\", \"JavaScript\", \"jQuery\", \"code reviews\"], \"missing\": [\"Yii2\", \"Nginx\", \"Vue\", \"HTML/CSS\", \"integrating software components with third-party services\"], \"extra\": [\"OOP\", \"MVC\", \"WordPress\", \"Laravel\", \"XML/XSLT\", \"3rd party API integration\", \"C#\", \"AJAX\", \"AngularJS\", \"Gulp\", \"HTML5\", \"LESS\", \"SASS\", \"Bootstrap\", \"responsive design\", \"PDO\", \"LAMP\", \"Composer\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "PHP",
+     "OOP",
+     "MVC",
+     "WordPress",
+     "Laravel",
+     "XML/XSLT",
+     "3rd party API integration",
+     "C#",
+     "JavaScript",
+     "AJAX",
+     "jQuery",
+     "AngularJS",
+     "Gulp",
+     "HTML5",
+     "LESS",
+     "SASS",
+     "Bootstrap",
+     "responsive design",
+     "MySQL",
+     "PDO",
+     "Linux",
+     "LAMP",
+     "Composer",
+     "Git",
+     "Code review"
+    ],
+    "job_skills": [
+     "PHP",
+     "Symfony",
+     "MySQL",
+     "MongoDB",
+     "Doctrine",
+     "HTML",
+     "CSS",
+     "JavaScript",
+     "Webpack",
+     "Twig",
+     "unit testing",
+     "code reviews",
+     "GIT",
+     "CI/CD",
+     "clean code"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"PHP\", \"MySQL\", \"JavaScript\", \"code reviews\", \"GIT\"], \"missing\": [\"Symfony\", \"MongoDB\", \"Doctrine\", \"HTML\", \"CSS\", \"Webpack\", \"Twig\", \"unit testing\", \"CI/CD\", \"clean code\"], \"extra\": [\"OOP\", \"MVC\", \"WordPress\", \"Laravel\", \"XML/XSLT\", \"3rd party API integration\", \"C#\", \"AJAX\", \"jQuery\", \"AngularJS\", \"Gulp\", \"HTML5\", \"LESS\", \"SASS\", \"Bootstrap\", \"responsive design\", \"PDO\", \"Linux\", \"LAMP\", \"Composer\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "PHP",
+     "OOP",
+     "MVC",
+     "WordPress",
+     "Laravel",
+     "XML/XSLT",
+     "3rd party API integration",
+     "C#",
+     "JavaScript",
+     "AJAX",
+     "jQuery",
+     "AngularJS",
+     "Gulp",
+     "HTML5",
+     "LESS",
+     "SASS",
+     "Bootstrap",
+     "responsive design",
+     "MySQL",
+     "PDO",
+     "Linux",
+     "LAMP",
+     "Composer",
+     "Git",
+     "Code review"
+    ],
+    "job_skills": [
+     "PHP 5+",
+     "JS",
+     "HTML",
+     "SQL",
+     "Azure",
+     "application architecture design",
+     "code review",
+     "lead a team"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"PHP 5+\", \"code review\"], \"missing\": [\"JS\", \"HTML\", \"SQL\", \"Azure\", \"application architecture design\", \"lead a team\"], \"extra\": [\"OOP\", \"MVC\", \"WordPress\", \"Laravel\", \"XML/XSLT\", \"3rd party API integration\", \"C#\", \"JavaScript\", \"AJAX\", \"jQuery\", \"AngularJS\", \"Gulp\", \"HTML5\", \"LESS\", \"SASS\", \"Bootstrap\", \"responsive design\", \"MySQL\", \"PDO\", \"Linux\", \"LAMP\", \"Composer\", \"Git\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "PHP",
+     "OOP",
+     "MVC",
+     "WordPress",
+     "Laravel",
+     "XML/XSLT",
+     "3rd party API integration",
+     "C#",
+     "JavaScript",
+     "AJAX",
+     "jQuery",
+     "AngularJS",
+     "Gulp",
+     "HTML5",
+     "LESS",
+     "SASS",
+     "Bootstrap",
+     "responsive design",
+     "MySQL",
+     "PDO",
+     "Linux",
+     "LAMP",
+     "Composer",
+     "Git",
+     "Code review",
+     "SOLID",
+     "DRY"
+    ],
+    "job_skills": [
+     "C#",
+     ".NET",
+     "ASP.NET Core",
+     "Entity Framework",
+     "SQL database",
+     "REST",
+     "Web API",
+     "SOLID principles",
+     "design patterns",
+     "CI/CD",
+     "third-parties integration",
+     "Docker",
+     "Unity",
+     "games"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"C#\", \"SOLID principles\"], \"missing\": [\".NET\", \"ASP.NET Core\", \"Entity Framework\", \"SQL database\", \"REST\", \"Web API\", \"design patterns\", \"CI/CD\", \"third-parties integration\", \"Docker\", \"Unity\", \"games\"], \"extra\": [\"PHP\", \"OOP\", \"MVC\", \"WordPress\", \"Laravel\", \"XML/XSLT\", \"3rd party API integration\", \"JavaScript\", \"AJAX\", \"jQuery\", \"AngularJS\", \"Gulp\", \"HTML5\", \"LESS\", \"SASS\", \"Bootstrap\", \"responsive design\", \"MySQL\", \"PDO\", \"Linux\", \"LAMP\", \"Composer\", \"Git\", \"Code review\", \"DRY\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "Now I'll build the ranking. The pool has only 10 jobs, so all of them are ranked. The resume's quotes come from the resume text, and the job quotes are verbatim from the fetched postings.\n\nKey verbatim quotes used:\n- Resume: \"PHP (OOP, MVC)\", \"Linux basic administration\", \"MySQL(+PDO)\", \"Composer/ Git experience\", \"vanillaJS/AJAX, jQuery\", \"Code review preferrably\", \"C# basics\", \"SOLID and DRY principles\", \"3rd party API integration\".\n- Jobs: InterLogic \"Experience with PHP 7+ development\", \"Good knowledge of MySql (MariaDB)\", \"Linux knowledge is a plus\", \"Good knowledge of HTML, HTML5, CSS/LESS, JavaScript, jQuery\"; MoveUp \"Experience with PHP 7.4\", \"Regular code reviews\", \"Integrating software components with third-party services\"; EPAM \"Good knowledge of PHP Symfony\", \"Ensuring high software quality and application performance through testing and code reviews\", \"Experience with version control systems (GIT)\"; GlobalLogic \"Solid PHP (5+) knowledge\", \"Code review.\"; Luxoft \"C# (ASP.NET, WPF) - strongly preferred\"; Exadel \"Experience in NoSQL databases (including MongoDB) and RDBMS (MySQL, PostgreSQL, etc.)\"; Launch Labs \"at least 4+ years in React and Typescript\"; Genesis \"Strong C# knowledge\", \"Familiarity with Design patterns and SOLID principles\"; JetSoftPro \"Conducting code reviews and providing constructive feedback\"; Rocket Effect is non-technical.\n\nRanking rationale: InterLogic (junior/middle PHP, front-end + MySQL + jQuery, close to the resume's HTML/jQuery/MySQL pro",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.004943
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 67363,
+ "output_tokens": 7239,
+ "cost_usd": 0.010356,
+ "latency_ms": 27061.0,
+ "tool_calls": 19,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 6067.2,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-122215",
+   "label": 0,
+   "title": "Senior PHP (Symfony) Developer"
+  },
+  {
+   "job_id": "djinni-job-30547",
+   "label": 0,
+   "title": "Flutter Developer"
+  },
+  {
+   "job_id": "djinni-job-117864",
+   "label": 0,
+   "title": "Senior JavaScript Developer (Node.js)"
+  },
+  {
+   "job_id": "djinni-job-36986",
+   "label": 1,
+   "title": "Full Stack Developer (United Arab Emirates)"
+  },
+  {
+   "job_id": "djinni-job-8815",
+   "label": 0,
+   "title": "Back-End .NET Developer (Suits)"
+  },
+  {
+   "job_id": "djinni-job-16779",
+   "label": 0,
+   "title": "Content Marketing Manager / Inbound (English)"
+  },
+  {
+   "job_id": "djinni-job-55448",
+   "label": 2,
+   "title": "Junior/Middle PHP developer"
+  },
+  {
+   "job_id": "djinni-job-114737",
+   "label": 0,
+   "title": "Senior FullStack PHP/JS Developer"
+  },
+  {
+   "job_id": "djinni-job-112738",
+   "label": 0,
+   "title": "Senior Frontend Engineer"
+  },
+  {
+   "job_id": "djinni-job-87928",
+   "label": 1,
+   "title": "PHP Developer (Czech Republic)"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-87548",
+  "cv_category": "PHP",
+  "ndcg10": 0.9726097514324383,
+  "p_at_3": 0.3333333333333333,
+  "mrr": 1.0,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 1,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 1.0,
+  "n_claims": 47,
+  "n_supported": 40,
+  "hallucination_rate": 0.14893617021276595,
+  "llm_calls": 4,
+  "input_tokens": 67363,
+  "output_tokens": 7239,
+  "cost_usd": 0.010356,
+  "latency_ms": 27061.0,
+  "wall_ms": 6067.2,
+  "tool_calls": 19,
+  "error": null,
+  "top1_label": 2,
+  "reasons": "{\"skill_not_in_quotes\": 2, \"skill_not_in_job\": 5}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 47,
+  "n_supported": 40,
+  "hallucination_rate": 0.14893617021276595,
+  "reasons": {
+   "skill_not_in_quotes": 2,
+   "skill_not_in_job": 5
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-55448",
+    "n_claims": 7,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 3,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.1429,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-87928",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 5,
+    "n_matched_supported": 5,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-122215",
+    "n_claims": 7,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.1429,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-114737",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-36986",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-8815",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-117864",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-112738",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-30547",
+    "n_claims": 3,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-16779",
+    "n_claims": 1,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 0,
+    "hallucination_rate": 1.0,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   }
+  ]
+ }
+}
