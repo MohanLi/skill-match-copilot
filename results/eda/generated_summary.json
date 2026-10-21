@@ -43,19 +43,39 @@
   "p3_explanations": {
     "fit_score": {
       "baseline_agent": 42.974,
-      "single_agent": 12.8
+      "multi_agent": 26.265,
+      "multi_noverify_agent": 26.265,
+      "multi_sonnet": 23.942,
+      "single_agent": 27.829,
+      "single_sonnet": 26.117,
+      "single_verified_agent": 27.829
     },
     "n_matched": {
       "baseline_agent": 0.0,
-      "single_agent": 0.8
+      "multi_agent": 1.107,
+      "multi_noverify_agent": 1.268,
+      "multi_sonnet": 0.883,
+      "single_agent": 1.408,
+      "single_sonnet": 1.233,
+      "single_verified_agent": 1.188
     },
     "n_missing": {
       "baseline_agent": 0.0,
-      "single_agent": 1.3
+      "multi_agent": 1.51,
+      "multi_noverify_agent": 1.779,
+      "multi_sonnet": 2.1,
+      "single_agent": 1.832,
+      "single_sonnet": 1.867,
+      "single_verified_agent": 1.589
     },
     "n_dropped": {
       "baseline_agent": 0.0,
-      "single_agent": 0.0
+      "multi_agent": 0.44,
+      "multi_noverify_agent": 0.0,
+      "multi_sonnet": 0.217,
+      "single_agent": 0.0,
+      "single_sonnet": 0.0,
+      "single_verified_agent": 0.469
     }
   },
   "gold_labels": {

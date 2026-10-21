@@ -73,8 +73,15 @@ def main() -> None:
     ap.add_argument("--model", default="agent")
     ap.add_argument("--tag", default=None)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--plot-only", action="store_true", help="re-draw the figures from results/p3/metrics_<tag>.csv")
     args = ap.parse_args()
     tag = args.tag or ("haiku" if "haiku" in args.model else args.model)
+    if args.plot_only:
+        agg = pd.read_csv(ROOT / f"results/p3/metrics_{tag}.csv")
+        agg["approach_label"] = agg["approach"].map(LABELS).fillna(agg["approach_label"])
+        agg.to_csv(ROOT / f"results/p3/metrics_{tag}.csv", index=False)
+        plot_metrics(agg, tag, int(agg["n_cvs"].max()))
+        return
 
     final = pd.read_csv(ROOT / "data" / "labels" / "final.csv")
     texts = pd.read_parquet(ROOT / "data" / "processed" / "p3_pairs_texts.parquet")
@@ -161,6 +168,10 @@ def main() -> None:
     if fails:
         write_results(pd.DataFrame(fails), f"results/p3/failures_{tag}.csv")
 
+    plot_metrics(agg, tag, len(cv_ids))
+
+
+def plot_metrics(agg: pd.DataFrame, tag: str, n_cvs: int) -> None:
     os.environ["SMC_SOURCE"] = "src/p3_agent/evaluate.py"
     import plotly.express as px
 
@@ -169,10 +180,10 @@ def main() -> None:
     viz.setup()
     m = agg.melt(id_vars=["approach_label"], value_vars=["ndcg10", "p_at_3", "mrr", "p_at_3_rel1", "mrr_rel1"], var_name="metric", value_name="value")
     m["metric"] = m["metric"].map({"ndcg10": "nDCG@10", "p_at_3": "P@3 (strong fit)", "mrr": "MRR (strong fit)", "p_at_3_rel1": "P@3 (partial or better)", "mrr_rel1": "MRR (partial or better)"})
-    fig = px.bar(m, x="metric", y="value", color="approach_label", barmode="group", text=m["value"].map(lambda v: f"{v:.2f}"), title=f"Problem 3 — ranking quality on the labelled pools ({len(cv_ids)} CVs × 10 jobs)")
+    fig = px.bar(m, x="metric", y="value", color="approach_label", barmode="group", text=m["value"].map(lambda v: f"{v:.2f}"), title=f"Problem 3 — ranking quality on the labelled pools ({n_cvs} CVs × 10 jobs)")
     fig.update_traces(textposition="outside")
     fig.update_layout(yaxis_range=[0, 1.1], xaxis_title="", yaxis_title="score", legend_title_text="")
-    viz.save_fig(fig, f"p3_ranking_quality_{tag}", f"Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same {len(cv_ids)} labelled 10-job pools.", width=1200)
+    viz.save_fig(fig, f"p3_ranking_quality_{tag}", f"Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same {n_cvs} labelled 10-job pools.", width=1200)
     a2 = agg[agg["approach"] != "baseline"]
     fig2 = px.bar(a2, x="approach_label", y="hallucination_rate", text=a2["hallucination_rate"].map(lambda v: f"{v:.1%}" if v is not None else ""), title="Explanation faithfulness: share of matched/missing-skill claims NOT supported by verbatim quotes")
     fig2.update_traces(textposition="outside", marker_color=viz.PALETTE[7])
@@ -184,6 +195,7 @@ def main() -> None:
     fig3.update_yaxes(matches=None, showticklabels=True)
     fig3.update_layout(xaxis_title="", showlegend=False)
     viz.save_fig(fig3, f"p3_efficiency_{tag}", "Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools).")
+
 
 
 if __name__ == "__main__":
