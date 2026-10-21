@@ -127,6 +127,7 @@ def save_fig(fig, name: str, caption: str, width: int = 960, height: int = 540, 
     png, html = FIG_DIR / f"{name}.png", FIG_DIR / f"{name}.html"
     is_plotly = hasattr(fig, "write_html")
     if is_plotly:
+        _tidy_facets(fig)
         fig.update_layout(width=None, height=None, autosize=True)
         fig.write_html(str(html), include_plotlyjs="directory", full_html=True, config={"displaylogo": False, "responsive": True})
         fig.update_layout(width=width, height=height)
@@ -139,6 +140,17 @@ def save_fig(fig, name: str, caption: str, width: int = 960, height: int = 540, 
         html.write_text(f"<!doctype html><html><head><meta charset='utf-8'><title>{name}</title></head><body style='margin:0;background:{INK['surface']}'><img src='{name}.png' style='max-width:100%'></body></html>")
     record_caption(name, caption, source)
     return {"png": str(png), "html": str(html)}
+
+
+def _tidy_facets(fig) -> None:
+    """Facet titles lose their 'column=' prefix; faceted charts move the legend below the plot so it never
+    collides with the facet headers."""
+    anns = [a for a in (fig.layout.annotations or ()) if a.text and "=" in a.text]
+    if not anns:
+        return
+    for a in anns:
+        a.update(text=a.text.split("=")[-1])
+    fig.update_layout(legend=dict(orientation="h", yanchor="top", y=-0.16, xanchor="left", x=0), margin=dict(b=120))
 
 
 def hover_fmt(cols: list[str]) -> str:

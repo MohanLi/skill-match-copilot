@@ -1,6 +1,6 @@
 {
   "file": "results/p1/errors_test.csv",
-  "rows": 24,
+  "rows": 32,
   "columns": [
     "approach",
     "column",
@@ -11,6 +11,6 @@
     "pred_spans",
     "error_types"
   ],
-  "created_utc": "2026-10-21T01:00:23Z",
-  "git_commit": "6ef4f7c"
+  "created_utc": "2026-10-21T01:41:47Z",
+  "git_commit": "cb97c8e"
 }

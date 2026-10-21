@@ -10,7 +10,7 @@
       },
       "datasetid_results": {
         "en": {
-          "evaluation_time": 107.28768610954285,
+          "evaluation_time": 14.109652042388916,
           "metrics_dict": {
             "map": 0.4340101471717292,
             "rp@10": 0.6648888888888888,
@@ -35,7 +35,7 @@
       },
       "datasetid_results": {
         "en": {
-          "evaluation_time": 1.5830879211425781,
+          "evaluation_time": 0.4505126476287842,
           "metrics_dict": {
             "map": 0.3371573288442105,
             "rp@10": 0.5592896174863388,
@@ -53,8 +53,8 @@
   },
   "metadata": {
     "model_name": "all-MiniLM-L6-v2 (zero-shot bi-encoder)",
-    "total_evaluation_time": 108.87265849113464,
-    "timestamp": 1792542134.1700733,
+    "total_evaluation_time": 14.563422679901123,
+    "timestamp": 1792546655.700578,
     "num_tasks": 2,
     "languages": [
       "Language.EN"

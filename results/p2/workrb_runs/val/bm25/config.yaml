@@ -28,5 +28,5 @@ custom_metrics: null
 output_folder: /home/claude/skill-match-copilot/results/p2/workrb_runs/val/bm25
 checkpoint_enabled: true
 checkpoint_frequency: per_task
-created_at: '2026-10-21T00:22:11.131671+00:00'
+created_at: '2026-10-21T01:37:32.552815+00:00'
 description: ''

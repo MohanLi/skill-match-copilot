@@ -1,0 +1,10 @@
+{
+  "approach": "tagger",
+  "column": "knowledge",
+  "seed": 42,
+  "split": "dev",
+  "n": 3174,
+  "latency_ms_per_sentence": 37.69,
+  "model_dir": "/home/claude/skill-match-copilot/models/p1_tagger/knowledge_seed42",
+  "device": "cpu"
+}
