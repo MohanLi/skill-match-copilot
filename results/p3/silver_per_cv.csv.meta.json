@@ -1,0 +1,20 @@
+{
+  "file": "results/p3/silver_per_cv.csv",
+  "rows": 1120,
+  "columns": [
+    "approach",
+    "cv_id",
+    "category",
+    "ndcg10",
+    "p_at_10",
+    "mrr",
+    "cost_usd",
+    "llm_calls",
+    "error"
+  ],
+  "created_utc": "2026-10-21T07:18:56Z",
+  "git_commit": "2409636",
+  "n_baseline": 1000,
+  "n_agents": 60,
+  "relevance": "same Primary Keyword category"
+}

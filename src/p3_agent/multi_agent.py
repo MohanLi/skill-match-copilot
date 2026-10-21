@@ -34,6 +34,7 @@ class MultiAgent:
         self.tb = toolbox
         self.model = model
         self.top_n = top_n or cfg["top_n"]
+        self.max_output_tokens = int(cfg.get("max_output_tokens", 8000))
         self.candidate_k = candidate_k or cfg["candidate_k"]
         self.matcher_max = matcher_max_candidates
         self.use_verifier = use_verifier
@@ -94,7 +95,8 @@ class MultiAgent:
                                       "compare_skills": {"matched": c["compare"]["matched"][:20], "missing": c["compare"]["missing"][:15]},
                                       "job_text": c["text"][:1600]}, ensure_ascii=False))
         try:
-            obj, res = self.client.complete_json(self.p_match, model=self.model, max_tokens=4000, resume=s["resume"], plan=json.dumps(s["plan"], ensure_ascii=False)[:1500], candidates="\n\n".join(blocks), top_n=self.top_n)
+            obj, res = self.client.complete_json(self.p_match, model=self.model, max_tokens=self.max_output_tokens, resume=s["resume"], plan=json.dumps(s["plan"], ensure_ascii=False)[:1500], candidates="\n\n".join(blocks), top_n=self.top_n)
+            self._run.extra["truncated_output"] = res.stop_reason == "max_tokens"
             self._run.add_usage(res)
             ranking = normalise_ranking(obj, self.top_n)
         except Exception as e:  # noqa: BLE001

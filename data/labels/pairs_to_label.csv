@@ -1,0 +1,301 @@
+pair_id,cv_id,cv_category,job_id,job_category,relation,pool_position
+djinni-cv-28678__djinni-job-1715,djinni-cv-28678,DevOps,djinni-job-1715,Marketing,random,0
+djinni-cv-28678__djinni-job-50601,djinni-cv-28678,DevOps,djinni-job-50601,Java,related,1
+djinni-cv-28678__djinni-job-50356,djinni-cv-28678,DevOps,djinni-job-50356,Java,related,2
+djinni-cv-28678__djinni-job-4647,djinni-cv-28678,DevOps,djinni-job-4647,QA Automation,random,3
+djinni-cv-28678__djinni-job-104660,djinni-cv-28678,DevOps,djinni-job-104660,DevOps,same,4
+djinni-cv-28678__djinni-job-29246,djinni-cv-28678,DevOps,djinni-job-29246,DevOps,same,5
+djinni-cv-28678__djinni-job-93578,djinni-cv-28678,DevOps,djinni-job-93578,Marketing,random,6
+djinni-cv-28678__djinni-job-66586,djinni-cv-28678,DevOps,djinni-job-66586,Java,related,7
+djinni-cv-28678__djinni-job-68432,djinni-cv-28678,DevOps,djinni-job-68432,DevOps,same,8
+djinni-cv-28678__djinni-job-110831,djinni-cv-28678,DevOps,djinni-job-110831,DevOps,same,9
+djinni-cv-28988__djinni-job-25235,djinni-cv-28988,DevOps,djinni-job-25235,DevOps,same,0
+djinni-cv-28988__djinni-job-5259,djinni-cv-28988,DevOps,djinni-job-5259,Node.js,random,1
+djinni-cv-28988__djinni-job-69930,djinni-cv-28988,DevOps,djinni-job-69930,Java,related,2
+djinni-cv-28988__djinni-job-87038,djinni-cv-28988,DevOps,djinni-job-87038,Other,related,3
+djinni-cv-28988__djinni-job-130668,djinni-cv-28988,DevOps,djinni-job-130668,Java,related,4
+djinni-cv-28988__djinni-job-68383,djinni-cv-28988,DevOps,djinni-job-68383,DevOps,same,5
+djinni-cv-28988__djinni-job-67884,djinni-cv-28988,DevOps,djinni-job-67884,.NET,random,6
+djinni-cv-28988__djinni-job-26163,djinni-cv-28988,DevOps,djinni-job-26163,DevOps,same,7
+djinni-cv-28988__djinni-job-85842,djinni-cv-28988,DevOps,djinni-job-85842,Node.js,random,8
+djinni-cv-28988__djinni-job-129582,djinni-cv-28988,DevOps,djinni-job-129582,DevOps,same,9
+djinni-cv-27425__djinni-job-36138,djinni-cv-27425,DevOps,djinni-job-36138,Node.js,random,0
+djinni-cv-27425__djinni-job-120888,djinni-cv-27425,DevOps,djinni-job-120888,DevOps,same,1
+djinni-cv-27425__djinni-job-117580,djinni-cv-27425,DevOps,djinni-job-117580,Java,related,2
+djinni-cv-27425__djinni-job-104002,djinni-cv-27425,DevOps,djinni-job-104002,Other,related,3
+djinni-cv-27425__djinni-job-36253,djinni-cv-27425,DevOps,djinni-job-36253,.NET,random,4
+djinni-cv-27425__djinni-job-26476,djinni-cv-27425,DevOps,djinni-job-26476,DevOps,same,5
+djinni-cv-27425__djinni-job-77954,djinni-cv-27425,DevOps,djinni-job-77954,DevOps,same,6
+djinni-cv-27425__djinni-job-118180,djinni-cv-27425,DevOps,djinni-job-118180,Java,related,7
+djinni-cv-27425__djinni-job-25470,djinni-cv-27425,DevOps,djinni-job-25470,DevOps,same,8
+djinni-cv-27425__djinni-job-121973,djinni-cv-27425,DevOps,djinni-job-121973,PHP,random,9
+djinni-cv-30477__djinni-job-127688,djinni-cv-30477,Marketing,djinni-job-127688,QA Automation,random,0
+djinni-cv-30477__djinni-job-1006,djinni-cv-30477,Marketing,djinni-job-1006,Marketing,same,1
+djinni-cv-30477__djinni-job-137681,djinni-cv-30477,Marketing,djinni-job-137681,Java,related,2
+djinni-cv-30477__djinni-job-45525,djinni-cv-30477,Marketing,djinni-job-45525,Other,related,3
+djinni-cv-30477__djinni-job-45248,djinni-cv-30477,Marketing,djinni-job-45248,DevOps,random,4
+djinni-cv-30477__djinni-job-50094,djinni-cv-30477,Marketing,djinni-job-50094,Java,related,5
+djinni-cv-30477__djinni-job-16520,djinni-cv-30477,Marketing,djinni-job-16520,Marketing,same,6
+djinni-cv-30477__djinni-job-15880,djinni-cv-30477,Marketing,djinni-job-15880,Marketing,same,7
+djinni-cv-30477__djinni-job-134827,djinni-cv-30477,Marketing,djinni-job-134827,JavaScript,random,8
+djinni-cv-30477__djinni-job-129946,djinni-cv-30477,Marketing,djinni-job-129946,Marketing,same,9
+djinni-cv-109824__djinni-job-54244,djinni-cv-109824,Marketing,djinni-job-54244,Java,related,0
+djinni-cv-109824__djinni-job-129860,djinni-cv-109824,Marketing,djinni-job-129860,Marketing,same,1
+djinni-cv-109824__djinni-job-24362,djinni-cv-109824,Marketing,djinni-job-24362,DevOps,random,2
+djinni-cv-109824__djinni-job-56284,djinni-cv-109824,Marketing,djinni-job-56284,Marketing,same,3
+djinni-cv-109824__djinni-job-129112,djinni-cv-109824,Marketing,djinni-job-129112,Marketing,same,4
+djinni-cv-109824__djinni-job-48739,djinni-cv-109824,Marketing,djinni-job-48739,Java,related,5
+djinni-cv-109824__djinni-job-137681,djinni-cv-109824,Marketing,djinni-job-137681,Java,related,6
+djinni-cv-109824__djinni-job-1563,djinni-cv-109824,Marketing,djinni-job-1563,Node.js,random,7
+djinni-cv-109824__djinni-job-76054,djinni-cv-109824,Marketing,djinni-job-76054,QA,random,8
+djinni-cv-109824__djinni-job-135560,djinni-cv-109824,Marketing,djinni-job-135560,Marketing,same,9
+djinni-cv-124531__djinni-job-16484,djinni-cv-124531,Marketing,djinni-job-16484,Marketing,same,0
+djinni-cv-124531__djinni-job-129819,djinni-cv-124531,Marketing,djinni-job-129819,Marketing,same,1
+djinni-cv-124531__djinni-job-56961,djinni-cv-124531,Marketing,djinni-job-56961,QA,random,2
+djinni-cv-124531__djinni-job-116442,djinni-cv-124531,Marketing,djinni-job-116442,Java,related,3
+djinni-cv-124531__djinni-job-133023,djinni-cv-124531,Marketing,djinni-job-133023,JavaScript,random,4
+djinni-cv-124531__djinni-job-127009,djinni-cv-124531,Marketing,djinni-job-127009,Java,related,5
+djinni-cv-124531__djinni-job-27217,djinni-cv-124531,Marketing,djinni-job-27217,Marketing,same,6
+djinni-cv-124531__djinni-job-61114,djinni-cv-124531,Marketing,djinni-job-61114,Java,related,7
+djinni-cv-124531__djinni-job-141380,djinni-cv-124531,Marketing,djinni-job-141380,PHP,random,8
+djinni-cv-124531__djinni-job-42304,djinni-cv-124531,Marketing,djinni-job-42304,Marketing,same,9
+djinni-cv-81405__djinni-job-53559,djinni-cv-81405,JavaScript,djinni-job-53559,JavaScript,same,0
+djinni-cv-81405__djinni-job-197,djinni-cv-81405,JavaScript,djinni-job-197,Other,random,1
+djinni-cv-81405__djinni-job-8857,djinni-cv-81405,JavaScript,djinni-job-8857,Node.js,related,2
+djinni-cv-81405__djinni-job-76004,djinni-cv-81405,JavaScript,djinni-job-76004,QA,random,3
+djinni-cv-81405__djinni-job-38800,djinni-cv-81405,JavaScript,djinni-job-38800,PHP,related,4
+djinni-cv-81405__djinni-job-34253,djinni-cv-81405,JavaScript,djinni-job-34253,JavaScript,same,5
+djinni-cv-81405__djinni-job-117572,djinni-cv-81405,JavaScript,djinni-job-117572,Java,random,6
+djinni-cv-81405__djinni-job-63562,djinni-cv-81405,JavaScript,djinni-job-63562,PHP,related,7
+djinni-cv-81405__djinni-job-30792,djinni-cv-81405,JavaScript,djinni-job-30792,JavaScript,same,8
+djinni-cv-81405__djinni-job-141305,djinni-cv-81405,JavaScript,djinni-job-141305,JavaScript,same,9
+djinni-cv-79928__djinni-job-59954,djinni-cv-79928,JavaScript,djinni-job-59954,Node.js,related,0
+djinni-cv-79928__djinni-job-76794,djinni-cv-79928,JavaScript,djinni-job-76794,JavaScript,same,1
+djinni-cv-79928__djinni-job-100876,djinni-cv-79928,JavaScript,djinni-job-100876,Marketing,random,2
+djinni-cv-79928__djinni-job-15218,djinni-cv-79928,JavaScript,djinni-job-15218,DevOps,random,3
+djinni-cv-79928__djinni-job-69680,djinni-cv-79928,JavaScript,djinni-job-69680,JavaScript,same,4
+djinni-cv-79928__djinni-job-36121,djinni-cv-79928,JavaScript,djinni-job-36121,JavaScript,same,5
+djinni-cv-79928__djinni-job-114725,djinni-cv-79928,JavaScript,djinni-job-114725,PHP,related,6
+djinni-cv-79928__djinni-job-37981,djinni-cv-79928,JavaScript,djinni-job-37981,Node.js,related,7
+djinni-cv-79928__djinni-job-85156,djinni-cv-79928,JavaScript,djinni-job-85156,.NET,random,8
+djinni-cv-79928__djinni-job-113271,djinni-cv-79928,JavaScript,djinni-job-113271,JavaScript,same,9
+djinni-cv-47119__djinni-job-71827,djinni-cv-47119,JavaScript,djinni-job-71827,JavaScript,same,0
+djinni-cv-47119__djinni-job-36747,djinni-cv-47119,JavaScript,djinni-job-36747,Node.js,related,1
+djinni-cv-47119__djinni-job-111855,djinni-cv-47119,JavaScript,djinni-job-111855,JavaScript,same,2
+djinni-cv-47119__djinni-job-54336,djinni-cv-47119,JavaScript,djinni-job-54336,Java,random,3
+djinni-cv-47119__djinni-job-27839,djinni-cv-47119,JavaScript,djinni-job-27839,PHP,related,4
+djinni-cv-47119__djinni-job-120942,djinni-cv-47119,JavaScript,djinni-job-120942,Node.js,related,5
+djinni-cv-47119__djinni-job-26435,djinni-cv-47119,JavaScript,djinni-job-26435,DevOps,random,6
+djinni-cv-47119__djinni-job-72565,djinni-cv-47119,JavaScript,djinni-job-72565,JavaScript,same,7
+djinni-cv-47119__djinni-job-70281,djinni-cv-47119,JavaScript,djinni-job-70281,.NET,random,8
+djinni-cv-47119__djinni-job-99239,djinni-cv-47119,JavaScript,djinni-job-99239,JavaScript,same,9
+djinni-cv-7960__djinni-job-55454,djinni-cv-7960,.NET,djinni-job-55454,PHP,random,0
+djinni-cv-7960__djinni-job-29457,djinni-cv-7960,.NET,djinni-job-29457,Other,related,1
+djinni-cv-7960__djinni-job-114811,djinni-cv-7960,.NET,djinni-job-114811,.NET,same,2
+djinni-cv-7960__djinni-job-70281,djinni-cv-7960,.NET,djinni-job-70281,.NET,same,3
+djinni-cv-7960__djinni-job-85156,djinni-cv-7960,.NET,djinni-job-85156,.NET,same,4
+djinni-cv-7960__djinni-job-96375,djinni-cv-7960,.NET,djinni-job-96375,QA,random,5
+djinni-cv-7960__djinni-job-38288,djinni-cv-7960,.NET,djinni-job-38288,.NET,same,6
+djinni-cv-7960__djinni-job-71824,djinni-cv-7960,.NET,djinni-job-71824,JavaScript,related,7
+djinni-cv-7960__djinni-job-106688,djinni-cv-7960,.NET,djinni-job-106688,Other,related,8
+djinni-cv-7960__djinni-job-137489,djinni-cv-7960,.NET,djinni-job-137489,QA,random,9
+djinni-cv-164185__djinni-job-24375,djinni-cv-164185,.NET,djinni-job-24375,DevOps,random,0
+djinni-cv-164185__djinni-job-132449,djinni-cv-164185,.NET,djinni-job-132449,Other,related,1
+djinni-cv-164185__djinni-job-27751,djinni-cv-164185,.NET,djinni-job-27751,Other,related,2
+djinni-cv-164185__djinni-job-108361,djinni-cv-164185,.NET,djinni-job-108361,.NET,same,3
+djinni-cv-164185__djinni-job-29919,djinni-cv-164185,.NET,djinni-job-29919,Other,related,4
+djinni-cv-164185__djinni-job-7108,djinni-cv-164185,.NET,djinni-job-7108,DevOps,random,5
+djinni-cv-164185__djinni-job-16104,djinni-cv-164185,.NET,djinni-job-16104,.NET,same,6
+djinni-cv-164185__djinni-job-13879,djinni-cv-164185,.NET,djinni-job-13879,.NET,same,7
+djinni-cv-164185__djinni-job-59423,djinni-cv-164185,.NET,djinni-job-59423,.NET,same,8
+djinni-cv-164185__djinni-job-96494,djinni-cv-164185,.NET,djinni-job-96494,QA,random,9
+djinni-cv-48345__djinni-job-112652,djinni-cv-48345,.NET,djinni-job-112652,JavaScript,related,0
+djinni-cv-48345__djinni-job-67866,djinni-cv-48345,.NET,djinni-job-67866,.NET,same,1
+djinni-cv-48345__djinni-job-132833,djinni-cv-48345,.NET,djinni-job-132833,.NET,same,2
+djinni-cv-48345__djinni-job-65658,djinni-cv-48345,.NET,djinni-job-65658,Marketing,random,3
+djinni-cv-48345__djinni-job-41819,djinni-cv-48345,.NET,djinni-job-41819,Other,related,4
+djinni-cv-48345__djinni-job-87718,djinni-cv-48345,.NET,djinni-job-87718,PHP,random,5
+djinni-cv-48345__djinni-job-66019,djinni-cv-48345,.NET,djinni-job-66019,Other,related,6
+djinni-cv-48345__djinni-job-68037,djinni-cv-48345,.NET,djinni-job-68037,.NET,same,7
+djinni-cv-48345__djinni-job-120916,djinni-cv-48345,.NET,djinni-job-120916,.NET,same,8
+djinni-cv-48345__djinni-job-75678,djinni-cv-48345,.NET,djinni-job-75678,QA,random,9
+djinni-cv-119381__djinni-job-52163,djinni-cv-119381,Node.js,djinni-job-52163,JavaScript,related,0
+djinni-cv-119381__djinni-job-67616,djinni-cv-119381,Node.js,djinni-job-67616,Node.js,same,1
+djinni-cv-119381__djinni-job-95520,djinni-cv-119381,Node.js,djinni-job-95520,QA Automation,random,2
+djinni-cv-119381__djinni-job-36044,djinni-cv-119381,Node.js,djinni-job-36044,PHP,random,3
+djinni-cv-119381__djinni-job-135164,djinni-cv-119381,Node.js,djinni-job-135164,Node.js,same,4
+djinni-cv-119381__djinni-job-36458,djinni-cv-119381,Node.js,djinni-job-36458,Node.js,same,5
+djinni-cv-119381__djinni-job-111951,djinni-cv-119381,Node.js,djinni-job-111951,JavaScript,related,6
+djinni-cv-119381__djinni-job-36350,djinni-cv-119381,Node.js,djinni-job-36350,Node.js,same,7
+djinni-cv-119381__djinni-job-35602,djinni-cv-119381,Node.js,djinni-job-35602,JavaScript,related,8
+djinni-cv-119381__djinni-job-74370,djinni-cv-119381,Node.js,djinni-job-74370,PHP,random,9
+djinni-cv-120581__djinni-job-25661,djinni-cv-120581,Node.js,djinni-job-25661,DevOps,random,0
+djinni-cv-120581__djinni-job-121396,djinni-cv-120581,Node.js,djinni-job-121396,Node.js,same,1
+djinni-cv-120581__djinni-job-3763,djinni-cv-120581,Node.js,djinni-job-3763,Node.js,same,2
+djinni-cv-120581__djinni-job-101071,djinni-cv-120581,Node.js,djinni-job-101071,Other,random,3
+djinni-cv-120581__djinni-job-50191,djinni-cv-120581,Node.js,djinni-job-50191,Java,related,4
+djinni-cv-120581__djinni-job-37376,djinni-cv-120581,Node.js,djinni-job-37376,Node.js,same,5
+djinni-cv-120581__djinni-job-82859,djinni-cv-120581,Node.js,djinni-job-82859,QA Automation,random,6
+djinni-cv-120581__djinni-job-62301,djinni-cv-120581,Node.js,djinni-job-62301,Node.js,same,7
+djinni-cv-120581__djinni-job-69206,djinni-cv-120581,Node.js,djinni-job-69206,JavaScript,related,8
+djinni-cv-120581__djinni-job-49735,djinni-cv-120581,Node.js,djinni-job-49735,Java,related,9
+djinni-cv-119860__djinni-job-14990,djinni-cv-119860,Node.js,djinni-job-14990,Java,related,0
+djinni-cv-119860__djinni-job-100595,djinni-cv-119860,Node.js,djinni-job-100595,QA,random,1
+djinni-cv-119860__djinni-job-9332,djinni-cv-119860,Node.js,djinni-job-9332,Node.js,same,2
+djinni-cv-119860__djinni-job-120989,djinni-cv-119860,Node.js,djinni-job-120989,Node.js,same,3
+djinni-cv-119860__djinni-job-8899,djinni-cv-119860,Node.js,djinni-job-8899,Node.js,same,4
+djinni-cv-119860__djinni-job-141599,djinni-cv-119860,Node.js,djinni-job-141599,.NET,random,5
+djinni-cv-119860__djinni-job-57340,djinni-cv-119860,Node.js,djinni-job-57340,JavaScript,related,6
+djinni-cv-119860__djinni-job-126943,djinni-cv-119860,Node.js,djinni-job-126943,JavaScript,related,7
+djinni-cv-119860__djinni-job-26274,djinni-cv-119860,Node.js,djinni-job-26274,DevOps,random,8
+djinni-cv-119860__djinni-job-59309,djinni-cv-119860,Node.js,djinni-job-59309,Node.js,same,9
+djinni-cv-70150__djinni-job-50565,djinni-cv-70150,Java,djinni-job-50565,Java,same,0
+djinni-cv-70150__djinni-job-18963,djinni-cv-70150,Java,djinni-job-18963,Other,related,1
+djinni-cv-70150__djinni-job-66461,djinni-cv-70150,Java,djinni-job-66461,Other,related,2
+djinni-cv-70150__djinni-job-50265,djinni-cv-70150,Java,djinni-job-50265,Java,same,3
+djinni-cv-70150__djinni-job-70198,djinni-cv-70150,Java,djinni-job-70198,Java,same,4
+djinni-cv-70150__djinni-job-77772,djinni-cv-70150,Java,djinni-job-77772,Other,related,5
+djinni-cv-70150__djinni-job-84953,djinni-cv-70150,Java,djinni-job-84953,.NET,random,6
+djinni-cv-70150__djinni-job-74443,djinni-cv-70150,Java,djinni-job-74443,PHP,random,7
+djinni-cv-70150__djinni-job-50728,djinni-cv-70150,Java,djinni-job-50728,Java,same,8
+djinni-cv-70150__djinni-job-99041,djinni-cv-70150,Java,djinni-job-99041,JavaScript,random,9
+djinni-cv-71744__djinni-job-117422,djinni-cv-71744,Java,djinni-job-117422,Java,same,0
+djinni-cv-71744__djinni-job-69318,djinni-cv-71744,Java,djinni-job-69318,Node.js,related,1
+djinni-cv-71744__djinni-job-50251,djinni-cv-71744,Java,djinni-job-50251,Java,same,2
+djinni-cv-71744__djinni-job-136508,djinni-cv-71744,Java,djinni-job-136508,Other,related,3
+djinni-cv-71744__djinni-job-79173,djinni-cv-71744,Java,djinni-job-79173,Java,same,4
+djinni-cv-71744__djinni-job-70348,djinni-cv-71744,Java,djinni-job-70348,Node.js,related,5
+djinni-cv-71744__djinni-job-21636,djinni-cv-71744,Java,djinni-job-21636,QA,random,6
+djinni-cv-71744__djinni-job-70198,djinni-cv-71744,Java,djinni-job-70198,Java,same,7
+djinni-cv-71744__djinni-job-120246,djinni-cv-71744,Java,djinni-job-120246,.NET,random,8
+djinni-cv-71744__djinni-job-6096,djinni-cv-71744,Java,djinni-job-6096,QA Automation,random,9
+djinni-cv-84559__djinni-job-16971,djinni-cv-84559,Java,djinni-job-16971,Other,related,0
+djinni-cv-84559__djinni-job-108933,djinni-cv-84559,Java,djinni-job-108933,Marketing,random,1
+djinni-cv-84559__djinni-job-50601,djinni-cv-84559,Java,djinni-job-50601,Java,same,2
+djinni-cv-84559__djinni-job-71812,djinni-cv-84559,Java,djinni-job-71812,Node.js,related,3
+djinni-cv-84559__djinni-job-64810,djinni-cv-84559,Java,djinni-job-64810,QA,random,4
+djinni-cv-84559__djinni-job-79044,djinni-cv-84559,Java,djinni-job-79044,Java,same,5
+djinni-cv-84559__djinni-job-49592,djinni-cv-84559,Java,djinni-job-49592,Java,same,6
+djinni-cv-84559__djinni-job-120730,djinni-cv-84559,Java,djinni-job-120730,.NET,random,7
+djinni-cv-84559__djinni-job-86533,djinni-cv-84559,Java,djinni-job-86533,Other,related,8
+djinni-cv-84559__djinni-job-55666,djinni-cv-84559,Java,djinni-job-55666,Java,same,9
+djinni-cv-57041__djinni-job-77371,djinni-cv-57041,Other,djinni-job-77371,JavaScript,random,0
+djinni-cv-57041__djinni-job-114354,djinni-cv-57041,Other,djinni-job-114354,JavaScript,random,1
+djinni-cv-57041__djinni-job-10445,djinni-cv-57041,Other,djinni-job-10445,Other,same,2
+djinni-cv-57041__djinni-job-50431,djinni-cv-57041,Other,djinni-job-50431,Java,related,3
+djinni-cv-57041__djinni-job-91415,djinni-cv-57041,Other,djinni-job-91415,Other,same,4
+djinni-cv-57041__djinni-job-66305,djinni-cv-57041,Other,djinni-job-66305,Other,same,5
+djinni-cv-57041__djinni-job-86115,djinni-cv-57041,Other,djinni-job-86115,Node.js,random,6
+djinni-cv-57041__djinni-job-136919,djinni-cv-57041,Other,djinni-job-136919,Marketing,related,7
+djinni-cv-57041__djinni-job-90872,djinni-cv-57041,Other,djinni-job-90872,Marketing,related,8
+djinni-cv-57041__djinni-job-1058,djinni-cv-57041,Other,djinni-job-1058,Other,same,9
+djinni-cv-161393__djinni-job-119225,djinni-cv-161393,Other,djinni-job-119225,QA,random,0
+djinni-cv-161393__djinni-job-131076,djinni-cv-161393,Other,djinni-job-131076,Other,same,1
+djinni-cv-161393__djinni-job-122854,djinni-cv-161393,Other,djinni-job-122854,Marketing,related,2
+djinni-cv-161393__djinni-job-130430,djinni-cv-161393,Other,djinni-job-130430,Node.js,random,3
+djinni-cv-161393__djinni-job-9663,djinni-cv-161393,Other,djinni-job-9663,Other,same,4
+djinni-cv-161393__djinni-job-27427,djinni-cv-161393,Other,djinni-job-27427,Marketing,related,5
+djinni-cv-161393__djinni-job-130016,djinni-cv-161393,Other,djinni-job-130016,Marketing,related,6
+djinni-cv-161393__djinni-job-103756,djinni-cv-161393,Other,djinni-job-103756,Other,same,7
+djinni-cv-161393__djinni-job-73564,djinni-cv-161393,Other,djinni-job-73564,Node.js,random,8
+djinni-cv-161393__djinni-job-29329,djinni-cv-161393,Other,djinni-job-29329,Other,same,9
+djinni-cv-9058__djinni-job-118582,djinni-cv-9058,Other,djinni-job-118582,Node.js,random,0
+djinni-cv-9058__djinni-job-128853,djinni-cv-9058,Other,djinni-job-128853,Marketing,related,1
+djinni-cv-9058__djinni-job-610,djinni-cv-9058,Other,djinni-job-610,Other,same,2
+djinni-cv-9058__djinni-job-111613,djinni-cv-9058,Other,djinni-job-111613,Other,same,3
+djinni-cv-9058__djinni-job-14594,djinni-cv-9058,Other,djinni-job-14594,Other,same,4
+djinni-cv-9058__djinni-job-14768,djinni-cv-9058,Other,djinni-job-14768,Other,same,5
+djinni-cv-9058__djinni-job-87220,djinni-cv-9058,Other,djinni-job-87220,Marketing,related,6
+djinni-cv-9058__djinni-job-79968,djinni-cv-9058,Other,djinni-job-79968,PHP,random,7
+djinni-cv-9058__djinni-job-38702,djinni-cv-9058,Other,djinni-job-38702,PHP,random,8
+djinni-cv-9058__djinni-job-116292,djinni-cv-9058,Other,djinni-job-116292,Java,related,9
+djinni-cv-77004__djinni-job-67211,djinni-cv-77004,QA Automation,djinni-job-67211,QA Automation,same,0
+djinni-cv-77004__djinni-job-106293,djinni-cv-77004,QA Automation,djinni-job-106293,QA Automation,same,1
+djinni-cv-77004__djinni-job-93014,djinni-cv-77004,QA Automation,djinni-job-93014,Other,related,2
+djinni-cv-77004__djinni-job-106385,djinni-cv-77004,QA Automation,djinni-job-106385,QA Automation,same,3
+djinni-cv-77004__djinni-job-141514,djinni-cv-77004,QA Automation,djinni-job-141514,Other,related,4
+djinni-cv-77004__djinni-job-101218,djinni-cv-77004,QA Automation,djinni-job-101218,Other,related,5
+djinni-cv-77004__djinni-job-5653,djinni-cv-77004,QA Automation,djinni-job-5653,QA Automation,same,6
+djinni-cv-77004__djinni-job-34047,djinni-cv-77004,QA Automation,djinni-job-34047,JavaScript,random,7
+djinni-cv-77004__djinni-job-141194,djinni-cv-77004,QA Automation,djinni-job-141194,PHP,random,8
+djinni-cv-77004__djinni-job-70097,djinni-cv-77004,QA Automation,djinni-job-70097,.NET,random,9
+djinni-cv-6976__djinni-job-14810,djinni-cv-6976,QA Automation,djinni-job-14810,Other,related,0
+djinni-cv-6976__djinni-job-77482,djinni-cv-6976,QA Automation,djinni-job-77482,QA Automation,same,1
+djinni-cv-6976__djinni-job-75659,djinni-cv-6976,QA Automation,djinni-job-75659,QA Automation,same,2
+djinni-cv-6976__djinni-job-48961,djinni-cv-6976,QA Automation,djinni-job-48961,Java,random,3
+djinni-cv-6976__djinni-job-51175,djinni-cv-6976,QA Automation,djinni-job-51175,JavaScript,random,4
+djinni-cv-6976__djinni-job-54635,djinni-cv-6976,QA Automation,djinni-job-54635,Other,related,5
+djinni-cv-6976__djinni-job-124060,djinni-cv-6976,QA Automation,djinni-job-124060,QA Automation,same,6
+djinni-cv-6976__djinni-job-97634,djinni-cv-6976,QA Automation,djinni-job-97634,QA Automation,same,7
+djinni-cv-6976__djinni-job-111811,djinni-cv-6976,QA Automation,djinni-job-111811,JavaScript,random,8
+djinni-cv-6976__djinni-job-130965,djinni-cv-6976,QA Automation,djinni-job-130965,Other,related,9
+djinni-cv-143738__djinni-job-31297,djinni-cv-143738,QA Automation,djinni-job-31297,JavaScript,random,0
+djinni-cv-143738__djinni-job-110369,djinni-cv-143738,QA Automation,djinni-job-110369,DevOps,random,1
+djinni-cv-143738__djinni-job-22287,djinni-cv-143738,QA Automation,djinni-job-22287,QA Automation,same,2
+djinni-cv-143738__djinni-job-129198,djinni-cv-143738,QA Automation,djinni-job-129198,QA,related,3
+djinni-cv-143738__djinni-job-125358,djinni-cv-143738,QA Automation,djinni-job-125358,Other,related,4
+djinni-cv-143738__djinni-job-4808,djinni-cv-143738,QA Automation,djinni-job-4808,QA Automation,same,5
+djinni-cv-143738__djinni-job-56946,djinni-cv-143738,QA Automation,djinni-job-56946,QA,related,6
+djinni-cv-143738__djinni-job-127662,djinni-cv-143738,QA Automation,djinni-job-127662,QA Automation,same,7
+djinni-cv-143738__djinni-job-105889,djinni-cv-143738,QA Automation,djinni-job-105889,QA Automation,same,8
+djinni-cv-143738__djinni-job-68689,djinni-cv-143738,QA Automation,djinni-job-68689,DevOps,random,9
+djinni-cv-87548__djinni-job-122215,djinni-cv-87548,PHP,djinni-job-122215,PHP,same,0
+djinni-cv-87548__djinni-job-30547,djinni-cv-87548,PHP,djinni-job-30547,Other,related,1
+djinni-cv-87548__djinni-job-117864,djinni-cv-87548,PHP,djinni-job-117864,Node.js,random,2
+djinni-cv-87548__djinni-job-36986,djinni-cv-87548,PHP,djinni-job-36986,JavaScript,related,3
+djinni-cv-87548__djinni-job-8815,djinni-cv-87548,PHP,djinni-job-8815,.NET,random,4
+djinni-cv-87548__djinni-job-16779,djinni-cv-87548,PHP,djinni-job-16779,Marketing,random,5
+djinni-cv-87548__djinni-job-55448,djinni-cv-87548,PHP,djinni-job-55448,PHP,same,6
+djinni-cv-87548__djinni-job-114737,djinni-cv-87548,PHP,djinni-job-114737,PHP,same,7
+djinni-cv-87548__djinni-job-112738,djinni-cv-87548,PHP,djinni-job-112738,JavaScript,related,8
+djinni-cv-87548__djinni-job-87928,djinni-cv-87548,PHP,djinni-job-87928,PHP,same,9
+djinni-cv-188695__djinni-job-14732,djinni-cv-188695,PHP,djinni-job-14732,Marketing,random,0
+djinni-cv-188695__djinni-job-74469,djinni-cv-188695,PHP,djinni-job-74469,PHP,same,1
+djinni-cv-188695__djinni-job-86429,djinni-cv-188695,PHP,djinni-job-86429,.NET,random,2
+djinni-cv-188695__djinni-job-138014,djinni-cv-188695,PHP,djinni-job-138014,PHP,same,3
+djinni-cv-188695__djinni-job-82421,djinni-cv-188695,PHP,djinni-job-82421,JavaScript,related,4
+djinni-cv-188695__djinni-job-63575,djinni-cv-188695,PHP,djinni-job-63575,PHP,same,5
+djinni-cv-188695__djinni-job-45516,djinni-cv-188695,PHP,djinni-job-45516,Other,related,6
+djinni-cv-188695__djinni-job-17382,djinni-cv-188695,PHP,djinni-job-17382,Marketing,random,7
+djinni-cv-188695__djinni-job-37420,djinni-cv-188695,PHP,djinni-job-37420,PHP,same,8
+djinni-cv-188695__djinni-job-34238,djinni-cv-188695,PHP,djinni-job-34238,JavaScript,related,9
+djinni-cv-48346__djinni-job-15970,djinni-cv-48346,PHP,djinni-job-15970,Other,related,0
+djinni-cv-48346__djinni-job-19321,djinni-cv-48346,PHP,djinni-job-19321,Other,related,1
+djinni-cv-48346__djinni-job-9091,djinni-cv-48346,PHP,djinni-job-9091,PHP,same,2
+djinni-cv-48346__djinni-job-118619,djinni-cv-48346,PHP,djinni-job-118619,.NET,random,3
+djinni-cv-48346__djinni-job-121965,djinni-cv-48346,PHP,djinni-job-121965,PHP,same,4
+djinni-cv-48346__djinni-job-71109,djinni-cv-48346,PHP,djinni-job-71109,Java,random,5
+djinni-cv-48346__djinni-job-87956,djinni-cv-48346,PHP,djinni-job-87956,PHP,same,6
+djinni-cv-48346__djinni-job-130199,djinni-cv-48346,PHP,djinni-job-130199,Marketing,random,7
+djinni-cv-48346__djinni-job-141359,djinni-cv-48346,PHP,djinni-job-141359,PHP,same,8
+djinni-cv-48346__djinni-job-17020,djinni-cv-48346,PHP,djinni-job-17020,Other,related,9
+djinni-cv-90969__djinni-job-64153,djinni-cv-90969,QA,djinni-job-64153,QA,same,0
+djinni-cv-90969__djinni-job-70028,djinni-cv-90969,QA,djinni-job-70028,PHP,random,1
+djinni-cv-90969__djinni-job-57241,djinni-cv-90969,QA,djinni-job-57241,QA,same,2
+djinni-cv-90969__djinni-job-41837,djinni-cv-90969,QA,djinni-job-41837,Other,related,3
+djinni-cv-90969__djinni-job-62606,djinni-cv-90969,QA,djinni-job-62606,Other,related,4
+djinni-cv-90969__djinni-job-15787,djinni-cv-90969,QA,djinni-job-15787,.NET,random,5
+djinni-cv-90969__djinni-job-97413,djinni-cv-90969,QA,djinni-job-97413,QA,same,6
+djinni-cv-90969__djinni-job-105998,djinni-cv-90969,QA,djinni-job-105998,QA Automation,related,7
+djinni-cv-90969__djinni-job-37127,djinni-cv-90969,QA,djinni-job-37127,Node.js,random,8
+djinni-cv-90969__djinni-job-137994,djinni-cv-90969,QA,djinni-job-137994,QA,same,9
+djinni-cv-105449__djinni-job-133260,djinni-cv-105449,QA,djinni-job-133260,JavaScript,random,0
+djinni-cv-105449__djinni-job-57266,djinni-cv-105449,QA,djinni-job-57266,QA,same,1
+djinni-cv-105449__djinni-job-82781,djinni-cv-105449,QA,djinni-job-82781,QA,same,2
+djinni-cv-105449__djinni-job-114944,djinni-cv-105449,QA,djinni-job-114944,QA,same,3
+djinni-cv-105449__djinni-job-76159,djinni-cv-105449,QA,djinni-job-76159,QA,same,4
+djinni-cv-105449__djinni-job-18067,djinni-cv-105449,QA,djinni-job-18067,Marketing,random,5
+djinni-cv-105449__djinni-job-86493,djinni-cv-105449,QA,djinni-job-86493,Other,related,6
+djinni-cv-105449__djinni-job-120284,djinni-cv-105449,QA,djinni-job-120284,.NET,random,7
+djinni-cv-105449__djinni-job-103928,djinni-cv-105449,QA,djinni-job-103928,Other,related,8
+djinni-cv-105449__djinni-job-22609,djinni-cv-105449,QA,djinni-job-22609,Other,related,9
+djinni-cv-145696__djinni-job-30238,djinni-cv-145696,QA,djinni-job-30238,Other,related,0
+djinni-cv-145696__djinni-job-23613,djinni-cv-145696,QA,djinni-job-23613,DevOps,random,1
+djinni-cv-145696__djinni-job-132263,djinni-cv-145696,QA,djinni-job-132263,QA,same,2
+djinni-cv-145696__djinni-job-114309,djinni-cv-145696,QA,djinni-job-114309,JavaScript,random,3
+djinni-cv-145696__djinni-job-119223,djinni-cv-145696,QA,djinni-job-119223,QA,same,4
+djinni-cv-145696__djinni-job-75682,djinni-cv-145696,QA,djinni-job-75682,QA,same,5
+djinni-cv-145696__djinni-job-72739,djinni-cv-145696,QA,djinni-job-72739,.NET,random,6
+djinni-cv-145696__djinni-job-64453,djinni-cv-145696,QA,djinni-job-64453,QA,same,7
+djinni-cv-145696__djinni-job-105950,djinni-cv-145696,QA,djinni-job-105950,QA Automation,related,8
+djinni-cv-145696__djinni-job-89053,djinni-cv-145696,QA,djinni-job-89053,Other,related,9

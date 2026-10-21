@@ -159,7 +159,7 @@ def test_baseline(toolbox):
 
 def test_single_agent(toolbox):
     ag = SingleAgent.__new__(SingleAgent)
-    ag.tb, ag.model, ag.top_n, ag.candidate_k, ag.max_steps = toolbox, "agent", 4, 5, 6
+    ag.tb, ag.model, ag.top_n, ag.candidate_k, ag.max_steps, ag.max_output_tokens = toolbox, "agent", 4, 5, 6, 8000
     ag.client = ScriptedLLM()
     from src.utils.llm import load_prompt
 
@@ -175,7 +175,7 @@ def test_single_agent(toolbox):
 
 def test_multi_agent(toolbox):
     ag = MultiAgent.__new__(MultiAgent)
-    ag.tb, ag.model, ag.top_n, ag.candidate_k, ag.matcher_max, ag.use_verifier = toolbox, "agent", 4, 5, 15, True
+    ag.tb, ag.model, ag.top_n, ag.candidate_k, ag.matcher_max, ag.use_verifier, ag.max_output_tokens = toolbox, "agent", 4, 5, 15, True, 8000
     ag.client = ScriptedLLM()
     from src.utils.llm import load_prompt
 

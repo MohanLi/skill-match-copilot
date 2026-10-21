@@ -39,7 +39,7 @@ for s in "${STAGES[@]}"; do
     p3_pairs)           run_stage $s python -m src.p3_agent.make_pairs ;;
     p3_labels)          run_stage $s python -m src.p3_agent.label_pairs ;;
     p3_eval)            run_stage $s python -m src.p3_agent.evaluate --approaches baseline single multi multi_noverify ;;
-    p3_eval_sonnet)     run_stage $s python -m src.p3_agent.evaluate --approaches single multi --model agent_ablation --tag sonnet ;;
+    p3_eval_sonnet)     run_stage $s python -m src.p3_agent.evaluate --approaches single multi --model agent_ablation --tag sonnet --limit 12 ;;  # Sonnet is ~20x Haiku per run: 12 CVs keep it under the budget
     p3_silver)          run_stage $s python -m src.p3_agent.silver_eval --agents-n 60 ;;
     eda04_post)         run_stage $s python scripts/nb.py notebooks/src/04_eda_live_jobs.py ;;
     drift)              run_stage $s python -m src.monitoring.drift_report ;;

@@ -1,0 +1,175 @@
+{
+  "pool": "djinni_jobs",
+  "selected": 6000,
+  "indexed_total": 6000,
+  "newly_indexed": 6000,
+  "build_time_min": 191.0,
+  "mean_esco_per_job": 12.674,
+  "mean_not_in_esco_per_job": 17.026,
+  "categories": {
+    "DevOps": 600,
+    "Marketing": 600,
+    "JavaScript": 600,
+    ".NET": 600,
+    "Node.js": 600,
+    "Java": 600,
+    "Other": 600,
+    "QA Automation": 600,
+    "PHP": 600,
+    "QA": 600
+  },
+  "spot_check_20": [
+    {
+      "job_id": "djinni-job-31297",
+      "title": "Front-end developer",
+      "category": "JavaScript",
+      "esco_skills": "CSS|English|JSSS|JavaScript",
+      "raw_skills": "Reactjs|React-redux|React-saga|JS|ES5|ES6|CSS|SCSS|Vuejs|Vuex|English"
+    },
+    {
+      "job_id": "djinni-job-57266",
+      "title": "Junior QA Manual",
+      "category": "QA",
+      "esco_skills": "CSS|English|JavaScript|PHP|SQL|customer relationship management|database|develop test procedures|iOS|logging|manage website|provide software testing documentation|test procedures|test soil load bearing capacity",
+      "raw_skills": "Develop and execute test cases and test plans|Create logs|document testing phases and defects|Conduct post-release / post-implementation testing|Continuously improve the QA process|Attention to detail|JS|PHP/JS|SQL|Postman|CRM|ORM|REST API|HTML|CSS|Database|REST API testing|Mobile testing|IOS/Android )|HTML/CSS|Load testing|GIT|Website|testing|post-release|post-implementation testing|English"
+    },
+    {
+      "job_id": "djinni-job-79121",
+      "title": "Middle/Senior Java Developer (IRC148513)",
+      "category": "Java",
+      "esco_skills": "Agile development|Android (mobile operating systems)|Apache Tomcat|CSS|Eclipse (integrated development environment software)|English|Java (computer programming)|SQL|analytical chemistry|detect bottlenecks|encourage teambuilding|fuel gas|iOS|manage the fleet according to planned operations|moderate a discussion|perform defensive driving|solve problems|solve technical problems|stack goods|troubleshoot|web programming",
+      "raw_skills": "producing REST-based web services|technical ,|analytical , and leadership skills|troubleshoot complex technical issues|verbal and written communication skills|effective written and verbal communication skills|analytical ,|problem solving|planning , time management and organization skills|Proven|team player|foster a team environment|working with the global delivery model|lead a discussion|drive to a solution|troubleshoot problems|Design , build and maintain high performance , reusable , and reliable Java code|Ensure the best possible performance , quality , and responsiveness of the application|Identify and resolve bottlenecks|fix bugs|Help to|interpret requests for new features|full stack|Java development|Spring Framework|Spring MVC|CSS|HTML|REST-based|web|Eclipse/IntelliJ IDEA|Gradel|Tomcat|SQL|English|core business functions ,|and|global delivery model|Android or|IOS development|Agile \\|Scrum|Jira|Confluence|fleet|load telematics|truck monitoring and control|driver safety|push-to-talk communication system|fuel"
+    },
+    {
+      "job_id": "djinni-job-87193",
+      "title": "Performance Analyst",
+      "category": "QA Automation",
+      "esco_skills": "English|Python (computer programming)|alter management|automation technology|business analysis|communicate with customers|communication|conduct performance tests|create a financial report|follow reporting procedures|logging|manage access programmes|report analysis results|select scripts",
+      "raw_skills": "creating and supporting server-side performance tests|analysis|communication skills|planning / time estimation skills|from customer|access|Results analysis|creation of business-oriented reports|Conducting meetings about performance test results|Communication with customer directly|performance test|development and maintenance of complex JMeter scripts|Analyze performance testing infrastructure|provide suggestions on|Jmeter|Excel|analysis and|reporting|Jira|Git|English|CI/CD|Linux|Azure cloud|VM|PaaS metrics|azure monitor ,|application insights|logs analytics|management –|resource groups ,|dashboards|Fiddler|dev tools|Jenkins|CI/CD basic|Jenkins local )|Python|results processing|automation|Client-side performance testing|Java GC|heap|InfluxDB|Server-side Performance testing|baseline ,|stress test|ramp-up test )|scripts|JMeter|logs|performance testing"
+    },
+    {
+      "job_id": "djinni-job-24312",
+      "title": "DevOps Engineer",
+      "category": "DevOps",
+      "esco_skills": "English|e-commerce systems|manage work|work in a multicultural environment in health care",
+      "raw_skills": "Automate build and release process|Support version control systems|Rollout and support react-app|work|a multicultural setting|CI/CD|AWS|version control systems|branching and merging strategies|continuous delivery|integration tools|Jenkins|English|ecommerce industry|Salesforce Commerce Cloud/Demandware|Hybris|Magento|Opencart|ecommerce"
+    },
+    {
+      "job_id": "djinni-job-75958",
+      "title": "Middle QA Engineer",
+      "category": "QA",
+      "esco_skills": "Agile development|English|JavaScript|SQL|TypeScript|application process|collect real-time geolocation information|comply with checklists|create solutions to problems|design application interfaces|develop automated software tests|develop test procedures|draft project documentation|identify requirements of the work|keep records of work progress|manage quality|mobile marketing|mobile operating systems|monitor curriculum implementation|plan software testing|solve problems|systems development life-cycle|test procedures|web programming|work in teams",
+      "raw_skills": "Understand and apply various types of testing in|Create a testing plan for a specific task or an entire application|Analyze task requirements|identify inaccuracies and contradictions|take action|testing API|testing web applications|gather additional information about an issue|Describe steps for reproducing found defects|collecting and providing enough information for localization|resolution of the problem|Discusses recurring quality issues with the team|proposes solutions|monitors their implementation|working in teams|compose and execute SQL queries|testing|applications|manage quality not|the task|web|defect|preparing test instructions|preparing test plans|keeping reports on work done|Postman|Swagger|technology and tools|Chrome DevTools|software development life cycle|QA|web application development|English|B2-C1|Agile methodologies|JavaScript|TypeScript|SQL|Git|project documentation|checklists|user instructions|automated web application testing|Cypress|technology and tools for|mobile|web application interfaces|API|mobile applications"
+    },
+    {
+      "job_id": "djinni-job-58645",
+      "title": "Junior WordPress Developer",
+      "category": "PHP",
+      "esco_skills": "English|WordPress|analyse business requirements|collaborate in company's daily operations |communication|define software architecture|think proactively",
+      "raw_skills": "communication skills|working with third-party services and API|Develop WordPress websites , themes , and plugins|Develop and maintain efficient , reusable , and reliable code|requirements analysis|research implementation ways|Proactively|engage in researches , discussions , and decisions on software architecture|Collaborate with the team members and customer representatives|WordPress|English|third-party services|API|research implementation"
+    },
+    {
+      "job_id": "djinni-job-107669",
+      "title": "Senior Big Data Developer",
+      "category": "Java",
+      "esco_skills": "English|Hadoop|Java (computer programming)|SPARK|Scala|communication|data storage|design cloud architecture|liaise with engineers|think analytically|use databases",
+      "raw_skills": "employing|database technologies|reliable and robust storage|architecture and evolution of data pipeline|Build and own a data environment|fast access|working with high scale , distributed cloud-based architectures|analytical and interpersonal skills|work successfully with engineers , product owners and business stakeholders|communication skills|ETL|Java development|Java core|Kafka|Spark|Hadoop|distributed cloud-based architectures|AWS|English|Scala/Go"
+    },
+    {
+      "job_id": "djinni-job-71324",
+      "title": "Middle Java Developer",
+      "category": "Java",
+      "esco_skills": "Java (computer programming)|MySQL|dock operations",
+      "raw_skills": "working remotely|React|Redux|Reactstrap|ReactRouter|React hooks|Java 11|Spring/Hibernate|Elasticsearch|MySQL|AWS|SQS|S3|Elastic Beanstalk|EventBridge|CloudFront|Docker|11"
+    },
+    {
+      "job_id": "djinni-job-127076",
+      "title": "Senior Software Test Engineer",
+      "category": "QA",
+      "esco_skills": "SQL|database|demonstrate curiosity|develop automated software tests|evaluate cost of software products|have emotional intelligence|manage personnel|perform ICT security testing|provide software testing documentation|record test data|test procedures|test soil load bearing capacity|think analytically|tools for ICT test automation",
+      "raw_skills": "writing testing documentation|prioritize in a multitasking environment|analytical skills|Developed communication skills|Attentiveness to details|curiosity|Development of tests for testing software products|Development of supporting documentation for the testing process|certification of software products|Development of manual and automated tests|Testing and|recording test results|Estimation of a software product|manual WEB and Mobile testing|testing approaches , techniques , and methodologies|Database (|SQL )|API testing|client-server architecture|Security testing|Load testing|test automation approaches|people management|emotional intelligence"
+    },
+    {
+      "job_id": "djinni-job-102475",
+      "title": "Salesforce B2C Commerce Developer",
+      "category": "Other",
+      "esco_skills": "CSS|JavaScript|apply technical communication skills|e-commerce systems|implement soap formula|promote balance between rest and activity|satisfy customers|work in teams",
+      "raw_skills": "technical and communication skills|work in a team|proactivity|Creating new features|Supporting and bug fixing|with the customer|development|Salesforce|B2C|e-commerce development|ommerce|JavaScript|HTML/CSS|SFRA|WebServices|REST|Soap )"
+    },
+    {
+      "job_id": "djinni-job-6453",
+      "title": "Automation QA JavaScript",
+      "category": "QA Automation",
+      "esco_skills": "English|JavaScript|Samurai Web Testing Framework|automation technology|communication|create puppets",
+      "raw_skills": "communication skills|combine basic work and our projects|Automation|QA|JavaScript|English|web testing|mobile app testing|Puppeteer|Codecept.js|WI-FI"
+    },
+    {
+      "job_id": "djinni-job-7650",
+      "title": "Back-End Developer",
+      "category": "PHP",
+      "esco_skills": "AJAX|JavaScript|MySQL|PHP|business processes|communication|define software architecture|design database scheme|design principles|develop automated software tests|meet deadlines|recommend product improvements|show initiative|solution deployment|use query languages|use specialised design software|web programming|work independently",
+      "raw_skills": "Design and build efficient , testable , and reusable PHP web applications|Solve performance problems and architectural challenges|Recommend performance improvements|create and refine style guidelines for website content|select design tools , programming languages or applications|Creating database schemas|represent and support business processes|Set up and configure development and testing environments for PHP|to|meeting deadlines|complete work in a timely manner|designing and working with REST APIs|attention to detail|communication skills|sense of ownership , responsibility|and initiative|work independently|function as an integral part of a team|setup automated testing and deployment process|authentication|authorization|web|PHP|OOP|AJAX|jQuery|SQL/MySQL databases|declarative query languages|REST APIs|PHP or web server exploits|design principles|code versioning tools|Git|BitBucket|software architecture|OpenCart|automated testing and|deployment process|JavaScript|HTML"
+    },
+    {
+      "job_id": "djinni-job-26127",
+      "title": "Devops Engineer in online graphic design editor",
+      "category": "DevOps",
+      "esco_skills": "Ansible|ICT network security risks|NoSQL|Python (computer programming)|communication|dock operations|helminthology|implement a firewall|operating systems|software design methodologies|think analytically|troubleshoot",
+      "raw_skills": "analytical|evaluative and problem-solving abilities|troubleshooting skills|communication skills|Conduct periodic on-call duties|AWS|EKS|Ec2|S3|SQS|ELB|IaC|Terraform|Ansible|Helm|Linux systems|LA|TCP stack|GitLab|CI/CD|k8s|Docker|software development process|NoSQL databases|MongoDB|Elasticsearch|Loki )|firewalls|network security|Bash|Python|Go|OSI"
+    },
+    {
+      "job_id": "djinni-job-5705",
+      "title": "Automation QA Engineer",
+      "category": "QA Automation",
+      "esco_skills": "Android (mobile operating systems)|English|Java (computer programming)|MySQL|automation technology|communication|database|drive vehicles|energy|iOS|recommend product improvements|supervise work",
+      "raw_skills": "testing mobile applications|write use cases|describe testing scenarios|work with minimum supervision|positive energy|drive|sense of ownership|Proactive attitude|suggest , improve and directly impact the product|positive|communication skills|communicate with people honestly and openly|Android|iOS|automation testing|Java|DataBase|MySQL|Appium|Android +|iOS app|Java )|REST API|Postman|Jmeter|Charles Proxy|Selenium|Bug|Jira|Windows 10|MacOS|Google Play/AppStore ecosystem|English"
+    },
+    {
+      "job_id": "djinni-job-128652",
+      "title": "Senior WordPress developer",
+      "category": "PHP",
+      "esco_skills": "CSS|English|JavaScript|PHP|WordPress|communication|mass customisation|think creatively",
+      "raw_skills": "building , coding , customizing WordPress themes and plugins|Creative|unconventional|Attention to detail|punctuality|communication skills|Support and bug fixing of existing|websites|WordPress|PHP|HTML|CSS|JS|External APIs|←|API →|External APP|Social Network )|English|customization|plugins development"
+    },
+    {
+      "job_id": "djinni-job-120666",
+      "title": "Senior .NET Engineer",
+      "category": ".NET",
+      "esco_skills": "Angular|SQL Server|TypeScript|dock operations|oversee development of software",
+      "raw_skills": "Migration existing ForDesk application|Upgrading the platform|Producing clean , efficient code based on specifications|invoices and budgets|software development|. NET 5/6|Kubernetes|Docker|MS SQL|Azure|Service Fabric|MassTransit|MediatR|Angular|TypeScript|. NET"
+    },
+    {
+      "job_id": "djinni-job-8617",
+      "title": "Back End Java Developer",
+      "category": "Java",
+      "esco_skills": "Agile development|C++|Java (computer programming)|Jboss|Oracle Relational Database|Python (computer programming)|Rapid application development|Ruby (computer programming)|SQL Server|define technical requirements|design computer network|implement ICT coding conventions|maintain updated professional knowledge|operating systems|perform business analysis|solution deployment|tolerate sitting for long periods|use object-oriented programming|web programming",
+      "raw_skills": "Assist the business and system analyst|design and develop technical requirements|Develop accurate and efficient programs|Maintain current knowledge|Build and deploy code|Support , investigate and analyze the root causes of reported issues/defect/problem|deploying and troubleshooting application|configuring/deploying JBoss|developing application|Java Backend|Microservices Architecture|Cryptocurrency|standard language|coding conventions|operations requirements|Development|SIT|UAT )|Java development|Oracle|MSSQL )|OOP software|REST/SOAP web services design and implementation|Linux OS|computer network|web application|TCP/IP stack|FTP|SMTP|DNS|JBoss|Spring MVC|Python|C/C + +|Ruby|Node.JS|Web service development|J2EE framework|Servlet|Java beans|EJB|JMS|JavaMail|Web Services|HTML|XML|UML|Agile|Scrum"
+    },
+    {
+      "job_id": "djinni-job-15375",
+      "title": "Cloud Engineer - UA",
+      "category": "DevOps",
+      "esco_skills": "Ansible|English|ICT encryption|SQL|Ukrainian|cloud monitoring and reporting|cloud security and compliance|cloud technologies|cooperate with colleagues|database management systems|deploy cloud resource|design cloud architecture|develop personal skills|install software|lead others|maintain relationship with customers|maintain system logs|manage cloud data and storage|perform backups|plan migration to cloud",
+      "raw_skills": "designing and implementing cloud solutions and infrastructure|monitoring cloud services and deployments|configure highly available and secure environments|containerize applications|constantly improve competences|migrating from on-premises environments to the public cloud|Configure , maintain and operationalise the cloud infrastructure|Monitor cloud management and cloud infrastructure components|Identify and implement system improvement opportunities|Keeping and improving the level of customer satisfaction|Participating in the development of standards and best practices|of|cooperation between people|Ukrainian|MS Azure services|cloud|infrastructure automation and management tools|Terraform|ARM|Ansible|database systems|MS SQL )|installation|backup|HA|replication|cloud services and deployments|Azure Monitor )|log management systems|Azure Monitor Logs|ElasticSearch|Kubernetes|Linux and/or Windows Server systems administration|English language|B2/C1|leading|cloud computing providers|environments|public cloud|cloud security issues|authorization and authentication systems|AWS|SSO|Active Directory|Azure AD|cryptography|PKI|cloud management|cloud infrastructure|and best practices|Microsoft Cloud"
+    },
+    {
+      "job_id": "djinni-job-34827",
+      "title": "Front End - Vue.js Developer",
+      "category": "JavaScript",
+      "esco_skills": "Agile development|CSS|English|ICT system integration|Informatica PowerCenter|LESS|Sass|adjust priorities|build team spirit|conduct ICT code review|data analytics|design buildings|develop automated software tests|do cloud refactoring|hardware components|keep an open mind|liaise with colleagues|machine tools|maintain responsive design|manage packaging material|perform software unit testing|production processes|provide mentorship|think analytically|work in teams",
+      "raw_skills": "resourceful|architecting and building solutions|integrating multiple applications|adding awesome features|to key data sources|open-minded|switch between technologies and tech stacks|Developing and maintaining existing application|Performing refactoring|analytical and problem-solving skills|deliver high-quality software|Conducting code reviews|mentoring less experienced colleagues|Self-driven|the team culture|of the teamwork|align with priorities|interpersonal and communication skills|building/integrating Frontend and Backend APIs|working with colleagues|self-realization|working on challenging projects|Vue.js|components|virtual DOM|package managers|npm )|css compilers|less|sass|tools|webpack|grunt )|HTML5|CSS3|Jaql|Git|adaptive and responsive design techniques and design patterns|cross-browser issues and debugging|common authentication/authorization patterns|Agile development environment|Scrum methodology|English|BS/BSE degree|data analytics|Sisence|Power BI|Tableau|Frontend and Backend|automated code testing|unit testing|automated UI testing )|production applications"
+    }
+  ],
+  "source_info": {
+    "mapping": {
+      "title": "Position",
+      "description": "Long Description",
+      "company": "Company Name",
+      "category": "Primary Keyword",
+      "exp_years": "Exp Years",
+      "english_level": "English Level",
+      "published": "Published"
+    },
+    "rows": 141897
+  }
+}

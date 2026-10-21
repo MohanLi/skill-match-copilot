@@ -130,7 +130,80 @@ def extract_json(text: str) -> Any:
             depth -= 1
             if depth == 0:
                 return json.loads(s[start : i + 1])
+    salvaged = salvage_truncated_json(s[start:])
+    if salvaged is not None:
+        return salvaged
     raise ValueError(f"unbalanced JSON in response: {text[:200]!r}")
+
+
+def salvage_truncated_json(s: str) -> Any:
+    """Best effort for a JSON document cut off by the output budget: keep everything up to the last complete element
+    at nesting depth 2 (e.g. the last finished entry of a top-level list field), close the open brackets, parse.
+    Returns None when nothing complete exists. Callers must treat the result as *partial* (an agent that ran out of
+    budget returned fewer jobs than asked)."""
+    stack: list[str] = []
+    in_str = esc = False
+    last_cut = -1
+    for i, ch in enumerate(s):
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch in "[{":
+            stack.append("]" if ch == "[" else "}")
+        elif ch in "]}":
+            if not stack:
+                return None
+            stack.pop()
+            if len(stack) == 2:
+                last_cut = i + 1
+    if last_cut < 0 or not stack:
+        return None
+    # the closers that were open at the cut point: recompute by re-scanning up to last_cut
+    stack2: list[str] = []
+    in_str = esc = False
+    for ch in s[:last_cut]:
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch in "[{":
+            stack2.append("]" if ch == "[" else "}")
+        elif ch in "]}":
+            stack2.pop()
+    try:
+        return json.loads(s[:last_cut] + "".join(reversed(stack2)))
+    except json.JSONDecodeError:
+        return None
+
+
+def thinking_kwargs(model_id: str, mode: str = "disabled") -> dict[str, Any]:
+    """Translate the project's thinking policy (configs/models.yaml: llm.thinking) into what each Claude 5.5 model accepts.
+    mode 'disabled' = no thinking before the answer (cheap, deterministic, output budget goes to the answer):
+      haiku-5-5  → thinking.type = disabled
+      sonnet-5-5 → thinking.type = between_tools ('disabled' is rejected; the model does not think before responding)
+      opus-5-5   → thinking cannot be switched off: adaptive thinking at the lowest effort
+    Any other mode sends nothing and leaves the model's default (adaptive) behaviour."""
+    if mode != "disabled":
+        return {}
+    fam = model_id.lower()
+    if "sonnet" in fam:
+        return {"thinking": {"type": "between_tools"}}
+    if "opus" in fam:
+        return {"thinking": {"type": "adaptive"}, "output_config": {"effort": "low"}}
+    return {"thinking": {"type": "disabled"}}
 
 
 class LLMClient:
@@ -257,10 +330,7 @@ class LLMClient:
         # Claude 5.x models reject sampling parameters ("`temperature` is deprecated for this model"); the configured
         # value stays in the cache key for provenance but is not sent. Reproducibility comes from the on-disk cache.
         kwargs: dict[str, Any] = dict(model=model_id, max_tokens=max_tokens, messages=messages)
-        if thinking == "disabled":
-            # Claude 5.x models think by default; for bulk, deterministic, cheap calls we turn it off explicitly
-            # (thinking blocks otherwise consume the output budget and inflate cost/latency).
-            kwargs["thinking"] = {"type": "disabled"}
+        kwargs.update(thinking_kwargs(model_id, thinking))
         if system:
             kwargs["system"] = system
         if tools:
@@ -269,9 +339,15 @@ class LLMClient:
             kwargs["tool_choice"] = tool_choice
         t0 = time.perf_counter()
         resp = self.client.messages.create(**kwargs)
-        latency = (time.perf_counter() - t0) * 1000
         content = [b.model_dump() for b in resp.content]
         text = "".join(b.get("text", "") for b in content if b.get("type") == "text")
+        if resp.stop_reason == "max_tokens" and not text.strip() and not any(b.get("type") == "tool_use" for b in content):
+            # thinking blocks (models that cannot switch thinking off) ate the output budget: retry once with 3x the budget
+            kwargs["max_tokens"] = max_tokens * 3
+            resp = self.client.messages.create(**kwargs)
+            content = [b.model_dump() for b in resp.content]
+            text = "".join(b.get("text", "") for b in content if b.get("type") == "text")
+        latency = (time.perf_counter() - t0) * 1000
         inp, out = int(resp.usage.input_tokens), int(resp.usage.output_tokens)
         c = self.cost(model_id, inp, out)
         res = LLMResult(

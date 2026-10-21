@@ -21,7 +21,7 @@ from ..utils.llm import LLMClient, load_prompt
 
 def rate(client: LLMClient, prompt, model_role: str, row: dict) -> dict:
     try:
-        obj, res = client.complete_json(prompt, model=model_role, max_tokens=700, cv_text=row["cv_text"], job_text=row["job_text"])
+        obj, res = client.complete_json(prompt, model=model_role, max_tokens=1000, cv_text=row["cv_text"], job_text=row["job_text"])
         lab = int(obj.get("label")) if obj.get("label") in (0, 1, 2, "0", "1", "2") else None
         return {"pair_id": row["pair_id"], "label": lab, "rationale": str(obj.get("rationale", ""))[:600], "role_family_match": obj.get("role_family_match"),
                 "present": json.dumps(obj.get("present", []))[:500], "missing": json.dumps(obj.get("missing", []))[:500], "seniority_gap_levels": obj.get("seniority_gap_levels"),

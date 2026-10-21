@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "categories": [
+    "DevOps",
+    "Marketing",
+    "JavaScript",
+    ".NET",
+    "Node.js",
+    "Java",
+    "Other",
+    "QA Automation",
+    "PHP",
+    "QA"
+  ],
+  "related": {
+    "DevOps": [
+      "Other",
+      "Java"
+    ],
+    "Marketing": [
+      "Other",
+      "Java"
+    ],
+    "JavaScript": [
+      "Node.js",
+      "PHP"
+    ],
+    ".NET": [
+      "Other",
+      "JavaScript"
+    ],
+    "Node.js": [
+      "JavaScript",
+      "Java"
+    ],
+    "Java": [
+      "Other",
+      "Node.js"
+    ],
+    "Other": [
+      "Marketing",
+      "Java"
+    ],
+    "QA Automation": [
+      "QA",
+      "Other"
+    ],
+    "PHP": [
+      "JavaScript",
+      "Other"
+    ],
+    "QA": [
+      "QA Automation",
+      "Other"
+    ]
+  },
+  "n_cvs": 30,
+  "n_pairs": 300,
+  "cv_ids": [
+    "djinni-cv-28678",
+    "djinni-cv-28988",
+    "djinni-cv-27425",
+    "djinni-cv-30477",
+    "djinni-cv-109824",
+    "djinni-cv-124531",
+    "djinni-cv-81405",
+    "djinni-cv-79928",
+    "djinni-cv-47119",
+    "djinni-cv-7960",
+    "djinni-cv-164185",
+    "djinni-cv-48345",
+    "djinni-cv-119381",
+    "djinni-cv-120581",
+    "djinni-cv-119860",
+    "djinni-cv-70150",
+    "djinni-cv-71744",
+    "djinni-cv-84559",
+    "djinni-cv-57041",
+    "djinni-cv-161393",
+    "djinni-cv-9058",
+    "djinni-cv-77004",
+    "djinni-cv-6976",
+    "djinni-cv-143738",
+    "djinni-cv-87548",
+    "djinni-cv-188695",
+    "djinni-cv-48346",
+    "djinni-cv-90969",
+    "djinni-cv-105449",
+    "djinni-cv-145696"
+  ],
+  "cv_chars": {
+    "min": 404,
+    "median": 1331.5,
+    "max": 5218
+  }
+}

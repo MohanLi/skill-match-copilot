@@ -1,0 +1,52 @@
+{
+  "n_pairs": 300,
+  "agreement_rate": 0.91,
+  "cohen_kappa_unweighted": 0.8109464348231998,
+  "cohen_kappa_linear": 0.8341183698545975,
+  "cohen_kappa_quadratic": 0.8667763157894737,
+  "confusion_a_rows_b_cols": [
+    [
+      189,
+      20,
+      0
+    ],
+    [
+      1,
+      72,
+      3
+    ],
+    [
+      0,
+      3,
+      12
+    ]
+  ],
+  "label_dist_a": {
+    "0": 209,
+    "1": 76,
+    "2": 15
+  },
+  "label_dist_b": {
+    "0": 190,
+    "1": 95,
+    "2": 15
+  },
+  "rater_a": "claude-opus-5-5",
+  "rater_b": "claude-sonnet-5-5",
+  "adjudicated": 27,
+  "adjudication_agree_with": {
+    "A": 18,
+    "B": 5
+  },
+  "final_label_dist": {
+    "0": 205,
+    "1": 82,
+    "2": 13
+  },
+  "final_label_by_relation": {
+    "random": 0.044,
+    "related": 0.122,
+    "same": 0.775
+  },
+  "cost_usd_total": 7.2812
+}

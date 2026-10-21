@@ -28,11 +28,12 @@ from .tools import ToolBox
 LABELS = {"baseline": "Embedding baseline (no LLM)", "single": "Single ReAct agent (champion)", "multi": "Multi-agent + verifier (challenger)", "multi_noverify": "Multi-agent without verifier (ablation)"}
 
 
-def ndcg_at_k(ranked_labels: list[int], all_labels: list[int], k: int = 10) -> float:
+def ndcg_at_k(ranked_labels: list[int], all_labels: list[int], k: int = 10) -> float | None:
+    """Graded nDCG; None (excluded from averages) when the pool holds no relevant job at all."""
     dcg = sum((2 ** l - 1) / math.log2(i + 2) for i, l in enumerate(ranked_labels[:k]))
     ideal = sorted(all_labels, reverse=True)[:k]
     idcg = sum((2 ** l - 1) / math.log2(i + 2) for i, l in enumerate(ideal))
-    return dcg / idcg if idcg > 0 else 0.0
+    return dcg / idcg if idcg > 0 else None
 
 
 def precision_at_k(ranked_labels: list[int], k: int = 3, rel: int = 2) -> float:
@@ -104,7 +105,8 @@ def main() -> None:
             prof = resume_profile(tb, resume) if key != "baseline" else {"esco_skills": []}
             faith = faithfulness_of_ranking(run.ranking, resume, jobs, prof.get("esco_skills")) if key != "baseline" else {"n_claims": 0, "n_supported": 0, "hallucination_rate": None, "reasons": {}}
             rec = {"approach": key, "cv_id": cv, "cv_category": pool["cv_category"].iloc[0], "ndcg10": ndcg_at_k(rl, list(labels.values())), "p_at_3": precision_at_k(rl), "mrr": mrr(rl),
-                   "n_strong_in_pool": sum(1 for l in labels.values() if l == 2), "coverage": coverage, "n_claims": faith["n_claims"], "n_supported": faith["n_supported"],
+                   "p_at_3_rel1": precision_at_k(rl, rel=1), "mrr_rel1": mrr(rl, rel=1),  # relaxed: partial fit counts as relevant
+                   "n_strong_in_pool": sum(1 for l in labels.values() if l == 2), "n_partial_or_better_in_pool": sum(1 for l in labels.values() if l >= 1), "coverage": coverage, "n_claims": faith["n_claims"], "n_supported": faith["n_supported"],
                    "hallucination_rate": faith["hallucination_rate"], "llm_calls": run.llm_calls, "input_tokens": run.input_tokens, "output_tokens": run.output_tokens,
                    "cost_usd": run.cost_usd, "latency_ms": run.latency_ms, "wall_ms": run.extra.get("wall_ms"), "tool_calls": run.tool_calls, "error": run.error,
                    "top1_label": rl[0] if rl else None, "ranked_order": "|".join(ranked), "reasons": json.dumps(faith["reasons"])}
@@ -115,12 +117,13 @@ def main() -> None:
             d = traces_dir / f"{key}_{tag}"
             d.mkdir(parents=True, exist_ok=True)
             (d / f"{cv}.json").write_text(json.dumps({**run.to_dict(), "pool": [{"job_id": j, "label": labels[j], "title": jobs.get(j, {}).get("title")} for j in pool_ids], "metrics": {k: v for k, v in rec.items() if k not in ("ranked_order",)}, "faithfulness": faith}, indent=1, ensure_ascii=False, default=str))
-            print(f"[{key}] {n}/{len(cv_ids)} {cv}: nDCG {rec['ndcg10']:.3f} P@3 {rec['p_at_3']:.2f} halluc {rec['hallucination_rate']} cost ${run.cost_usd:.3f} ({(time.time()-t_app)/60:.1f} min)", flush=True)
+            print(f"[{key}] {n}/{len(cv_ids)} {cv}: nDCG {rec['ndcg10'] if rec['ndcg10'] is None else round(rec['ndcg10'], 3)} P@3 {rec['p_at_3']:.2f} halluc {rec['hallucination_rate']} cost ${run.cost_usd:.3f} ({(time.time()-t_app)/60:.1f} min)", flush=True)
 
     df = pd.DataFrame(per_cv)
     write_results(df, f"results/p3/per_cv_{tag}.csv", meta={"model": args.model, "n_cvs": len(cv_ids)})
     agg = df.groupby("approach").agg(
-        n_cvs=("cv_id", "nunique"), ndcg10=("ndcg10", "mean"), ndcg10_std=("ndcg10", "std"), p_at_3=("p_at_3", "mean"), mrr=("mrr", "mean"),
+        n_cvs=("cv_id", "nunique"), n_cvs_with_relevant=("ndcg10", "count"), ndcg10=("ndcg10", "mean"), ndcg10_std=("ndcg10", "std"), p_at_3=("p_at_3", "mean"), mrr=("mrr", "mean"),
+        p_at_3_rel1=("p_at_3_rel1", "mean"), mrr_rel1=("mrr_rel1", "mean"),
         coverage=("coverage", "mean"), claims_per_cv=("n_claims", "mean"), supported_per_cv=("n_supported", "mean"),
         hallucination_rate=("hallucination_rate", lambda s: (1 - df.loc[s.index, "n_supported"].sum() / df.loc[s.index, "n_claims"].sum()) if df.loc[s.index, "n_claims"].sum() else None),
         llm_calls=("llm_calls", "mean"), input_tokens=("input_tokens", "mean"), output_tokens=("output_tokens", "mean"), cost_usd=("cost_usd", "mean"),
@@ -143,7 +146,7 @@ def main() -> None:
         if r["error"]:
             kinds.append("run_error")
         if kinds:
-            fails.append({"approach": r["approach"], "cv_id": r["cv_id"], "failure_types": ",".join(kinds), "ndcg10": round(r["ndcg10"], 3), "hallucination_rate": r["hallucination_rate"], "reasons": r["reasons"]})
+            fails.append({"approach": r["approach"], "cv_id": r["cv_id"], "failure_types": ",".join(kinds), "ndcg10": None if pd.isna(r["ndcg10"]) else round(r["ndcg10"], 3), "hallucination_rate": r["hallucination_rate"], "reasons": r["reasons"]})
     if fails:
         write_results(pd.DataFrame(fails), f"results/p3/failures_{tag}.csv")
 
@@ -153,12 +156,12 @@ def main() -> None:
     from ..utils import viz
 
     viz.setup()
-    m = agg.melt(id_vars=["approach_label"], value_vars=["ndcg10", "p_at_3", "mrr"], var_name="metric", value_name="value")
-    m["metric"] = m["metric"].map({"ndcg10": "nDCG@10", "p_at_3": "Precision@3", "mrr": "MRR"})
+    m = agg.melt(id_vars=["approach_label"], value_vars=["ndcg10", "p_at_3", "mrr", "p_at_3_rel1", "mrr_rel1"], var_name="metric", value_name="value")
+    m["metric"] = m["metric"].map({"ndcg10": "nDCG@10", "p_at_3": "P@3 (strong fit)", "mrr": "MRR (strong fit)", "p_at_3_rel1": "P@3 (partial or better)", "mrr_rel1": "MRR (partial or better)"})
     fig = px.bar(m, x="metric", y="value", color="approach_label", barmode="group", text=m["value"].map(lambda v: f"{v:.2f}"), title=f"Problem 3 — ranking quality on the labelled pools ({len(cv_ids)} CVs × 10 jobs)")
     fig.update_traces(textposition="outside")
     fig.update_layout(yaxis_range=[0, 1], xaxis_title="", legend_title_text="")
-    viz.save_fig(fig, f"p3_ranking_quality_{tag}", f"Problem 3: nDCG@10, Precision@3 and MRR of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same {len(cv_ids)} labelled 10-job pools.")
+    viz.save_fig(fig, f"p3_ranking_quality_{tag}", f"Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same {len(cv_ids)} labelled 10-job pools.", width=1200)
     a2 = agg[agg["approach"] != "baseline"]
     fig2 = px.bar(a2, x="approach_label", y="hallucination_rate", text=a2["hallucination_rate"].map(lambda v: f"{v:.1%}" if v is not None else ""), title="Explanation faithfulness: share of matched/missing-skill claims NOT supported by verbatim quotes")
     fig2.update_traces(textposition="outside", marker_color=viz.PALETTE[7])

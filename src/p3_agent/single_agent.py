@@ -29,6 +29,7 @@ class SingleAgent:
         self.tb = toolbox
         self.model = model
         self.top_n = top_n or cfg["top_n"]
+        self.max_output_tokens = int(cfg.get("max_output_tokens", 8000))  # a 10-job ranking with quotes is ~4-6k tokens
         self.candidate_k = candidate_k or cfg["candidate_k"]
         self.max_steps = max_steps or cfg["max_agent_steps"]
         self.client = LLMClient(task=task)
@@ -43,7 +44,7 @@ class SingleAgent:
         run: AgentRun = None  # type: ignore[assignment]
 
         def agent_node(state: AgentState) -> AgentState:
-            res = self.client.chat(state["messages"], system=self._system(), model=self.model, prompt_version=self.prompt.tag, tools=self.tb.anthropic_tools(), max_tokens=3000)
+            res = self.client.chat(state["messages"], system=self._system(), model=self.model, prompt_version=self.prompt.tag, tools=self.tb.anthropic_tools(), max_tokens=self.max_output_tokens)
             self._run.add_usage(res)
             self._run.trace.append({"step": state["steps"] + 1, "type": "llm", "stop_reason": res.stop_reason, "text": res.text[:1500], "tool_uses": [{"name": b["name"], "input": b["input"]} for b in res.content if b.get("type") == "tool_use"], "cached": res.cached, "cost_usd": res.cost_usd})
             msgs = state["messages"] + [{"role": "assistant", "content": res.content}]
@@ -77,6 +78,7 @@ class SingleAgent:
         try:
             final = self.graph.invoke({"messages": [{"role": "user", "content": user}], "steps": 0, "done": False, "final_text": ""}, config={"recursion_limit": 4 * self.max_steps + 4})
             text = final.get("final_text") or ""
+            self._run.extra["truncated_output"] = any(t.get("stop_reason") == "max_tokens" for t in self._run.trace if t.get("type") == "llm")
             ranking = []
             try:
                 ranking = normalise_ranking(extract_json(text), self.top_n)
@@ -84,7 +86,7 @@ class SingleAgent:
                 pass
             if not ranking:  # ask once more, without tools, for the JSON only
                 msgs = final["messages"] + [{"role": "user", "content": f"Give the FINAL ANSWER now as the JSON object described in the instructions (top {self.top_n} jobs). Output only JSON."}]
-                res = self.client.chat(msgs, system=self._system(), model=self.model, prompt_version=self.prompt.tag + "+final", max_tokens=3000)
+                res = self.client.chat(msgs, system=self._system(), model=self.model, prompt_version=self.prompt.tag + "+final", max_tokens=self.max_output_tokens)
                 self._run.add_usage(res)
                 self._run.trace.append({"type": "llm_final", "text": res.text[:1500], "cost_usd": res.cost_usd})
                 try:

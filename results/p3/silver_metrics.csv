@@ -1,0 +1,4 @@
+approach,n_cvs,ndcg10,p_at_10,mrr,cost_usd,llm_calls,approach_label
+baseline,1000,0.7772,0.7732,0.8583,0.0,0.0,Embedding baseline (no LLM)
+multi,60,0.5084,0.4233,0.7325,0.0032,2.9667,Multi-agent + verifier (challenger)
+single,60,0.1751,0.1483,0.2472,0.0148,5.2,Single ReAct agent (champion)
