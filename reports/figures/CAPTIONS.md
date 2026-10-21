@@ -25,3 +25,18 @@ Every figure exists as `<name>.png` (for slides/report) and `<name>.html` (inter
 | 19 | `p2_workrb_map_val.png` | Problem 2: WorkRB MAP per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
 | 20 | `p2_workrb_rp10_val.png` | Problem 2: WorkRB RP@10 per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
 | 21 | `p2_workrb_mrr_val.png` | Problem 2: WorkRB MRR per task on the val split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
+| 22 | `p2_workrb_map_test.png` | Problem 2: WorkRB MAP per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
+| 23 | `p2_workrb_rp10_test.png` | Problem 2: WorkRB RP@10 per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
+| 24 | `p2_workrb_mrr_test.png` | Problem 2: WorkRB MRR per task on the test split for lexical and dense baselines, the fine-tuned bi-encoder (champion) and retrieve-then-LLM (challenger). | src/p2_normalize/run_workrb.py |
+| 25 | `p2_nil_threshold_sweep.png` | Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold. | src/p2_normalize/nil_eval.py |
+| 26 | `p2_nil_results.png` | 'Not in ESCO' detection on TECH and HOUSE test spans: joint accuracy, F1 of the NIL decision and accuracy on mapped phrases for the thresholded bi-encoder (champion) vs retrieve-then-LLM (challenger). | src/p2_normalize/nil_eval.py |
+| 27 | `eda03_missing_values.png` | Djinni: share of missing/empty values per field for job postings and candidate profiles (CV free-text fields such as 'Looking For' and 'Highlights' are often empty). | notebooks/03_eda_djinni |
+| 28 | `eda04_postings_by_source.png` | Live snapshot: number of postings per applicant-tracking-system source (Ashby, Greenhouse, Lever, …). | notebooks/04_eda_live_jobs |
+| 29 | `eda04_salary_missingness.png` | Salary availability in the live snapshot: most postings leave compensation fields empty. | notebooks/04_eda_live_jobs |
+| 30 | `eda04_top_titles.png` | Most frequent job titles across the whole live snapshot. | notebooks/04_eda_live_jobs |
+| 31 | `eda04_departments.png` | Live snapshot sample: distribution of department. | notebooks/04_eda_live_jobs |
+| 32 | `eda04_employment_type.png` | Live snapshot sample: distribution of employment type. | notebooks/04_eda_live_jobs |
+| 33 | `eda04_description_length.png` | Length of live postings after HTML stripping (postings with text only): median 668 words — several times longer than a Djinni posting. | notebooks/04_eda_live_jobs |
+| 34 | `eda04_posting_dates.png` | Posting dates in the sample: the snapshot contains postings that are still open, so dates spread over several months with a recent peak. | notebooks/04_eda_live_jobs |
+| 35 | `eda04_ai_role_families.png` | The live demo index: data/AI/ML postings grouped into role families by title pattern. | notebooks/04_eda_live_jobs |
+| 36 | `eda04_description_coverage_by_source.png` | Only the Greenhouse, Ashby, Lever, Rippling and Gem feeds return posting bodies; Workday and SmartRecruiters listings are title-only, so the live index can only cover postings with text. | notebooks/04_eda_live_jobs |

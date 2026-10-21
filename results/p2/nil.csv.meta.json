@@ -1,0 +1,26 @@
+{
+  "file": "results/p2/nil.csv",
+  "rows": 6,
+  "columns": [
+    "approach",
+    "subset",
+    "threshold",
+    "encoder",
+    "n",
+    "n_nil_true",
+    "acc_on_mapped_phrases",
+    "joint_accuracy",
+    "nil_precision",
+    "nil_recall",
+    "nil_f1",
+    "recall_at_k_on_mapped",
+    "llm_cost_usd",
+    "llm_latency_ms_median"
+  ],
+  "created_utc": "2026-10-21T02:45:47Z",
+  "git_commit": "3855465",
+  "encoder": "/home/claude/skill-match-copilot/models/p2_biencoder",
+  "threshold": 0.7,
+  "k": 10,
+  "tuned_on": "tech_validation"
+}

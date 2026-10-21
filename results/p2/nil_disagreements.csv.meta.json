@@ -1,0 +1,16 @@
+{
+  "file": "results/p2/nil_disagreements.csv",
+  "rows": 40,
+  "columns": [
+    "subset",
+    "sentence",
+    "span",
+    "gold",
+    "encoder_pred",
+    "encoder_score",
+    "llm_pred",
+    "llm_reason"
+  ],
+  "created_utc": "2026-10-21T02:45:47Z",
+  "git_commit": "3855465"
+}

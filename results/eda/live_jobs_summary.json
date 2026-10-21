@@ -1,0 +1,91 @@
+{
+  "snapshot_date": "2026-10-20",
+  "n_rows_snapshot": 1162694,
+  "n_ai_data": 21157,
+  "n_sample": 20000,
+  "columns": [
+    "id",
+    "source_slug",
+    "title",
+    "apply_url",
+    "description_html",
+    "employment_type",
+    "department",
+    "locations",
+    "remote",
+    "posted_at",
+    "updated_at",
+    "salary_min",
+    "salary_max",
+    "salary_currency",
+    "salary_period",
+    "date",
+    "source"
+  ],
+  "rows_by_source": {
+    "workday": 632935,
+    "smartrecruiters": 228763,
+    "greenhouse": 162239,
+    "ashby": 65539,
+    "lever": 45437,
+    "rippling": 22517,
+    "gem": 5264
+  },
+  "remote_share_sample": 0.0742,
+  "remote_share_ai": 0.1858959209717824,
+  "salary_available": {
+    "salary_min": 0.039,
+    "salary_max": 0.039,
+    "salary_currency": 0.039,
+    "salary_period": 0.0191
+  },
+  "description_coverage_sample": 0.31305,
+  "description_coverage_ai": 0.5335350002363284,
+  "n_ai_with_description": 11288,
+  "description_coverage_by_source": {
+    "workday": 0.091,
+    "smartrecruiters": 0.029,
+    "greenhouse": 1.0,
+    "ashby": 1.0,
+    "lever": 0.982,
+    "rippling": 1.0,
+    "gem": 1.0
+  },
+  "description_words_median_with_text": 668.0,
+  "description_words_p25_p75_with_text": [
+    457.0,
+    881.0
+  ],
+  "description_length_quantiles_chars_nonnull_whole_snapshot": {
+    "p05": 1004.0,
+    "p25": 4535.0,
+    "p50": 6994.0,
+    "p75": 10000.0,
+    "p95": 19955.0
+  },
+  "ai_role_families": {
+    "AI engineer / LLM / GenAI": 6283,
+    "data engineer / platform": 4993,
+    "data scientist / applied scientist": 4545,
+    "machine learning / ML engineer": 3122,
+    "data analyst": 1838,
+    "other": 376
+  },
+  "top_titles": {
+    "Customer Service Representative": 2923,
+    "Sales Associate": 1800,
+    "Account Executive": 1421,
+    "Senior Software Engineer": 1385,
+    "Automotive Technician": 1370,
+    "Registered Nurse": 1322,
+    "Care Assistant": 1265,
+    "Assistant Store Manager": 1230,
+    "Project Manager": 1193,
+    "Retail Sales Associate": 1173,
+    "Bar & Waiting Staff": 1168,
+    "Software Engineer": 1076,
+    "Maintenance Technician": 1060,
+    "Physical Therapist": 1015,
+    "Seasonal Beauty Advisor - Sephora": 975
+  }
+}

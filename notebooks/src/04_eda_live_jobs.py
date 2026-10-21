@@ -69,14 +69,31 @@ for col, name in [("department", "eda04_departments"), ("employment_type", "eda0
         fig.show()
 
 # %% [markdown]
-# ## 3. Description length and posting dates
+# ## 3. Description coverage, description length and posting dates
+#
+# Not every ATS feed returns the posting body: the snapshot stores `description_html` only where the source API
+# exposes it. This decides how many postings the skill pipeline can actually read, so we measure it per source.
+# (Greenhouse delivers its bodies as *escaped* HTML — `&lt;p&gt;…` — which `strip_html` now unescapes before parsing.)
+
+# %%
+for d in (smp, ai):
+    d["has_desc"] = d["description"].str.len() > 0
+cov = (smp.groupby("source")["has_desc"].agg(share_with_description="mean", postings="size").reset_index()
+          .sort_values("postings", ascending=False))
+cov["label"] = cov.apply(lambda r: f"{r.share_with_description:.0%} (n={r.postings:,})", axis=1)
+fig = px.bar(cov, x="source", y="share_with_description", text="label", title="Share of postings that carry a description, per ATS source (20k sample)")
+fig.update_traces(textposition="outside"); fig.update_layout(yaxis_tickformat=".0%", yaxis_range=[0, 1.15], xaxis_title="", yaxis_title="postings with description text")
+viz.save_fig(fig, "eda04_description_coverage_by_source", "Only the Greenhouse, Ashby, Lever, Rippling and Gem feeds return posting bodies; Workday and SmartRecruiters listings are title-only, so the live index can only cover postings with text.")
+print(f"postings with a description: sample {smp['has_desc'].mean():.1%} | data/AI/ML subset {ai['has_desc'].mean():.1%} ({int(ai['has_desc'].sum()):,} of {len(ai):,})")
+fig
 
 # %%
 smp["n_words"] = smp["description"].str.split().str.len()
-fig = px.histogram(smp[smp["n_words"] <= 2000], x="n_words", nbins=80, title="Description length (words, 20k sample)")
+wd = smp.loc[smp["has_desc"], "n_words"]
+fig = px.histogram(wd[wd <= 2000], x="n_words", nbins=80, title=f"Description length (words) — {len(wd):,} sampled postings that have a description")
 fig.update_layout(xaxis_title="words", yaxis_title="postings", bargap=0.05, showlegend=False)
-viz.save_fig(fig, "eda04_description_length", "Length of live postings after HTML stripping — typically 300–900 words, longer than Djinni postings.")
-print(smp["n_words"].describe().round(1).to_dict())
+viz.save_fig(fig, "eda04_description_length", f"Length of live postings after HTML stripping (postings with text only): median {wd.median():.0f} words — several times longer than a Djinni posting.")
+print(wd.describe().round(1).to_dict())
 fig
 
 # %%
@@ -135,7 +152,10 @@ else:
 summary = {"snapshot_date": live_jobs.snapshot_date(), "n_rows_snapshot": stats.get("n_rows"), "n_ai_data": int(len(ai)), "n_sample": int(len(smp)), "columns": stats.get("columns"),
            "rows_by_source": stats.get(src_key) if src_key else None, "remote_share_sample": remote_share, "remote_share_ai": float(rem_ai),
            "salary_available": sal.set_index("field")["share_available"].round(4).to_dict() if len(sal) else None,
-           "description_words_median": float(smp["n_words"].median()), "description_length_quantiles_chars": stats.get("description_length_quantiles_chars"),
+           "description_coverage_sample": float(smp["has_desc"].mean()), "description_coverage_ai": float(ai["has_desc"].mean()), "n_ai_with_description": int(ai["has_desc"].sum()),
+           "description_coverage_by_source": cov.set_index("source")["share_with_description"].round(3).to_dict(),
+           "description_words_median_with_text": float(wd.median()), "description_words_p25_p75_with_text": [float(wd.quantile(0.25)), float(wd.quantile(0.75))],
+           "description_length_quantiles_chars_nonnull_whole_snapshot": stats.get("description_length_quantiles_chars"),
            "ai_role_families": fc.set_index("family")["postings"].to_dict(), "top_titles": dict(list(stats["top_titles"].items())[:15])}
 write_json(summary, "results/eda/live_jobs_summary.json")
 print(json.dumps({k: v for k, v in summary.items() if k not in ("columns", "top_titles")}, indent=1))
@@ -143,7 +163,10 @@ print(f"""
 THREE MOST IMPORTANT FINDINGS
 1. The snapshot holds {stats.get('n_rows'):,} open postings; {len(ai):,} ({len(ai)/stats.get('n_rows', 1):.1%}) are data/AI/ML roles — enough for a live demo
    that changes every day, and small enough to re-index on CPU.
-2. Live postings are long ({smp['n_words'].median():.0f} words median) and HTML-formatted, unlike SkillSpan's single sentences: the extraction pipeline
-   must split postings into sentences and the tagger faces a domain shift that we measure with spot checks.
-3. Compensation and remote fields are sparsely filled, so the matcher relies on skills and titles, not on structured metadata.
+2. Only {smp['has_desc'].mean():.0%} of postings ({ai['has_desc'].mean():.0%} of the data/AI/ML subset, {int(ai['has_desc'].sum()):,} postings) carry a description: the Greenhouse,
+   Ashby, Lever, Rippling and Gem feeds return the body, Workday and SmartRecruiters listings are title-only. The live index therefore
+   covers postings with text (>= 200 characters), and coverage of Workday-heavy employers is a known gap for the ops plan.
+3. Postings with text are long ({wd.median():.0f} words median) and HTML-formatted (Greenhouse even double-escapes its HTML), unlike SkillSpan's single
+   sentences: the pipeline must clean and sentence-split postings, and the tagger faces a domain shift. Compensation and remote
+   fields are sparsely filled, so the matcher relies on skills and titles, not on structured metadata.
 """)

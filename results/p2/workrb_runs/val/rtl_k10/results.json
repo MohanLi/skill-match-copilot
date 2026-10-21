@@ -1,0 +1,73 @@
+{
+  "task_results": {
+    "Skill Extraction Tech": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+        "split": "val"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 34.33600568771362,
+          "metrics_dict": {
+            "map": 0.5647919253732837,
+            "rp@10": 0.7226666666666667,
+            "mrr": 0.6681938489120227
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction House": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+        "split": "val"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 13.643891096115112,
+          "metrics_dict": {
+            "map": 0.4959075315123661,
+            "rp@10": 0.6153005464480874,
+            "mrr": 0.6260123813133942
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "Retrieve-then-LLM (challenger) k=10",
+    "total_evaluation_time": 47.98177528381348,
+    "timestamp": 1792549139.554041,
+    "num_tasks": 2,
+    "languages": [
+      "Language.EN"
+    ],
+    "resumed_from_checkpoint": false,
+    "language_aggregation_mode": "monolingual_only",
+    "replayed_from_workrb_version": null
+  },
+  "key_metrics_by_task_group": {
+    "rank_skill_extraction": [
+      "map",
+      "rp@10",
+      "mrr"
+    ]
+  }
+}

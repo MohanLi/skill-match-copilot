@@ -1,0 +1,19 @@
+{
+  "file": "results/p2/nil_threshold_sweep.csv",
+  "rows": 31,
+  "columns": [
+    "threshold",
+    "n",
+    "n_nil_true",
+    "acc_on_mapped_phrases",
+    "joint_accuracy",
+    "nil_precision",
+    "nil_recall",
+    "nil_f1"
+  ],
+  "created_utc": "2026-10-21T02:33:48Z",
+  "git_commit": "3855465",
+  "encoder": "/home/claude/skill-match-copilot/models/p2_biencoder",
+  "tuned_on": "tech_validation",
+  "best_threshold": 0.7
+}

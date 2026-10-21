@@ -7,14 +7,27 @@ import re
 from typing import Iterable
 
 _BLOCK_TAGS = {"p", "div", "li", "br", "h1", "h2", "h3", "h4", "h5", "h6", "tr", "ul", "ol", "section", "article", "header", "footer", "table"}
+_TAG_RE = re.compile(r"</?[a-zA-Z][^<>]{0,200}>")
+
+
+def _normalise_ws(text: str) -> str:
+    text = text.replace("\xa0", " ")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\s*\n\s*", "\n", text)
+    text = re.sub(r"\n{2,}", "\n", text)
+    return text.strip()
 
 
 def strip_html(raw: str) -> str:
-    """HTML → plain text with newlines at block boundaries; safe on plain text input."""
+    """HTML → plain text with newlines at block boundaries; safe on plain text input.
+    Also handles *escaped* HTML (``&lt;p&gt;…``), which the Greenhouse ATS feed emits for every posting:
+    the text is unescaped once and, if real tags appear, parsed like ordinary HTML."""
     if not raw:
         return ""
     if "<" not in raw or ">" not in raw:
-        return _html.unescape(raw).strip()
+        raw = _html.unescape(raw)
+        if not _TAG_RE.search(raw):
+            return _normalise_ws(raw)
     try:
         from bs4 import BeautifulSoup
 
@@ -28,11 +41,7 @@ def strip_html(raw: str) -> str:
     except Exception:  # noqa: BLE001
         text = re.sub(r"<[^>]+>", " ", raw)
         text = _html.unescape(text)
-    text = text.replace("\xa0", " ")
-    text = re.sub(r"[ \t]+", " ", text)
-    text = re.sub(r"\s*\n\s*", "\n", text)
-    text = re.sub(r"\n{2,}", "\n", text)
-    return text.strip()
+    return _normalise_ws(text)
 
 
 _SENT_END = re.compile(r"(?<=[.!?;])\s+(?=[A-Z0-9(\"'•\-–])")

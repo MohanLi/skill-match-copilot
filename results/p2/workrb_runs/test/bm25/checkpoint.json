@@ -1,0 +1,154 @@
+{
+  "config": {
+    "model_name": "BM25-lower",
+    "model_class": "BM25Model",
+    "model_kwargs": {},
+    "task_configs": [
+      {
+        "name": "Skill Extraction Tech",
+        "languages": [
+          "en"
+        ],
+        "split": "test",
+        "class": "LocalTechSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER."
+      },
+      {
+        "name": "Skill Extraction House",
+        "languages": [
+          "en"
+        ],
+        "split": "test",
+        "class": "LocalHouseSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER."
+      },
+      {
+        "name": "Skill Extraction TechWolf",
+        "languages": [
+          "en"
+        ],
+        "split": "test",
+        "class": "LocalTechWolfSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from text descriptions in a generic distribution of job descriptions."
+      }
+    ],
+    "languages": [
+      "en"
+    ],
+    "custom_metrics": null,
+    "output_folder": "/home/claude/skill-match-copilot/results/p2/workrb_runs/test/bm25",
+    "checkpoint_enabled": true,
+    "checkpoint_frequency": "per_task",
+    "created_at": "2026-10-21T02:22:22.629764+00:00",
+    "description": ""
+  },
+  "last_updated": 1792549362.6613197,
+  "last_updated_iso": "2026-10-21T02:22:42.661322+00:00",
+  "results": {
+    "task_results": {
+      "Skill Extraction Tech": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+          "split": "test"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 6.132746934890747,
+            "metrics_dict": {
+              "map": 0.27489717143577025,
+              "rp@10": 0.3843688362919132,
+              "mrr": 0.34120630021895515
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      },
+      "Skill Extraction House": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+          "split": "test"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 7.521856784820557,
+            "metrics_dict": {
+              "map": 0.15986088059363823,
+              "rp@10": 0.24799618320610683,
+              "mrr": 0.22507421676344969
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      },
+      "Skill Extraction TechWolf": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from text descriptions in a generic distribution of job descriptions.",
+          "split": "test"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 6.373544931411743,
+            "metrics_dict": {
+              "map": 0.17728386525993306,
+              "rp@10": 0.23764241893076246,
+              "mrr": 0.23385951057018675
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model_name": "BM25-lower",
+      "total_evaluation_time": 0.0,
+      "timestamp": 1792549342.6297953,
+      "num_tasks": 3,
+      "languages": [
+        "Language.EN"
+      ],
+      "resumed_from_checkpoint": false,
+      "language_aggregation_mode": "monolingual_only",
+      "replayed_from_workrb_version": null
+    },
+    "key_metrics_by_task_group": {
+      "rank_skill_extraction": [
+        "map",
+        "rp@10",
+        "mrr"
+      ]
+    }
+  }
+}

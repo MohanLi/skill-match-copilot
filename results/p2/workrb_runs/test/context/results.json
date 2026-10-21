@@ -1,0 +1,98 @@
+{
+  "task_results": {
+    "Skill Extraction Tech": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 107.70492362976074,
+          "metrics_dict": {
+            "map": 0.5363560664735735,
+            "rp@10": 0.7392176199868508,
+            "mrr": 0.6309572122356821
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction House": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 117.24303889274597,
+          "metrics_dict": {
+            "map": 0.42307689302868867,
+            "rp@10": 0.6568172179813401,
+            "mrr": 0.5263991221715887
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction TechWolf": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from text descriptions in a generic distribution of job descriptions.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 118.30921363830566,
+          "metrics_dict": {
+            "map": 0.46054771452324383,
+            "rp@10": 0.6580789268672704,
+            "mrr": 0.5614626968647509
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "ConTeXT-Skill-Extraction-base",
+    "total_evaluation_time": 343.2609746456146,
+    "timestamp": 1792549380.6196194,
+    "num_tasks": 3,
+    "languages": [
+      "Language.EN"
+    ],
+    "resumed_from_checkpoint": false,
+    "language_aggregation_mode": "monolingual_only",
+    "replayed_from_workrb_version": null
+  },
+  "key_metrics_by_task_group": {
+    "rank_skill_extraction": [
+      "map",
+      "rp@10",
+      "mrr"
+    ]
+  }
+}

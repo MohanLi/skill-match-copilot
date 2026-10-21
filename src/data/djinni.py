@@ -75,39 +75,72 @@ def _years(x) -> float | None:
     return float(m.group(0)) if m else None
 
 
+_STR = "string[pyarrow]"  # Arrow-backed strings: ~3x less memory than object columns for 350k long texts
+
+
+def _clean_text_series(s: pd.Series) -> pd.Series:
+    s = s.fillna("").astype(str)
+    # only run the HTML parser/unescaper where needed (0.1 % of Djinni texts carry tags or entities)
+    mask = (s.str.contains("<", regex=False) & s.str.contains(">", regex=False)) | s.str.contains(r"&(?:#\d+|[a-z]+);", regex=True)
+    if mask.any():
+        s = s.copy()
+        s.loc[mask] = s.loc[mask].map(strip_html)
+    return s.str.strip().astype(_STR)
+
+
 def load_jobs(raw: bool = False) -> tuple[pd.DataFrame, dict]:
     local = ROOT / data_cfg()["datasets"]["djinni_jobs"]["local"]
     df = _read_dir(local)
     if raw:
         return df, {"columns": list(df.columns)}
     out, used = _normalise(df, JOB_COLS)
-    out["job_id"] = [f"djinni-job-{i}" for i in range(len(out))]
-    out["description"] = out["description"].fillna("").astype(str).map(strip_html)
-    out["title"] = out["title"].fillna("").astype(str).str.strip()
+    src_cols = list(df.columns)
+    del df
+    out["job_id"] = pd.Series([f"djinni-job-{i}" for i in range(len(out))], dtype=_STR)
+    out["description"] = _clean_text_series(out["description"])
+    out["title"] = out["title"].fillna("").astype(str).str.strip().astype(_STR)
     out["exp_years_num"] = out["exp_years"].map(_years)
-    out["text"] = (out["title"] + "\n" + out["description"]).str.strip()
-    out["n_chars"] = out["description"].str.len()
-    return out, {"source_columns": list(df.columns), "mapping": used, "rows": len(out)}
+    out["text"] = (out["title"].astype(str) + "\n" + out["description"].astype(str)).str.strip().astype(_STR)
+    out["n_chars"] = out["description"].str.len().astype("int32")
+    return out, {"source_columns": src_cols, "mapping": used, "rows": len(out)}
 
 
-def load_cvs(raw: bool = False, scrub_pii: bool = True) -> tuple[pd.DataFrame, dict]:
+def load_cvs(raw: bool = False, scrub_pii: bool = True, keep_fields: bool = False) -> tuple[pd.DataFrame, dict]:
+    """Memory-lean: the four free-text fields are merged into `text` and replaced by presence flags
+    (has_moreinfo, ...) unless keep_fields=True. PII is scrubbed in place."""
     local = ROOT / data_cfg()["datasets"]["djinni_cvs"]["local"]
     df = _read_dir(local)
     if raw:
         return df, {"columns": list(df.columns)}
     out, used = _normalise(df, CV_COLS)
-    out["cv_id"] = [f"djinni-cv-{i}" for i in range(len(out))]
-    for c in ("title", "moreinfo", "looking_for", "highlights", "cv"):
-        out[c] = out[c].fillna("").astype(str).map(strip_html)
-    out["exp_years_num"] = out["exp_years"].map(_years)
-    parts = ["Position: " + out["title"], "Experience: " + out["moreinfo"], "Looking for: " + out["looking_for"], "Highlights: " + out["highlights"], out["cv"]]
-    text = parts[0]
-    for p in parts[1:]:
-        text = text + "\n\n" + p
-    out["text"] = text.str.replace(r"(?m)^(Experience|Looking for|Highlights): $", "", regex=True).str.replace(r"\n{3,}", "\n\n", regex=True).str.strip()
+    src_cols = list(df.columns)
+    del df
+    out["cv_id"] = pd.Series([f"djinni-cv-{i}" for i in range(len(out))], dtype=_STR)
+    out["title"] = out["title"].fillna("").astype(str).str.strip().astype(_STR)
+    fields = ("moreinfo", "looking_for", "highlights", "cv")
+    labels = {"moreinfo": "Experience", "looking_for": "Looking for", "highlights": "Highlights", "cv": ""}
+    text = ("Position: " + out["title"].astype(str))
+    for c in fields:
+        col = _clean_text_series(out[c])
+        out[f"has_{c}"] = (col.str.len() > 0)
+        prefix = (labels[c] + ": ") if labels[c] else ""
+        text = text + "\n\n" + (prefix + col.astype(str)).where(col.str.len() > 0, "")
+        if keep_fields:
+            out[c] = col
+        else:
+            out.drop(columns=[c], inplace=True)
+    text = text.str.replace(r"\n{3,}", "\n\n", regex=True).str.strip()
     if scrub_pii:
-        scrubbed = out["text"].map(scrub)
-        out["text"] = scrubbed.map(lambda r: r.text)
-        out["pii_removed"] = scrubbed.map(lambda r: sum(r.counts.values()))
-    out["n_chars"] = out["text"].str.len()
-    return out, {"source_columns": list(df.columns), "mapping": used, "rows": len(out)}
+        counts = []
+
+        def _scrub(t: str) -> str:
+            r = scrub(t)
+            counts.append(sum(r.counts.values()))
+            return r.text
+
+        text = text.map(_scrub)
+        out["pii_removed"] = pd.Series(counts, index=out.index, dtype="int32")
+    out["text"] = text.astype(_STR)
+    out["exp_years_num"] = out["exp_years"].map(_years)
+    out["n_chars"] = out["text"].str.len().astype("int32")
+    return out, {"source_columns": src_cols, "mapping": used, "rows": len(out)}

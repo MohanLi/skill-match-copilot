@@ -1,0 +1,42 @@
+model_name: BM25-lower
+model_class: BM25Model
+model_kwargs: {}
+task_configs:
+- name: Skill Extraction Tech
+  languages:
+  - en
+  split: test
+  class: LocalTechSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from technical text descriptions in the TECH subset
+    of CAREER.
+- name: Skill Extraction House
+  languages:
+  - en
+  split: test
+  class: LocalHouseSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from general text descriptions in the HOUSE subset of
+    CAREER.
+- name: Skill Extraction TechWolf
+  languages:
+  - en
+  split: test
+  class: LocalTechWolfSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from text descriptions in a generic distribution of
+    job descriptions.
+languages:
+- en
+custom_metrics: null
+output_folder: /home/claude/skill-match-copilot/results/p2/workrb_runs/test/bm25
+checkpoint_enabled: true
+checkpoint_frequency: per_task
+created_at: '2026-10-21T02:22:22.629764+00:00'
+description: ''

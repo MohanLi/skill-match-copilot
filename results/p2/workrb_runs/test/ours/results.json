@@ -1,0 +1,98 @@
+{
+  "task_results": {
+    "Skill Extraction Tech": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 14.648212432861328,
+          "metrics_dict": {
+            "map": 0.42368302166486965,
+            "rp@10": 0.5963346482577252,
+            "mrr": 0.5079920890780022
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction House": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 1.6241044998168945,
+          "metrics_dict": {
+            "map": 0.3126339348247237,
+            "rp@10": 0.4856022052586938,
+            "mrr": 0.4184718832247602
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction TechWolf": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from text descriptions in a generic distribution of job descriptions.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 1.8310136795043945,
+          "metrics_dict": {
+            "map": 0.37439859486821947,
+            "rp@10": 0.5181736293699484,
+            "mrr": 0.4623751339810434
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "Fine-tuned MiniLM on synthetic ESCO pairs (champion)",
+    "total_evaluation_time": 18.106842517852783,
+    "timestamp": 1792549723.940782,
+    "num_tasks": 3,
+    "languages": [
+      "Language.EN"
+    ],
+    "resumed_from_checkpoint": false,
+    "language_aggregation_mode": "monolingual_only",
+    "replayed_from_workrb_version": null
+  },
+  "key_metrics_by_task_group": {
+    "rank_skill_extraction": [
+      "map",
+      "rp@10",
+      "mrr"
+    ]
+  }
+}

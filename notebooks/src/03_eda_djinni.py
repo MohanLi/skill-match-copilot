@@ -33,7 +33,9 @@ def missing_table(df, cols):
         rows.append({"field": c, "missing_or_empty": int(empty.sum()), "share": round(float(empty.mean()), 4)})
     return pd.DataFrame(rows)
 miss_jobs = missing_table(jobs, ["title", "description", "company", "category", "exp_years", "english_level", "published"])
-miss_cvs = missing_table(cvs, ["title", "category", "exp_years", "english_level", "moreinfo", "looking_for", "highlights", "cv"])
+miss_cvs = missing_table(cvs, ["title", "category", "exp_years", "english_level"])
+# the four free-text CV fields were merged into `text` by the loader; their presence flags give the missing shares
+miss_cvs = pd.concat([miss_cvs, pd.DataFrame([{"field": f, "missing_or_empty": int((~cvs[f"has_{f}"]).sum()), "share": round(float((~cvs[f"has_{f}"]).mean()), 4)} for f in ["moreinfo", "looking_for", "highlights", "cv"]])], ignore_index=True)
 dup_jobs = int(jobs.duplicated(["title", "description"]).sum()); dup_cvs = int(cvs.duplicated(["text"]).sum())
 print(f"duplicate job postings (same title+description): {dup_jobs:,} ({dup_jobs/len(jobs):.1%}) | duplicate CV texts: {dup_cvs:,} ({dup_cvs/len(cvs):.1%})")
 pd.concat([miss_jobs.assign(table="jobs"), miss_cvs.assign(table="cvs")])
@@ -50,13 +52,13 @@ fig
 # ## 2. Text length distributions (tokens ≈ whitespace-split words)
 
 # %%
-jobs["n_words"] = jobs["description"].str.split().str.len()
-cvs["n_words"] = cvs["text"].str.split().str.len()
+jobs["n_words"] = jobs["description"].str.count(r"\S+").astype("int32")
+cvs["n_words"] = cvs["text"].str.count(r"\S+").astype("int32")
 print("job description words:", jobs["n_words"].describe().round(1).to_dict())
 print("cv words            :", cvs["n_words"].describe().round(1).to_dict())
 min_chars = 300
 print(f"CVs shorter than {min_chars} characters (excluded from the labelled set): {(cvs['n_chars'] < min_chars).mean():.1%}")
-ld = pd.concat([pd.DataFrame({"words": jobs["n_words"].clip(upper=1500), "type": "job posting"}), pd.DataFrame({"words": cvs["n_words"].clip(upper=1500), "type": "candidate profile"})])
+ld = pd.concat([pd.DataFrame({"words": jobs["n_words"].sample(60000, random_state=42).clip(upper=1500), "type": "job posting"}), pd.DataFrame({"words": cvs["n_words"].sample(60000, random_state=42).clip(upper=1500), "type": "candidate profile"})])
 fig = px.histogram(ld, x="words", color="type", barmode="overlay", opacity=0.7, nbins=75, title="Length of job postings vs candidate profiles (words, clipped at 1,500)")
 fig.update_layout(yaxis_title="records", bargap=0.05)
 viz.save_fig(fig, "eda03_text_length", "Djinni text lengths: job postings are typically 150–400 words; CVs are much more variable, with a long tail of multi-page profiles and a spike of one-liners.")
@@ -193,6 +195,7 @@ summary = {
     "words": {"jobs_median": float(jobs["n_words"].median()), "cvs_median": float(cvs["n_words"].median()), "cvs_under_300_chars_share": round(float((cvs["n_chars"] < 300).mean()), 4)},
     "top_categories_jobs": top_cats.head(10).to_dict(), "cvs_per_posting_top10": sd.head(10).set_index("category")["cvs per posting"].round(2).to_dict(),
     "pii_removed_total": int(cvs["pii_removed"].sum()) if "pii_removed" in cvs else None, "encoder_for_umap": str(enc_path.name),
+    "cvs_with_all_four_fields_share": round(float((cvs["has_moreinfo"] & cvs["has_looking_for"] & cvs["has_highlights"] & cvs["has_cv"]).mean()), 4),
     "category_similarity_top10": {c: {o: round(float(S[i, j]), 3) for j, o in enumerate(top10)} for i, c in enumerate(top10)},
 }
 write_json(summary, "results/eda/djinni_summary.json")

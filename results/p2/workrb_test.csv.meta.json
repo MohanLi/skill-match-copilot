@@ -1,0 +1,29 @@
+{
+  "file": "results/p2/workrb_test.csv",
+  "rows": 15,
+  "columns": [
+    "model_key",
+    "k",
+    "model",
+    "task",
+    "split",
+    "map",
+    "rp@10",
+    "mrr",
+    "n_queries",
+    "eval_time_s",
+    "esco_source",
+    "llm_cost_usd",
+    "llm_calls",
+    "run_utc"
+  ],
+  "created_utc": "2026-10-21T02:33:17Z",
+  "git_commit": "3855465",
+  "split": "test",
+  "esco_source": "esco_csv",
+  "tasks": {
+    "Skill Extraction Tech": 338,
+    "Skill Extraction House": 262,
+    "Skill Extraction TechWolf": 326
+  }
+}

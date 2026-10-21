@@ -1,0 +1,98 @@
+{
+  "task_results": {
+    "Skill Extraction Tech": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 14.553056955337524,
+          "metrics_dict": {
+            "map": 0.36532059625118946,
+            "rp@10": 0.5558514135437213,
+            "mrr": 0.4348203178851366
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction House": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 1.5031917095184326,
+          "metrics_dict": {
+            "map": 0.24629410623328613,
+            "rp@10": 0.4087468193384224,
+            "mrr": 0.3296911014980086
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    },
+    "Skill Extraction TechWolf": {
+      "metadata": {
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from text descriptions in a generic distribution of job descriptions.",
+        "split": "test"
+      },
+      "datasetid_results": {
+        "en": {
+          "evaluation_time": 1.687671184539795,
+          "metrics_dict": {
+            "map": 0.2929256599767253,
+            "rp@10": 0.4540205959684488,
+            "mrr": 0.35315729593403244
+          },
+          "input_languages": [
+            "en"
+          ],
+          "output_languages": [
+            "en"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "all-MiniLM-L6-v2 (zero-shot bi-encoder)",
+    "total_evaluation_time": 17.74778437614441,
+    "timestamp": 1792549362.7779636,
+    "num_tasks": 3,
+    "languages": [
+      "Language.EN"
+    ],
+    "resumed_from_checkpoint": false,
+    "language_aggregation_mode": "monolingual_only",
+    "replayed_from_workrb_version": null
+  },
+  "key_metrics_by_task_group": {
+    "rank_skill_extraction": [
+      "map",
+      "rp@10",
+      "mrr"
+    ]
+  }
+}

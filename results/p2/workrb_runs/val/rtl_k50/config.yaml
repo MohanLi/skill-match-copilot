@@ -1,0 +1,32 @@
+model_name: Retrieve-then-LLM (challenger) k=50
+model_class: RetrieveThenLLM
+model_kwargs: {}
+task_configs:
+- name: Skill Extraction Tech
+  languages:
+  - en
+  split: val
+  class: LocalTechSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from technical text descriptions in the TECH subset
+    of CAREER.
+- name: Skill Extraction House
+  languages:
+  - en
+  split: val
+  class: LocalHouseSkillExtractRanking
+  task_group: rank_skill_extraction
+  task_type: ranking
+  label_type: multi_label
+  description: Extract skills from general text descriptions in the HOUSE subset of
+    CAREER.
+languages:
+- en
+custom_metrics: null
+output_folder: /home/claude/skill-match-copilot/results/p2/workrb_runs/val/rtl_k50
+checkpoint_enabled: true
+checkpoint_frequency: per_task
+created_at: '2026-10-21T02:20:23.211914+00:00'
+description: ''
