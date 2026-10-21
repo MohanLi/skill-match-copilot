@@ -1,0 +1,11 @@
+# Streamlit settings for the demo UI.
+# The default file watcher walks every imported package to watch for code changes and, for `transformers`,
+# imports its vision sub-modules on the way, which print "No module named 'torchvision'" tracebacks in the
+# terminal (harmless, but noisy). The demo does not need auto-reload, so the watcher is off; restart
+# `streamlit run src/ui/app.py` after editing the app.
+[server]
+fileWatcherType = "none"
+headless = false
+
+[browser]
+gatherUsageStats = false
