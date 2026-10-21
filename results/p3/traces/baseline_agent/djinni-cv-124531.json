@@ -1,0 +1,178 @@
+{
+ "approach": "embedding_baseline",
+ "ranking": [
+  {
+   "job_id": "djinni-job-42304",
+   "rank": 1,
+   "fit_score": 44.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-129819",
+   "rank": 2,
+   "fit_score": 43.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-27217",
+   "rank": 3,
+   "fit_score": 36.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-16484",
+   "rank": 4,
+   "fit_score": 33.8,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-133023",
+   "rank": 5,
+   "fit_score": 29.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-61114",
+   "rank": 6,
+   "fit_score": 22.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-56961",
+   "rank": 7,
+   "fit_score": 20.6,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-141380",
+   "rank": 8,
+   "fit_score": 16.9,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-116442",
+   "rank": 9,
+   "fit_score": 14.9,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-127009",
+   "rank": 10,
+   "fit_score": 14.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  }
+ ],
+ "trace": [],
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cost_usd": 0.0,
+ "latency_ms": 0.0,
+ "tool_calls": 1,
+ "error": null,
+ "wall_ms": 272.7,
+ "pool": [
+  {
+   "job_id": "djinni-job-16484",
+   "label": 1,
+   "title": "Content Manager"
+  },
+  {
+   "job_id": "djinni-job-129819",
+   "label": 1,
+   "title": "SMM for blockchain project (NFT marketplace)"
+  },
+  {
+   "job_id": "djinni-job-56961",
+   "label": 0,
+   "title": "Junior QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-116442",
+   "label": 0,
+   "title": "Senior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-133023",
+   "label": 0,
+   "title": "Strong Middle/ Senior Front-End (React) developer"
+  },
+  {
+   "job_id": "djinni-job-127009",
+   "label": 0,
+   "title": "Senior Software Engineer with mobile consumer apps experience"
+  },
+  {
+   "job_id": "djinni-job-27217",
+   "label": 0,
+   "title": "Digital Marketing Manager"
+  },
+  {
+   "job_id": "djinni-job-61114",
+   "label": 0,
+   "title": "Lead Java Developer (Healthcare)"
+  },
+  {
+   "job_id": "djinni-job-141380",
+   "label": 0,
+   "title": "WordPress Developer"
+  },
+  {
+   "job_id": "djinni-job-42304",
+   "label": 0,
+   "title": "Head of marketing & sales, igaming"
+  }
+ ],
+ "metrics": {
+  "approach": "baseline",
+  "cv_id": "djinni-cv-124531",
+  "cv_category": "Marketing",
+  "ndcg10": 0.6509209298071326,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.3333333333333333,
+  "mrr_rel1": 0.5,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 2,
+  "coverage": 1.0,
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "llm_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "latency_ms": 0.0,
+  "wall_ms": 272.7,
+  "tool_calls": 1,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}"
+ },
+ "faithfulness": {
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "reasons": {}
+ }
+}

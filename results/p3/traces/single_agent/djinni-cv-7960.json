@@ -1,0 +1,751 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-70281",
+   "rank": 1,
+   "fit_score": 82.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "C#.Net is my core technology stack",
+     "job_quote": "Experience with C#/.NET Core"
+    },
+    {
+     "skill": ".NET Core",
+     "resume_quote": "The web API was built with.NetCore using JWT authentication",
+     "job_quote": "Experience with C#/.NET Core"
+    },
+    {
+     "skill": "microservices",
+     "resume_quote": "The solution was built on the microservice architecture",
+     "job_quote": "Experience working with micro-services architecture."
+    },
+    {
+     "skill": "SQL Server",
+     "resume_quote": "MS SQL was used as primary DB store.",
+     "job_quote": "Experience working with SQL/NoSQL databases."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Angular",
+     "job_quote": "Experience with Client-Side Angular framework"
+    },
+    {
+     "skill": "Docker",
+     "job_quote": "Experience with Docker and Orchestration Infrastructures (K8S)."
+    },
+    {
+     "skill": "RESTful Web API",
+     "job_quote": "Experience with RESTful Web API"
+    }
+   ],
+   "summary": "Strong stack overlap on C#/.NET Core and microservices with a full-stack bent; the main gaps are the Angular front-end and container orchestration."
+  },
+  {
+   "job_id": "djinni-job-106688",
+   "rank": 2,
+   "fit_score": 74.0,
+   "matched_skills": [
+    {
+     "skill": "C#/.NET backend",
+     "resume_quote": "C#.Net is my core technology stack",
+     "job_quote": "At least 5 years of experience in system and/or web development (.NET/Java)"
+    },
+    {
+     "skill": "microservices",
+     "resume_quote": "The solution was built on the microservice architecture",
+     "job_quote": "Experience of agile work, continuous delivery and microservices"
+    },
+    {
+     "skill": "Azure",
+     "resume_quote": "Azure build and release pipelines were used for CI/CD.",
+     "job_quote": "running on components from Azure"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Octopus Deploy",
+     "job_quote": "Good knowledge of tools such as Github, Octopus Deploy, Docker and similar"
+    },
+    {
+     "skill": "Docker",
+     "job_quote": "Good knowledge of tools such as Github, Octopus Deploy, Docker and similar"
+    }
+   ],
+   "summary": "Senior backend role with 5+ years .NET/Java and microservices/Azure matching the candidate's experience level and DevOps background; the candidate's CI/CD work is a plus for the deployment tooling requirement."
+  },
+  {
+   "job_id": "djinni-job-85156",
+   "rank": 3,
+   "fit_score": 72.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "C#.Net is my core technology stack",
+     "job_quote": "We are looking for a C # /. Net Core developer"
+    },
+    {
+     "skill": ".NET Core",
+     "resume_quote": "The web API was built with.NetCore using JWT authentication",
+     "job_quote": "C # / .Net Core / git /"
+    },
+    {
+     "skill": "microservices",
+     "resume_quote": "The solution was built on the microservice architecture",
+     "job_quote": "Architecture: microservices deployed on Kubernetes"
+    },
+    {
+     "skill": "Azure",
+     "resume_quote": "Azure build and release pipelines were used for CI/CD.",
+     "job_quote": "Mandatory: Experience with Azure"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Kubernetes",
+     "job_quote": "Architecture: microservices deployed on Kubernetes"
+    },
+    {
+     "skill": "MongoDB",
+     "job_quote": "Database: MongoDb"
+    },
+    {
+     "skill": "Kafka",
+     "job_quote": "Messaging technology: Kafka"
+    }
+   ],
+   "summary": "Mid-level .NET Core microservices role with a mandatory Azure requirement the candidate meets; gaps are MongoDB, Kafka and Kubernetes, and the posting is in Ukrainian-language header but the requirements are in English."
+  },
+  {
+   "job_id": "djinni-job-38288",
+   "rank": 4,
+   "fit_score": 68.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "C#.Net is my core technology stack",
+     "job_quote": "strong knowledge of C# language, .NET 6, .NET 5.0, .NET Core 3.1"
+    },
+    {
+     "skill": "SQL Server",
+     "resume_quote": "MS SQL was used as primary DB store.",
+     "job_quote": "strong knowledge of MS SQL Server, Database Architecture Design"
+    },
+    {
+     "skill": "microservices",
+     "resume_quote": "The solution was built on the microservice architecture",
+     "job_quote": "understanding of microservice architecture"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Entity Framework",
+     "job_quote": "experience with LINQ and Entity Framework"
+    },
+    {
+     "skill": "React",
+     "job_quote": "knowledge of React"
+    }
+   ],
+   "summary": "Solid .NET/C# and MS SQL match with a building-management platform; the candidate lacks the React front-end and Entity Framework experience the posting asks for."
+  },
+  {
+   "job_id": "djinni-job-114811",
+   "rank": 5,
+   "fit_score": 60.0,
+   "matched_skills": [
+    {
+     "skill": "ASP.NET Core API",
+     "resume_quote": "The web API was built with.NetCore using JWT authentication",
+     "job_quote": "Net 5.0 Asp.net Core API, with Entity Framework Core 5.0"
+    },
+    {
+     "skill": "CI/CD",
+     "resume_quote": "Azure build and release pipelines were used for CI/CD.",
+     "job_quote": "Experience with CI/CD tooling"
+    },
+    {
+     "skill": "Azure",
+     "resume_quote": "Azure build and release pipelines were used for CI/CD.",
+     "job_quote": "Experience with integration with AWS and/or Azure"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React",
+     "job_quote": "React experience"
+    },
+    {
+     "skill": "Entity Framework",
+     "job_quote": "Entity Framework Core 5.0"
+    }
+   ],
+   "summary": "Senior full-stack role where the backend (ASP.NET Core API, CI/CD, Azure) matches well, but the React front-end requirement is a major gap."
+  },
+  {
+   "job_id": "djinni-job-29457",
+   "rank": 6,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Event Manager role outside the candidate's backend engineering family; no meaningful skill overlap."
+  },
+  {
+   "job_id": "djinni-job-96375",
+   "rank": 7,
+   "fit_score": 15.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "QA role focused on manual and cross-platform testing; not a backend development match."
+  },
+  {
+   "job_id": "djinni-job-137489",
+   "rank": 8,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Trainee content QA role; junior and outside the candidate's backend engineering family."
+  },
+  {
+   "job_id": "djinni-job-71824",
+   "rank": 9,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Front-end JavaScript/React role; no backend C#/.NET overlap with the candidate's experience."
+  },
+  {
+   "job_id": "djinni-job-55454",
+   "rank": 10,
+   "fit_score": 25.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "PHP/Symfony developer role; PHP appears on the resume only as a secondary language, and the role is junior-to-middle, below the candidate's 5-year seniority."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting skills from the resume and running searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Backend Developer. An experienced backend engineer with 5 years of experience in building scalable, maintainable, and secure enterprise applications. C#.Net is my core technology stack, I have worked with Java and PHP. Gloepid: The web API was built with .NetCore using JWT authentication and MS SQL server for data storage. Azure build and release pipelines were used for CI/CD. Led the DevOps team, deployment and data migration to Azure tenant. eProcurement Solution: backend developed using C#. Zimvest Mobile Application: microservice architecture using C#, authentication & authorization service, wallet transaction service, identity verification service, background services, integration service with core banking app, MS SQL primary DB."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Backend developer C# .NET Core microservices",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Senior backend engineer ASP.NET Core Azure DevOps SQL Server",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Fintech backend engineer payments wallet transactions C#",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000622
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Backend Developer. An experienced backend engineer with 5 years of experience in building scalable, maintainable, and secure enterprise applications. C#.Net is my core technology stack, I have worked with Java and PHP. Gloepid: The web API was built with .NetCore using JWT authentication and MS SQL server for data storage. Azure build and release pipelines were used for CI/CD. Led the DevOps team, deployment and data migration to Azure tenant. eProcurement Solution: backend developed using C#. Zimvest Mobile Application: microservice architecture using C#, authentication & authorization service, wallet transaction service, identity verification service, background services, integration service with core banking app, MS SQL primary DB."
+   },
+   "output_preview": "{\"skills\": [\"building scalable , maintainable , and secure enterprise applications\", \"Led the DevOps team ,\", \"deployment\", \"data migration\"], \"knowledge\": [\". Net\", \"Java\", \"PHP\", \"CI/CD\", \"data\", \"Azure\", \"tenant\", \"C#\", \"microservice architecture\", \"authentication & authorization service\", \"wallet transaction service\", \"identity verification service\", \"background services\", \"integration service\", \"banking\", \"MS SQL primary DB\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Backend developer C# .NET Core microservices",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-85156\", \"title\": \".Net-програміст\", \"company\": \"Sencury\", \"category\": \".NET\", \"score\": 0.5698, \"esco_skills\": [\"C#\", \"adapt to change\", \"design engineering components\", \"participate in technical aspects of the production\", \"process data\", \"study topics\"], \"snippet\": \".Net-програміст\\nWe are looking for a  C # /. Net Core developer, with a pronounced taste for quality, a strong ability to adapt and communicate to join a team responsible for orders of a marketplace.\\r\\n\\r\\nYou will work in an agile ecosystem, giving pride of place to agility and new technologies (C #, \"},"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Senior backend engineer ASP.NET Core Azure DevOps SQL Server",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-70281\", \"title\": \"Middle Full Stack .Net Developer\", \"company\": \"Gemicle\", \"category\": \".NET\", \"score\": 0.5871, \"esco_skills\": [\"C#\", \"English\", \"NoSQL\", \"SQL Server\", \"TypeScript\", \"automation technology\", \"computer science\", \"dock operations\", \"solution deployment\", \"work independently\"], \"snippet\": \"Middle Full Stack .Net Developer\\n**Responsibilities:**\\r\\n- Design and develop full-stack end-to-end solutions in a scalable microservices-based environment.\\r\\n- Own your code from design to production, seeing the full picture including automation tests and deployment.\\"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Fintech backend engineer payments wallet transactions C#",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-85156\", \"title\": \".Net-програміст\", \"company\": \"Sencury\", \"category\": \".NET\", \"score\": 0.3268, \"esco_skills\": [\"C#\", \"adapt to change\", \"design engineering components\", \"participate in technical aspects of the production\", \"process data\", \"study topics\"], \"snippet\": \".Net-програміст\\nWe are looking for a  C # /. Net Core developer, with a pronounced taste for quality, a strong ability to adapt and communicate to join a team responsible for orders of a marketplace.\\r\\n\\r\\nYou will work in an agile ecosystem, giving pride of place to agility and new technologies (C #, \"},"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The searches returned only 10 distinct jobs, which is the full pool. Next I'll normalize the resume skills and pull the full text of the most relevant postings.",
+   "tool_uses": [
+    {
+     "name": "normalize_skills",
+     "input": {
+      "phrases": [
+       "C#",
+       ".NET Core",
+       "Java",
+       "PHP",
+       "JWT authentication",
+       "MS SQL Server",
+       "Azure",
+       "CI/CD",
+       "DevOps",
+       "microservices",
+       "background services",
+       "REST API",
+       "data migration",
+       "authentication and authorization",
+       "integration with core banking"
+      ]
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-70281"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-106688"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-114811"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-38288"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-85156"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001433
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "normalize_skills",
+   "input": {
+    "phrases": [
+     "C#",
+     ".NET Core",
+     "Java",
+     "PHP",
+     "JWT authentication",
+     "MS SQL Server",
+     "Azure",
+     "CI/CD",
+     "DevOps",
+     "microservices",
+     "background services",
+     "REST API",
+     "data migration",
+     "authentication and authorization",
+     "integration with core banking"
+    ]
+   },
+   "output_preview": "{\"mapped\": [{\"phrase\": \"C#\", \"esco_label\": \"C#\", \"score\": 1.0}, {\"phrase\": \".NET Core\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5465}, {\"phrase\": \"Java\", \"esco_label\": \"Java (computer programming)\", \"score\": 0.9157}, {\"phrase\": \"PHP\", \"esco_label\": \"PHP\", \"score\": 1.0}, {\"phrase\": \"JWT authentication\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3145}, {\"phrase\": \"MS SQL Server\", \"esco_label\": \"SQL Server\", \"score\": 0.9677}, {\"phrase\": \"Azure\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.4044}, {\"phrase\": \"CI/CD\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3964}, {\"phrase\": \"DevOps\", \"esco_label\": \"DevOp"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-70281"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-70281\", \"title\": \"Middle Full Stack .Net Developer\", \"company\": \"Gemicle\", \"category\": \".NET\", \"url\": \"\", \"text\": \"Middle Full Stack .Net Developer\\n**Responsibilities:**\\r\\n- Design and develop full-stack end-to-end solutions in a scalable microservices-based environment.\\r\\n- Own your code from design to production, seeing the full picture including automation tests and deployment.\\r\\n- As a data-driven company, you will work with various Database types (MS SQL, MongoDB, Redis...) and with multiple data structures.\\r\\n- Work both autonomously and collaboratively with t"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-106688"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-106688\", \"title\": \"Senior Backend Developer\", \"company\": \"Envion Software\", \"category\": \"Other\", \"url\": \"\", \"text\": \"Senior Backend Developer\\nRequirements:\\r\\n* Post-secondary education or equivalent competence\\r\\n* At least 5 years of experience in system and/or web development (.NET/Java), with a focus on scalability and modularity\\r\\n* Experience of agile work, continuous delivery and microservices\\r\\n* Experience in some degree of different types of e-commerce solutions, CMS, CRM and system integrations\\r\\n* Good knowledge of tools such as Github, Octopus Deploy, Do"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-114811"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-114811\", \"title\": \"Senior FullStack (React/.NET) Engineer\", \"company\": \"AgileEngine\", \"category\": \".NET\", \"url\": \"\", \"text\": \"Senior FullStack (React/.NET) Engineer\\nWhat you will do:\\r\\n- Analyze product requirements and take a major part in designing the software at a high and detailed level\\r\\n- Provide technical guidance, mentoring to team members and ensure project success\\r\\n- Maintain and instill high standards for code quality, application performance, and stability\\r\\n- Collaborate with the C-level stakeholders to understand our users and their needs\\r\\n- Ask th"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-38288"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-38288\", \"title\": \"Full Stack  .NET Developer\", \"company\": \"BLISCORE\", \"category\": \".NET\", \"url\": \"\", \"text\": \"Full Stack  .NET Developer\\nBLISCORE is an outsourcing promising company with a long-term and clear vision. This is a place where you can work on cool projects with focused people. We create teams of developers and creative problem solvers who are passionate about developing great software. As a team, we work on various projects, but we also like to relax, share ideas and create memories together.\\r\\n\\r\\nProject:\\r\\nThe digital platform stitches together services"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-85156"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-85156\", \"title\": \".Net-програміст\", \"company\": \"Sencury\", \"category\": \".NET\", \"url\": \"\", \"text\": \".Net-програміст\\nWe are looking for a  C # /. Net Core developer, with a pronounced taste for quality, a strong ability to adapt and communicate to join a team responsible for orders of a marketplace.\\r\\n\\r\\nYou will work in an agile ecosystem, giving pride of place to agility and new technologies (C #, .Net Core, Kubernetes, …) to ensure the implementation of a product responsible for the integration of orders, the management of their life cycle, and their availability.\\r\\n"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I have enough evidence to rank. Two postings (djinni-job-71824 and the QA/event/content roles) are clearly off-family, so I'll rank them lowest. I'll verify the strongest matches with a comparison.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       ".NET Core",
+       "Java",
+       "PHP",
+       "SQL Server",
+       "DevOps",
+       "Azure",
+       "CI/CD",
+       "microservices",
+       "REST API",
+       "authentication and authorization",
+       "migrate existing data"
+      ],
+      "job_skills": [
+       "C#",
+       ".NET Core",
+       "microservices",
+       "MongoDB",
+       "Kubernetes",
+       "Kafka",
+       "Azure",
+       "git",
+       "Java (computer programming)",
+       "Octopus Deploy",
+       "Docker",
+       "RESTful Web API",
+       "Angular",
+       "SQL Server",
+       "Entity Framework",
+       "React",
+       "Node.JS"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001952
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     ".NET Core",
+     "Java",
+     "PHP",
+     "SQL Server",
+     "DevOps",
+     "Azure",
+     "CI/CD",
+     "microservices",
+     "REST API",
+     "authentication and authorization",
+     "migrate existing data"
+    ],
+    "job_skills": [
+     "C#",
+     ".NET Core",
+     "microservices",
+     "MongoDB",
+     "Kubernetes",
+     "Kafka",
+     "Azure",
+     "git",
+     "Java (computer programming)",
+     "Octopus Deploy",
+     "Docker",
+     "RESTful Web API",
+     "Angular",
+     "SQL Server",
+     "Entity Framework",
+     "React",
+     "Node.JS"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"C#\", \".NET Core\", \"microservices\", \"Azure\", \"Java (computer programming)\", \"SQL Server\"], \"missing\": [\"MongoDB\", \"Kubernetes\", \"Kafka\", \"git\", \"Octopus Deploy\", \"Docker\", \"RESTful Web API\", \"Angular\", \"Entity Framework\", \"React\", \"Node.JS\"], \"extra\": [\"PHP\", \"DevOps\", \"CI/CD\", \"REST API\", \"authentication and authorization\", \"migrate existing data\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "```json\n{\"ranking\": [\n   {\"job_id\": \"djinni-job-70281\", \"rank\": 1, \"fit_score\": 82,\n    \"matched_skills\": [\n      {\"skill\": \"C#\", \"resume_quote\": \"C#.Net is my core technology stack\", \"job_quote\": \"Experience with C#/.NET Core\"},\n      {\"skill\": \".NET Core\", \"resume_quote\": \"The web API was built with.NetCore using JWT authentication\", \"job_quote\": \"Experience with C#/.NET Core\"},\n      {\"skill\": \"microservices\", \"resume_quote\": \"The solution was built on the microservice architecture\", \"job_quote\": \"Experience working with micro-services architecture.\"},\n      {\"skill\": \"SQL Server\", \"resume_quote\": \"MS SQL was used as primary DB store.\", \"job_quote\": \"Experience working with SQL/NoSQL databases.\"}\n    ],\n    \"missing_skills\": [\n      {\"skill\": \"Angular\", \"job_quote\": \"Experience with Client-Side Angular framework\"},\n      {\"skill\": \"Docker\", \"job_quote\": \"Experience with Docker and Orchestration Infrastructures (K8S).\"},\n      {\"skill\": \"RESTful Web API\", \"job_quote\": \"Experience with RESTful Web API\"}\n    ],\n    \"summary\": \"Strong stack overlap on C#/.NET Core and microservices with a full-stack bent; the main gaps are the Angular front-end and container orchestration.\"},\n   {\"job_id\": \"djinni-job-106688\", \"rank\": 2, \"fit_score\": 74,\n    \"matched_skills\": [\n      {\"skill\": \"C#/.NET backend\", \"resume_quote\": \"C#.Net is my core technology stack\", \"job_quote\": \"At least 5 years of experience in system and/or web development (.NET/Java)\"},\n      {\"skill\": \"microservices\", \"res",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.00316
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 51641,
+ "output_tokens": 4006,
+ "cost_usd": 0.007167,
+ "latency_ms": 17338.8,
+ "tool_calls": 11,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 7424.8,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-55454",
+   "label": 1,
+   "title": "Junior+\\Middle PHP Developer"
+  },
+  {
+   "job_id": "djinni-job-29457",
+   "label": 0,
+   "title": "Event Manager"
+  },
+  {
+   "job_id": "djinni-job-114811",
+   "label": 1,
+   "title": "Senior FullStack (React/.NET) Engineer"
+  },
+  {
+   "job_id": "djinni-job-70281",
+   "label": 1,
+   "title": "Middle Full Stack .Net Developer"
+  },
+  {
+   "job_id": "djinni-job-85156",
+   "label": 2,
+   "title": ".Net-програміст"
+  },
+  {
+   "job_id": "djinni-job-96375",
+   "label": 0,
+   "title": "QA engineer"
+  },
+  {
+   "job_id": "djinni-job-38288",
+   "label": 1,
+   "title": "Full Stack  .NET Developer"
+  },
+  {
+   "job_id": "djinni-job-71824",
+   "label": 0,
+   "title": "Middle JavaScript (React) Developer 🧨"
+  },
+  {
+   "job_id": "djinni-job-106688",
+   "label": 2,
+   "title": "Senior Backend Developer"
+  },
+  {
+   "job_id": "djinni-job-137489",
+   "label": 0,
+   "title": "Trainee Content QС"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-7960",
+  "cv_category": ".NET",
+  "ndcg10": 0.8374875251908257,
+  "p_at_3": 0.6666666666666666,
+  "mrr": 0.5,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 2,
+  "n_partial_or_better_in_pool": 6,
+  "coverage": 1.0,
+  "n_claims": 29,
+  "n_supported": 25,
+  "hallucination_rate": 0.13793103448275867,
+  "llm_calls": 4,
+  "input_tokens": 51641,
+  "output_tokens": 4006,
+  "cost_usd": 0.007167,
+  "latency_ms": 17338.8,
+  "wall_ms": 7424.8,
+  "tool_calls": 11,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{\"skill_not_in_quotes\": 4}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 29,
+  "n_supported": 25,
+  "hallucination_rate": 0.13793103448275867,
+  "reasons": {
+   "skill_not_in_quotes": 4
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-70281",
+    "n_claims": 7,
+    "n_supported": 5,
+    "n_matched": 4,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.2857,
+    "reasons": {
+     "skill_not_in_quotes": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-106688",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-85156",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-38288",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-114811",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-29457",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-96375",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-137489",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-71824",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-55454",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

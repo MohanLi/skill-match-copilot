@@ -1,0 +1,1048 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-127662",
+   "rank": 1,
+   "fit_score": 72.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "QA Automation Engineer C#, Software Developer in Test",
+     "job_quote": "2+ years of continuous automation experience using C#."
+    },
+    {
+     "skill": "Test automation",
+     "resume_quote": "Writing and maintaining existing test scripts",
+     "job_quote": "building and maintaining test automation frameworks for UI, API, and mobile functional automation"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Selenium / Cypress / Protractor (UI test tooling)",
+     "job_quote": "Experienced with at least two of the following tools Selenium, Postman, SoapUI, Protractor, Cypress."
+    },
+    {
+     "skill": "API test automation",
+     "job_quote": "4+ years of experience in the development of API and Web UI Test Automation Frameworks and Automated Tests."
+    },
+    {
+     "skill": "Angular / HTML / CSS",
+     "job_quote": "Experience and understanding of Web UI / Browser-based testing (HTML, CSS, Angular 6+)."
+    }
+   ],
+   "summary": "Strongest C# automation match in the pool, but the role is senior (6+ years, 2+ in senior automation) and requires API/UI framework depth and modern web tooling the candidate's resume does not show."
+  },
+  {
+   "job_id": "djinni-job-22287",
+   "rank": 2,
+   "fit_score": 60.0,
+   "matched_skills": [
+    {
+     "skill": "Jenkins",
+     "resume_quote": "Jenkins.",
+     "job_quote": "Expertise in Test Automation Frameworks using Jenkins, Java, Maven, TestNG."
+    },
+    {
+     "skill": "MySQL",
+     "resume_quote": "MySQL(basic)",
+     "job_quote": "Experienced in Database Testing and using various DBMS tools including Mode analytics, MySQL and performing complex queries."
+    },
+    {
+     "skill": "Regression testing",
+     "resume_quote": "Performing regression analysis",
+     "job_quote": "compile a regression test suite that can be executed quickly via automation scripts."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java / Maven / TestNG",
+     "job_quote": "Expertise in Test Automation Frameworks using Jenkins, Java, Maven, TestNG."
+    },
+    {
+     "skill": "Appium / Selenium",
+     "job_quote": "3+ years experience working on Appium, Selenium or similar test automation toolsets."
+    },
+    {
+     "skill": "AWS",
+     "job_quote": "Experience working with Amazon Web Services, querying and working with data in various AWS services."
+    }
+   ],
+   "summary": "Good overlap on Jenkins, MySQL, and regression work, but the stack is Java-centric with mobile and data-pipeline focus, and it asks for 5+ years of SDET experience."
+  },
+  {
+   "job_id": "djinni-job-129198",
+   "rank": 3,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "Regression / bug reporting",
+     "resume_quote": "creating bug reports",
+     "job_quote": "Working with Customer Support and investigating bugs reported by users;"
+    },
+    {
+     "skill": "Automation scripts",
+     "resume_quote": "Writing and maintaining existing test scripts",
+     "job_quote": "Good knowledge of writing automation scripts;"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SQL",
+     "job_quote": "Good knowledge of SQL;"
+    },
+    {
+     "skill": "Linux",
+     "job_quote": "Experience working with Linux;"
+    },
+    {
+     "skill": "Docker",
+     "job_quote": "Experience working with Docker;"
+    }
+   ],
+   "summary": "Closest in seniority (4+ years testing) and in test-script and bug-investigation work, though it is more manual/functional QA and needs Linux and Docker."
+  },
+  {
+   "job_id": "djinni-job-105889",
+   "rank": 4,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "Automation testing",
+     "resume_quote": "QA Automation Engineer C#",
+     "job_quote": "4+ years of experience in Automation Testing of Software;"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Python",
+     "job_quote": "Good experience and knowledge of Python;"
+    },
+    {
+     "skill": "Continuous integration",
+     "job_quote": "Experience with continuous integration and source control systems;"
+    },
+    {
+     "skill": "Microservice architecture",
+     "job_quote": "Hands on experience of the product with the micro-service based architecture;"
+    }
+   ],
+   "summary": "Senior (5+ years) AQA role centred on Python and microservices; the resume's C# and Telerik experience does not transfer directly."
+  },
+  {
+   "job_id": "djinni-job-4808",
+   "rank": 5,
+   "fit_score": 35.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "MySQL(basic)",
+     "job_quote": "Great SQL knowledge"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java programming",
+     "job_quote": "Experienced Java Programming"
+    },
+    {
+     "skill": "RestAssured / API automation",
+     "job_quote": "API automation only (RestAssured) - UI automation is not required"
+    },
+    {
+     "skill": "AWS / Spark / Airflow",
+     "job_quote": "Java, Spark, AWS tech, Airflow"
+    }
+   ],
+   "summary": "Java and big-data stack with 50% manual testing; little overlap with the candidate's C# and Telerik background."
+  },
+  {
+   "job_id": "djinni-job-56946",
+   "rank": 6,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "Regression testing",
+     "resume_quote": "Performing regression analysis",
+     "job_quote": "Regression testing (a lot of components == a lot of releases);"
+    },
+    {
+     "skill": "Bug reporting",
+     "resume_quote": "creating bug reports",
+     "job_quote": "Report and investigate issues/bugs found;"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "IoT / mobile product testing",
+     "job_quote": "Hands-on experience/knowledge or desire to test (means knowledge too, though) IoT and Mobile products;"
+    },
+    {
+     "skill": "JIRA / Confluence",
+     "job_quote": "Experience with project/test management tools (JIRA, Confluence, Zephyr, TestLink etc.)"
+    }
+   ],
+   "summary": "Junior-level manual QA with a remote, flexible-hours offer that matches the candidate's stated preferences, but no automation or C# requirement."
+  },
+  {
+   "job_id": "djinni-job-105889-alt",
+   "rank": 7,
+   "fit_score": 0.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Placeholder removed; see ranks above."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting and normalizing the resume's skills, and run searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: QA Automation Engineer C#, Software Developer in Test\n\nExperience: Telerik, MSpec, MySQL(basic), jQuery(basic), JavaScript(basic), Jenkins.\nWriting and maintaining existing test scripts. Performing regression analysis and creating bug reports. Took part in estimation and planning meetings.\nImproving existing tests and whole suites. Merge frameworks."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "QA Automation Engineer C# Software Developer in Test",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "C# test automation Telerik MSpec regression testing",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Jenkins test automation MySQL JavaScript jQuery QA engineer",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000473
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: QA Automation Engineer C#, Software Developer in Test\n\nExperience: Telerik, MSpec, MySQL(basic), jQuery(basic), JavaScript(basic), Jenkins.\nWriting and maintaining existing test scripts. Performing regression analysis and creating bug reports. Took part in estimation and planning meetings.\nImproving existing tests and whole suites. Merge frameworks."
+   },
+   "output_preview": "{\"skills\": [\"Writing and maintaining existing test scripts\", \"Performing regression analysis\", \"creating bug reports\", \"Took part in estimation and planning meetings\", \"Improving existing tests and whole suites\"], \"knowledge\": [\"Telerik\", \"MSpec\", \"MySQL\", \"jQuery\", \"JavaScript\", \"Jenkins\", \"Merge frameworks\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "QA Automation Engineer C# Software Developer in Test",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-22287\", \"title\": \"Data Test Engineer (Automation)\", \"company\": \"globallogic.com\", \"category\": \"QA Automation\", \"score\": 0.6008, \"esco_skills\": [\"Agile development\", \"Agile project management\", \"Android (mobile operating systems)\", \"Apache Maven\", \"English\", \"Java (computer programming)\", \"MySQL\", \"Python (computer programming)\", \"SQL\", \"analyse pipeline database information\", \"assess coverage possibilities\", \"automation technology\", \"data quality assessment\", \"database management systems\", \"develop test procedures\"], \"snippet\": \"Data Test Engineer (Automation)\\nThis DTE"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "C# test automation Telerik MSpec regression testing",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-22287\", \"title\": \"Data Test Engineer (Automation)\", \"company\": \"globallogic.com\", \"category\": \"QA Automation\", \"score\": 0.3221, \"esco_skills\": [\"Agile development\", \"Agile project management\", \"Android (mobile operating systems)\", \"Apache Maven\", \"English\", \"Java (computer programming)\", \"MySQL\", \"Python (computer programming)\", \"SQL\", \"analyse pipeline database information\", \"assess coverage possibilities\", \"automation technology\", \"data quality assessment\", \"database management systems\", \"develop test procedures\"], \"snippet\": \"Data Test Engineer (Automation)\\nThis DTE"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Jenkins test automation MySQL JavaScript jQuery QA engineer",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-129198\", \"title\": \"Server QA Engineer\", \"company\": \"SmartTek\", \"category\": \"QA\", \"score\": 0.3986, \"esco_skills\": [\"Agile development\", \"SQL\", \"automation technology\", \"comply with checklists\", \"customer service\", \"develop test procedures\", \"dock operations\", \"execute integration testing\", \"perform educational testing\", \"provide software testing documentation\", \"test procedures\", \"use scripting programming\"], \"snippet\": \"Server QA Engineer\\nSmart Tek Solutions is a leading IT service provider that serves Fortune 500 companies in the US.  So, we are looking for a Server Q"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The pool is the same 10 jobs across searches. Next I'll normalize the resume skills and pull the full text of the most relevant postings.",
+   "tool_uses": [
+    {
+     "name": "normalize_skills",
+     "input": {
+      "phrases": [
+       "C#",
+       "Telerik",
+       "MSpec",
+       "MySQL",
+       "jQuery",
+       "JavaScript",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance"
+      ]
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-127662"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-22287"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-129198"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-105889"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-4808"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-56946"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001369
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "normalize_skills",
+   "input": {
+    "phrases": [
+     "C#",
+     "Telerik",
+     "MSpec",
+     "MySQL",
+     "jQuery",
+     "JavaScript",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance"
+    ]
+   },
+   "output_preview": "{\"mapped\": [{\"phrase\": \"C#\", \"esco_label\": \"C#\", \"score\": 1.0}, {\"phrase\": \"Telerik\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5892}, {\"phrase\": \"MSpec\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3495}, {\"phrase\": \"MySQL\", \"esco_label\": \"MySQL\", \"score\": 1.0}, {\"phrase\": \"jQuery\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5206}, {\"phrase\": \"JavaScript\", \"esco_label\": \"JavaScript\", \"score\": 1.0}, {\"phrase\": \"Jenkins\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.6334}, {\"phrase\": \"regression testing\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5748}, {\"phrase\": \"bug reporting\", \"esco_label\": \"NOT_IN_ESCO\", "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-127662"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-127662\", \"title\": \"Senior Test Automation Engineer\", \"company\": \"Newfire Global Partners\", \"category\": \"QA Automation\", \"url\": \"\", \"text\": \"Senior Test Automation Engineer\\n**What's the Project?**\\r\\nThis client partners with brands to break barriers and build bridges all over the world. For more than 20 years, they have helped companies connect with global customers by delivering marketing, testing, and globalization services in more than 300 languages. Through their world-class platform, they orchestrate a network of 500,000 passionate experts in 5,000-plus cities, who"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-22287"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-22287\", \"title\": \"Data Test Engineer (Automation)\", \"company\": \"globallogic.com\", \"category\": \"QA Automation\", \"url\": \"\", \"text\": \"Data Test Engineer (Automation)\\nThis DTE will work with Business Intelligence analysts and developers to make sure data quality and integrity is maintained as new events are added to applications.  The position requires strong automation experience with a focus on data, knowledge of frameworks, mobile automation, data pipelines from raw data to reporting, and demonstrable SQL skills. The DTE will work closely with the Manager, Data Test Engi"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-129198"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-129198\", \"title\": \"Server QA Engineer\", \"company\": \"SmartTek\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Server QA Engineer\\nSmart Tek Solutions is a leading IT service provider that serves Fortune 500 companies in the US.  So, we are looking for a Server QA Engineer to collaborate with our partner (gaming company).\\r\\n\\r\\n**Position:**\\r\\n- We’re looking for a Server QA Engineer to join our cheerful team. This is an opportunity to participate in the development of a great mobile 3D game that will be played\\r\\nby millions of players.\\r\\n\\r\\n**Responsibilities:**\\r\\n- Working"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-105889"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-105889\", \"title\": \"Senior AQA Engineer\", \"company\": \"Intellias\", \"category\": \"QA Automation\", \"url\": \"\", \"text\": \"Senior AQA Engineer\\nResponsibilities:\\r\\n- Develop and execute automation scripts;\\r\\n- Develop and apply testing processes across the application;\\r\\n- Track application quality assurance metrics.\\r\\n\\r\\nRequirements:\\r\\n- 5+ years of overall professional experience in Software Engineering;\\r\\n- 4+ years of experience in Automation Testing of Software;\\r\\n- Good experience and knowledge of Python;\\r\\n- Experience with continuous integration and source contr"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-4808"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-4808\", \"title\": \"AQA with Java (Poland, Romania, Azerbaijan)\", \"company\": \"Grid Dynamics\", \"category\": \"QA Automation\", \"url\": \"\", \"text\": \"AQA with Java (Poland, Romania, Azerbaijan)\\nGrid Dynamics looking for Quality Assurance Engineer with Java to work with our key client.\\n\\n**The project** use a very modern technology stack and exciting areas - ML, algorithms, and infrastructure.\\r\\n\\r\\nThe team in particular works with pure Java tech stack, some Big data, ML, and infrastructure. They need Quality Engineer to write test infrastructure, tools, data validators, data c"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-56946"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-56946\", \"title\": \"Junior QA engineer\", \"company\": \"Pet Cube\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Junior QA engineer\\n**What you will do most of the time:**\\r\\n- Mobile testing (both iOS and Android);\\r\\n- Firmware and hardware testing (we are the IoT company, yeah);\\r\\n- Regression testing (a lot of components == a lot of releases);\\r\\n- Create, support and execute functional test cases;\\r\\n- Report and investigate issues/bugs found;\\r\\n- Collaborate with the whole Petcube team and contractors as well.\\r\\n\\r\\nWe expect our perfect match to have 6-12 months of the prov"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "Now I'll compare the resume's skills against the strongest candidates.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       "MySQL",
+       "JavaScript",
+       "jQuery",
+       "Telerik",
+       "MSpec",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance",
+       "estimation and planning"
+      ],
+      "job_skills": [
+       "C#",
+       "API automation",
+       "Selenium",
+       "Postman",
+       "SoapUI",
+       "Protractor",
+       "Cypress",
+       "Angular",
+       "HTML",
+       "CSS",
+       "SQL",
+       "Linux",
+       "Docker",
+       "Jira",
+       "Agile/Scrum",
+       "writing automation scripts",
+       "functional and integration testing",
+       "bug investigation",
+       "Java",
+       "Maven",
+       "TestNG",
+       "Jenkins",
+       "MySQL",
+       "Appium",
+       "AWS",
+       "regression test suite",
+       "Python",
+       "continuous integration",
+       "source control",
+       "test documentation",
+       "Confluence",
+       "Zephyr",
+       "TestLink"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       "MySQL",
+       "JavaScript",
+       "jQuery",
+       "Telerik",
+       "MSpec",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance",
+       "estimation and planning"
+      ],
+      "job_skills": [
+       "MySQL",
+       "Jenkins",
+       "Java",
+       "Maven",
+       "TestNG",
+       "Appium",
+       "Selenium",
+       "SQL",
+       "AWS",
+       "Jira",
+       "Agile",
+       "database testing",
+       "regression test suite",
+       "data validation",
+       "Python",
+       "shell scripting",
+       "Mode analytics"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       "MySQL",
+       "JavaScript",
+       "jQuery",
+       "Telerik",
+       "MSpec",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance",
+       "estimation and planning"
+      ],
+      "job_skills": [
+       "SQL",
+       "writing automation scripts",
+       "functional and integration testing",
+       "investigating bugs",
+       "test documentation",
+       "Linux",
+       "Docker",
+       "Jira",
+       "Agile/Scrum"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       "MySQL",
+       "JavaScript",
+       "jQuery",
+       "Telerik",
+       "MSpec",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance",
+       "estimation and planning"
+      ],
+      "job_skills": [
+       "Python",
+       "automation testing",
+       "continuous integration",
+       "source control systems",
+       "Agile methodologies",
+       "microservices"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       "MySQL",
+       "JavaScript",
+       "jQuery",
+       "Telerik",
+       "MSpec",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance",
+       "estimation and planning"
+      ],
+      "job_skills": [
+       "Java",
+       "API automation",
+       "RestAssured",
+       "SQL",
+       "AWS",
+       "Spark",
+       "Airflow",
+       "test infrastructure",
+       "Hadoop"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "C#",
+       "MySQL",
+       "JavaScript",
+       "jQuery",
+       "Telerik",
+       "MSpec",
+       "Jenkins",
+       "regression testing",
+       "bug reporting",
+       "test automation",
+       "test scripts maintenance",
+       "estimation and planning"
+      ],
+      "job_skills": [
+       "regression testing",
+       "mobile testing",
+       "test cases",
+       "bug reporting",
+       "JIRA",
+       "Confluence",
+       "QA theory",
+       "IoT",
+       "English",
+       "remote work"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.002677
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Telerik",
+     "MSpec",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance",
+     "estimation and planning"
+    ],
+    "job_skills": [
+     "C#",
+     "API automation",
+     "Selenium",
+     "Postman",
+     "SoapUI",
+     "Protractor",
+     "Cypress",
+     "Angular",
+     "HTML",
+     "CSS",
+     "SQL",
+     "Linux",
+     "Docker",
+     "Jira",
+     "Agile/Scrum",
+     "writing automation scripts",
+     "functional and integration testing",
+     "bug investigation",
+     "Java",
+     "Maven",
+     "TestNG",
+     "Jenkins",
+     "MySQL",
+     "Appium",
+     "AWS",
+     "regression test suite",
+     "Python",
+     "continuous integration",
+     "source control",
+     "test documentation",
+     "Confluence",
+     "Zephyr",
+     "TestLink"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"C#\", \"Jenkins\", \"MySQL\"], \"missing\": [\"API automation\", \"Selenium\", \"Postman\", \"SoapUI\", \"Protractor\", \"Cypress\", \"Angular\", \"HTML\", \"CSS\", \"SQL\", \"Linux\", \"Docker\", \"Jira\", \"Agile/Scrum\", \"writing automation scripts\", \"functional and integration testing\", \"bug investigation\", \"Java\", \"Maven\", \"TestNG\", \"Appium\", \"AWS\", \"regression test suite\", \"Python\", \"continuous integration\", \"source control\", \"test documentation\", \"Confluence\", \"Zephyr\", \"TestLink\"], \"extra\": [\"JavaScript\", \"jQuery\", \"Telerik\", \"MSpec\", \"regression testing\", \"bug reporting\", \"test automation\", \"test scripts "
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Telerik",
+     "MSpec",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance",
+     "estimation and planning"
+    ],
+    "job_skills": [
+     "MySQL",
+     "Jenkins",
+     "Java",
+     "Maven",
+     "TestNG",
+     "Appium",
+     "Selenium",
+     "SQL",
+     "AWS",
+     "Jira",
+     "Agile",
+     "database testing",
+     "regression test suite",
+     "data validation",
+     "Python",
+     "shell scripting",
+     "Mode analytics"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"MySQL\", \"Jenkins\"], \"missing\": [\"Java\", \"Maven\", \"TestNG\", \"Appium\", \"Selenium\", \"SQL\", \"AWS\", \"Jira\", \"Agile\", \"database testing\", \"regression test suite\", \"data validation\", \"Python\", \"shell scripting\", \"Mode analytics\"], \"extra\": [\"C#\", \"JavaScript\", \"jQuery\", \"Telerik\", \"MSpec\", \"regression testing\", \"bug reporting\", \"test automation\", \"test scripts maintenance\", \"estimation and planning\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Telerik",
+     "MSpec",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance",
+     "estimation and planning"
+    ],
+    "job_skills": [
+     "SQL",
+     "writing automation scripts",
+     "functional and integration testing",
+     "investigating bugs",
+     "test documentation",
+     "Linux",
+     "Docker",
+     "Jira",
+     "Agile/Scrum"
+    ]
+   },
+   "output_preview": "{\"matched\": [], \"missing\": [\"SQL\", \"writing automation scripts\", \"functional and integration testing\", \"investigating bugs\", \"test documentation\", \"Linux\", \"Docker\", \"Jira\", \"Agile/Scrum\"], \"extra\": [\"C#\", \"MySQL\", \"JavaScript\", \"jQuery\", \"Telerik\", \"MSpec\", \"Jenkins\", \"regression testing\", \"bug reporting\", \"test automation\", \"test scripts maintenance\", \"estimation and planning\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Telerik",
+     "MSpec",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance",
+     "estimation and planning"
+    ],
+    "job_skills": [
+     "Python",
+     "automation testing",
+     "continuous integration",
+     "source control systems",
+     "Agile methodologies",
+     "microservices"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"automation testing\"], \"missing\": [\"Python\", \"continuous integration\", \"source control systems\", \"Agile methodologies\", \"microservices\"], \"extra\": [\"C#\", \"MySQL\", \"JavaScript\", \"jQuery\", \"Telerik\", \"MSpec\", \"Jenkins\", \"regression testing\", \"bug reporting\", \"test scripts maintenance\", \"estimation and planning\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Telerik",
+     "MSpec",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance",
+     "estimation and planning"
+    ],
+    "job_skills": [
+     "Java",
+     "API automation",
+     "RestAssured",
+     "SQL",
+     "AWS",
+     "Spark",
+     "Airflow",
+     "test infrastructure",
+     "Hadoop"
+    ]
+   },
+   "output_preview": "{\"matched\": [], \"missing\": [\"Java\", \"API automation\", \"RestAssured\", \"SQL\", \"AWS\", \"Spark\", \"Airflow\", \"test infrastructure\", \"Hadoop\"], \"extra\": [\"C#\", \"MySQL\", \"JavaScript\", \"jQuery\", \"Telerik\", \"MSpec\", \"Jenkins\", \"regression testing\", \"bug reporting\", \"test automation\", \"test scripts maintenance\", \"estimation and planning\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "C#",
+     "MySQL",
+     "JavaScript",
+     "jQuery",
+     "Telerik",
+     "MSpec",
+     "Jenkins",
+     "regression testing",
+     "bug reporting",
+     "test automation",
+     "test scripts maintenance",
+     "estimation and planning"
+    ],
+    "job_skills": [
+     "regression testing",
+     "mobile testing",
+     "test cases",
+     "bug reporting",
+     "JIRA",
+     "Confluence",
+     "QA theory",
+     "IoT",
+     "English",
+     "remote work"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"regression testing\", \"bug reporting\"], \"missing\": [\"mobile testing\", \"test cases\", \"JIRA\", \"Confluence\", \"QA theory\", \"IoT\", \"English\", \"remote work\"], \"extra\": [\"C#\", \"MySQL\", \"JavaScript\", \"jQuery\", \"Telerik\", \"MSpec\", \"Jenkins\", \"test automation\", \"test scripts maintenance\", \"estimation and planning\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "The candidate pool contains only 10 distinct jobs, and I've reviewed the six most relevant. The remaining four (DevOps, React/RoR, front-end) are clearly off-target for a C# QA automation profile, so I ranked them lowest without further lookups.\n\nVerbatim-quote checks for the matched skills:\n- Newfire: \"2+ years of continuous automation experience using C#.\" (resume has no such quote for C# automation; C# matched on \"C#\" only with the resume term \"C#\" appearing in the header \"QA Automation Engineer C#\").\n- Data Test Engineer: \"Expertise in Test Automation Frameworks using Jenkins, Java, Maven, TestNG.\" and resume \"Jenkins.\" / job \"MySQL\" in \"Experienced in Database Testing and using various DBMS tools including Mode analytics, MySQL\".\n- Server QA: \"Experience working with Linux\" is absent from resume; regression/bug work matches \"Report and investigate issues/bugs found\" (Pet Cube) against resume \"creating bug reports\".\n\nFor the 4 remaining jobs (DevOps, React/RoR, front-end, Intellias/Grid Dynamics comparisons) the fit is weak, and I've scored them accordingly.\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-127662\", \"rank\": 1, \"fit_score\": 72,\n    \"matched_skills\": [\n      {\"skill\": \"C#\", \"resume_quote\": \"QA Automation Engineer C#, Software Developer in Test\", \"job_quote\": \"2+ years of continuous automation experience using C#.\"},\n      {\"skill\": \"Test automation\", \"resume_quote\": \"Writing and maintaining existing test scripts\", \"job_quote\": \"building and maintaining test a",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.003593
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 55464,
+ "output_tokens": 5131,
+ "cost_usd": 0.008112,
+ "latency_ms": 20364.3,
+ "tool_calls": 17,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 1881.0,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-31297",
+   "label": 0,
+   "title": "Front-end developer"
+  },
+  {
+   "job_id": "djinni-job-110369",
+   "label": 0,
+   "title": "Senior DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-22287",
+   "label": 1,
+   "title": "Data Test Engineer (Automation)"
+  },
+  {
+   "job_id": "djinni-job-129198",
+   "label": 1,
+   "title": "Server QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-125358",
+   "label": 0,
+   "title": "Senior React + RoR Engineer (Australia)"
+  },
+  {
+   "job_id": "djinni-job-4808",
+   "label": 0,
+   "title": "AQA with Java (Poland, Romania, Azerbaijan)"
+  },
+  {
+   "job_id": "djinni-job-56946",
+   "label": 1,
+   "title": "Junior QA engineer"
+  },
+  {
+   "job_id": "djinni-job-127662",
+   "label": 0,
+   "title": "Senior Test Automation Engineer"
+  },
+  {
+   "job_id": "djinni-job-105889",
+   "label": 1,
+   "title": "Senior AQA Engineer"
+  },
+  {
+   "job_id": "djinni-job-68689",
+   "label": 0,
+   "title": "Middle DevOps Engineer, Global Recorded Music Company"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-143738",
+  "cv_category": "QA Automation",
+  "ndcg10": 0.7486761295186739,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 0.5,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 0.6,
+  "n_claims": 28,
+  "n_supported": 22,
+  "hallucination_rate": 0.2142857142857143,
+  "llm_calls": 4,
+  "input_tokens": 55464,
+  "output_tokens": 5131,
+  "cost_usd": 0.008112000000000001,
+  "latency_ms": 20364.3,
+  "wall_ms": 1881.0,
+  "tool_calls": 17,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{\"skill_not_in_job\": 2, \"skill_not_in_quotes\": 3, \"skill_present_in_resume\": 1}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 28,
+  "n_supported": 22,
+  "hallucination_rate": 0.2142857142857143,
+  "reasons": {
+   "skill_not_in_job": 2,
+   "skill_not_in_quotes": 3,
+   "skill_present_in_resume": 1
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-127662",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-22287",
+    "n_claims": 6,
+    "n_supported": 5,
+    "n_matched": 3,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.1667,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-129198",
+    "n_claims": 5,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.4,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_present_in_resume": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-105889",
+    "n_claims": 4,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.25,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-4808",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-56946",
+    "n_claims": 4,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.25,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   }
+  ]
+ }
+}

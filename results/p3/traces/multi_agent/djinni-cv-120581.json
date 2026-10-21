@@ -1,0 +1,417 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-37376",
+   "rank": 1,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "computer science",
+     "resume_quote": "Master of Computer Science.",
+     "job_quote": "A degree in computer science (or equivalent)"
+    },
+    {
+     "skill": "development",
+     "resume_quote": "4 years of versatile experience in web development.",
+     "job_quote": "5+ years development experience building backend components"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React Native",
+     "job_quote": "2+ years with React Native"
+    },
+    {
+     "skill": "relational databases",
+     "job_quote": "Experience with relational databases (Postgres, SQL Server, MySQL, etc.)"
+    },
+    {
+     "skill": "Docker",
+     "job_quote": "Experience building Docker images and using Docker for development and deployment"
+    }
+   ],
+   "summary": "Strong role-family overlap in backend/full-stack Node.js work and the candidate's Master's degree matches the degree requirement. However, the posting asks for 5+ years and the resume does not mention Node.js in detail beyond the title, and it calls for React Native and relational database experience that are not evidenced in the resume.",
+   "dropped": [
+    {
+     "skill": "Node.js",
+     "reason": "skill_present_in_resume: 'Node.js' appears in the resume ('Position: Node.js Developer'), so it is not missing; no verbatim resume quote supports a matched claim with the required wording, so the claim is dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-69206",
+   "rank": 2,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "web programming",
+     "resume_quote": "4 years of versatile experience in web development.",
+     "job_quote": "Min 2+ year of experience in Front-End Development"
+    },
+    {
+     "skill": "Computer Science",
+     "resume_quote": "Master of Computer Science.",
+     "job_quote": "Bachelor’s and/or Master’s degree in Computer Science"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Angular",
+     "job_quote": "Angular ecosystem knowledge"
+    },
+    {
+     "skill": "JavaScript",
+     "job_quote": "Good knowledge of JavaScript HTML, and CSS"
+    },
+    {
+     "skill": "CSS",
+     "job_quote": "Good knowledge of JavaScript HTML, and CSS"
+    },
+    {
+     "skill": "Git",
+     "job_quote": "Experience with version control — Git"
+    }
+   ],
+   "summary": "A middle-level web development role that fits the candidate's seniority and general web experience, but its core stack is Angular front-end, which the resume does not show. Strong general fit on experience and degree, weaker on the specific framework requirement.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-62301",
+   "rank": 3,
+   "fit_score": 38.0,
+   "matched_skills": [
+    {
+     "skill": "development",
+     "resume_quote": "4 years of versatile experience in web development.",
+     "job_quote": "The Company's technical development makes use of .NET Core, Node.js, Typescript, React.js, GraphQL."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "leadership",
+     "job_quote": "The role requires that you have solid experience and a leadership proclivity."
+    }
+   ],
+   "summary": "A lead solution architect role requiring leadership and architecture experience well beyond the candidate's middle-level profile. Only Node.js-adjacent technology overlap exists, so fit is modest.",
+   "dropped": [
+    {
+     "skill": "Node.js",
+     "reason": "Flagged skill_present_in_resume: Node.js appears in the resume as the position title \"Node.js Developer\", so it is not missing and cannot be listed as a missing skill."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-3763",
+   "rank": 4,
+   "fit_score": 35.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "PostgreSQL",
+     "job_quote": "Strong knowledge of PostgreSQL"
+    },
+    {
+     "skill": "TypeScript",
+     "job_quote": "Good knowledge of TypeScript"
+    },
+    {
+     "skill": "Angular",
+     "job_quote": "Understanding and basic experience of Angular"
+    }
+   ],
+   "summary": "Titled Angular Developer but requires strong Node.js backend skills, which the candidate has. The posting's emphasis on highload systems, PostgreSQL optimization, and asynchronous programming is not evidenced in the resume, so fit is partial.",
+   "dropped": [
+    {
+     "skill": "Node.js",
+     "reason": "Flagged as skill_present_in_resume: Node.js is named in the resume's Position line ('Node.js Developer'), so it is not missing. No verbatim resume quote supports a matched claim here, and the claim is not a valid missing skill, so it is dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-121396",
+   "rank": 5,
+   "fit_score": 30.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "CI/CD",
+     "job_quote": "Kubernetes, CI/CD in SaaS architecture"
+    }
+   ],
+   "summary": "Node.js role that matches the candidate's core language, but it is senior-level and emphasizes SaaS, Kubernetes, and high-load engineering not present in the resume. The seniority gap and missing infrastructure experience limit the score.",
+   "dropped": [
+    {
+     "skill": "Node.js",
+     "reason": "Flagged as skill_present_in_resume: Node.js is named in the resume's position line (\"Node.js Developer\"), so it is not a missing skill. The claim was a 'missing' claim, and no verbatim text supports it as missing, so it is dropped."
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "full stack / backend (Node.js-focused)",
+    "seniority": "middle",
+    "target_titles": [
+     "Node.js Developer",
+     "Full Stack Developer",
+     "Backend Developer (Node.js)",
+     "Middle Full Stack Developer",
+     "JavaScript Web Developer"
+    ],
+    "must_have_skills": [
+     "Node.js",
+     "JavaScript",
+     "Web application development",
+     "Full stack development",
+     "REST API development"
+    ],
+    "nice_to_have_skills": [
+     "TypeScript",
+     "Express.js",
+     "Frontend framework (React, Vue, or Angular)",
+     "SQL / NoSQL databases",
+     "Git",
+     "Agile / Scrum teamwork"
+    ],
+    "search_queries": [
+     "Node.js developer middle",
+     "full stack developer Node.js JavaScript",
+     "backend developer Node.js REST API",
+     "middle full stack developer web applications"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Node.js developer middle",
+    "full stack developer Node.js JavaScript",
+    "backend developer Node.js REST API",
+    "middle full stack developer web applications",
+    "Node.js Developer",
+    "Full Stack Developer",
+    "Backend Developer (Node.js)"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [],
+    "knowledge": [
+     "web development",
+     "of Computer Science",
+     "Master of Computer Science"
+    ],
+    "esco_skills": [
+     "computer science",
+     "web programming"
+    ],
+    "not_in_esco": []
+   },
+   "ms": 869.0
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 5,
+   "ms": 0.7
+  },
+  {
+   "node": "verifier",
+   "flagged": 4,
+   "repaired": 0,
+   "dropped": 4,
+   "ms": 13155.4
+  }
+ ],
+ "llm_calls": 6,
+ "input_tokens": 13386,
+ "output_tokens": 3348,
+ "cost_usd": 0.003012,
+ "latency_ms": 22333.5,
+ "tool_calls": 92,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 4,
+ "verifier_repaired": 0,
+ "verifier_dropped": 4,
+ "plan": {
+  "role_family": "full stack / backend (Node.js-focused)",
+  "seniority": "middle",
+  "target_titles": [
+   "Node.js Developer",
+   "Full Stack Developer",
+   "Backend Developer (Node.js)",
+   "Middle Full Stack Developer",
+   "JavaScript Web Developer"
+  ],
+  "must_have_skills": [
+   "Node.js",
+   "JavaScript",
+   "Web application development",
+   "Full stack development",
+   "REST API development"
+  ],
+  "nice_to_have_skills": [
+   "TypeScript",
+   "Express.js",
+   "Frontend framework (React, Vue, or Angular)",
+   "SQL / NoSQL databases",
+   "Git",
+   "Agile / Scrum teamwork"
+  ],
+  "search_queries": [
+   "Node.js developer middle",
+   "full stack developer Node.js JavaScript",
+   "backend developer Node.js REST API",
+   "middle full stack developer web applications"
+  ]
+ },
+ "wall_ms": 14028.2,
+ "pool": [
+  {
+   "job_id": "djinni-job-25661",
+   "label": 0,
+   "title": "DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-121396",
+   "label": 1,
+   "title": "Senior Node.js Engineer"
+  },
+  {
+   "job_id": "djinni-job-3763",
+   "label": 1,
+   "title": "Angular Developer"
+  },
+  {
+   "job_id": "djinni-job-101071",
+   "label": 0,
+   "title": "Revit/BIM Modeler (Electrical / Сontrol System Design )"
+  },
+  {
+   "job_id": "djinni-job-50191",
+   "label": 0,
+   "title": "Java Developer in Manchester"
+  },
+  {
+   "job_id": "djinni-job-37376",
+   "label": 1,
+   "title": "Full Stack Engineer - Node.js/React (Europe)_USA company_ASAP"
+  },
+  {
+   "job_id": "djinni-job-82859",
+   "label": 0,
+   "title": "Mid/Sr. QA Engineer (Automation) with Python knowledge"
+  },
+  {
+   "job_id": "djinni-job-62301",
+   "label": 0,
+   "title": "Lead Solution Architect"
+  },
+  {
+   "job_id": "djinni-job-69206",
+   "label": 1,
+   "title": "Middle Frontend Developer (Angular)"
+  },
+  {
+   "job_id": "djinni-job-49735",
+   "label": 1,
+   "title": "Java Developer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-120581",
+  "cv_category": "Node.js",
+  "ndcg10": 0.951231200062686,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 5,
+  "coverage": 0.5,
+  "n_claims": 17,
+  "n_supported": 17,
+  "hallucination_rate": 0.0,
+  "llm_calls": 6,
+  "input_tokens": 13386,
+  "output_tokens": 3348,
+  "cost_usd": 0.003012,
+  "latency_ms": 22333.499999999996,
+  "wall_ms": 14028.2,
+  "tool_calls": 92,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 4,
+  "verifier_repaired": 0,
+  "verifier_dropped": 4
+ },
+ "faithfulness": {
+  "n_claims": 17,
+  "n_supported": 17,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-37376",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-69206",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 4,
+    "n_missing_supported": 4,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-62301",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-3763",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-121396",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

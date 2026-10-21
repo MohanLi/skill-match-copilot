@@ -1,0 +1,178 @@
+{
+ "approach": "embedding_baseline",
+ "ranking": [
+  {
+   "job_id": "djinni-job-69680",
+   "rank": 1,
+   "fit_score": 56.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-36121",
+   "rank": 2,
+   "fit_score": 53.8,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-113271",
+   "rank": 3,
+   "fit_score": 50.9,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-59954",
+   "rank": 4,
+   "fit_score": 50.2,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-76794",
+   "rank": 5,
+   "fit_score": 50.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-37981",
+   "rank": 6,
+   "fit_score": 49.1,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-100876",
+   "rank": 7,
+   "fit_score": 35.6,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-85156",
+   "rank": 8,
+   "fit_score": 32.6,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-114725",
+   "rank": 9,
+   "fit_score": 31.2,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  },
+  {
+   "job_id": "djinni-job-15218",
+   "rank": 10,
+   "fit_score": 24.8,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": ""
+  }
+ ],
+ "trace": [],
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cost_usd": 0.0,
+ "latency_ms": 0.0,
+ "tool_calls": 1,
+ "error": null,
+ "wall_ms": 858.6,
+ "pool": [
+  {
+   "job_id": "djinni-job-59954",
+   "label": 0,
+   "title": "Lead Full Stack (React+Node) Developer"
+  },
+  {
+   "job_id": "djinni-job-76794",
+   "label": 0,
+   "title": "Middle React Native Developer"
+  },
+  {
+   "job_id": "djinni-job-100876",
+   "label": 0,
+   "title": "Research and Engagement Manager"
+  },
+  {
+   "job_id": "djinni-job-15218",
+   "label": 0,
+   "title": "Cloud Consultant _Azure cloud Architecture relocate to Germany"
+  },
+  {
+   "job_id": "djinni-job-69680",
+   "label": 1,
+   "title": "Middle Frontend ReactJS developer"
+  },
+  {
+   "job_id": "djinni-job-36121",
+   "label": 1,
+   "title": "Full Stack Developer - Laravel + Vue.js developer"
+  },
+  {
+   "job_id": "djinni-job-114725",
+   "label": 0,
+   "title": "Senior fullstack PHP engineer"
+  },
+  {
+   "job_id": "djinni-job-37981",
+   "label": 0,
+   "title": "Full Stack JS Developer"
+  },
+  {
+   "job_id": "djinni-job-85156",
+   "label": 0,
+   "title": ".Net-програміст"
+  },
+  {
+   "job_id": "djinni-job-113271",
+   "label": 0,
+   "title": "Senior Front-end (Vue) developer"
+  }
+ ],
+ "metrics": {
+  "approach": "baseline",
+  "cv_id": "djinni-cv-79928",
+  "cv_category": "JavaScript",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 2,
+  "coverage": 1.0,
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "llm_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0,
+  "latency_ms": 0.0,
+  "wall_ms": 858.6,
+  "tool_calls": 1,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}"
+ },
+ "faithfulness": {
+  "n_claims": 0,
+  "n_supported": 0,
+  "hallucination_rate": null,
+  "reasons": {}
+ }
+}

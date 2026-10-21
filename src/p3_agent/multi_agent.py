@@ -109,6 +109,9 @@ class MultiAgent:
 
     def verifier(self, s: MState) -> dict[str, Any]:
         t0 = time.perf_counter()
+        if not self.use_verifier:  # ablation: the Matcher's claims go out unchecked
+            self._run.trace.append({"node": "verifier", "skipped": True})
+            return {"verified": [{**e, "dropped": []} for e in s["ranking"]]}
         jobs = {c["job_id"]: c for c in s["candidates"]}
         resume_esco = list((s.get("profile") or {}).get("esco_skills") or [])
         verified, n_flagged, n_repaired, n_dropped = [], 0, 0, 0
@@ -119,7 +122,7 @@ class MultiAgent:
             flagged = [c for c in claims if c["flag"]]
             n_flagged += len(flagged)
             llm_dropped: list[dict] = []
-            if flagged and self.use_verifier:
+            if flagged:
                 try:
                     obj, res = self.client.complete_json(self.p_verify, model=self.model, max_tokens=2000, resume=s["resume"], job_text=job.get("text", "")[:3500], claims=json.dumps(claims, ensure_ascii=False))
                     self._run.add_usage(res)

@@ -1,0 +1,426 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-59423",
+   "rank": 1,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "As a software engineer, have experience working with:",
+     "job_quote": "Expert knowledge of the C#"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Service-based architectures / web services",
+     "job_quote": "Experience working with service-based architectures and web services"
+    },
+    {
+     "skill": "Unit testing / TDD",
+     "job_quote": "Hands-on experience with unit-testing and TDD"
+    },
+    {
+     "skill": "Scalable / high-load architecture design",
+     "job_quote": "design new products architecture (incl. scalable and high-load solutions)"
+    }
+   ],
+   "summary": "Strong alignment on C# and leading a development team, with a clear senior/lead profile. Gaps are in web service architectures and TDD, and the role emphasizes architecture design beyond the candidate's desktop focus.",
+   "dropped": [
+    {
+     "skill": "Team leadership / planning",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-13879",
+   "rank": 2,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "As a software engineer, have experience working with:",
+     "job_quote": "At least 5 years of experience with C#"
+    },
+    {
+     "skill": "Jira",
+     "resume_quote": "Jira",
+     "job_quote": "Working with Jira issues using the Kanban methodology"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Azure / SQL Server / APIs",
+     "job_quote": "Experience with Azure Functions, SQL Server and building APIs"
+    }
+   ],
+   "summary": "A solid C# and Jira match, but the role centers on Dynamics 365 and Azure, which the resume does not show. The candidate's NUnit experience partially transfers to the testing requirements.",
+   "dropped": [
+    {
+     "skill": ".NET Framework / .NET Core",
+     "reason": "skill_not_in_job"
+    },
+    {
+     "skill": "Unit and integration testing",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-108361",
+   "rank": 3,
+   "fit_score": 50.0,
+   "matched_skills": [
+    {
+     "skill": "C#",
+     "resume_quote": "As a software engineer, have experience working with:",
+     "job_quote": "Convert requirements into functioning code utilising best practices and company standards"
+    },
+    {
+     "skill": "Team-focused development",
+     "resume_quote": "team of three developers",
+     "job_quote": "team focused development"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile development",
+     "job_quote": "You live / breath agile development"
+    },
+    {
+     "skill": "Mentoring",
+     "job_quote": "You might mentor or help to answer any questions that junior developers have"
+    }
+   ],
+   "summary": "Good seniority and C# fit with team-oriented experience, though the candidate's Scrum background aligns well with agile expectations. The role asks for 8+ years and a broader web-oriented stack, and it does not explicitly mention desktop work.",
+   "dropped": [
+    {
+     "skill": "Automated testing",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "desktop software engineering (.NET / C#) with team leadership",
+    "seniority": "senior",
+    "target_titles": [
+     "Senior .NET Developer",
+     "Senior Desktop Application Developer",
+     "Senior C# Developer",
+     "Development Team Lead (.NET)",
+     "Software Engineer / Team Lead (Desktop)",
+     "Senior WPF Developer"
+    ],
+    "must_have_skills": [
+     "C#",
+     ".NET",
+     "WPF",
+     "WinForms",
+     "WCF",
+     "NUnit",
+     "Git",
+     "Scrum",
+     "Jira",
+     "Technical leadership / team coordination"
+    ],
+    "nice_to_have_skills": [
+     "Autofac (dependency injection)",
+     "NLog",
+     "LiteDB",
+     "RTI DDS",
+     "WinAPI",
+     "Bluetooth",
+     "InstallShield",
+     "TFS",
+     "GitLab",
+     "Technical interviewing"
+    ],
+    "search_queries": [
+     "Senior .NET Desktop Developer C# WPF",
+     "Senior C# WinForms WCF developer",
+     "Development Team Lead .NET Scrum Jira",
+     "Senior desktop application developer med-tech C#",
+     "C# .NET developer WPF team lead remote"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Senior .NET Desktop Developer C# WPF",
+    "Senior C# WinForms WCF developer",
+    "Development Team Lead .NET Scrum Jira",
+    "Senior desktop application developer med-tech C#",
+    "C# .NET developer WPF team lead remote",
+    "Senior .NET Developer",
+    "Senior Desktop Application Developer",
+    "Senior C# Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "Developed a series of desktop applications",
+     "Worked closely with stakeholders",
+     "team",
+     "managing a team of three developers",
+     "coordinating with QA team",
+     "leading Scrum activities",
+     "daily",
+     "grooming",
+     "planning",
+     "creating and managing project documentation",
+     "conducting technical interviews",
+     "dive deep into legacy code"
+    ],
+    "knowledge": [
+     ". Net",
+     "C#",
+     "WPF",
+     "WinForms",
+     "WCF",
+     "Nlog",
+     "NUnit",
+     "Autofac",
+     "LiteDB",
+     "Git",
+     "GitLab",
+     "TFS",
+     "WinAPI",
+     "Bluetooth",
+     "Scrum",
+     "Jira",
+     "English",
+     "Science"
+    ],
+    "esco_skills": [
+     "C#",
+     "English",
+     "draft project documentation",
+     "engage with stakeholders",
+     "groom animals",
+     "plan "
+    ],
+    "not_in_esco": [
+     "Developed a series of desktop applications",
+     "team",
+     "managing a team of three developers",
+     "coordinating with QA team",
+     "leading Scrum activities",
+     "daily",
+     "conducting technical interviews",
+     "dive deep into legacy code",
+     ". Net",
+     "WPF",
+     "WinForms",
+     "WCF",
+     "Nlog",
+     "NUnit",
+     "Autofac",
+     "LiteDB",
+     "Git",
+     "GitLab",
+     "TFS",
+     "WinAPI"
+    ]
+   },
+   "ms": 6640.2
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 3,
+   "ms": 0.8
+  },
+  {
+   "node": "verifier",
+   "flagged": 4,
+   "repaired": 0,
+   "dropped": 4,
+   "ms": 15.1
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 10402,
+ "output_tokens": 1688,
+ "cost_usd": 0.001884,
+ "latency_ms": 7081.7,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 4,
+ "verifier_repaired": 0,
+ "verifier_dropped": 4,
+ "plan": {
+  "role_family": "desktop software engineering (.NET / C#) with team leadership",
+  "seniority": "senior",
+  "target_titles": [
+   "Senior .NET Developer",
+   "Senior Desktop Application Developer",
+   "Senior C# Developer",
+   "Development Team Lead (.NET)",
+   "Software Engineer / Team Lead (Desktop)",
+   "Senior WPF Developer"
+  ],
+  "must_have_skills": [
+   "C#",
+   ".NET",
+   "WPF",
+   "WinForms",
+   "WCF",
+   "NUnit",
+   "Git",
+   "Scrum",
+   "Jira",
+   "Technical leadership / team coordination"
+  ],
+  "nice_to_have_skills": [
+   "Autofac (dependency injection)",
+   "NLog",
+   "LiteDB",
+   "RTI DDS",
+   "WinAPI",
+   "Bluetooth",
+   "InstallShield",
+   "TFS",
+   "GitLab",
+   "Technical interviewing"
+  ],
+  "search_queries": [
+   "Senior .NET Desktop Developer C# WPF",
+   "Senior C# WinForms WCF developer",
+   "Development Team Lead .NET Scrum Jira",
+   "Senior desktop application developer med-tech C#",
+   "C# .NET developer WPF team lead remote"
+  ]
+ },
+ "wall_ms": 6659.0,
+ "pool": [
+  {
+   "job_id": "djinni-job-24375",
+   "label": 0,
+   "title": "DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-132449",
+   "label": 0,
+   "title": "Strong Junior/Middle Resource Manager"
+  },
+  {
+   "job_id": "djinni-job-27751",
+   "label": 0,
+   "title": "Document Analyst"
+  },
+  {
+   "job_id": "djinni-job-108361",
+   "label": 1,
+   "title": "Senior C# Developer"
+  },
+  {
+   "job_id": "djinni-job-29919",
+   "label": 0,
+   "title": "Farmer/  Google Farm Specialist"
+  },
+  {
+   "job_id": "djinni-job-7108",
+   "label": 0,
+   "title": "Azure DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-16104",
+   "label": 0,
+   "title": "Computational Geometry Software Developer"
+  },
+  {
+   "job_id": "djinni-job-13879",
+   "label": 1,
+   "title": "C# Developer"
+  },
+  {
+   "job_id": "djinni-job-59423",
+   "label": 2,
+   "title": "Lead C# .Net developer"
+  },
+  {
+   "job_id": "djinni-job-96494",
+   "label": 0,
+   "title": "QA Engineer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-164185",
+  "cv_category": ".NET",
+  "ndcg10": 1.0,
+  "p_at_3": 0.3333333333333333,
+  "mrr": 1.0,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 1,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 0.3,
+  "n_claims": 11,
+  "n_supported": 11,
+  "hallucination_rate": 0.0,
+  "llm_calls": 2,
+  "input_tokens": 10402,
+  "output_tokens": 1688,
+  "cost_usd": 0.001884,
+  "latency_ms": 7081.7,
+  "wall_ms": 6659.0,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 2,
+  "reasons": "{}",
+  "verifier_flagged": 4,
+  "verifier_repaired": 0,
+  "verifier_dropped": 4
+ },
+ "faithfulness": {
+  "n_claims": 11,
+  "n_supported": 11,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-59423",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-13879",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-108361",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

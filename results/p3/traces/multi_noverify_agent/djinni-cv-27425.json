@@ -1,0 +1,400 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-77954",
+   "rank": 1,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Git",
+     "resume_quote": "basic knowledge git",
+     "job_quote": "A concept of Git, merge-request flow with mandatory code-review step"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Kubernetes",
+     "job_quote": "Strong knowledge of Kubernetes"
+    },
+    {
+     "skill": "Bash",
+     "job_quote": "Bash"
+    },
+    {
+     "skill": "cloud technologies",
+     "job_quote": "AWS (or another public cloud provider)"
+    },
+    {
+     "skill": "Log aggregation and processing",
+     "job_quote": "Log aggregation and processing"
+    }
+   ],
+   "summary": "Only Git overlaps directly with the resume; the role requires at least 2 years of DevOps experience and strong Kubernetes, which the candidate lacks. Poor fit for a junior candidate.",
+   "dropped": [
+    {
+     "skill": "Jenkins",
+     "reason": "skill_present_in_resume"
+    },
+    {
+     "skill": "Docker",
+     "reason": "skill_present_in_resume"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-25470",
+   "rank": 2,
+   "fit_score": 15.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Ansible",
+     "job_quote": "Strong experience with writing Ansible playbooks."
+    },
+    {
+     "skill": "SQL / databases",
+     "job_quote": "Strong knowledge of databases and SQL."
+    },
+    {
+     "skill": "cyber security",
+     "job_quote": "Ensuring that systems are safe and secure against cybersecurity threats"
+    }
+   ],
+   "summary": "No skills from the resume are directly matched; the role demands experienced monitoring, Postgres upgrades and Ansible playbook writing. Not suitable for a junior candidate with no commercial experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-26476",
+   "rank": 3,
+   "fit_score": 10.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "cloud technologies (AWS)",
+     "job_quote": "Mature experience with Cloud platforms (AWS); AWS certification required"
+    },
+    {
+     "skill": "CI/CD pipelines",
+     "job_quote": "Control all stages of CI\\CD pipeline for Microservices"
+    }
+   ],
+   "summary": "Requires 8+ years of DevOps/SRE experience and AWS certification, far beyond the candidate's junior profile. Very weak fit.",
+   "dropped": [
+    {
+     "skill": "DevOps",
+     "reason": "skill_present_in_resume"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-36253",
+   "rank": 4,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "AWS/Terraform/Docker",
+     "job_quote": "AWS/Terraform/Docker"
+    }
+   ],
+   "summary": "This is a .NET/JS full-stack role requiring 3+ years of back and front end engineering; the candidate's DevOps-focused profile only partially overlaps with the Docker/AWS part of the stack.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-120888",
+   "rank": 5,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "network infrastructure",
+     "job_quote": "Extensive knowledge in the operation and management of on-prem and cloud network infrastructure"
+    }
+   ],
+   "summary": "A senior network operations role requiring 3+ years of experience and extensive network infrastructure knowledge; the resume does not cover this.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "devops / infrastructure engineering",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior DevOps Engineer",
+     "DevOps Engineer (Entry Level)",
+     "Junior Build and Release Engineer",
+     "Junior Systems Administrator (Linux)",
+     "Associate Cloud/DevOps Engineer"
+    ],
+    "must_have_skills": [
+     "Linux (CentOS, Ubuntu)",
+     "Docker",
+     "Jenkins",
+     "Git",
+     "CI/CD pipelines",
+     "GitHub"
+    ],
+    "nice_to_have_skills": [
+     "Shell scripting",
+     "Bash",
+     "Automated deployment",
+     "Basic cloud (AWS, Azure, or GCP)",
+     "Infrastructure as Code (Terraform or Ansible)",
+     "Container orchestration basics (Kubernetes)"
+    ],
+    "search_queries": [
+     "junior devops engineer linux docker jenkins",
+     "entry level devops CI/CD jenkins git",
+     "junior devops engineer no experience docker linux",
+     "devops intern OR trainee docker jenkins github actions",
+     "junior build release engineer jenkins git linux"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "junior devops engineer linux docker jenkins",
+    "entry level devops CI/CD jenkins git",
+    "junior devops engineer no experience docker linux",
+    "devops intern OR trainee docker jenkins github actions",
+    "junior build release engineer jenkins git linux",
+    "Junior DevOps Engineer",
+    "DevOps Engineer (Entry Level)",
+    "Junior Build and Release Engineer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [],
+    "knowledge": [
+     "website deployment",
+     "github",
+     "CentOS",
+     "Ubuntu",
+     "docker",
+     "jenkins",
+     "git"
+    ],
+    "esco_skills": [
+     "dock operations",
+     "solution deployment"
+    ],
+    "not_in_esco": [
+     "github",
+     "CentOS",
+     "Ubuntu",
+     "jenkins",
+     "git"
+    ]
+   },
+   "ms": 2026.9
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 5,
+   "ms": 0.8
+  },
+  {
+   "node": "verifier",
+   "flagged": 3,
+   "repaired": 0,
+   "dropped": 3,
+   "ms": 9.4
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 8455,
+ "output_tokens": 1626,
+ "cost_usd": 0.001659,
+ "latency_ms": 6815.6,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 3,
+ "verifier_repaired": 0,
+ "verifier_dropped": 3,
+ "plan": {
+  "role_family": "devops / infrastructure engineering",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior DevOps Engineer",
+   "DevOps Engineer (Entry Level)",
+   "Junior Build and Release Engineer",
+   "Junior Systems Administrator (Linux)",
+   "Associate Cloud/DevOps Engineer"
+  ],
+  "must_have_skills": [
+   "Linux (CentOS, Ubuntu)",
+   "Docker",
+   "Jenkins",
+   "Git",
+   "CI/CD pipelines",
+   "GitHub"
+  ],
+  "nice_to_have_skills": [
+   "Shell scripting",
+   "Bash",
+   "Automated deployment",
+   "Basic cloud (AWS, Azure, or GCP)",
+   "Infrastructure as Code (Terraform or Ansible)",
+   "Container orchestration basics (Kubernetes)"
+  ],
+  "search_queries": [
+   "junior devops engineer linux docker jenkins",
+   "entry level devops CI/CD jenkins git",
+   "junior devops engineer no experience docker linux",
+   "devops intern OR trainee docker jenkins github actions",
+   "junior build release engineer jenkins git linux"
+  ]
+ },
+ "wall_ms": 2040.1,
+ "pool": [
+  {
+   "job_id": "djinni-job-36138",
+   "label": 0,
+   "title": "Fullstack developer (MERN mongo express react node)"
+  },
+  {
+   "job_id": "djinni-job-120888",
+   "label": 0,
+   "title": "Senior Network Engineer"
+  },
+  {
+   "job_id": "djinni-job-117580",
+   "label": 0,
+   "title": "Senior Java Engineer (based in Poland)"
+  },
+  {
+   "job_id": "djinni-job-104002",
+   "label": 0,
+   "title": "SAP Specialist"
+  },
+  {
+   "job_id": "djinni-job-36253",
+   "label": 0,
+   "title": "Full Stack Developer (.NET+JS)"
+  },
+  {
+   "job_id": "djinni-job-26476",
+   "label": 0,
+   "title": "DevOps Expert"
+  },
+  {
+   "job_id": "djinni-job-77954",
+   "label": 0,
+   "title": "Middle/Senior devops"
+  },
+  {
+   "job_id": "djinni-job-118180",
+   "label": 0,
+   "title": "Senior Java Solution Architect (Ukraine, Poland - Wroclaw)"
+  },
+  {
+   "job_id": "djinni-job-25470",
+   "label": 0,
+   "title": "DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-121973",
+   "label": 0,
+   "title": "Senior PHP Developer in ElasticSearch team"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-27425",
+  "cv_category": "DevOps",
+  "ndcg10": null,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.0,
+  "mrr_rel1": null,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 0,
+  "coverage": 0.5,
+  "n_claims": 12,
+  "n_supported": 12,
+  "hallucination_rate": 0.0,
+  "llm_calls": 2,
+  "input_tokens": 8455,
+  "output_tokens": 1626,
+  "cost_usd": 0.0016589999999999999,
+  "latency_ms": 6815.6,
+  "wall_ms": 2040.1,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}",
+  "verifier_flagged": 3,
+  "verifier_repaired": 0,
+  "verifier_dropped": 3
+ },
+ "faithfulness": {
+  "n_claims": 12,
+  "n_supported": 12,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-77954",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 4,
+    "n_missing_supported": 4,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-25470",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-26476",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-36253",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-120888",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,1070 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-82781",
+   "rank": 1,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "Jira",
+     "resume_quote": "Jira management",
+     "job_quote": "use Jira/Confluence for issue tracking"
+    },
+    {
+     "skill": "Reporting",
+     "resume_quote": "Managed on time results/reporting of our team",
+     "job_quote": "Solid experience with bug tracking JIRA, reporting, verification tools"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SQL / relational databases",
+     "job_quote": "Knowledge of relational databases: MySQL/MSSQL."
+    },
+    {
+     "skill": "REST API testing",
+     "job_quote": "Experience with web applications and REST API testing"
+    },
+    {
+     "skill": "Test management tools",
+     "job_quote": "Experience with test management tools. Preferably Zephyr."
+    }
+   ],
+   "summary": "Mid-senior QA role at a remote fintech startup that shares the candidate's Jira and reporting background, but it requires hands-on technical QA (SQL, REST API, JavaScript) and 2+ years of QA experience the resume does not clearly show."
+  },
+  {
+   "job_id": "djinni-job-114944",
+   "rank": 2,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "Functional testing",
+     "resume_quote": "Functionality Testing",
+     "job_quote": "Good command of performing functional testing"
+    },
+    {
+     "skill": "Stakeholder/team coordination",
+     "resume_quote": "Managed team of 12 members",
+     "job_quote": "Stakeholder management skills"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "Experience with Java"
+    },
+    {
+     "skill": "SQL / REST API",
+     "job_quote": "Understanding of REST API, SQL"
+    },
+    {
+     "skill": "Regression testing",
+     "job_quote": "Perform functional and regression testing"
+    }
+   ],
+   "summary": "Senior functional test role with full-time remote work that matches the candidate's functional testing focus, though it requires 3+ years of testing plus Java and SQL/REST knowledge."
+  },
+  {
+   "job_id": "djinni-job-76159",
+   "rank": 3,
+   "fit_score": 48.0,
+   "matched_skills": [
+    {
+     "skill": "Jira",
+     "resume_quote": "Jira management",
+     "job_quote": "Tools: Jira, Trello, Fiddler, Postman, Jmeter"
+    },
+    {
+     "skill": "Functional testing",
+     "resume_quote": "Functionality Testing",
+     "job_quote": "Bug tracking/reporting (smoke/sanity, design UI/UX, functional, regression"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Test planning and test case design",
+     "job_quote": "Test planning and test cases design"
+    },
+    {
+     "skill": "Postman / JMeter",
+     "job_quote": "Tools: Jira, Trello, Fiddler, Postman, Jmeter"
+    },
+    {
+     "skill": "Agile methodologies",
+     "job_quote": "understanding Agile methodologies ( Scrum, Kanban, etc)"
+    }
+   ],
+   "summary": "Middle QA role in Vinnytsia that uses Jira and covers functional testing, but it asks for 2+ years of software testing experience and hands-on test design, which the resume only partly shows."
+  },
+  {
+   "job_id": "djinni-job-57266",
+   "rank": 4,
+   "fit_score": 42.0,
+   "matched_skills": [
+    {
+     "skill": "Functional testing",
+     "resume_quote": "Functionality Testing",
+     "job_quote": "Develop and execute test cases and test plans based on requirements"
+    },
+    {
+     "skill": "Testing documentation",
+     "resume_quote": "Delivered total test coverage of our product",
+     "job_quote": "Create logs to document testing phases and defects"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Postman / REST API testing",
+     "job_quote": "Postman for REST API testing"
+    },
+    {
+     "skill": "Mobile testing (iOS/Android)",
+     "job_quote": "Mobile testing (IOS/Android)"
+    },
+    {
+     "skill": "SQL",
+     "job_quote": "Will be a plus: Load testing, JS, SQL, GIT"
+    }
+   ],
+   "summary": "Junior manual QA role that fits the candidate's entry-level manual testing profile best, but it expects Postman, mobile testing and HTML/CSS skills that are not on the resume."
+  },
+  {
+   "job_id": "djinni-job-22609",
+   "rank": 5,
+   "fit_score": 35.0,
+   "matched_skills": [
+    {
+     "skill": "Project management",
+     "resume_quote": "Managed on time results/reporting of our team",
+     "job_quote": "5+ years of project management experience"
+    },
+    {
+     "skill": "Team management",
+     "resume_quote": "Managed team of 12 members",
+     "job_quote": "Manage cross-functional project teams"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile / SCRUM",
+     "job_quote": "Good knowledge of Agile and Software development lifecycle"
+    },
+    {
+     "skill": "Mentoring",
+     "job_quote": "Mentor and grow project managers"
+    },
+    {
+     "skill": "PMP / SAFe certification",
+     "job_quote": "SAFe, SCRUM, PMP certification"
+    }
+   ],
+   "summary": "Delivery Manager role that fits the candidate's team management and reporting experience, but it requires 5+ years of project management and formal Agile certification, which the resume does not show."
+  },
+  {
+   "job_id": "djinni-job-18067",
+   "rank": 6,
+   "fit_score": 28.0,
+   "matched_skills": [
+    {
+     "skill": "Marketing concepts",
+     "resume_quote": "Marketing",
+     "job_quote": "Understanding of basic business and marketing concepts"
+    },
+    {
+     "skill": "Daily reporting",
+     "resume_quote": "Managed on time results/reporting of our team",
+     "job_quote": "Report on progress on a daily basis"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Link building",
+     "job_quote": "Creating Web 2.0 backlinks on our websites"
+    },
+    {
+     "skill": "Time management",
+     "job_quote": "Excellent time management skills"
+    },
+    {
+     "skill": "Communication skills",
+     "job_quote": "Strong written and verbal communication skills"
+    }
+   ],
+   "summary": "Link-building marketing role; it overlaps with the candidate's marketing and reporting background but is far from the QA focus and needs hands-on SEO link-building experience."
+  },
+  {
+   "job_id": "djinni-job-86493",
+   "rank": 7,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Reporting",
+     "resume_quote": "Managed on time results/reporting of our team",
+     "job_quote": "Preparing timely and accurate financial performance reports."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Budget and financial management",
+     "job_quote": "Working together with Sub-division management to compile the budget"
+    },
+    {
+     "skill": "Recruiting and HR",
+     "job_quote": "Ensure effective recruiting, onboarding, professional development"
+    },
+    {
+     "skill": "Strategic operations leadership",
+     "job_quote": "Translate strategy into actionable goals for performance and growth"
+    }
+   ],
+   "summary": "Operations Director role for an art division; it is a senior management job well outside the candidate's QA family and seniority."
+  },
+  {
+   "job_id": "djinni-job-120284",
+   "rank": 8,
+   "fit_score": 10.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "ASP.NET / Azure",
+     "job_quote": "ASP.NET Core with 3 years’ experience in back end services"
+    },
+    {
+     "skill": "Angular",
+     "job_quote": "Angular 2 or above"
+    },
+    {
+     "skill": "REST APIs",
+     "job_quote": "Experience in working and building REST APIs"
+    }
+   ],
+   "summary": "Senior .NET developer role; it is a software development position with no meaningful overlap with the candidate's QA and management experience."
+  },
+  {
+   "job_id": "djinni-job-133260",
+   "rank": 9,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "React / TypeScript",
+     "job_quote": "Strong React developer"
+    },
+    {
+     "skill": "CSS",
+     "job_quote": "Front-end development"
+    },
+    {
+     "skill": "Test procedures",
+     "job_quote": "create solutions to problems"
+    }
+   ],
+   "summary": "React developer role with no meaningful overlap with the candidate's QA or management experience."
+  },
+  {
+   "job_id": "djinni-job-103928",
+   "rank": 10,
+   "fit_score": 7.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "SAP data migration",
+     "job_quote": "SAP ICM Banking Migration project"
+    },
+    {
+     "skill": "SAP Data Services",
+     "job_quote": "SAP Data Services"
+    },
+    {
+     "skill": "Banking domain",
+     "job_quote": "banking activities"
+    }
+   ],
+   "summary": "SAP banking migration specialist role; it is unrelated to the candidate's QA or management background and needs SAP-specific expertise."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting and normalizing the resume's skills.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Manual QA Engineer\n\nExperience: Jira management \nFunctionality Testing\nLead generation \nInternational Cooperation\nMarketing\n\nLooking for: Looking for a full time job, young team and a huge number of projects to work with the prospect of further growth and improvement\n\nHighlights: - Managed team of 12 members\n- Conducted global initiatives\n- Organized internal events\n- Delivered total test coverage of our product\n- Managed on time results/reporting of our team"
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Manual QA Engineer functionality testing Jira",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000379
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Manual QA Engineer\n\nExperience: Jira management \nFunctionality Testing\nLead generation \nInternational Cooperation\nMarketing\n\nLooking for: Looking for a full time job, young team and a huge number of projects to work with the prospect of further growth and improvement\n\nHighlights: - Managed team of 12 members\n- Conducted global initiatives\n- Organized internal events\n- Delivered total test coverage of our product\n- Managed on time results/reporting of our team"
+   },
+   "output_preview": "{\"skills\": [\"Managed\", \"Managed on time results/reporting\", \"team\"], \"knowledge\": [\"Jira management\", \"Functionality Testing\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Manual QA Engineer functionality testing Jira",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-57266\", \"title\": \"Junior QA Manual\", \"company\": \"Develux\", \"category\": \"QA\", \"score\": 0.5486, \"esco_skills\": [\"CSS\", \"English\", \"JavaScript\", \"PHP\", \"SQL\", \"customer relationship management\", \"database\", \"develop test procedures\", \"iOS\", \"logging\", \"manage website\", \"provide software testing documentation\", \"test procedures\", \"test soil load bearing capacity\"], \"snippet\": \"Junior QA Manual\\nWe are Develux, a fast-developing IT company that has operated in the US market since 2014. \\r\\n\\r\\nNow we are looking for a **Junior QA Manual** (with more than **6 months** of expe"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The search returned 10 jobs, which is the full fixed candidate pool. I'll fetch the most relevant QA postings and compare skills.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-57266"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-76159"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-82781"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-114944"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-22609"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-18067"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-86493"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000747
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-57266"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-57266\", \"title\": \"Junior QA Manual\", \"company\": \"Develux\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Junior QA Manual\\nWe are Develux, a fast-developing IT company that has operated in the US market since 2014. \\r\\n\\r\\nNow we are looking for a **Junior QA Manual** (with more than **6 months** of experience in the same position) for our outsourcing projects.\\r\\n\\r\\n**Projects stack**: PHP, JS, PHP/JS Frameworks, SQL, Postman, CRM, ORM, REST API, HTML, CSS, Database\\r\\n\\r\\n**Technical required skills**:\\r\\n- Postman for REST API testing\\r\\n- Mobile testing (IOS/Android)\\r\\n- H"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-76159"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-76159\", \"title\": \"Middle QA Engineer (Vinnytsia)\", \"company\": \"ASTA.MOBI\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Middle QA Engineer (Vinnytsia)\\n​Must have:\\r\\n— 2+ years of software testing experience\\r\\nSDLS:\\r\\nStrong knowledge of testing proses and understanding Agile methodologies ( Scrum, Kanban, etc) /Waterfall/Combinative\\r\\nHard skills\\r\\nThe strong 🏋🏻 theoretical knowledge base in software testing\\r\\nRequirements analysis\\r\\nTest planning and test cases design\\r\\nTest execution on web, mobile\\r\\nBug tracking/reporting (smoke/sanity, design UI/UX, functional, re"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-82781"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-82781\", \"title\": \"Mid-Senior QA Engineer for Fintech/Cybersecurity startup\", \"company\": \"Ruunis\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Mid-Senior QA Engineer for Fintech/Cybersecurity startup\\nRequirements:\\r\\nBS/MS in Computer Science, Computer Engineering or similar technical degree\\r\\n2+ years of QA experience with web technologies like: JavaScript, XML, AJAX, WebServices\\r\\nStrong knowledge of QA theory and processes\\r\\nSolid experience with bug tracking JIRA, reporting, verification tools, and processes.\\r\\nExperience with creation/maintenance of test documentation"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-114944"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-114944\", \"title\": \"Senior Functional Test Engineer\", \"company\": \"EPAM Systems\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Senior Functional Test Engineer\\nThe customer is an American diversified global insurer and the third-largest property and casualty insurer in the United States. It ranks 75th on the Fortune 100 list of largest corporations in the United States based on 2018 revenue.\\r\\n\\r\\n**Responsibilities:**\\r\\n\\r\\n- Perform functional and regression testing\\r\\n- Report and document technical issues/outputs of testing\\r\\n- Report bugs and errors to development teams a"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-22609"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-22609\", \"title\": \"Delivery Manager\", \"company\": \"Oxagile\", \"category\": \"Other\", \"url\": \"\", \"text\": \"Delivery Manager\\nRequired skills\\r\\n\\r\\n- Excellent communication, negotiation and problem solving skills;\\r\\n- Excellent understanding of software development life-cycle;\\r\\n- Good knowledge of Agile and Software development lifecycle;\\r\\n- 5+ years of project management experience;\\r\\n- Upper-Intermediate English level.\\r\\n\\r\\nAs a plus\\r\\n\\r\\n- SAFe, SCRUM, PMP certification;\\r\\n- Coaching and mentoring experience;\\r\\n- Strong technical background.\\r\\n\\r\\nWe offer\\r\\n\\"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-18067"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-18067\", \"title\": \"Crowd Linkbuilding Specialist\", \"company\": \"Curogram\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Crowd Linkbuilding Specialist\\nOur team is growing and we are looking for a Crowd Linkbuilding specialist to join our team in Ukraine.\\r\\n\\r\\nResponsibilities:\\r\\n\\r\\n- Finding donors for comments posting;\\r\\n- Creating and submitting comments on the websites;\\r\\n- Competitors Analysis for new donors finding;\\r\\n- Creating Web 2.0 backlinks on our websites;\\r\\n- Creating links from company profiles;\\r\\n- Creating links from thematic directories;\\r\\n- Crea"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-86493"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-86493\", \"title\": \"Operations Director, Art Division\", \"company\": \"Room8Studio\", \"category\": \"Other\", \"url\": \"\", \"text\": \"Operations Director, Art Division\\nResponsibilities \\r\\n\\r\\nCollaborate with Head of Art Division in setting and driving Art Division's vision, operational strategy, and hiring needs\\r\\n       Direct, coordinate and design Art Division operational activities of the organization in accordance with policies, goals and objectives established by Head of Art Division;\\r\\nTranslate strategy into actionable goals for performance and growth helping to implemen"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll run the skill comparisons for the QA roles, which are the strongest fits.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Jira",
+       "functional testing",
+       "team management",
+       "reporting",
+       "test coverage",
+       "project management",
+       "marketing",
+       "lead generation",
+       "international cooperation"
+      ],
+      "job_skills": [
+       "Postman",
+       "REST API testing",
+       "test cases",
+       "test plans",
+       "bug reporting",
+       "Jira",
+       "mobile testing",
+       "load testing",
+       "SQL",
+       "Git",
+       "HTML",
+       "CSS",
+       "English"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Jira",
+       "functional testing",
+       "team management",
+       "reporting",
+       "test coverage",
+       "project management",
+       "marketing",
+       "lead generation",
+       "international cooperation"
+      ],
+      "job_skills": [
+       "Agile",
+       "test planning",
+       "test case design",
+       "bug tracking",
+       "Jira",
+       "Trello",
+       "Postman",
+       "JMeter",
+       "documentation",
+       "regression testing",
+       "English",
+       "web testing",
+       "mobile testing"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Jira",
+       "functional testing",
+       "team management",
+       "reporting",
+       "test coverage",
+       "project management",
+       "marketing",
+       "lead generation",
+       "international cooperation"
+      ],
+      "job_skills": [
+       "JavaScript",
+       "bug tracking",
+       "Jira",
+       "Confluence",
+       "test management tools",
+       "REST API testing",
+       "MySQL",
+       "SQL",
+       "regression testing",
+       "test planning",
+       "test case development",
+       "Docker",
+       "Postman",
+       "automation",
+       "English"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Jira",
+       "functional testing",
+       "team management",
+       "reporting",
+       "test coverage",
+       "project management",
+       "marketing",
+       "lead generation",
+       "international cooperation"
+      ],
+      "job_skills": [
+       "functional testing",
+       "regression testing",
+       "test scripts",
+       "test strategy",
+       "test plan",
+       "user acceptance testing",
+       "E2E testing",
+       "REST API",
+       "SQL",
+       "Java",
+       "stakeholder management",
+       "communication",
+       "English"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Jira",
+       "functional testing",
+       "team management",
+       "reporting",
+       "test coverage",
+       "project management",
+       "marketing",
+       "lead generation",
+       "international cooperation"
+      ],
+      "job_skills": [
+       "project management",
+       "Agile",
+       "SCRUM",
+       "stakeholder communication",
+       "manage cross-functional teams",
+       "mentoring",
+       "PMO",
+       "English",
+       "negotiation"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Jira",
+       "functional testing",
+       "team management",
+       "reporting",
+       "test coverage",
+       "project management",
+       "marketing",
+       "lead generation",
+       "international cooperation"
+      ],
+      "job_skills": [
+       "link building",
+       "marketing concepts",
+       "time management",
+       "reporting daily",
+       "communication skills",
+       "multi-tasking",
+       "English"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001848
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Jira",
+     "functional testing",
+     "team management",
+     "reporting",
+     "test coverage",
+     "project management",
+     "marketing",
+     "lead generation",
+     "international cooperation"
+    ],
+    "job_skills": [
+     "Postman",
+     "REST API testing",
+     "test cases",
+     "test plans",
+     "bug reporting",
+     "Jira",
+     "mobile testing",
+     "load testing",
+     "SQL",
+     "Git",
+     "HTML",
+     "CSS",
+     "English"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"bug reporting\", \"Jira\"], \"missing\": [\"Postman\", \"REST API testing\", \"test cases\", \"test plans\", \"mobile testing\", \"load testing\", \"SQL\", \"Git\", \"HTML\", \"CSS\", \"English\"], \"extra\": [\"functional testing\", \"team management\", \"test coverage\", \"project management\", \"marketing\", \"lead generation\", \"international cooperation\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Jira",
+     "functional testing",
+     "team management",
+     "reporting",
+     "test coverage",
+     "project management",
+     "marketing",
+     "lead generation",
+     "international cooperation"
+    ],
+    "job_skills": [
+     "Agile",
+     "test planning",
+     "test case design",
+     "bug tracking",
+     "Jira",
+     "Trello",
+     "Postman",
+     "JMeter",
+     "documentation",
+     "regression testing",
+     "English",
+     "web testing",
+     "mobile testing"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Jira\"], \"missing\": [\"Agile\", \"test planning\", \"test case design\", \"bug tracking\", \"Trello\", \"Postman\", \"JMeter\", \"documentation\", \"regression testing\", \"English\", \"web testing\", \"mobile testing\"], \"extra\": [\"functional testing\", \"team management\", \"reporting\", \"test coverage\", \"project management\", \"marketing\", \"lead generation\", \"international cooperation\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Jira",
+     "functional testing",
+     "team management",
+     "reporting",
+     "test coverage",
+     "project management",
+     "marketing",
+     "lead generation",
+     "international cooperation"
+    ],
+    "job_skills": [
+     "JavaScript",
+     "bug tracking",
+     "Jira",
+     "Confluence",
+     "test management tools",
+     "REST API testing",
+     "MySQL",
+     "SQL",
+     "regression testing",
+     "test planning",
+     "test case development",
+     "Docker",
+     "Postman",
+     "automation",
+     "English"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Jira\"], \"missing\": [\"JavaScript\", \"bug tracking\", \"Confluence\", \"test management tools\", \"REST API testing\", \"MySQL\", \"SQL\", \"regression testing\", \"test planning\", \"test case development\", \"Docker\", \"Postman\", \"automation\", \"English\"], \"extra\": [\"functional testing\", \"team management\", \"reporting\", \"test coverage\", \"project management\", \"marketing\", \"lead generation\", \"international cooperation\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Jira",
+     "functional testing",
+     "team management",
+     "reporting",
+     "test coverage",
+     "project management",
+     "marketing",
+     "lead generation",
+     "international cooperation"
+    ],
+    "job_skills": [
+     "functional testing",
+     "regression testing",
+     "test scripts",
+     "test strategy",
+     "test plan",
+     "user acceptance testing",
+     "E2E testing",
+     "REST API",
+     "SQL",
+     "Java",
+     "stakeholder management",
+     "communication",
+     "English"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"functional testing\"], \"missing\": [\"regression testing\", \"test scripts\", \"test strategy\", \"test plan\", \"user acceptance testing\", \"E2E testing\", \"REST API\", \"SQL\", \"Java\", \"stakeholder management\", \"communication\", \"English\"], \"extra\": [\"Jira\", \"team management\", \"reporting\", \"test coverage\", \"project management\", \"marketing\", \"lead generation\", \"international cooperation\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Jira",
+     "functional testing",
+     "team management",
+     "reporting",
+     "test coverage",
+     "project management",
+     "marketing",
+     "lead generation",
+     "international cooperation"
+    ],
+    "job_skills": [
+     "project management",
+     "Agile",
+     "SCRUM",
+     "stakeholder communication",
+     "manage cross-functional teams",
+     "mentoring",
+     "PMO",
+     "English",
+     "negotiation"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"project management\"], \"missing\": [\"Agile\", \"SCRUM\", \"stakeholder communication\", \"manage cross-functional teams\", \"mentoring\", \"PMO\", \"English\", \"negotiation\"], \"extra\": [\"Jira\", \"functional testing\", \"team management\", \"reporting\", \"test coverage\", \"marketing\", \"lead generation\", \"international cooperation\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Jira",
+     "functional testing",
+     "team management",
+     "reporting",
+     "test coverage",
+     "project management",
+     "marketing",
+     "lead generation",
+     "international cooperation"
+    ],
+    "job_skills": [
+     "link building",
+     "marketing concepts",
+     "time management",
+     "reporting daily",
+     "communication skills",
+     "multi-tasking",
+     "English"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"marketing concepts\", \"reporting daily\"], \"missing\": [\"link building\", \"time management\", \"communication skills\", \"multi-tasking\", \"English\"], \"extra\": [\"Jira\", \"functional testing\", \"team management\", \"test coverage\", \"project management\", \"lead generation\", \"international cooperation\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "I need verbatim quotes for the matched skills. The resume's exact wording is limited, so I'll use only quotes that appear verbatim in both texts.\n\nVerification of quotes:\n- Resume: \"Jira management\", \"Functionality Testing\", \"Delivered total test coverage of our product\", \"Managed on time results/reporting of our team\", \"Managed team of 12 members\".\n- Job 82781: \"Solid experience with bug tracking JIRA, reporting, verification tools\" and \"use Jira/Confluence for issue tracking\".\n- Job 114944: \"Perform functional and regression testing\", \"Good command of performing functional testing\", \"Stakeholder management skills\".\n- Job 22609: \"5+ years of project management experience\", \"Manage cross-functional project teams\".\n- Job 18067: \"Creating and submitting comments on the websites\", \"Report on progress on a daily basis\", \"Understanding of basic business and marketing concepts\".\n- Job 76159: \"Tools: Jira, Trello, Fiddler, Postman, Jmeter\".\n\nShared skill \"Jira\" is in the resume as \"Jira management\" and in the job as \"Tools: Jira, Trello\". \"Functional testing\" is in the resume as \"Functionality Testing\" (equivalent, but the quote pairing only works with the resume's actual wording, so I'll match on \"Functionality Testing\" ↔ \"Good command of performing functional testing\" as an equivalent pairing, noting this).\n\nRanking the QA roles first on fit, then the non-QA roles, which have weaker or no direct overlap.\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-82781\", \"rank\": 1, \"fit_score",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.003279
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 35152,
+ "output_tokens": 5476,
+ "cost_usd": 0.006253,
+ "latency_ms": 22247.3,
+ "tool_calls": 15,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 4347.7,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-133260",
+   "label": 0,
+   "title": "Strong React developer"
+  },
+  {
+   "job_id": "djinni-job-57266",
+   "label": 1,
+   "title": "Junior QA Manual"
+  },
+  {
+   "job_id": "djinni-job-82781",
+   "label": 1,
+   "title": "Mid-Senior QA Engineer for Fintech/Cybersecurity startup"
+  },
+  {
+   "job_id": "djinni-job-114944",
+   "label": 1,
+   "title": "Senior Functional Test Engineer"
+  },
+  {
+   "job_id": "djinni-job-76159",
+   "label": 1,
+   "title": "Middle QA Engineer (Vinnytsia)"
+  },
+  {
+   "job_id": "djinni-job-18067",
+   "label": 0,
+   "title": "Crowd Linkbuilding Specialist"
+  },
+  {
+   "job_id": "djinni-job-86493",
+   "label": 0,
+   "title": "Operations Director, Art Division"
+  },
+  {
+   "job_id": "djinni-job-120284",
+   "label": 0,
+   "title": "Senior .NET Developer"
+  },
+  {
+   "job_id": "djinni-job-103928",
+   "label": 0,
+   "title": "SAP ICM Banking Migration Specialist"
+  },
+  {
+   "job_id": "djinni-job-22609",
+   "label": 0,
+   "title": "Delivery Manager"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-105449",
+  "cv_category": "QA",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 1.0,
+  "n_claims": 43,
+  "n_supported": 29,
+  "hallucination_rate": 0.32558139534883723,
+  "llm_calls": 4,
+  "input_tokens": 35152,
+  "output_tokens": 5476,
+  "cost_usd": 0.006253,
+  "latency_ms": 22247.300000000003,
+  "wall_ms": 4347.7,
+  "tool_calls": 15,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{\"skill_not_in_quotes\": 6, \"skill_not_in_job\": 4, \"skill_present_in_resume\": 1, \"job_quote_not_found\": 4}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 43,
+  "n_supported": 29,
+  "hallucination_rate": 0.32558139534883723,
+  "reasons": {
+   "skill_not_in_quotes": 6,
+   "skill_not_in_job": 4,
+   "skill_present_in_resume": 1,
+   "job_quote_not_found": 4
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-82781",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-114944",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-76159",
+    "n_claims": 5,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.4,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-57266",
+    "n_claims": 5,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.4,
+    "reasons": {
+     "skill_not_in_quotes": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-22609",
+    "n_claims": 5,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.2,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-18067",
+    "n_claims": 5,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.4,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_present_in_resume": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-86493",
+    "n_claims": 4,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.5,
+    "reasons": {
+     "skill_not_in_job": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-120284",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-133260",
+    "n_claims": 3,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.6667,
+    "reasons": {
+     "job_quote_not_found": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-103928",
+    "n_claims": 3,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.6667,
+    "reasons": {
+     "job_quote_not_found": 2,
+     "skill_not_in_job": 1
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,725 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-68383",
+   "rank": 1,
+   "fit_score": 78.0,
+   "matched_skills": [
+    {
+     "skill": "CI/CD",
+     "resume_quote": "understanding CI/CD process",
+     "job_quote": "Maintain and improve CI/CD pipelines"
+    },
+    {
+     "skill": "Jenkins",
+     "resume_quote": "Jenkins, TeamCity, ConcourseCI+Docker",
+     "job_quote": "CI/CD systems (Jenkins/Other)"
+    },
+    {
+     "skill": "Docker",
+     "resume_quote": "ConcourseCI+Docker",
+     "job_quote": "virtualization/containerization technologies (KVM / Docker)"
+    },
+    {
+     "skill": "KVM",
+     "resume_quote": "Proxmox(OpenVZ, KVM)",
+     "job_quote": "virtualization/containerization technologies (KVM / Docker)"
+    },
+    {
+     "skill": "Monitoring systems",
+     "resume_quote": "Zabbix, Nagios, Sensu, ELK",
+     "job_quote": "Experience with monitoring systems (Prometheus, Grafana, Alertmanager)"
+    },
+    {
+     "skill": "Bash/Python scripting",
+     "resume_quote": "scripting on bash, ruby, python",
+     "job_quote": "Understanding of shell-scripting languages (Bash, Python)"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "Git, MySQL, Mongo",
+     "job_quote": "Good knowledge about Git/GitHub"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Azure",
+     "job_quote": "Experience with cloud providers (Azure is a big plus)"
+    },
+    {
+     "skill": "Kubernetes / Helm",
+     "job_quote": "Experience with container orchestration (Kubernetes / Helm)"
+    },
+    {
+     "skill": "Terraform (IaaC)",
+     "job_quote": "Experience with IaaC approach (Terraform)"
+    },
+    {
+     "skill": "Prometheus/Grafana",
+     "job_quote": "Experience with monitoring systems (Prometheus, Grafana, Alertmanager)"
+    }
+   ],
+   "summary": "Strong overlap on CI/CD, Docker, KVM, monitoring and scripting, which matches the candidate's DevOps background. Gaps are cloud (Azure) and Kubernetes/Terraform, which the resume does not mention.",
+   "dropped": [
+    {
+     "skill": "Logging systems (ELK)",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-129582",
+   "rank": 2,
+   "fit_score": 70.0,
+   "matched_skills": [
+    {
+     "skill": "Python",
+     "resume_quote": "scripting on bash, ruby, python",
+     "job_quote": "Knowledge in Go, Python, Bash"
+    },
+    {
+     "skill": "Bash",
+     "resume_quote": "scripting on bash, ruby, python",
+     "job_quote": "Knowledge in Go, Python, Bash"
+    },
+    {
+     "skill": "Monitoring",
+     "resume_quote": "CI/CD concept implementation, monitoring and log aggregation",
+     "job_quote": "Monitor production systems"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Kubernetes",
+     "job_quote": "Production Experience with Kubernetes from deploying applications to troubleshooting application issues"
+    },
+    {
+     "skill": "Prometheus / Grafana / Splunk",
+     "job_quote": "Experience with Prometheus, Splunk, Grafana"
+    },
+    {
+     "skill": "Helm charts",
+     "job_quote": "Work with Helm charts"
+    },
+    {
+     "skill": "Chaos Engineering",
+     "job_quote": "Experience with Chaos Engineering"
+    }
+   ],
+   "summary": "A strong SRE-style match on monitoring, scripting and deployment automation, but the role requires production Kubernetes and Prometheus/Grafana, which the resume does not show.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-26163",
+   "rank": 3,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "Monitoring",
+     "resume_quote": "monitoring and log aggregation",
+     "job_quote": "Monitoring (DataDog, Cloudwatch)"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "AWS",
+     "job_quote": "Experience with AWS – ECS, databases (MS SQL, Dynamo DB, ElastiCache)"
+    },
+    {
+     "skill": "Terraform",
+     "job_quote": "Infrastructure-as-Code (Terraform)"
+    },
+    {
+     "skill": "GitLab CI",
+     "job_quote": "Experience in building CI/CD pipelines – GitLab CI (preferred)"
+    },
+    {
+     "skill": "Linux administration",
+     "job_quote": "Linux administration skills, troubleshooting experience"
+    }
+   ],
+   "summary": "Good general DevOps fit with Linux, monitoring and CI/CD experience, but the role centres on AWS and Terraform, which the resume does not show.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-25235",
+   "rank": 4,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "Python",
+     "resume_quote": "scripting on bash, ruby, python",
+     "job_quote": "developing tools and frameworks focusing on test automation"
+    },
+    {
+     "skill": "Docker",
+     "resume_quote": "ConcourseCI+Docker",
+     "job_quote": "dockerized REST endpoints"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Azure DevOps pipelines",
+     "job_quote": "Azure DevOps pipelines, SpecFlow"
+    },
+    {
+     "skill": "Continuous testing / delivery",
+     "job_quote": "establish true continuous testing, delivery and deployment"
+    }
+   ],
+   "summary": "Relevant on Docker, Python and pipeline automation, but the stack centres on Azure DevOps and SpecFlow, and the role is more test-infrastructure focused.",
+   "dropped": [
+    {
+     "skill": "Python",
+     "reason": "The original job quote \"Python (computer programming)\" does not appear in the job text. The repaired job quote \"developing tools and frameworks focusing on test automation\" does not name Python, so the Python claim was re-anchored to a quote that does not contain the skill. The skill is named in the job text only as \"(e.g., .NET C#, C++, APL, Python)\", which is verbatim but must be checked against the resume quote; the resume quote \"scripting on bash, ruby, python\" is valid. Because the job-side quote cannot be verified as naming Python in the required form, the claim is dropped."
+    },
+    {
+     "skill": "C#",
+     "reason": "The original job quote \"C#\" is not a verbatim substring of the job text as a standalone quote of 3-15 words, and no resume text naming C# was supplied, so the missing-skill claim cannot be supported with a verbatim quote of the required length; dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-130668",
+   "rank": 5,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "Testing",
+     "resume_quote": "Infrastructure and code(unit, integration, system) testing",
+     "job_quote": "testing"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "ideally using Java or other JVM languages"
+    },
+    {
+     "skill": "Cloud technologies",
+     "job_quote": "Has some experience with AWS or other cloud offerings (GCP, Azure, etc.)"
+    }
+   ],
+   "summary": "A back-end software engineering role centred on Java and algorithms; the resume shows DevOps and infrastructure work rather than application development.",
+   "dropped": [
+    {
+     "skill": "Algorithms / core backend development",
+     "reason": "The job text names knowledge of algorithms and data structures, but the claim's job_quote (\"building core parts of the\") does not name the skill as the claim states, and the skill is not a clearly identifiable 'missing' skill the resume lacks; the claim was not repairable with a verbatim quote that names it as missing. Dropped to avoid an unsupported claim."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-5259",
+   "rank": 6,
+   "fit_score": 22.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "C# / Selenium / SpecFlow",
+     "job_quote": "Generate C# code based on feature file"
+    },
+    {
+     "skill": "University degree in computer-related sciences",
+     "job_quote": "University Degree in Computer Related Sciences"
+    }
+   ],
+   "summary": "A QA automation role built on C#, Selenium and BDD tooling; the resume has no QA automation or C# experience.",
+   "dropped": [
+    {
+     "skill": "Test automation",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-67884",
+   "rank": 7,
+   "fit_score": 15.0,
+   "matched_skills": [
+    {
+     "skill": "Automated testing",
+     "resume_quote": "Infrastructure and code(unit, integration, system) testing",
+     "job_quote": "Implementing automated testing platforms and unit tests"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C# / .NET",
+     "job_quote": "Proficient in C#, with a good knowledge of its ecosystems"
+    },
+    {
+     "skill": "SQL Server",
+     "job_quote": "Familiarity with Microsoft SQL Server"
+    },
+    {
+     "skill": "Object-oriented development",
+     "job_quote": "Strong understanding of object-oriented programming"
+    }
+   ],
+   "summary": "A .NET application development role; the resume has no C#/.NET or application-development experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-69930",
+   "rank": 8,
+   "fit_score": 10.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java",
+     "job_quote": "Middle Full Stack Developer (Java + React)"
+    },
+    {
+     "skill": "JavaScript / React",
+     "job_quote": "Middle Full Stack  Developer (Java + React)"
+    },
+    {
+     "skill": "TypeScript",
+     "job_quote": "TypeScript"
+    }
+   ],
+   "summary": "A full-stack Java and React development role with no overlap with the candidate's DevOps and infrastructure profile.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-85842",
+   "rank": 9,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "SQL database",
+     "job_quote": "Experience working with SQL database"
+    }
+   ],
+   "summary": "A Node.js back-end development role; the resume shows no Node.js or application back-end experience.",
+   "dropped": [
+    {
+     "skill": "Node.js",
+     "reason": "Flagged skill_not_in_job: the job text does name NodeJS (\"backend web development using NodeJS\"), but the claim was categorized as 'missing' and the resume does not contain Node.js either, so the claim was not a valid 'missing' claim as submitted. Dropped rather than reclassified, since the Verifier may not add new claims or change claim kind; the skill also cannot be placed under matched_skills without resume support."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-87038",
+   "rank": 10,
+   "fit_score": 3.0,
+   "matched_skills": [
+    {
+     "skill": "Hard work",
+     "resume_quote": "interesting and hard work(startups type)",
+     "job_quote": "hard worker"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Android",
+     "job_quote": "A mobile device based on Android 8.1+ or iOS 13.5+"
+    }
+   ],
+   "summary": "A field data-collection job unrelated to the candidate's engineering background; only the generic phrase 'hard worker' overlaps.",
+   "dropped": [
+    {
+     "skill": "Field data collection / map services",
+     "reason": "Flagged as skill_not_in_job: the job text does name the skill in the form 'walk around the city and visit specific points of interest', but that quote was not accepted as naming the skill, and the claimed skill label does not appear verbatim in the job text; no verbatim text naming this skill was supplied, so the claim is dropped."
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "DevOps / platform engineering (CI/CD, infrastructure as code, monitoring)",
+    "seniority": "senior",
+    "target_titles": [
+     "DevOps Engineer",
+     "Senior DevOps Engineer",
+     "Site Reliability Engineer",
+     "Platform Engineer",
+     "Infrastructure Engineer",
+     "Release Engineer"
+    ],
+    "must_have_skills": [
+     "CI/CD (Jenkins, TeamCity, ConcourseCI)",
+     "Docker",
+     "Infrastructure as code (Ansible, Chef, Vagrant)",
+     "Linux system administration",
+     "Monitoring and alerting (Zabbix, Nagios, Sensu)",
+     "Log aggregation (ELK)",
+     "Scripting (Bash, Python, Ruby)",
+     "Git / Bitbucket",
+     "Relational and NoSQL databases (MySQL, PostgreSQL, MongoDB, Redis)"
+    ],
+    "nice_to_have_skills": [
+     "Consul",
+     "Rundeck",
+     "HAProxy / Nginx load balancing",
+     "RabbitMQ",
+     "Proxmox / VMware ESXi virtualization",
+     "Bacula backup",
+     "Elasticsearch / Solr / Sphinx",
+     "GlusterFS",
+     "Asterisk / VoIP",
+     "Network fundamentals"
+    ],
+    "search_queries": [
+     "DevOps Engineer Jenkins Docker Ansible startup",
+     "Senior DevOps Engineer CI/CD infrastructure as code Linux",
+     "Site Reliability Engineer ELK Zabbix Kubernetes Docker",
+     "Release Engineer Git Jenkins TeamCity remote",
+     "Platform Engineer Consul Ansible Python monitoring"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "DevOps Engineer Jenkins Docker Ansible startup",
+    "Senior DevOps Engineer CI/CD infrastructure as code Linux",
+    "Site Reliability Engineer ELK Zabbix Kubernetes Docker",
+    "Release Engineer Git Jenkins TeamCity remote",
+    "Platform Engineer Consul Ansible Python monitoring",
+    "DevOps Engineer",
+    "Senior DevOps Engineer",
+    "Site Reliability Engineer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "hard",
+     "implement useful and new technologies",
+     "Working in startups",
+     "startups"
+    ],
+    "knowledge": [
+     "Jenkins",
+     "ConcourseCI+",
+     "Docker",
+     "CHEF",
+     "Vagrant",
+     "Ansible",
+     "Git",
+     "Mongo",
+     "PerconaDB",
+     "cluster",
+     "PostgreSQL",
+     "RabbitMQ",
+     "Proxmox",
+     "OpenVZ",
+     "KVM )",
+     "VMWare",
+     "ESXi",
+     "Zabbix",
+     "Nagios",
+     "Sensu"
+    ],
+    "esco_skills": [
+     "Ansible",
+     "PostgreSQL",
+     "Python (computer programming)",
+     "Ruby (computer programming)",
+     "Vagrant",
+     "build networks",
+     "dock operations",
+     "manage logs segregation and stacking",
+     "manage software releases",
+     "rail infrastructure",
+     "systems theory",
+     "test procedures"
+    ],
+    "not_in_esco": [
+     "hard",
+     "implement useful and new technologies",
+     "Working in startups",
+     "startups",
+     "Jenkins",
+     "ConcourseCI+",
+     "CHEF",
+     "Git",
+     "Mongo",
+     "PerconaDB",
+     "cluster",
+     "RabbitMQ",
+     "Proxmox",
+     "OpenVZ",
+     "KVM )",
+     "VMWare",
+     "ESXi",
+     "Zabbix",
+     "Nagios",
+     "Sensu"
+    ]
+   },
+   "ms": 16960.8
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 1.0
+  },
+  {
+   "node": "verifier",
+   "flagged": 12,
+   "repaired": 5,
+   "dropped": 7,
+   "ms": 18649.9
+  }
+ ],
+ "llm_calls": 10,
+ "input_tokens": 31901,
+ "output_tokens": 7777,
+ "cost_usd": 0.00708,
+ "latency_ms": 32978.5,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 12,
+ "verifier_repaired": 5,
+ "verifier_dropped": 7,
+ "plan": {
+  "role_family": "DevOps / platform engineering (CI/CD, infrastructure as code, monitoring)",
+  "seniority": "senior",
+  "target_titles": [
+   "DevOps Engineer",
+   "Senior DevOps Engineer",
+   "Site Reliability Engineer",
+   "Platform Engineer",
+   "Infrastructure Engineer",
+   "Release Engineer"
+  ],
+  "must_have_skills": [
+   "CI/CD (Jenkins, TeamCity, ConcourseCI)",
+   "Docker",
+   "Infrastructure as code (Ansible, Chef, Vagrant)",
+   "Linux system administration",
+   "Monitoring and alerting (Zabbix, Nagios, Sensu)",
+   "Log aggregation (ELK)",
+   "Scripting (Bash, Python, Ruby)",
+   "Git / Bitbucket",
+   "Relational and NoSQL databases (MySQL, PostgreSQL, MongoDB, Redis)"
+  ],
+  "nice_to_have_skills": [
+   "Consul",
+   "Rundeck",
+   "HAProxy / Nginx load balancing",
+   "RabbitMQ",
+   "Proxmox / VMware ESXi virtualization",
+   "Bacula backup",
+   "Elasticsearch / Solr / Sphinx",
+   "GlusterFS",
+   "Asterisk / VoIP",
+   "Network fundamentals"
+  ],
+  "search_queries": [
+   "DevOps Engineer Jenkins Docker Ansible startup",
+   "Senior DevOps Engineer CI/CD infrastructure as code Linux",
+   "Site Reliability Engineer ELK Zabbix Kubernetes Docker",
+   "Release Engineer Git Jenkins TeamCity remote",
+   "Platform Engineer Consul Ansible Python monitoring"
+  ]
+ },
+ "wall_ms": 35615.0,
+ "pool": [
+  {
+   "job_id": "djinni-job-25235",
+   "label": 1,
+   "title": "DevOps Engineer"
+  },
+  {
+   "job_id": "djinni-job-5259",
+   "label": 0,
+   "title": "Associate QA Automation Engineer #8054"
+  },
+  {
+   "job_id": "djinni-job-69930",
+   "label": 0,
+   "title": "Middle Full Stack  Developer (Java + React)"
+  },
+  {
+   "job_id": "djinni-job-87038",
+   "label": 0,
+   "title": "Pedestrian Data Collector"
+  },
+  {
+   "job_id": "djinni-job-130668",
+   "label": 0,
+   "title": "Software Engineer, Back-End"
+  },
+  {
+   "job_id": "djinni-job-68383",
+   "label": 1,
+   "title": "Middle DevOps (Azure) #10043"
+  },
+  {
+   "job_id": "djinni-job-67884",
+   "label": 0,
+   "title": "Middle C# Developer"
+  },
+  {
+   "job_id": "djinni-job-26163",
+   "label": 1,
+   "title": "DevOps Engineer IRC159716"
+  },
+  {
+   "job_id": "djinni-job-85842",
+   "label": 0,
+   "title": "Node JS Developer"
+  },
+  {
+   "job_id": "djinni-job-129582",
+   "label": 1,
+   "title": "Site Reliability Engineer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-28988",
+  "cv_category": "DevOps",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 1.0,
+  "n_claims": 42,
+  "n_supported": 42,
+  "hallucination_rate": 0.0,
+  "llm_calls": 10,
+  "input_tokens": 31901,
+  "output_tokens": 7777,
+  "cost_usd": 0.007080000000000001,
+  "latency_ms": 32978.5,
+  "wall_ms": 35615.0,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 12,
+  "verifier_repaired": 5,
+  "verifier_dropped": 7
+ },
+ "faithfulness": {
+  "n_claims": 42,
+  "n_supported": 42,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-68383",
+    "n_claims": 11,
+    "n_supported": 11,
+    "n_matched": 7,
+    "n_matched_supported": 7,
+    "n_missing": 4,
+    "n_missing_supported": 4,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-129582",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 4,
+    "n_missing_supported": 4,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-26163",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 4,
+    "n_missing_supported": 4,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-25235",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-130668",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-5259",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-67884",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-69930",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-85842",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-87038",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

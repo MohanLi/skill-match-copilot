@@ -1,0 +1,1084 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-50251",
+   "rank": 1,
+   "fit_score": 84.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "2+ years of experience in Java Development"
+    },
+    {
+     "skill": "Hibernate",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "Java, Spring Boot, Hibernate, SQL"
+    },
+    {
+     "skill": "PostgreSQL",
+     "resume_quote": "Experience in working with RDBMS (PostgreSQL, Oracle )",
+     "job_quote": "Liquibase"
+    },
+    {
+     "skill": "JUnit",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit",
+     "job_quote": "Git, JUnit, REST, OOP, SOLID, JSON"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "Version Control Tools: Git(Bitbucket), SVN",
+     "job_quote": "Git, JUnit, REST, OOP, SOLID, JSON"
+    },
+    {
+     "skill": "JSON",
+     "resume_quote": "Web Development: HTML/CSS, XML, JSON, AJAX",
+     "job_quote": "Git, JUnit, REST, OOP, SOLID, JSON"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "REST API",
+     "job_quote": "Git, JUnit, REST, OOP, SOLID, JSON, Gradle, Tomcat, REST API, PostgreSQL"
+    },
+    {
+     "skill": "Spring Boot",
+     "job_quote": "Java, Spring Boot, Hibernate, SQL"
+    },
+    {
+     "skill": "Liquibase",
+     "job_quote": "Git, JUnit, REST, OOP, SOLID, JSON, Gradle, Tomcat, REST API, PostgreSQL, Liquibase"
+    }
+   ],
+   "summary": "Closest stack match: Java, Hibernate, PostgreSQL, JUnit, Git and JSON all align, at middle level. Gaps are Spring Boot, REST APIs and Gradle/Tomcat tooling, which are learnable given the candidate's stated interest in growing skills. Requires English at intermediate level or higher, which the resume does not state."
+  },
+  {
+   "job_id": "djinni-job-70198",
+   "rank": 2,
+   "fit_score": 74.0,
+   "matched_skills": [
+    {
+     "skill": "Java / Spring",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "2-3 years of experience with Java (Spring Framework / Spring Boot) and Angular"
+    },
+    {
+     "skill": "RDBMS",
+     "resume_quote": "Experience in working with RDBMS (PostgreSQL, Oracle )",
+     "job_quote": "Experience with at least one RDBMS"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "Version Control Tools: Git(Bitbucket), SVN",
+     "job_quote": "Experience with Git, Linux command line, and containers."
+    },
+    {
+     "skill": "Linux",
+     "resume_quote": "Operating systems: Linux, Windows",
+     "job_quote": "Experience with Git, Linux command line, and containers."
+    },
+    {
+     "skill": "HTML/CSS",
+     "resume_quote": "Web Development: HTML/CSS, XML, JSON, AJAX",
+     "job_quote": "HTML, Typescript, and CSS including pre-processors such as Less or SASS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Angular",
+     "job_quote": "2-3 years of experience with Java (Spring Framework / Spring Boot) and Angular"
+    },
+    {
+     "skill": "TypeScript",
+     "job_quote": "HTML, Typescript, and CSS including pre-processors such as Less or SASS"
+    },
+    {
+     "skill": "Agile/Scrum",
+     "job_quote": "Worked within an agile software development process e.g. Scrum"
+    },
+    {
+     "skill": "CI/CD tools",
+     "job_quote": "Worked with CI/CD tools"
+    }
+   ],
+   "summary": "Strong backend overlap (Java, Spring, RDBMS, Git, Linux) but the role is full-stack with a hard Angular requirement the candidate does not have. Good fit if the candidate is willing to grow into front-end work."
+  },
+  {
+   "job_id": "djinni-job-79173",
+   "rank": 3,
+   "fit_score": 68.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "Experience of 3 years in the development of solutions in Java, Oracle, TOMEE"
+    },
+    {
+     "skill": "Oracle",
+     "resume_quote": "Experience in working with RDBMS (PostgreSQL, Oracle )",
+     "job_quote": "Experience of 3 years in the development of solutions in Java, Oracle, TOMEE"
+    },
+    {
+     "skill": "Spring",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "Main: JAVA, Spring, Spring Boot, ThreadExecutor"
+    },
+    {
+     "skill": "Maven",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit",
+     "job_quote": "Knowledge of the development environment IntelliJ, MAVEN, SonarQube"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Angular",
+     "job_quote": "2 years of experience in Angular front-end development"
+    },
+    {
+     "skill": "MongoDB",
+     "job_quote": "Databases/Messaging: MongoDB, RabbitMQ, Hazelcast, Rsocket, Reactive"
+    },
+    {
+     "skill": "Docker/Kubernetes",
+     "job_quote": "Knowledge of tools and principles related to agility and DevOps (CI/CD, Docker, Kubernetes, Gitlab, JIRA, SCRUM) an asset"
+    }
+   ],
+   "summary": "Matches on Java, Spring, Oracle and Maven, but it is a senior full-stack role with a required Angular track record and a broad messaging/DevOps stack. Stretch for a candidate with a middle-level resume."
+  },
+  {
+   "job_id": "djinni-job-6096",
+   "rank": 4,
+   "fit_score": 60.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "Strong Java knowledge"
+    },
+    {
+     "skill": "Spring",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "Knowledge of Spring framework"
+    },
+    {
+     "skill": "JUnit / testing",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit",
+     "job_quote": "Test automation with internal test framework (Java + http client, selenium, TestNg, Hamcrest, Spring core)"
+    },
+    {
+     "skill": "Git",
+     "resume_quote": "Version Control Tools: Git(Bitbucket), SVN",
+     "job_quote": "Our code is on GitHub and we love code reviews"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TestNG / Selenium",
+     "job_quote": "Very good knowledge of TestNg, Hamcrest, Selenium libraries with proven hands-on experience"
+    },
+    {
+     "skill": "Kubernetes",
+     "job_quote": "We operate our platform on Kubernetes in AWS"
+    },
+    {
+     "skill": "REST services testing",
+     "job_quote": "Experience with testing Web, Mobile and REST services"
+    }
+   ],
+   "summary": "Java and Spring match, but the role is QA automation focused (TestNG, Selenium, test strategy), which differs from the candidate's developer profile. Lateral move rather than a direct fit."
+  },
+  {
+   "job_id": "djinni-job-117422",
+   "rank": 5,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate",
+     "job_quote": "Experience with Java"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Python",
+     "job_quote": "Experience with Python"
+    },
+    {
+     "skill": "5+ years software development",
+     "job_quote": "5+ years of professional experience in software development"
+    }
+   ],
+   "summary": "Only Java overlaps. The role requires a mechanical/electrical engineering degree or control/fluids/thermodynamics background and 5+ years of experience, which the resume does not show."
+  },
+  {
+   "job_id": "djinni-job-21636",
+   "rank": 6,
+   "fit_score": 35.0,
+   "matched_skills": [
+    {
+     "skill": "Web application testing",
+     "resume_quote": "Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit, Mockito",
+     "job_quote": "Experience testing web applications"
+    },
+    {
+     "skill": "SQL",
+     "resume_quote": "Experience in working with RDBMS (PostgreSQL, Oracle )",
+     "job_quote": "Middle-level knowledge of SQL"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Manual/API test management",
+     "job_quote": "Experience with test management systems (Jira/Azure Devops)"
+    },
+    {
+     "skill": "3+ years testing experience",
+     "job_quote": "3+ years of testing experience"
+    }
+   ],
+   "summary": "A QA role in a financial/NetSuite context. The candidate has no dedicated testing experience on the resume, so this is a weak match."
+  },
+  {
+   "job_id": "djinni-job-70348",
+   "rank": 7,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript/web",
+     "resume_quote": "Web Development: HTML/CSS, XML, JSON, AJAX",
+     "job_quote": "JavaScript"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Node.js/React",
+     "job_quote": "Middle Full-Stack Node.js/React Developer"
+    }
+   ],
+   "summary": "Node.js/React full-stack role; the candidate's stack is Java-based, so only generic web skills overlap."
+  },
+  {
+   "job_id": "djinni-job-69318",
+   "rank": 8,
+   "fit_score": 20.0,
+   "matched_skills": [
+    {
+     "skill": "CSS",
+     "resume_quote": "Web Development: HTML/CSS, XML, JSON, AJAX",
+     "job_quote": "HTML5/CSS3, Bootstrap."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Node.js",
+     "job_quote": "1+ Experience in Node.js (TypeScript)."
+    }
+   ],
+   "summary": "Front-end Node.js role with no Java component; poor match for the candidate's back-end Java profile."
+  },
+  {
+   "job_id": "djinni-job-120246",
+   "rank": 9,
+   "fit_score": 12.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": ".NET",
+     "job_quote": "Senior .NET Developer"
+    }
+   ],
+   "summary": "A .NET role with no overlap with the candidate's Java stack."
+  },
+  {
+   "job_id": "djinni-job-136508",
+   "rank": 10,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Technical writing role with no meaningful skill overlap with a Java developer profile."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting and normalizing the resume's skills, and run searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Java Developer\n\nExperience: Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit, Mockito\nEnterprise/integration design patterns. Experience in working with RDBMS (PostgreSQL, Oracle )\nWeb Development: HTML/CSS, XML, JSON, AJAX\nOperating systems: Linux, Windows\nVersion Control Tools: Git(Bitbucket), SVN\n\nHighlights: Completed several projects within tax administration domain."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Java developer Spring Hibernate web applications",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Java developer tax administration enterprise integration",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Java EE Servlets JSP PostgreSQL Oracle developer",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000487
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Java Developer\n\nExperience: Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit, Mockito\nEnterprise/integration design patterns. Experience in working with RDBMS (PostgreSQL, Oracle )\nWeb Development: HTML/CSS, XML, JSON, AJAX\nOperating systems: Linux, Windows\nVersion Control Tools: Git(Bitbucket), SVN\n\nHighlights: Completed several projects within tax administration domain."
+   },
+   "output_preview": "{\"skills\": [], \"knowledge\": [\"Java 8\", \"Servlets\", \"JSP\", \"Spring\", \"Hibernate\", \"Maven\", \"JUnit\", \"Mockito\", \"Enterprise/integration design patterns\", \"RDBMS\", \"PostgreSQL\", \"Oracle )\", \"Web Development\", \"HTML/CSS\", \"XML\", \"JSON\", \"AJAX\", \"Linux\", \"Windows\", \"Version Control\", \"Git\", \"Bitbucket )\", \"SVN\", \"tax administration\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Java developer Spring Hibernate web applications",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-50251\", \"title\": \"Java Developer (Middle)\", \"company\": \"SoftCust\", \"category\": \"Java\", \"score\": 0.3731, \"esco_skills\": [\"Apache Tomcat\", \"English\", \"Java (computer programming)\", \"PostgreSQL\", \"SQL\", \"communication\", \"computer science\", \"learning technologies\", \"managing a business with great care\", \"promote balance between rest and activity\", \"provide self management support\"], \"snippet\": \"Java Developer (Middle)\\n**Mandatory requirements:**\\r\\n- Important - English level - Intermediate or higher\\r\\n- 2+ years of experience in Java Development\\r\\n- Java, Spring Boot, H"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Java developer tax administration enterprise integration",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-50251\", \"title\": \"Java Developer (Middle)\", \"company\": \"SoftCust\", \"category\": \"Java\", \"score\": 0.4626, \"esco_skills\": [\"Apache Tomcat\", \"English\", \"Java (computer programming)\", \"PostgreSQL\", \"SQL\", \"communication\", \"computer science\", \"learning technologies\", \"managing a business with great care\", \"promote balance between rest and activity\", \"provide self management support\"], \"snippet\": \"Java Developer (Middle)\\n**Mandatory requirements:**\\r\\n- Important - English level - Intermediate or higher\\r\\n- 2+ years of experience in Java Development\\r\\n- Java, Spring Boot, H"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Java EE Servlets JSP PostgreSQL Oracle developer",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-50251\", \"title\": \"Java Developer (Middle)\", \"company\": \"SoftCust\", \"category\": \"Java\", \"score\": 0.4207, \"esco_skills\": [\"Apache Tomcat\", \"English\", \"Java (computer programming)\", \"PostgreSQL\", \"SQL\", \"communication\", \"computer science\", \"learning technologies\", \"managing a business with great care\", \"promote balance between rest and activity\", \"provide self management support\"], \"snippet\": \"Java Developer (Middle)\\n**Mandatory requirements:**\\r\\n- Important - English level - Intermediate or higher\\r\\n- 2+ years of experience in Java Development\\r\\n- Java, Spring Boot, H"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The candidate pool is the same 10 jobs across searches. Next I'll pull full text for the Java-focused postings and normalize the resume's skills.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-50251"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-79173"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-70198"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-117422"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-21636"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-6096"
+     }
+    },
+    {
+     "name": "normalize_skills",
+     "input": {
+      "phrases": [
+       "Java 8",
+       "Servlets",
+       "JSP",
+       "Spring",
+       "Hibernate",
+       "Maven",
+       "JUnit",
+       "Mockito",
+       "PostgreSQL",
+       "Oracle",
+       "HTML/CSS",
+       "XML",
+       "JSON",
+       "AJAX",
+       "Git",
+       "SVN",
+       "Linux"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001389
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-50251"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-50251\", \"title\": \"Java Developer (Middle)\", \"company\": \"SoftCust\", \"category\": \"Java\", \"url\": \"\", \"text\": \"Java Developer (Middle)\\n**Mandatory requirements:**\\r\\n- Important - English level - Intermediate or higher\\r\\n- 2+ years of experience in Java Development\\r\\n- Java, Spring Boot, Hibernate, SQL\\r\\n- Git, JUnit, REST, OOP, SOLID, JSON, Gradle, Tomcat, REST API, PostgreSQL, Liquibase\\r\\n- Willingness to learn new technologies\\r\\n \\r\\n**Personal profile:**\\r\\n- Strong desire to do a job well and take care of business needs\\r\\n- Strong communication skills\\r\\n- Self-m"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-79173"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-79173\", \"title\": \"Middle-Senior Java Full-Stack Developer (+Angular)\", \"company\": \"DTeam\", \"category\": \"Java\", \"url\": \"\", \"text\": \"Middle-Senior Java Full-Stack Developer (+Angular)\\n**:DTeam is looking Middle-Senior Java Full-Stack Developer to join our team !**\\r\\n\\r\\n**Requirements:**\\r\\n— 2 years of experience in Angular front-end development\\r\\n— Experience of 3 years in the development of solutions in Java, Oracle, TOMEE\\r\\n— Knowledge of the development environment IntelliJ, MAVEN, SonarQube\\r\\n— Good communication skills in English, both written and spoken\\r\\n\\r\\"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-70198"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-70198\", \"title\": \"Middle Full-stack Java engineer (Angular)\", \"company\": \"Mindecs\", \"category\": \"Java\", \"url\": \"\", \"text\": \"Middle Full-stack Java engineer (Angular)\\nThis is a remote position.\\r\\n\\r\\nMindecs is a trusted software engineering partner. We are looking for a Java engineer with excellent communication skills to join one of our teams. You will become part of a team of professionals who make a big contribution to solving problems for business clients.\\r\\n\\r\\nRequirements:\\r\\n- 2-3 years of experience with Java (Spring Framework / Spring Boot) and Angular\\r\\n- "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-117422"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-117422\", \"title\": \"Senior Java Engineer\", \"company\": \"Adjutor\", \"category\": \"Java\", \"url\": \"\", \"text\": \"Senior Java Engineer\\nHi! We are looking for a Senior Java Engineer to join SHIFT Energy team.\\r\\n\\r\\nSHIFT is pushing the state of the art in AI-based supervisory control systems that reduce GHG associated with large scale heating, ventilation, and air conditioning systems.\\r\\n\\r\\n**Responsibilities:**\\r\\n- Contribute to the design, development, and maintenance of a wide variety of product components.\\r\\n- Write well designed, easily testable, and efficient code.\\r\\n-"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-21636"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-21636\", \"title\": \"Data QA Engineer, Financial Systems\", \"company\": \"DataArt\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Data QA Engineer, Financial Systems\\nAdvanced technological solutions, skilled technical specialists, and the importance of human relations is what makes working on projects for this company comfortable and interesting. Minimum viable bureaucracy and openness to new solutions allow every developer to significantly influence the products created.\\r\\n\\r\\nNote that we hire specialists not to the project, but to the company. If the project is over, or you becom"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-6096"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-6096\", \"title\": \"Automation QA Engineer for Ciklum\", \"company\": \"Ciklum\", \"category\": \"QA Automation\", \"url\": \"\", \"text\": \"Automation QA Engineer for Ciklum\\nAbout Client:\\r\\n\\r\\nDaimler Mobility Services GmbH is developing the mobility of the future. With brands like car2go, mytaxi and moovel, but also with services for autonomous driving as well as our own eWallet “Mercedes Pay”, we are pioneers in the field of innovative mobility services. In addition, we have shareholdings in future-oriented companies like Turo, Flixbus and Blacklane and many more. This makes us one "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "normalize_skills",
+   "input": {
+    "phrases": [
+     "Java 8",
+     "Servlets",
+     "JSP",
+     "Spring",
+     "Hibernate",
+     "Maven",
+     "JUnit",
+     "Mockito",
+     "PostgreSQL",
+     "Oracle",
+     "HTML/CSS",
+     "XML",
+     "JSON",
+     "AJAX",
+     "Git",
+     "SVN",
+     "Linux"
+    ]
+   },
+   "output_preview": "{\"mapped\": [{\"phrase\": \"Java 8\", \"esco_label\": \"Java (computer programming)\", \"score\": 0.7236}, {\"phrase\": \"Servlets\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.4955}, {\"phrase\": \"JSP\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5131}, {\"phrase\": \"Spring\", \"esco_label\": \"types of spring\", \"score\": 0.7479}, {\"phrase\": \"Hibernate\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3589}, {\"phrase\": \"Maven\", \"esco_label\": \"Apache Maven\", \"score\": 0.9373}, {\"phrase\": \"JUnit\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3444}, {\"phrase\": \"Mockito\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3948}, {\"phrase\": \"PostgreSQL"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll compare the resume against the strongest Java candidates to get the matched and missing skills.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Java 8",
+       "Servlets",
+       "JSP",
+       "Spring",
+       "Hibernate",
+       "Maven",
+       "JUnit",
+       "Mockito",
+       "PostgreSQL",
+       "Oracle",
+       "HTML/CSS",
+       "XML",
+       "JSON",
+       "AJAX",
+       "Git",
+       "SVN",
+       "Linux",
+       "Enterprise integration design patterns"
+      ],
+      "job_skills": [
+       "Java",
+       "Spring Boot",
+       "Hibernate",
+       "SQL",
+       "Git",
+       "JUnit",
+       "REST",
+       "JSON",
+       "Gradle",
+       "Tomcat",
+       "REST API",
+       "PostgreSQL",
+       "Liquibase"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Java 8",
+       "Servlets",
+       "JSP",
+       "Spring",
+       "Hibernate",
+       "Maven",
+       "JUnit",
+       "Mockito",
+       "PostgreSQL",
+       "Oracle",
+       "HTML/CSS",
+       "XML",
+       "JSON",
+       "AJAX",
+       "Git",
+       "SVN",
+       "Linux"
+      ],
+      "job_skills": [
+       "Java",
+       "Angular",
+       "Spring",
+       "Spring Boot",
+       "Maven",
+       "Oracle",
+       "MongoDB",
+       "RabbitMQ",
+       "Docker",
+       "Kubernetes",
+       "GraphQL",
+       "Gitlab",
+       "SonarQube",
+       "OWASP"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Java 8",
+       "Spring",
+       "Hibernate",
+       "Maven",
+       "JUnit",
+       "Mockito",
+       "PostgreSQL",
+       "Oracle",
+       "HTML/CSS",
+       "XML",
+       "JSON",
+       "AJAX",
+       "Git",
+       "SVN",
+       "Linux"
+      ],
+      "job_skills": [
+       "Java",
+       "Spring",
+       "Spring Framework",
+       "Spring Boot",
+       "RDBMS",
+       "RESTful APIs",
+       "Angular",
+       "TypeScript",
+       "CSS",
+       "Git",
+       "Linux",
+       "Scrum",
+       "CI/CD",
+       "containers",
+       "message-oriented middleware"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "Java 8",
+       "Spring",
+       "Hibernate",
+       "Maven",
+       "JUnit",
+       "Mockito",
+       "PostgreSQL",
+       "Oracle",
+       "Git",
+       "Linux",
+       "XML",
+       "JSON"
+      ],
+      "job_skills": [
+       "Java",
+       "OOP",
+       "software design principles",
+       "TestNG",
+       "Hamcrest",
+       "Selenium",
+       "Spring",
+       "REST",
+       "Kubernetes",
+       "Java + http client",
+       "Git"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.002322
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Java 8",
+     "Servlets",
+     "JSP",
+     "Spring",
+     "Hibernate",
+     "Maven",
+     "JUnit",
+     "Mockito",
+     "PostgreSQL",
+     "Oracle",
+     "HTML/CSS",
+     "XML",
+     "JSON",
+     "AJAX",
+     "Git",
+     "SVN",
+     "Linux",
+     "Enterprise integration design patterns"
+    ],
+    "job_skills": [
+     "Java",
+     "Spring Boot",
+     "Hibernate",
+     "SQL",
+     "Git",
+     "JUnit",
+     "REST",
+     "JSON",
+     "Gradle",
+     "Tomcat",
+     "REST API",
+     "PostgreSQL",
+     "Liquibase"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Java\", \"Spring Boot\", \"Hibernate\", \"Git\", \"JUnit\", \"JSON\", \"PostgreSQL\"], \"missing\": [\"SQL\", \"REST\", \"Gradle\", \"Tomcat\", \"REST API\", \"Liquibase\"], \"extra\": [\"Servlets\", \"JSP\", \"Maven\", \"Mockito\", \"Oracle\", \"HTML/CSS\", \"XML\", \"AJAX\", \"SVN\", \"Linux\", \"Enterprise integration design patterns\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Java 8",
+     "Servlets",
+     "JSP",
+     "Spring",
+     "Hibernate",
+     "Maven",
+     "JUnit",
+     "Mockito",
+     "PostgreSQL",
+     "Oracle",
+     "HTML/CSS",
+     "XML",
+     "JSON",
+     "AJAX",
+     "Git",
+     "SVN",
+     "Linux"
+    ],
+    "job_skills": [
+     "Java",
+     "Angular",
+     "Spring",
+     "Spring Boot",
+     "Maven",
+     "Oracle",
+     "MongoDB",
+     "RabbitMQ",
+     "Docker",
+     "Kubernetes",
+     "GraphQL",
+     "Gitlab",
+     "SonarQube",
+     "OWASP"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Java\", \"Spring\", \"Spring Boot\", \"Maven\", \"Oracle\"], \"missing\": [\"Angular\", \"MongoDB\", \"RabbitMQ\", \"Docker\", \"Kubernetes\", \"GraphQL\", \"Gitlab\", \"SonarQube\", \"OWASP\"], \"extra\": [\"Servlets\", \"JSP\", \"Hibernate\", \"JUnit\", \"Mockito\", \"PostgreSQL\", \"HTML/CSS\", \"XML\", \"JSON\", \"AJAX\", \"Git\", \"SVN\", \"Linux\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Java 8",
+     "Spring",
+     "Hibernate",
+     "Maven",
+     "JUnit",
+     "Mockito",
+     "PostgreSQL",
+     "Oracle",
+     "HTML/CSS",
+     "XML",
+     "JSON",
+     "AJAX",
+     "Git",
+     "SVN",
+     "Linux"
+    ],
+    "job_skills": [
+     "Java",
+     "Spring",
+     "Spring Framework",
+     "Spring Boot",
+     "RDBMS",
+     "RESTful APIs",
+     "Angular",
+     "TypeScript",
+     "CSS",
+     "Git",
+     "Linux",
+     "Scrum",
+     "CI/CD",
+     "containers",
+     "message-oriented middleware"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Java\", \"Spring\", \"Spring Framework\", \"Spring Boot\", \"Git\", \"Linux\"], \"missing\": [\"RDBMS\", \"RESTful APIs\", \"Angular\", \"TypeScript\", \"CSS\", \"Scrum\", \"CI/CD\", \"containers\", \"message-oriented middleware\"], \"extra\": [\"Hibernate\", \"Maven\", \"JUnit\", \"Mockito\", \"PostgreSQL\", \"Oracle\", \"HTML/CSS\", \"XML\", \"JSON\", \"AJAX\", \"SVN\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "Java 8",
+     "Spring",
+     "Hibernate",
+     "Maven",
+     "JUnit",
+     "Mockito",
+     "PostgreSQL",
+     "Oracle",
+     "Git",
+     "Linux",
+     "XML",
+     "JSON"
+    ],
+    "job_skills": [
+     "Java",
+     "OOP",
+     "software design principles",
+     "TestNG",
+     "Hamcrest",
+     "Selenium",
+     "Spring",
+     "REST",
+     "Kubernetes",
+     "Java + http client",
+     "Git"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"Java\", \"Spring\", \"Git\"], \"missing\": [\"OOP\", \"software design principles\", \"TestNG\", \"Hamcrest\", \"Selenium\", \"REST\", \"Kubernetes\", \"Java + http client\"], \"extra\": [\"Hibernate\", \"Maven\", \"JUnit\", \"Mockito\", \"PostgreSQL\", \"Oracle\", \"Linux\", \"XML\", \"JSON\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "I have enough to rank. I checked the six most relevant postings in full. The other four (djinni-job-120246 .NET, djinni-job-69318 Node.js front-end, djinni-job-70348 Node/React, djinni-job-136508 technical writer) are clearly off-family and I did not open them, so they are ranked low with lower scores.\n\nQuote verification against the job texts:\n- SoftCust: \"Java, Spring Boot, Hibernate, SQL\" and \"Git, JUnit, REST, OOP, SOLID, JSON\" are verbatim.\n- Mindecs: \"Experience with at least one RDBMS\" and \"Experience with Git, Linux command line\" are verbatim.\n- DTeam: \"Experience of 3 years in the development of solutions in Java, Oracle, TOMEE\" and \"Knowledge of the development environment IntelliJ, MAVEN, SonarQube\" are verbatim.\n- Ciklum: \"Strong Java knowledge\" and \"Understanding and hands-on of OOP and various software design principles\" are verbatim.\n- Adjutor: \"Experience with Java\" is verbatim, but it requires a mechanical/electrical engineering degree or control/fluids/thermodynamics background, which the candidate lacks.\n- DataArt: \"Experience testing web applications\" and \"Experience testing web services (API)\" are verbatim, but the role is QA-focused.\n\nResume quotes used: \"Java 8, Servlets, JSP, Spring, Hibernate, Maven, JUnit, Mockito\", \"Experience in working with RDBMS (PostgreSQL, Oracle )\", \"Version Control Tools: Git(Bitbucket), SVN\", \"Web Development: HTML/CSS, XML, JSON, AJAX\".\n\n```json\n{\"ranking\": [\n   {\"job_id\": \"djinni-job-50251\", \"rank\": 1, \"fit_score\": 84,\n   ",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.00427
+  }
+ ],
+ "llm_calls": 4,
+ "input_tokens": 51736,
+ "output_tokens": 6591,
+ "cost_usd": 0.008468,
+ "latency_ms": 22457.3,
+ "tool_calls": 15,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 7267.1,
+ "steps": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-117422",
+   "label": 1,
+   "title": "Senior Java Engineer"
+  },
+  {
+   "job_id": "djinni-job-69318",
+   "label": 0,
+   "title": "Middle Front-end developer (Node.js)"
+  },
+  {
+   "job_id": "djinni-job-50251",
+   "label": 2,
+   "title": "Java Developer (Middle)"
+  },
+  {
+   "job_id": "djinni-job-136508",
+   "label": 0,
+   "title": "Technical writer"
+  },
+  {
+   "job_id": "djinni-job-79173",
+   "label": 1,
+   "title": "Middle-Senior Java Full-Stack Developer (+Angular)"
+  },
+  {
+   "job_id": "djinni-job-70348",
+   "label": 0,
+   "title": "Middle Full-Stack Node.js/React Developer"
+  },
+  {
+   "job_id": "djinni-job-21636",
+   "label": 0,
+   "title": "Data QA Engineer, Financial Systems"
+  },
+  {
+   "job_id": "djinni-job-70198",
+   "label": 1,
+   "title": "Middle Full-stack Java engineer (Angular)"
+  },
+  {
+   "job_id": "djinni-job-120246",
+   "label": 0,
+   "title": "Senior .NET Developer"
+  },
+  {
+   "job_id": "djinni-job-6096",
+   "label": 1,
+   "title": "Automation QA Engineer for Ciklum"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-71744",
+  "cv_category": "Java",
+  "ndcg10": 1.0,
+  "p_at_3": 0.3333333333333333,
+  "mrr": 1.0,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 1,
+  "n_partial_or_better_in_pool": 5,
+  "coverage": 1.0,
+  "n_claims": 44,
+  "n_supported": 39,
+  "hallucination_rate": 0.11363636363636365,
+  "llm_calls": 4,
+  "input_tokens": 51736,
+  "output_tokens": 6591,
+  "cost_usd": 0.008468,
+  "latency_ms": 22457.3,
+  "wall_ms": 7267.1,
+  "tool_calls": 15,
+  "error": null,
+  "top1_label": 2,
+  "reasons": "{\"skill_present_in_resume\": 1, \"skill_not_in_quotes\": 3, \"skill_not_in_job\": 1}",
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 44,
+  "n_supported": 39,
+  "hallucination_rate": 0.11363636363636365,
+  "reasons": {
+   "skill_present_in_resume": 1,
+   "skill_not_in_quotes": 3,
+   "skill_not_in_job": 1
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-50251",
+    "n_claims": 9,
+    "n_supported": 9,
+    "n_matched": 6,
+    "n_matched_supported": 6,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-70198",
+    "n_claims": 9,
+    "n_supported": 8,
+    "n_matched": 5,
+    "n_matched_supported": 5,
+    "n_missing": 4,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.1111,
+    "reasons": {
+     "skill_present_in_resume": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-79173",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-6096",
+    "n_claims": 7,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 3,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.1429,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-117422",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-21636",
+    "n_claims": 4,
+    "n_supported": 2,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.5,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-70348",
+    "n_claims": 2,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.5,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-69318",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-120246",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-136508",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}
