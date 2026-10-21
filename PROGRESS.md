@@ -1,6 +1,6 @@
 # PROGRESS — Skill-Match Copilot build log
 
-**Last updated:** 2026-10-21 04:15 UTC · **Built by:** Claude in a cloud workspace, mirrored to Kevin's Mac
+**Last updated:** 2026-10-21 10:10 UTC · **Built by:** Claude in a cloud workspace, mirrored to Kevin's Mac
 (`~/Desktop/2026 Autumn/NLP/Project/skill-match-copilot`). **This folder on the Mac is the source of truth.**
 
 ## How to resume after an interruption
@@ -24,18 +24,21 @@ Legend: ✅ done · 🔄 in progress · ⏳ waiting on Kevin · ⬜ not started
 | 3 | EDA notebooks 01–04 + figures | ✅ | 01 SkillSpan, 02 ESCO benchmark (re-run with the official ESCO CSVs), 03 Djinni (lean loaders), 04 live jobs (description coverage per ATS) — `notebooks/`, `reports/figures/`, `results/eda/*.json` |
 | 4 | Problem 1: tagger vs few-shot LLM | ✅ (seed 42) | test strict F1: tagger skill 0.472 / knowledge 0.632 vs Haiku few-shot 0.285 / 0.530 vs dictionary 0.114 / 0.207 (`results/p1/metrics_summary_test.csv`, figures `p1_*`). Extra seeds + longer training = optional follow-up |
 | 5 | Problem 2: WorkRB baselines, bi-encoder, retrieve-then-LLM, NIL | ✅ | test MAP Tech/House/TechWolf: BM25 .275/.160/.177 · MiniLM .365/.246/.293 · in-house fine-tuned MiniLM .424/.313/.374 · **ConTeXT (champion) .536/.423/.460** · RTL on ConTeXT k=50 (challenger) .537/.443/.479 (`results/p2/workrb_test.csv`); NIL threshold 0.64 for ConTeXT (`results/p2/nil.csv`) |
-| 6 | Job index + agent tools | 🔄 | `index_djinni` building (6,000 postings, ~2.5 h on CPU), then `index_live` (4,000 most recent data/AI/ML postings with text) |
-| 7 | Problem 3: gold labels, baseline, single vs multi-agent, EDA 05 | ⬜ | code complete and wiring-tested; runs after the indexes (`p3_pairs → p3_labels → p3_eval → p3_eval_sonnet → p3_silver → eda05`) |
-| 8 | Model Ops: API, UI, ingestion, drift report, architecture doc, Dockerfile | 🔄 | written (`src/api/app.py`, `src/ui/app.py`, `src/monitoring/`, `docs/architecture.md`, `Dockerfile`); `drift` stage + smoke tests after the indexes exist |
-| 9 | Draft report, slide outline, references, README, verification pass | ⬜ | |
+| 6 | Job index + agent tools | ✅ / 🔄 | `djinni_jobs` index: 6,000 postings (`results/index/djinni_jobs_build.json`, 191 min CPU); `live_jobs`: 2,000 most recent data/AI/ML postings with text — building (1,280 done; `logs/runs/index_live.log`) |
+| 7 | Problem 3: gold labels, baseline, single vs multi-agent, EDA 05 | ✅ | 300 gold labels (Opus + Sonnet, linear κ 0.83, $7.28; `data/labels/`); Haiku eval of 5 arms (`results/p3/metrics_agent.csv`): single ReAct nDCG 0.961 / 17.8 % unsupported claims → **single + verifier 0.961 / 0 %** (champion); planner→matcher→verifier 0.887 / 0 %; Sonnet ablation on 12 CVs (`metrics_sonnet.csv`); silver 1,000-CV check (`silver_metrics.csv`); EDA 05 executed |
+| 8 | Model Ops: API, UI, ingestion, drift report, architecture doc, Dockerfile | 🔄 | written; `drift` stage + API/UI smoke tests run after the live index |
+| 9 | Draft report, slide outline, references, README, verification pass | 🔄 | `REPORT.md` sections 1–7 written with final numbers; `SLIDES_OUTLINE.md` drafted; verification pass + README/REFERENCES check pending |
 
 ## Next action
 
-`scripts/run_stages.sh` is running the remaining stages unattended in the workspace (markers in `logs/runs/*.done`,
-failures listed in `logs/runs/FAILED`). To resume after an interruption: `scripts/run_stages.sh` (skips finished stages).
-Remaining order: index_djinni (running) → index_live → p3_pairs → p3_labels (Opus + Sonnet, ≈ $8–12) → p3_eval →
-p3_eval_sonnet → p3_silver → eda04_post → drift → eda05 → Phase 9 (fill Section 5 of `REPORT.md`, `SLIDES_OUTLINE.md`,
-README/architecture update for the ConTeXT champion, verification pass).
+Remaining stages, in order (each is one command; `scripts/run_stages.sh <stage>` skips finished ones):
+1. wait for `python -m src.index.build_job_index --pool live` (running detached; marker `logs/runs/index_live.done` is set by hand when its log ends with `done:`),
+2. `scripts/run_stages.sh eda04_post drift` (live-index skills in EDA 04, ops dashboard + emerging-skills queue),
+3. API/UI smoke test (`uvicorn src.api.app:app` → `/health`, `/match` with `data/demo/synthetic_resume.md`),
+4. `python -m src.p3_agent.make_pairs` once more to write the human labelling sheet (`openpyxl` now installed; deterministic),
+5. fill the ops numbers into `REPORT.md` §6, update `SLIDES_OUTLINE.md` slides 11–13 with the final figures, verification pass
+   (every number in REPORT.md against `results/`), README refresh, commit, sync to the Mac (repo zip + state bundle:
+   `chroma/`, `data/processed/`, `.cache/llm`, `logs/llm_calls.jsonl`).
 
 ## Waiting on Kevin
 
@@ -62,6 +65,19 @@ Nothing — both inputs arrived 2026-10-20 (bundle verified, key works).
   fine-tuned MiniLM). The in-house model is kept as the owned alternative (`p2_normalize.champion_encoder` switches it in; re-run
   `nil_eval` to re-tune the threshold). LLM re-ranking adds ≤ 0.02 MAP on ConTeXT, so the pure encoder is deployed.
 - **Job index embeddings use all-MiniLM-L6-v2 at 256 tokens** (`src/index/embedder.py`), not the 64-token skill-phrase encoder.
+- **Claude 5.5 thinking controls differ per model** (`src/utils/llm.thinking_kwargs`): Haiku accepts `disabled`, Sonnet needs
+  `between_tools`, Opus cannot switch thinking off (adaptive + low effort). The wrapper also retries once with 3× the output
+  budget when thinking consumed it, and salvages truncated JSON (keeps the complete entries).
+- **Agents need an 8k-token output budget**: a 10-job ranking with quotes is 4–6k tokens; with 3k the single agent's final JSON
+  was truncated in most silver-set runs (first results were garbage and were discarded).
+- **Verifier = the faithfulness metric**: its deterministic check now applies exactly the checker's rules (verbatim quotes that
+  *name* the skill; a missing skill must be in the job and not in the resume), so "verified" output scores 0 % unsupported by
+  construction and the interesting numbers are what it repairs vs drops (1.1 vs 4.6 claims per resume).
+- **Gold labels are skewed** (205/82/13 for 0/1/2): P@3 and MRR are reported for "strong" and "partial or better"; nDCG@10
+  excludes the 2 pools with no relevant job.
+- **Added arm `single_verified`** after the first evaluation: the ReAct agent ranks best, the pipeline is faithful; the verifier is a
+  post-processor, so the combination is the product champion.
+- **Live index reduced to 2,000 postings**: live postings are 3–4× longer than Djinni ones (~8 s each on 2 vCPUs).
 - **EDA 03 needed the lean Djinni loaders** (Arrow strings, text fields merged into one column): the first run hit the 7 GB RAM limit.
 
 ## Milestone log
@@ -72,3 +88,5 @@ Nothing — both inputs arrived 2026-10-20 (bundle verified, key works).
 - 2026-10-21 01:40 UTC — Data bundle imported and verified; both taggers trained (seed 42); P1 evaluated; stage runner started for P2–P3.
 - 2026-10-21 04:15 UTC — P2 complete (champion ConTeXT, challenger RTL, NIL for both encoders); EDA 01–04 all executed; trained
   models mirrored to the Mac (`models/p1_tagger`, `models/p2_biencoder`); Djinni index build restarted with the new embedder.
+- 2026-10-21 10:10 UTC — Djinni index built; gold labels, Haiku/Sonnet agent evaluations, silver check and EDA 05 done; REPORT.md
+  §3–7 written with final numbers. Live index restarted at 2,000 postings (CPU: ~8 s per long posting).

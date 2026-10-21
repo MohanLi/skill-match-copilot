@@ -51,7 +51,7 @@ index:
   text_embedding_model: models/base/all-MiniLM-L6-v2
   text_max_seq_length: 256
   djinni_sample_size: 6000
-  live_sample_size: 4000     # most recent data/AI/ML postings indexed for the demo (CPU budget)
+  live_sample_size: 2000     # most recent data/AI/ML postings with text indexed for the demo (CPU budget: ~8 s per posting on 2 vCPUs — live postings are 3-4x longer than Djinni ones)
   chunk_chars: 1200
 
 llm:
