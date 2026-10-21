@@ -1,6 +1,6 @@
 {
   "file": "results/p1/metrics_summary_test.csv",
-  "rows": 2,
+  "rows": 5,
   "columns": [
     "approach",
     "column",
@@ -21,8 +21,8 @@
     "cost_usd_per_1000",
     "hallucination_rate"
   ],
-  "created_utc": "2026-10-15T09:54:24Z",
-  "git_commit": "77573e4",
+  "created_utc": "2026-10-21T01:00:23Z",
+  "git_commit": "6ef4f7c",
   "split": "test",
   "common_sentences": {
     "knowledge": 3569,

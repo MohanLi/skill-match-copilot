@@ -1,3 +1,6 @@
 approach,column,seeds,strict_f1_mean,strict_f1_std,strict_precision,strict_recall,loose_f1,strict_f1_tech,strict_f1_house,fp_spans_per_100_all_O,share_all_O_with_fp,n_pred_spans,n_gold_spans,n_sentences,latency_ms,cost_usd_per_1000,hallucination_rate
 dict,knowledge,1,0.2074,0.0,0.1283,0.5409,0.2812,0.2996,0.096,117.1083,0.5702,4949.0,1174,3569,0.016,,
 dict,skill,1,0.1142,0.0,0.0892,0.1586,0.3472,0.1292,0.1022,34.3384,0.2268,1939.0,1091,3569,0.016,,
+llm_haiku,knowledge,1,0.5298,0.0,0.4347,0.678,0.6236,0.6124,0.3915,25.1881,0.1488,1831.0,1174,3569,753.8,0.1296,0.0468
+llm_haiku,skill,1,0.2854,0.0,0.2297,0.3767,0.5347,0.2744,0.2946,29.8157,0.2224,1789.0,1091,3569,753.8,0.1296,0.0922
+tagger,skill,1,0.4723,0.0,0.4508,0.4959,0.7438,0.476,0.4698,5.0586,0.0348,1200.0,1091,3569,39.08,,

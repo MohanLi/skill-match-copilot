@@ -1,6 +1,6 @@
 {
   "file": "results/p1/metrics_test.csv",
-  "rows": 30,
+  "rows": 81,
   "columns": [
     "approach",
     "column",
@@ -10,8 +10,8 @@
     "metric",
     "value"
   ],
-  "created_utc": "2026-10-15T09:54:24Z",
-  "git_commit": "77573e4",
+  "created_utc": "2026-10-21T01:00:23Z",
+  "git_commit": "6ef4f7c",
   "split": "test",
   "common_sentences": {
     "knowledge": 3569,

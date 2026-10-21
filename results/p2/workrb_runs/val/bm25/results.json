@@ -10,11 +10,11 @@
       },
       "datasetid_results": {
         "en": {
-          "evaluation_time": 1.5691475868225098,
+          "evaluation_time": 1.3192856311798096,
           "metrics_dict": {
-            "map": 0.42408570991176253,
+            "map": 0.42363672645166833,
             "rp@10": 0.5482222222222223,
-            "mrr": 0.514064323870865
+            "mrr": 0.5134174788865462
           },
           "input_languages": [
             "en"
@@ -35,11 +35,11 @@
       },
       "datasetid_results": {
         "en": {
-          "evaluation_time": 2.136187791824341,
+          "evaluation_time": 1.5702910423278809,
           "metrics_dict": {
-            "map": 0.2563703290879188,
-            "rp@10": 0.3702185792349727,
-            "mrr": 0.3039376107856471
+            "map": 0.2642906603190662,
+            "rp@10": 0.38661202185792354,
+            "mrr": 0.31341290614727924
           },
           "input_languages": [
             "en"
@@ -53,8 +53,8 @@
   },
   "metadata": {
     "model_name": "BM25-lower",
-    "total_evaluation_time": 3.709415912628174,
-    "timestamp": 1792058223.21599,
+    "total_evaluation_time": 2.893777847290039,
+    "timestamp": 1792542131.131703,
     "num_tasks": 2,
     "languages": [
       "Language.EN"

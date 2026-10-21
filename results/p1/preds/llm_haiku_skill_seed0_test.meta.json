@@ -1,0 +1,12 @@
+{
+  "approach": "llm_haiku",
+  "column": "skill",
+  "seed": 0,
+  "split": "test",
+  "n": 3569,
+  "model": "claude-haiku-5-5",
+  "prompt_version": "p1_extract_v1",
+  "latency_ms_per_sentence": 753.8,
+  "cost_usd_per_1000_sentences": 0.1296,
+  "hallucination_rate": 0.0922
+}

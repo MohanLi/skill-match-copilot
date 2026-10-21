@@ -1,0 +1,117 @@
+{
+  "config": {
+    "model_name": "all-MiniLM-L6-v2 (zero-shot bi-encoder)",
+    "model_class": "NamedBiEncoder",
+    "model_kwargs": {},
+    "task_configs": [
+      {
+        "name": "Skill Extraction Tech",
+        "languages": [
+          "en"
+        ],
+        "split": "val",
+        "class": "LocalTechSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from technical text descriptions in the TECH subset of CAREER."
+      },
+      {
+        "name": "Skill Extraction House",
+        "languages": [
+          "en"
+        ],
+        "split": "val",
+        "class": "LocalHouseSkillExtractRanking",
+        "task_group": "rank_skill_extraction",
+        "task_type": "ranking",
+        "label_type": "multi_label",
+        "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER."
+      }
+    ],
+    "languages": [
+      "en"
+    ],
+    "custom_metrics": null,
+    "output_folder": "/home/claude/skill-match-copilot/results/p2/workrb_runs/val/minilm",
+    "checkpoint_enabled": true,
+    "checkpoint_frequency": "per_task",
+    "created_at": "2026-10-21T00:22:14.170049+00:00",
+    "description": ""
+  },
+  "last_updated": 1792542243.042313,
+  "last_updated_iso": "2026-10-21T00:24:03.042315+00:00",
+  "results": {
+    "task_results": {
+      "Skill Extraction Tech": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from technical text descriptions in the TECH subset of CAREER.",
+          "split": "val"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 107.28768610954285,
+            "metrics_dict": {
+              "map": 0.4340101471717292,
+              "rp@10": 0.6648888888888888,
+              "mrr": 0.5296220904121653
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      },
+      "Skill Extraction House": {
+        "metadata": {
+          "task_group": "rank_skill_extraction",
+          "task_type": "ranking",
+          "label_type": "multi_label",
+          "description": "Extract skills from general text descriptions in the HOUSE subset of CAREER.",
+          "split": "val"
+        },
+        "datasetid_results": {
+          "en": {
+            "evaluation_time": 1.5830879211425781,
+            "metrics_dict": {
+              "map": 0.3371573288442105,
+              "rp@10": 0.5592896174863388,
+              "mrr": 0.4404629290961907
+            },
+            "input_languages": [
+              "en"
+            ],
+            "output_languages": [
+              "en"
+            ]
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model_name": "all-MiniLM-L6-v2 (zero-shot bi-encoder)",
+      "total_evaluation_time": 0.0,
+      "timestamp": 1792542134.1700733,
+      "num_tasks": 2,
+      "languages": [
+        "Language.EN"
+      ],
+      "resumed_from_checkpoint": false,
+      "language_aggregation_mode": "monolingual_only",
+      "replayed_from_workrb_version": null
+    },
+    "key_metrics_by_task_group": {
+      "rank_skill_extraction": [
+        "map",
+        "rp@10",
+        "mrr"
+      ]
+    }
+  }
+}

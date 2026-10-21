@@ -36,11 +36,11 @@
     "output_folder": "/home/claude/skill-match-copilot/results/p2/workrb_runs/val/bm25",
     "checkpoint_enabled": true,
     "checkpoint_frequency": "per_task",
-    "created_at": "2026-10-15T09:57:03.215950+00:00",
+    "created_at": "2026-10-21T00:22:11.131671+00:00",
     "description": ""
   },
-  "last_updated": 1792058226.9243317,
-  "last_updated_iso": "2026-10-15T09:57:06.924337+00:00",
+  "last_updated": 1792542134.0250041,
+  "last_updated_iso": "2026-10-21T00:22:14.025006+00:00",
   "results": {
     "task_results": {
       "Skill Extraction Tech": {
@@ -53,11 +53,11 @@
         },
         "datasetid_results": {
           "en": {
-            "evaluation_time": 1.5691475868225098,
+            "evaluation_time": 1.3192856311798096,
             "metrics_dict": {
-              "map": 0.42408570991176253,
+              "map": 0.42363672645166833,
               "rp@10": 0.5482222222222223,
-              "mrr": 0.514064323870865
+              "mrr": 0.5134174788865462
             },
             "input_languages": [
               "en"
@@ -78,11 +78,11 @@
         },
         "datasetid_results": {
           "en": {
-            "evaluation_time": 2.136187791824341,
+            "evaluation_time": 1.5702910423278809,
             "metrics_dict": {
-              "map": 0.2563703290879188,
-              "rp@10": 0.3702185792349727,
-              "mrr": 0.3039376107856471
+              "map": 0.2642906603190662,
+              "rp@10": 0.38661202185792354,
+              "mrr": 0.31341290614727924
             },
             "input_languages": [
               "en"
@@ -97,7 +97,7 @@
     "metadata": {
       "model_name": "BM25-lower",
       "total_evaluation_time": 0.0,
-      "timestamp": 1792058223.21599,
+      "timestamp": 1792542131.131703,
       "num_tasks": 2,
       "languages": [
         "Language.EN"

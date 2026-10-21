@@ -1,0 +1,16 @@
+{
+  "file": "results/p1/errors_test.csv",
+  "rows": 24,
+  "columns": [
+    "approach",
+    "column",
+    "sid",
+    "source",
+    "sentence",
+    "gold_spans",
+    "pred_spans",
+    "error_types"
+  ],
+  "created_utc": "2026-10-21T01:00:23Z",
+  "git_commit": "6ef4f7c"
+}

@@ -1,0 +1,22 @@
+{
+  "approach": "llm_haiku",
+  "model": "claude-haiku-5-5",
+  "prompt_version": "p1_extract_v1",
+  "split": "test",
+  "n_sentences": 3569,
+  "subset": 0,
+  "parse_failures": 1,
+  "phrases_returned": 3877,
+  "phrases_unmatched": 271,
+  "hallucination_rate": 0.0699,
+  "hallucination_rate_skills": 0.0922,
+  "hallucination_rate_knowledge": 0.0468,
+  "input_tokens": 4052094,
+  "output_tokens": 114827,
+  "cost_usd": 0.4627,
+  "cost_usd_per_1000_sentences": 0.1296,
+  "latency_ms_median": 753.8,
+  "latency_ms_p90": 1029.0,
+  "cached_calls": 878,
+  "wall_time_min": 9.28
+}

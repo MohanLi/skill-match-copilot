@@ -35,7 +35,7 @@ def extract_one(client: LLMClient, prompt, examples_text: str, r: dict, model: s
     sentence = " ".join(r["tokens"])
     t0 = time.perf_counter()
     try:
-        obj, res = client.complete_json(prompt, model=model, max_tokens=400, examples=examples_text, sentence=sentence)
+        obj, res = client.complete_json(prompt, model=model, max_tokens=1200, examples=examples_text, sentence=sentence)
         skills = [str(x) for x in (obj.get("skills") or []) if isinstance(x, (str, int, float))]
         knowledge = [str(x) for x in (obj.get("knowledge") or []) if isinstance(x, (str, int, float))]
         parse_ok = True

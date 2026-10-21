@@ -235,10 +235,11 @@ class LLMClient:
         model_id = self.resolve_model(model)
         temperature = self.cfg.get("temperature", 0.0) if temperature is None else temperature
         max_tokens = int(self.cfg.get("max_tokens", 1024) if max_tokens is None else max_tokens)
+        thinking = self.cfg.get("thinking", "disabled")
         payload = {
             "model": model_id, "system": system, "messages": messages, "tools": tools or [],
             "temperature": temperature, "max_tokens": max_tokens, "prompt_version": prompt_version,
-            "tool_choice": tool_choice,
+            "tool_choice": tool_choice, "thinking": thinking,
         }
         key = self._key(payload)
         cache_f = self.cache_dir / f"{key}.json"
@@ -256,6 +257,10 @@ class LLMClient:
         # Claude 5.x models reject sampling parameters ("`temperature` is deprecated for this model"); the configured
         # value stays in the cache key for provenance but is not sent. Reproducibility comes from the on-disk cache.
         kwargs: dict[str, Any] = dict(model=model_id, max_tokens=max_tokens, messages=messages)
+        if thinking == "disabled":
+            # Claude 5.x models think by default; for bulk, deterministic, cheap calls we turn it off explicitly
+            # (thinking blocks otherwise consume the output budget and inflate cost/latency).
+            kwargs["thinking"] = {"type": "disabled"}
         if system:
             kwargs["system"] = system
         if tools:

@@ -40,6 +40,7 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=cfg["seed"])
     ap.add_argument("--batch", type=int, default=64)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--live-sample", type=int, default=None, help="live pool: keep the N most recent postings (default configs/models.yaml index.live_sample_size)")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -51,6 +52,11 @@ def main() -> None:
     else:
         jobs, info = live_jobs.load_filtered()
         jobs = jobs[jobs["n_chars"] >= 200].copy()
+        jobs = jobs.drop_duplicates(["title", "description"])
+        live_n = args.live_sample if args.live_sample is not None else cfg["index"].get("live_sample_size", 4000)
+        if live_n and len(jobs) > live_n:  # most recent postings first (the demo should show this week's jobs)
+            jobs["_posted"] = pd.to_datetime(jobs["posted_at"], errors="coerce", utc=True)
+            jobs = jobs.sort_values("_posted", ascending=False, na_position="last").head(live_n).drop(columns=["_posted"])
         jobs["category"] = jobs["department"].fillna("").astype(str)
         jobs["company"] = jobs["company"].fillna("").astype(str)
         jobs["source"] = "live"

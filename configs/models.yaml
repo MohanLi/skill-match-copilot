@@ -43,6 +43,7 @@ p3_agent:
 index:
   embedding_model: models/p2_biencoder   # falls back to base_encoder if not trained yet
   djinni_sample_size: 6000
+  live_sample_size: 4000     # most recent data/AI/ML postings indexed for the demo (CPU budget)
   chunk_chars: 1200
 
 llm:
@@ -55,6 +56,7 @@ llm:
   label_second: claude-sonnet-5-5   # second rater for agreement statistics
   temperature: 0.0   # recorded for provenance only: the Claude 5.x API no longer accepts sampling parameters
   max_tokens: 1024
+  thinking: disabled   # Claude 5.x thinks by default; disabled for all project calls (cost, determinism, output budget)
   cache_dir: .cache/llm
   log_path: logs/llm_calls.jsonl
   budget_usd: 25.0
