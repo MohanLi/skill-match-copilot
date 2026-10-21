@@ -190,11 +190,17 @@ def plot_metrics(agg: pd.DataFrame, tag: str, n_cvs: int) -> None:
     fig2.update_layout(yaxis_tickformat=".0%", xaxis_title="", yaxis_title="unsupported claims (share)", yaxis_range=[0, max(0.05, float(a2["hallucination_rate"].fillna(0).max()) * 1.25)])
     viz.save_fig(fig2, f"p3_hallucination_{tag}", "Problem 3: hallucination rate of the explanations (unsupported claims ÷ all claims, automatic checker) — the verifier's effect.")
     c = agg.melt(id_vars=["approach_label"], value_vars=["llm_calls", "cost_usd", "latency_s"], var_name="metric", value_name="value")
-    fig3 = px.bar(c, x="approach_label", y="value", facet_col="metric", facet_col_spacing=0.08, text=c["value"].map(lambda v: f"{v:.3g}"), title="Efficiency per resume: LLM calls, cost (USD) and model latency (s)")
-    fig3.update_traces(textposition="outside", marker_color=viz.PALETTE[0])
-    fig3.update_yaxes(matches=None, showticklabels=True)
-    fig3.update_layout(xaxis_title="", showlegend=False)
-    viz.save_fig(fig3, f"p3_efficiency_{tag}", "Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools).")
+    c["metric"] = c["metric"].map({"llm_calls": "LLM calls per resume", "cost_usd": "cost per resume (USD)", "latency_s": "model latency per resume (s)"})
+    order = agg.sort_values("cost_usd")["approach_label"].tolist()
+    fig3 = px.bar(c, y="approach_label", x="value", facet_col="metric", orientation="h", facet_col_spacing=0.06, text=c["value"].map(lambda v: f"{v:.3g}"),
+                  category_orders={"approach_label": order, "metric": ["LLM calls per resume", "cost per resume (USD)", "model latency per resume (s)"]},
+                  title="Efficiency per resume: LLM calls, cost and model latency (same model, same tools)")
+    fig3.update_traces(textposition="outside", cliponaxis=False, marker_color=viz.PALETTE[0])
+    fig3.update_xaxes(matches=None, showticklabels=True, title_text="")
+    fig3.update_yaxes(title_text="", showticklabels=False)
+    fig3.update_yaxes(showticklabels=True, col=1)
+    fig3.update_layout(showlegend=False, width=1400)
+    viz.save_fig(fig3, f"p3_efficiency_{tag}", "Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools).", width=1400)
 
 
 
