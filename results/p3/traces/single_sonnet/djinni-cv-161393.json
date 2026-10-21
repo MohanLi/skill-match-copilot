@@ -1,0 +1,547 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-103756",
+   "rank": 1,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "SAP MM (ERP logistics) implementation",
+     "resume_quote": "Design, configuration and implementation of SAP MM/SD",
+     "job_quote": "ERP logistics (MM, PUR) prerequisite"
+    },
+    {
+     "skill": "System configuration / customizing",
+     "resume_quote": "Configuration of organizational structure and Master Data",
+     "job_quote": "Combination of process knowledge and system configuration skills"
+    },
+    {
+     "skill": "Roll-out / go-live and support phases",
+     "resume_quote": "Roll-out",
+     "job_quote": "- GoLive"
+    },
+    {
+     "skill": "Post go-live support",
+     "resume_quote": "Support",
+     "job_quote": "- Support"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SAP Ariba SCC implementation",
+     "job_quote": "Successful ARIBA SCC implementation project"
+    },
+    {
+     "skill": "Ariba supplier collaboration (PO, forecast, scheduling agreements)",
+     "job_quote": "SAP ARIBA SCC Forecast Collaboration"
+    }
+   ],
+   "summary": "The only SAP posting in the pool. It requires MM logistics experience and configuration through go-live and support, which the candidate has. The gap is Ariba SCC-specific experience, and the role is not SD/Retail."
+  },
+  {
+   "job_id": "djinni-job-122854",
+   "rank": 2,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "Problem solving",
+     "resume_quote": "resolving problems",
+     "job_quote": "Strong problem-solving skills"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile",
+     "job_quote": "In-depth knowledge of Agile process and principles and other frameworks"
+    },
+    {
+     "skill": "Web and mobile development",
+     "job_quote": "Experience with web and mobile development MUST HAVE!"
+    }
+   ],
+   "summary": "Senior delivery and project role. It shares only soft skills with the candidate and requires web and mobile development, which the candidate lacks."
+  },
+  {
+   "job_id": "djinni-job-9663",
+   "rank": 3,
+   "fit_score": 10.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "T-SQL",
+     "job_quote": "Profound knowledge in T-SQL"
+    },
+    {
+     "skill": "ETL",
+     "job_quote": "Maintain and develop ETL processes"
+    }
+   ],
+   "summary": "BI and SQL developer role. It touches on data and finance reporting but is a different role family from SAP functional consulting."
+  },
+  {
+   "job_id": "djinni-job-131076",
+   "rank": 4,
+   "fit_score": 6.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "PowerShell",
+     "job_quote": "good PowerShell Scripting knowledge is an advantage"
+    },
+    {
+     "skill": "Software packaging",
+     "job_quote": "developing software installation routines"
+    }
+   ],
+   "summary": "Infrastructure software packaging role, not related to SAP consulting."
+  },
+  {
+   "job_id": "djinni-job-119225",
+   "rank": 5,
+   "fit_score": 4.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Manual QA role for a lottery platform. Different domain and role family, with no meaningful overlap."
+  },
+  {
+   "job_id": "djinni-job-73564",
+   "rank": 6,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Node.js developer role. This is a software engineering position with no SAP overlap."
+  },
+  {
+   "job_id": "djinni-job-29329",
+   "rank": 7,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Erlang engineer role. It is a programming position unrelated to the candidate's SAP functional background."
+  },
+  {
+   "job_id": "djinni-job-130430",
+   "rank": 8,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Node.js/TypeScript/React developer role. It is unrelated to SAP consulting."
+  },
+  {
+   "job_id": "djinni-job-27427",
+   "rank": 9,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Digital marketing role. Different role family with no skill overlap."
+  },
+  {
+   "job_id": "djinni-job-130016",
+   "rank": 10,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Social media marketing role. It is unrelated to the candidate's profile."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting skills from the resume and running several searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: SAP MM/SD Consultant\n\nExperience: Experienced Senior SAP Consultant with over 6 years of experience in SAP R/3 and S/4 HANA. Excellent reputation for resolving problems, improving customer satisfaction, and driving overall operational improvements. Consistently saved costs while increasing profits. Specialized mainly in Material management (MM), Sales & Distribution (SD) and SAP Retail with focus on integration with other modules such as FI, WMS.\n\nDesign, configuration and implementation of SAP MM/SD User Manuals Documentation Configuration of organizational structure and Master Data Organization of processes and trainings Configuration of supply chain Change management Roll-out Support"
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "SAP MM SD Consultant S/4 HANA",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Senior SAP Consultant Materials Management Sales and Distribution SAP Retail integration FI WMS",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "SAP supply chain configuration roll-out support change management",
+      "k": 10
+     }
+    }
+   ],
+   "cached": false,
+   "cost_usd": 0.01139
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: SAP MM/SD Consultant\n\nExperience: Experienced Senior SAP Consultant with over 6 years of experience in SAP R/3 and S/4 HANA. Excellent reputation for resolving problems, improving customer satisfaction, and driving overall operational improvements. Consistently saved costs while increasing profits. Specialized mainly in Material management (MM), Sales & Distribution (SD) and SAP Retail with focus on integration with other modules such as FI, WMS.\n\nDesign, configuration and implementation of SAP MM/SD User Manuals Documentation Configuration of organizational structure and Master Data Organization of processes and trainings Configuration of supply chain Change management Roll-out Support"
+   },
+   "output_preview": "{\"skills\": [\"resolving problems\", \"improving customer satisfaction\", \"driving overall operational improvements\", \"saved costs\", \"increasing profits\", \"Design , configuration and implementation of SAP\", \"Configuration of organizational structure and Master Data\", \"Organization of processes and trainings\", \"Configuration of supply chain\"], \"knowledge\": [\"SAP R/3\", \"S/4 HANA\", \"Material management (\", \"MM )\", \"Sales & Distribution (\", \"SD )\", \"SAP Retail\", \"FI\", \"WMS\", \"SAP MM/SD User Manuals\", \"structure\", \"Master Data\", \"supply chain\", \"Change management\", \"Roll-out\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "SAP MM SD Consultant S/4 HANA",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-103756\", \"title\": \"SAP Ariba Consultant\", \"company\": \"SKIY31\", \"category\": \"Other\", \"score\": 0.4759, \"esco_skills\": [\"SAP Data Services\", \"collaborate in company's daily operations \", \"develop design concept\", \"manage inventory\", \"mass customisation\", \"supplier management\", \"transportation software related to an ERP system\"], \"snippet\": \"SAP Ariba Consultant\\n**Requirements**\\r\\nAt least 1 successful implementation:\\r\\n- ERP logistics (MM, PUR) prerequisite\\r\\n- Successful ARIBA SCC implementation project,including the following project phases\\r\\n- Conceptual design\\r\\n"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Senior SAP Consultant Materials Management Sales and Distribution SAP Retail integration FI WMS",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-103756\", \"title\": \"SAP Ariba Consultant\", \"company\": \"SKIY31\", \"category\": \"Other\", \"score\": 0.5279, \"esco_skills\": [\"SAP Data Services\", \"collaborate in company's daily operations \", \"develop design concept\", \"manage inventory\", \"mass customisation\", \"supplier management\", \"transportation software related to an ERP system\"], \"snippet\": \"SAP Ariba Consultant\\n**Requirements**\\r\\nAt least 1 successful implementation:\\r\\n- ERP logistics (MM, PUR) prerequisite\\r\\n- Successful ARIBA SCC implementation project,including the following project phases\\r\\n- Conceptual design\\r\\n"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "SAP supply chain configuration roll-out support change management",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-103756\", \"title\": \"SAP Ariba Consultant\", \"company\": \"SKIY31\", \"category\": \"Other\", \"score\": 0.4643, \"esco_skills\": [\"SAP Data Services\", \"collaborate in company's daily operations \", \"develop design concept\", \"manage inventory\", \"mass customisation\", \"supplier management\", \"transportation software related to an ERP system\"], \"snippet\": \"SAP Ariba Consultant\\n**Requirements**\\r\\nAt least 1 successful implementation:\\r\\n- ERP logistics (MM, PUR) prerequisite\\r\\n- Successful ARIBA SCC implementation project,including the following project phases\\r\\n- Conceptual design\\r\\n"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The pool is the same 10 jobs each time. I'll pull full text for the most relevant ones and normalize the resume skills.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-103756"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-122854"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-9663"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-131076"
+     }
+    },
+    {
+     "name": "normalize_skills",
+     "input": {
+      "phrases": [
+       "Configuration of supply chain",
+       "Change management",
+       "Master Data",
+       "SAP Retail",
+       "Organization of processes and trainings",
+       "Design, configuration and implementation of SAP"
+      ]
+     }
+    }
+   ],
+   "cached": false,
+   "cost_usd": 0.02707
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-103756"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-103756\", \"title\": \"SAP Ariba Consultant\", \"company\": \"SKIY31\", \"category\": \"Other\", \"url\": \"\", \"text\": \"SAP Ariba Consultant\\n**Requirements**\\r\\nAt least 1 successful implementation:\\r\\n- ERP logistics (MM, PUR) prerequisite\\r\\n- Successful ARIBA SCC implementation project,including the following project phases\\r\\n- Conceptual design\\r\\n- Implementation (Customizing, conceptual design ofdevelopments)\\r\\n- GoLive\\r\\n- Support\\r\\n\\r\\n**Focus on the following SAP ARIBA SCC collaboration topics:**\\r\\n- Cloud Integration Gateway, SAP ARIBA SCC PO Collaboration\\r\\n- SAP ARIBA"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-122854"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-122854\", \"title\": \"Senior Project Manager/Delivery Manager\", \"company\": \"outstaffing.no\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Senior Project Manager/Delivery Manager\\nThe customer is the Norwegian online travel booking agency, which already has 1.5 million different direct flight packages. The client has an understanding of their market and loyal customers. The time has come to upgrade the system and open up new work horizons.\\r\\n\\r\\nResponsibilities\\r\\n\\r\\nIt will be necessary to delve into the existing project. Identify the needs of the client and the product,"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-9663"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-9663\", \"title\": \"BI Developer  #2882\", \"company\": \"Zhuko.Net\", \"category\": \"Other\", \"url\": \"\", \"text\": \"BI Developer  #2882\\nResponsibilities:\\r\\nDevelop and maintain company’s BI system (integrate new data sources, add new measures and dimensions to existing data model);\\r\\nConduct Ad-Hoc analysis and custom reporting with the aim to enforce marketing decisions, investigate technical issues, support finance calculations;\\r\\nMaintain and develop regular reporting;\\r\\nMaintain and develop ETL processes, that gather data from SQL DB, NoSQL DB, Services API;\\r\\nEnsure data "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-131076"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-131076\", \"title\": \"Software Packaging Engineer\", \"company\": \"Ciklum\", \"category\": \"Other\", \"url\": \"\", \"text\": \"Software Packaging Engineer\\nAs a motivated personality who likes to solve tricky tasks in an extraordinary team, YOU are the right person for us.\\r\\n\\r\\nWe are a 12-person international crew in the in-house high-class software packaging studio of a company that has been successfully established in the market since 2004 with around 40 employees as an IT service provider specializing in infrastructure, service and security management as well as end-user experienc"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "normalize_skills",
+   "input": {
+    "phrases": [
+     "Configuration of supply chain",
+     "Change management",
+     "Master Data",
+     "SAP Retail",
+     "Organization of processes and trainings",
+     "Design, configuration and implementation of SAP"
+    ]
+   },
+   "output_preview": "{\"mapped\": [{\"phrase\": \"Configuration of supply chain\", \"esco_label\": \"supply chain principles\", \"score\": 0.6846}, {\"phrase\": \"Change management\", \"esco_label\": \"apply change management\", \"score\": 0.876}, {\"phrase\": \"Master Data\", \"esco_label\": \"manage data\", \"score\": 0.7193}, {\"phrase\": \"SAP Retail\", \"esco_label\": \"SAP Data Services\", \"score\": 0.6592}, {\"phrase\": \"Organization of processes and trainings\", \"esco_label\": \"organise training\", \"score\": 0.6543}, {\"phrase\": \"Design, configuration and implementation of SAP\", \"esco_label\": \"SAP Data Services\", \"score\": 0.7138}], \"esco_skills\": [\"SAP "
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "The SAP Ariba job is the only real match. I'll rank the others by how much they overlap with SAP consulting (project delivery, ERP-adjacent data work, and so on).\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-103756\", \"rank\": 1, \"fit_score\": 62,\n   \"matched_skills\": [\n     {\"skill\": \"SAP MM (ERP logistics) implementation\", \"resume_quote\": \"Design, configuration and implementation of SAP MM/SD\", \"job_quote\": \"ERP logistics (MM, PUR) prerequisite\"},\n     {\"skill\": \"System configuration / customizing\", \"resume_quote\": \"Configuration of organizational structure and Master Data\", \"job_quote\": \"Combination of process knowledge and system configuration skills\"},\n     {\"skill\": \"Roll-out / go-live and support phases\", \"resume_quote\": \"Roll-out\", \"job_quote\": \"- GoLive\"},\n     {\"skill\": \"Post go-live support\", \"resume_quote\": \"Support\", \"job_quote\": \"- Support\"}\n   ],\n   \"missing_skills\": [\n     {\"skill\": \"SAP Ariba SCC implementation\", \"job_quote\": \"Successful ARIBA SCC implementation project\"},\n     {\"skill\": \"Ariba supplier collaboration (PO, forecast, scheduling agreements)\", \"job_quote\": \"SAP ARIBA SCC Forecast Collaboration\"}\n   ],\n   \"summary\": \"The only SAP posting in the pool. It requires MM logistics experience and configuration through go-live and support, which the candidate has. The gap is Ariba SCC-specific experience, and the role is not SD/Retail.\"},\n  {\"job_id\": \"djinni-job-122854\", \"rank\": 2, \"fit_score\": 12,\n   \"matched_skills\": [\n     {\"skill\": \"Problem solving\",",
+   "tool_uses": [],
+   "cached": false,
+   "cost_usd": 0.05181
+  }
+ ],
+ "llm_calls": 3,
+ "input_tokens": 32005,
+ "output_tokens": 2626,
+ "cost_usd": 0.09027,
+ "latency_ms": 17230.0,
+ "tool_calls": 9,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 18862.5,
+ "steps": 3,
+ "pool": [
+  {
+   "job_id": "djinni-job-119225",
+   "label": 0,
+   "title": "Senior Manual QA Engineer for Neogames"
+  },
+  {
+   "job_id": "djinni-job-131076",
+   "label": 0,
+   "title": "Software Packaging Engineer"
+  },
+  {
+   "job_id": "djinni-job-122854",
+   "label": 0,
+   "title": "Senior Project Manager/Delivery Manager"
+  },
+  {
+   "job_id": "djinni-job-130430",
+   "label": 0,
+   "title": "Software Developer (Estonia)"
+  },
+  {
+   "job_id": "djinni-job-9663",
+   "label": 0,
+   "title": "BI Developer  #2882"
+  },
+  {
+   "job_id": "djinni-job-27427",
+   "label": 0,
+   "title": "Digital Marketing Specialist"
+  },
+  {
+   "job_id": "djinni-job-130016",
+   "label": 0,
+   "title": "SMM Specialist"
+  },
+  {
+   "job_id": "djinni-job-103756",
+   "label": 1,
+   "title": "SAP Ariba Consultant"
+  },
+  {
+   "job_id": "djinni-job-73564",
+   "label": 0,
+   "title": "Middle Node.js Developer"
+  },
+  {
+   "job_id": "djinni-job-29329",
+   "label": 0,
+   "title": "Erlang Engineer (Parsers)"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-161393",
+  "cv_category": "Other",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.3333333333333333,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 1,
+  "coverage": 1.0,
+  "n_claims": 13,
+  "n_supported": 8,
+  "hallucination_rate": 0.3846153846153846,
+  "llm_calls": 3,
+  "input_tokens": 32005,
+  "output_tokens": 2626,
+  "cost_usd": 0.09027,
+  "latency_ms": 17230.0,
+  "wall_ms": 18862.5,
+  "tool_calls": 9,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{\"skill_not_in_quotes\": 4, \"skill_not_in_job\": 1}",
+  "steps": 3
+ },
+ "faithfulness": {
+  "n_claims": 13,
+  "n_supported": 8,
+  "hallucination_rate": 0.3846153846153846,
+  "reasons": {
+   "skill_not_in_quotes": 4,
+   "skill_not_in_job": 1
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-103756",
+    "n_claims": 6,
+    "n_supported": 1,
+    "n_matched": 4,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.8333,
+    "reasons": {
+     "skill_not_in_quotes": 4,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-122854",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-9663",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-131076",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-119225",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-73564",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-29329",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-130430",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-27427",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-130016",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

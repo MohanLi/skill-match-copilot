@@ -1,0 +1,14 @@
+{
+  "file": "results/p3/failures_sonnet.csv",
+  "rows": 13,
+  "columns": [
+    "approach",
+    "cv_id",
+    "failure_types",
+    "ndcg10",
+    "hallucination_rate",
+    "reasons"
+  ],
+  "created_utc": "2026-10-21T09:10:11Z",
+  "git_commit": "db1ad6b"
+}

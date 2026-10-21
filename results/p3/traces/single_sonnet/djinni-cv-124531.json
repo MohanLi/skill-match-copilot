@@ -1,0 +1,614 @@
+{
+ "approach": "single_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-129819",
+   "rank": 1,
+   "fit_score": 66.0,
+   "matched_skills": [
+    {
+     "skill": "Social media management",
+     "resume_quote": "SMM (60+ Social Media pages under management)",
+     "job_quote": "Manage and grow the community across our social media channels;"
+    },
+    {
+     "skill": "Written content creation",
+     "resume_quote": "Content management (number of blogposts, press-releases, media articles",
+     "job_quote": "Draft captivating written content to tell our story across different channels"
+    },
+    {
+     "skill": "Communications campaigns / strategy",
+     "resume_quote": "20+ Projects (B2B, B2C) PR strategy planning and execution",
+     "job_quote": "develop holistic creative communications campaigns;"
+    },
+    {
+     "skill": "Reporting",
+     "resume_quote": "Budgeting and Reporting",
+     "job_quote": "Produce regular reporting"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Crypto/blockchain knowledge",
+     "job_quote": "Understand at least the basics of cryptocurrencies and blockchain;"
+    },
+    {
+     "skill": "Paid media campaigns",
+     "job_quote": "Experience in creating high quality visual content and paid media campaigns."
+    }
+   ],
+   "summary": "Closest role-family fit: social media and communications content, which are core to the candidate's 10+ years of PR/SMM. The candidate is far more senior than the 2+ years required and has no crypto background."
+  },
+  {
+   "job_id": "djinni-job-27217",
+   "rank": 2,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "Networking with media and industry professionals",
+     "resume_quote": "Liaising relationships with journalists/media",
+     "job_quote": "Communicate with industry professionals and influencers via social media to create a strong network"
+    },
+    {
+     "skill": "Reporting",
+     "resume_quote": "Budgeting and Reporting",
+     "job_quote": "Analysis and reporting: you'll be analyzing ad performance"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Paid search / Google Ads",
+     "job_quote": "Google Ads, Affiliates, and more."
+    },
+    {
+     "skill": "Travel domain experience",
+     "job_quote": "2-4 years of experience in hands-on digital marketing for the Travel Domain"
+    }
+   ],
+   "summary": "A marketing role with an influencer and network-building component the candidate can cover. It is mainly performance and paid digital marketing, which the resume does not show."
+  },
+  {
+   "job_id": "djinni-job-42304",
+   "rank": 3,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "Brand/PR and SMM",
+     "resume_quote": "SMM (60+ Social Media pages under management)",
+     "job_quote": "SMM (email, messaging, social networks (FB/TW/IG/TT/YB, etc.)"
+    },
+    {
+     "skill": "Gamification / promo activities",
+     "resume_quote": "promo activities (gamification)",
+     "job_quote": "other gamification and engaging techniques."
+    },
+    {
+     "skill": "Budgeting",
+     "resume_quote": "Budgeting and Reporting",
+     "job_quote": "allocate budgets and make decisions based on short- and long-term business goals."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Team leadership",
+     "job_quote": "Experience in team leadership with strong business acumen."
+    },
+    {
+     "skill": "SEO/PPC and traffic acquisition",
+     "job_quote": "Proven experience in Traffic Acquisition."
+    },
+    {
+     "skill": "iGaming domain",
+     "job_quote": "6+ years' experience in a digital media role with gaming/gambling/betting know-how knowledge."
+    }
+   ],
+   "summary": "Brand/PR and SMM are only a small part of a senior performance-marketing leadership role. The candidate lacks the acquisition, analytics and iGaming background."
+  },
+  {
+   "job_id": "djinni-job-16484",
+   "rank": 4,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "Newsletter / mailing content",
+     "resume_quote": "monthly newsletter (from 0 to 1800+ subscribers within 7 mon",
+     "job_quote": "Create and edit templates for letters and newsletters"
+    },
+    {
+     "skill": "Content work",
+     "resume_quote": "Created or Edited most of the text content (pages, blog articles",
+     "job_quote": "Working with content, adding content through CMS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "SEO writing",
+     "job_quote": "Experience in writing SEO texts"
+    },
+    {
+     "skill": "CMS systems",
+     "job_quote": "Experience with CMS systems, office programs"
+    }
+   ],
+   "summary": "Content and newsletter work overlaps, but this is a junior, operational CMS role well below the candidate's PR strategy seniority."
+  },
+  {
+   "job_id": "djinni-job-56961",
+   "rank": 5,
+   "fit_score": 12.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "QA testing",
+     "job_quote": "Provide hands-on testing support during QA phase and production validation."
+    },
+    {
+     "skill": "HTML/CSS/JS",
+     "job_quote": "Basic knowledge of HTML/CSS/JS."
+    }
+   ],
+   "summary": "A junior QA/proofreading role with only a faint editing overlap. It is the wrong role family and seniority."
+  },
+  {
+   "job_id": "djinni-job-133023",
+   "rank": 6,
+   "fit_score": 4.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "React/front-end development",
+     "job_quote": "Maintain proper transfering from WordPress to React;"
+    }
+   ],
+   "summary": "Front-end engineering role with no relevant overlap."
+  },
+  {
+   "job_id": "djinni-job-141380",
+   "rank": 7,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "PHP/WordPress development",
+     "job_quote": "Development of new Plugins with high code quality and the goal of a future-proof implementation and controlled maintenance"
+    }
+   ],
+   "summary": "WordPress/PHP engineering role, not relevant to a PR professional."
+  },
+  {
+   "job_id": "djinni-job-127009",
+   "rank": 8,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Software engineering",
+     "job_quote": "As a Senior Engineer you will be part of an elite team of highly talented individuals"
+    }
+   ],
+   "summary": "Senior mobile/Java engineering role, unrelated to the candidate's background."
+  },
+  {
+   "job_id": "djinni-job-61114",
+   "rank": 9,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java leadership",
+     "job_quote": "You would work as a Lead Java Developer in the company and build our Java community."
+    }
+   ],
+   "summary": "Lead Java developer role, unrelated to PR and communications."
+  },
+  {
+   "job_id": "djinni-job-116442",
+   "rank": 10,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java development",
+     "job_quote": "You will also be coaching new developers and influencing how the development in the Tribe should be"
+    }
+   ],
+   "summary": "Senior Java developer role, unrelated to the candidate's skills."
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting skills from the resume and running several searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: PR and Communications. Experience: PR support of the brand on target markets: Ukraine, USA, Europe. 10+ years of experience. 20+ Projects (B2B, B2C) PR strategy planning and execution. SMM (60+ Social Media pages under management). Liaising relationships with journalists/media. Content management (number of blogposts, press-releases, media articles, questionnaires and surveys for internal\\external use). Planning and establishing of all corporate events according to the annual plan. POS materials and branded gifts. Budgeting and Reporting. Event management: booth management, POS materials, promo activities (gamification). CEO opinion leader brand development. Press-release campaigns in niche media. monthly newsletter."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "PR and Communications manager",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "social media marketing, content management, press releases, media relations",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "event management and brand communications specialist",
+      "k": 10
+     }
+    }
+   ],
+   "cached": false,
+   "cost_usd": 0.011908
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: PR and Communications. Experience: PR support of the brand on target markets: Ukraine, USA, Europe. 10+ years of experience. 20+ Projects (B2B, B2C) PR strategy planning and execution. SMM (60+ Social Media pages under management). Liaising relationships with journalists/media. Content management (number of blogposts, press-releases, media articles, questionnaires and surveys for internal\\external use). Planning and establishing of all corporate events according to the annual plan. POS materials and branded gifts. Budgeting and Reporting. Event management: booth management, POS materials, promo activities (gamification). CEO opinion leader brand development. Press-release campaigns in niche media. monthly newsletter."
+   },
+   "output_preview": "{\"skills\": [\"PR\", \"support\", \"Liaising relationships with journalists/media\", \"Planning and establishing of all corporate events\"], \"knowledge\": [\"B2B\", \"B2C\", \"PR\", \"strategy planning\", \"management\", \"booth management\", \"POS materials\", \"promo activities\", \"gamification\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "PR and Communications manager",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-27217\", \"title\": \"Digital Marketing Manager\", \"company\": \"Business Class\", \"category\": \"Marketing\", \"score\": 0.4439, \"esco_skills\": [\"English\", \"apply social media marketing\", \"collaborate in the development of marketing strategies\", \"communication\", \"coordinate events\", \"define technical requirements\", \"deliver visual presentation of data\", \"design automation components\", \"develop campaigns\", \"develop financial statistics reports\", \"digital marketing techniques\", \"engage with stakeholders\", \"implement marketing strategies\", \"liaise with industry experts\", \"marketing ma"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "social media marketing, content management, press releases, media relations",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-42304\", \"title\": \"Head of marketing & sales, igaming\", \"company\": \"Collins Cross\", \"category\": \"Marketing\", \"score\": 0.5007, \"esco_skills\": [\"adapt to change in marketing\", \"advise on acquisitions\", \"allocate bills\", \"alter management\", \"analyse big data\", \"animal acquisition\", \"apply business acumen\", \"apply customer engagement strategy\", \"architectural design\", \"build networks\", \"channel marketing\", \"communication\", \"design graphics\", \"execute email marketing\", \"execute marketing plan\"], \"snippet\": \"Head of marketing & sales, igaming\\nRESPONSIBILITIES\\r\\n•\\tResponsibl"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "event management and brand communications specialist",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-42304\", \"title\": \"Head of marketing & sales, igaming\", \"company\": \"Collins Cross\", \"category\": \"Marketing\", \"score\": 0.4546, \"esco_skills\": [\"adapt to change in marketing\", \"advise on acquisitions\", \"allocate bills\", \"alter management\", \"analyse big data\", \"animal acquisition\", \"apply business acumen\", \"apply customer engagement strategy\", \"architectural design\", \"build networks\", \"channel marketing\", \"communication\", \"design graphics\", \"execute email marketing\", \"execute marketing plan\"], \"snippet\": \"Head of marketing & sales, igaming\\nRESPONSIBILITIES\\r\\n•\\tResponsibl"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The pool is the same 10 jobs. I'll pull full text for the 4 marketing jobs, and the Junior QA and WordPress postings, which have content/proofreading and website overlap.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-27217"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-42304"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-129819"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-16484"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-56961"
+     }
+    }
+   ],
+   "cached": false,
+   "cost_usd": 0.028482
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-27217"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-27217\", \"title\": \"Digital Marketing Manager\", \"company\": \"Business Class\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Digital Marketing Manager\\nHere, at Business-Class, we strive to become the number one choice for all premium-class travelers. A mission we won’t be able to achieve without the right people working together hand-in-hand to accomplish the same purpose. We are dedicated to providing the very best product paying a detailed focus on customer service and satisfaction in order to gain loyal repetitive clients eager to be working with our employees.\\r\\n\\r\\n**A"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-42304"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-42304\", \"title\": \"Head of marketing & sales, igaming\", \"company\": \"Collins Cross\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Head of marketing & sales, igaming\\nRESPONSIBILITIES\\r\\n•\\tResponsible for leading and managing affiliate marketing, SEO, Copywriting, SMM (email, messaging, social networks (FB/TW/IG/TT/YB, etc.), Design, Graphics, UX, Acquisition, Retention, Re-marketing, Brand/PR/Reputation protection, and Casino Management.\\r\\n•\\tReport directly to the CEO.\\r\\n•\\tManage mostly remotely based specialists/teams/functions (processes) of 7 people with a plan to "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-129819"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-129819\", \"title\": \"SMM for blockchain project (NFT marketplace)\", \"company\": \"Tacans\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"SMM for blockchain project (NFT marketplace)\\nResponsibilities\\r\\n- Work closely with CMO to develop holistic creative communications campaigns;\\r\\n- Create and follow SMM content plan;\\r\\n- Draft captivating written content to tell our story across different channels\\r\\n- Produce eye-catching, evoking visual content;\\r\\n- Build up an engaged audience within our core target audiences and pillars of work;\\r\\n- Manage and grow the community ac"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-16484"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-16484\", \"title\": \"Content Manager\", \"company\": \"Ox gaming\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Content Manager\\nKey requirements:\\r\\n●Experience in campaigns (teaser and banner advertising)\\r\\n●Experience in writing SEO texts\\r\\n●Experience in creating letter templates, working with mailings\\r\\n●Attention\\r\\n●Accuracy\\r\\n●A responsibility\\r\\n●Experience with CMS systems, office programs\\r\\n\\r\\nKey responsibilities:\\r\\n●Working with content, adding content through CMS\\r\\n●Adding banners, slides, advertising campaigns to the site\\r\\n●Create and edit templates for"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-56961"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-56961\", \"title\": \"Junior QA Engineer\", \"company\": \"HR Studio\", \"category\": \"QA\", \"url\": \"\", \"text\": \"Junior QA Engineer\\nA day in the life of...\\r\\n• Proofread, edit, and perform quality checks on the corporate websites (e.g. product detail pages, articles, web forms etc.) being translated and localized from English to numerous foreign languages.\\r\\n• Estimate QA/proofreading efforts and collaborate with the team in the development of a testing strategy.\\r\\n• Ensure that all assigned projects are completed in an efficient, accurate, and timely manner and transmitted to s"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "I have enough to rank. The four marketing roles are the only family fits, and the remaining six are engineering or QA roles with little overlap.\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-129819\", \"rank\": 1, \"fit_score\": 66,\n   \"matched_skills\": [\n     {\"skill\": \"Social media management\", \"resume_quote\": \"SMM (60+ Social Media pages under management)\", \"job_quote\": \"Manage and grow the community across our social media channels;\"},\n     {\"skill\": \"Written content creation\", \"resume_quote\": \"Content management (number of blogposts, press-releases, media articles\", \"job_quote\": \"Draft captivating written content to tell our story across different channels\"},\n     {\"skill\": \"Communications campaigns / strategy\", \"resume_quote\": \"20+ Projects (B2B, B2C) PR strategy planning and execution\", \"job_quote\": \"develop holistic creative communications campaigns;\"},\n     {\"skill\": \"Reporting\", \"resume_quote\": \"Budgeting and Reporting\", \"job_quote\": \"Produce regular reporting\"}\n   ],\n   \"missing_skills\": [\n     {\"skill\": \"Crypto/blockchain knowledge\", \"job_quote\": \"Understand at least the basics of cryptocurrencies and blockchain;\"},\n     {\"skill\": \"Paid media campaigns\", \"job_quote\": \"Experience in creating high quality visual content and paid media campaigns.\"}\n   ],\n   \"summary\": \"Closest role-family fit: social media and communications content, which are core to the candidate's 10+ years of PR/SMM. The candidate is far more senior than the 2+ years required and has no crypto backg",
+   "tool_uses": [],
+   "cached": false,
+   "cost_usd": 0.066728
+  }
+ ],
+ "llm_calls": 3,
+ "input_tokens": 36369,
+ "output_tokens": 3438,
+ "cost_usd": 0.107118,
+ "latency_ms": 21752.4,
+ "tool_calls": 9,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 23582.5,
+ "steps": 3,
+ "pool": [
+  {
+   "job_id": "djinni-job-16484",
+   "label": 1,
+   "title": "Content Manager"
+  },
+  {
+   "job_id": "djinni-job-129819",
+   "label": 1,
+   "title": "SMM for blockchain project (NFT marketplace)"
+  },
+  {
+   "job_id": "djinni-job-56961",
+   "label": 0,
+   "title": "Junior QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-116442",
+   "label": 0,
+   "title": "Senior Java Developer"
+  },
+  {
+   "job_id": "djinni-job-133023",
+   "label": 0,
+   "title": "Strong Middle/ Senior Front-End (React) developer"
+  },
+  {
+   "job_id": "djinni-job-127009",
+   "label": 0,
+   "title": "Senior Software Engineer with mobile consumer apps experience"
+  },
+  {
+   "job_id": "djinni-job-27217",
+   "label": 0,
+   "title": "Digital Marketing Manager"
+  },
+  {
+   "job_id": "djinni-job-61114",
+   "label": 0,
+   "title": "Lead Java Developer (Healthcare)"
+  },
+  {
+   "job_id": "djinni-job-141380",
+   "label": 0,
+   "title": "WordPress Developer"
+  },
+  {
+   "job_id": "djinni-job-42304",
+   "label": 0,
+   "title": "Head of marketing & sales, igaming"
+  }
+ ],
+ "metrics": {
+  "approach": "single",
+  "cv_id": "djinni-cv-124531",
+  "cv_category": "Marketing",
+  "ndcg10": 0.8772153153380493,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.3333333333333333,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 2,
+  "coverage": 1.0,
+  "n_claims": 27,
+  "n_supported": 17,
+  "hallucination_rate": 0.37037037037037035,
+  "llm_calls": 3,
+  "input_tokens": 36369,
+  "output_tokens": 3438,
+  "cost_usd": 0.10711799999999999,
+  "latency_ms": 21752.4,
+  "wall_ms": 23582.5,
+  "tool_calls": 9,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{\"skill_not_in_quotes\": 6, \"skill_not_in_job\": 4}",
+  "steps": 3
+ },
+ "faithfulness": {
+  "n_claims": 27,
+  "n_supported": 17,
+  "hallucination_rate": 0.37037037037037035,
+  "reasons": {
+   "skill_not_in_quotes": 6,
+   "skill_not_in_job": 4
+  },
+  "per_job": [
+   {
+    "job_id": "djinni-job-129819",
+    "n_claims": 6,
+    "n_supported": 3,
+    "n_matched": 4,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.5,
+    "reasons": {
+     "skill_not_in_quotes": 2,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-27217",
+    "n_claims": 4,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.25,
+    "reasons": {
+     "skill_not_in_quotes": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-42304",
+    "n_claims": 6,
+    "n_supported": 4,
+    "n_matched": 3,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.3333,
+    "reasons": {
+     "skill_not_in_quotes": 1,
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-16484",
+    "n_claims": 4,
+    "n_supported": 2,
+    "n_matched": 2,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.5,
+    "reasons": {
+     "skill_not_in_quotes": 2
+    }
+   },
+   {
+    "job_id": "djinni-job-56961",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-133023",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-141380",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-127009",
+    "n_claims": 1,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 0,
+    "hallucination_rate": 1.0,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-61114",
+    "n_claims": 1,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 0,
+    "hallucination_rate": 1.0,
+    "reasons": {
+     "skill_not_in_job": 1
+    }
+   },
+   {
+    "job_id": "djinni-job-116442",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

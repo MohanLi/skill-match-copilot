@@ -1,0 +1,584 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-63575",
+   "rank": 1,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "Proxy API server on Symfony for a big telecommunication company",
+     "job_quote": "2+ years experience with PHP"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Magento",
+     "job_quote": "1+ year experience with Magento, Magento 2"
+    },
+    {
+     "skill": "JavaScript development",
+     "job_quote": "Solid JavaScript development experience"
+    }
+   ],
+   "summary": "Closest fit: PHP eCommerce developer role matching the candidate's Commerce background, though it is a Magento-specific, lower-seniority position with no leadership component.",
+   "dropped": [
+    {
+     "skill": "eCommerce",
+     "reason": "The job text never names eCommerce, so no verbatim job quote can support this skill; the resume's 'Commerce' projects do not match any skill named in the job."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-74469",
+   "rank": 2,
+   "fit_score": 48.0,
+   "matched_skills": [
+    {
+     "skill": "API",
+     "resume_quote": "Proxy API server on Symfony for a big telecommunication company",
+     "job_quote": "Knowledge of Restful concepts and APIs"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Laravel/Lumen",
+     "job_quote": "Expertise in PHP (Laravel/Lumen)"
+    },
+    {
+     "skill": "MySQL",
+     "job_quote": "Experience in designing and maintaining MySQL databases"
+    }
+   ],
+   "summary": "PHP backend and API role aligned with the candidate's Symfony API work, but it is a middle-level Laravel position, below the candidate's lead seniority.",
+   "dropped": [
+    {
+     "skill": "PHP backend development",
+     "reason": "The resume never names PHP in any quotable text (only Symfony, which is not named in the job text), so no verbatim resume quote can support the skill 'PHP'; claim dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-37420",
+   "rank": 3,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "Proxy API server on Symfony for a big telecommunication company",
+     "job_quote": "Understanding of object-oriented design (specifically in PHP7)"
+    },
+    {
+     "skill": "Gathering requirements from stakeholders",
+     "resume_quote": "I'm solving customer's problems on different levels",
+     "job_quote": "Experience with gathering requirements for projects from non-technical stakeholders"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React",
+     "job_quote": "Expertise in JavaScript frameworks, specifically in React and jQuery"
+    },
+    {
+     "skill": "MySQL",
+     "job_quote": "MySQL expertise and ability to create schemas, write complex queries and optimize for performance"
+    }
+   ],
+   "summary": "PHP full-stack role with a heavy front-end (React/jQuery) emphasis; the backend and client-facing overlap is partial.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-138014",
+   "rank": 4,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "PHP",
+     "resume_quote": "I also do coding and implement solutions",
+     "job_quote": "Basic PHP knowledge"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "MySQL",
+     "job_quote": "MySQL or other DB knowledge"
+    },
+    {
+     "skill": "Front-end technologies",
+     "job_quote": "Basic knowledge of front-end technologies (HTML, CSS, JS)"
+    }
+   ],
+   "summary": "PHP-related but a trainee position, far below the candidate's lead-level seniority.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-82421",
+   "rank": 5,
+   "fit_score": 18.0,
+   "matched_skills": [
+    {
+     "skill": "Drupal",
+     "resume_quote": "Acquia Certified Back End Specialist - Drupal 7",
+     "job_quote": "Experience with Drupal CMS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Vue.js/TypeScript",
+     "job_quote": "2+ years of experience with JavaScript ecosystem and VueJs + TypeScript"
+    },
+    {
+     "skill": "Front-end UI engineering",
+     "job_quote": "Strong front-end UI engineering skills"
+    }
+   ],
+   "summary": "Front-end Vue.js role where Drupal is only a nice-to-have; wrong role family for a backend PHP lead.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-34238",
+   "rank": 6,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "React/Redux",
+     "job_quote": "Experience with React/Redux and Redux-saga"
+    },
+    {
+     "skill": "TypeScript",
+     "job_quote": "Hands-on experience with TypeScript"
+    }
+   ],
+   "summary": "Front-end React role with no overlap with the candidate's PHP/Drupal backend profile.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-14732",
+   "rank": 7,
+   "fit_score": 8.0,
+   "matched_skills": [
+    {
+     "skill": "eCommerce",
+     "resume_quote": "Blog posts about eCommerce",
+     "job_quote": "working on large scale e-commerce B2B projects"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Digital marketing experience",
+     "job_quote": "5+ years experience in digital marketing roles"
+    },
+    {
+     "skill": "Content marketing",
+     "job_quote": "2+ years experience in content marketing roles"
+    }
+   ],
+   "summary": "Marketing leadership role; only a superficial eCommerce overlap, wrong role family.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-45516",
+   "rank": 8,
+   "fit_score": 6.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Embedded software architecture",
+     "job_quote": "Strong expertise in embedded Software Architecture for Microprocessor based systems in the Automotive domain"
+    },
+    {
+     "skill": "Vehicle diagnostics",
+     "job_quote": "At least basic understanding of vehicle diagnostics from ECU and tester perspective"
+    }
+   ],
+   "summary": "Automotive embedded and OTA architecture role, unrelated to web backend development.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-86429",
+   "rank": 9,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "OpenGL",
+     "job_quote": "hands-on experience with OpenGL"
+    }
+   ],
+   "summary": "Graphics and game development role with no connection to the candidate's skills.",
+   "dropped": [
+    {
+     "skill": "C#",
+     "reason": "job_quote_not_found"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-17382",
+   "rank": 10,
+   "fit_score": 4.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Copywriting",
+     "job_quote": "At least 2 years experience in copywriting"
+    },
+    {
+     "skill": "SEO",
+     "job_quote": "Optimizing texts to search engines"
+    }
+   ],
+   "summary": "Copywriting role; the candidate writes blog posts but has no copywriting or SEO profile, so this is a poor fit.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "backend / PHP web development (Drupal & Symfony, eCommerce)",
+    "seniority": "lead",
+    "target_titles": [
+     "Technical Lead (Drupal)",
+     "Team Lead PHP Developer",
+     "Senior Drupal Developer",
+     "Senior Backend Developer (Symfony)",
+     "eCommerce Solutions Architect",
+     "Drupal Commerce Lead Developer"
+    ],
+    "must_have_skills": [
+     "Drupal",
+     "Drupal Commerce",
+     "PHP",
+     "Symfony",
+     "REST API development",
+     "eCommerce",
+     "Team leadership",
+     "Backend development",
+     "Custom module development",
+     "Client solution design"
+    ],
+    "nice_to_have_skills": [
+     "Open source contribution",
+     "Acquia",
+     "API proxy/gateway design",
+     "Drupal 7",
+     "Technical writing",
+     "Telecommunication domain",
+     "Code review and mentoring",
+     "Agile/Scrum"
+    ],
+    "search_queries": [
+     "Drupal Commerce team lead PHP",
+     "Senior Drupal developer Symfony eCommerce",
+     "Technical lead PHP Symfony API backend",
+     "Drupal architect eCommerce retail telecom",
+     "Lead PHP developer Drupal Commerce open source"
+    ]
+   },
+   "ms": 3746.7
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Drupal Commerce team lead PHP",
+    "Senior Drupal developer Symfony eCommerce",
+    "Technical lead PHP Symfony API backend",
+    "Drupal architect eCommerce retail telecom",
+    "Lead PHP developer Drupal Commerce open source",
+    "Technical Lead (Drupal)",
+    "Team Lead PHP Developer",
+    "Senior Drupal Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "solving customer's problems",
+     "coding"
+    ],
+    "knowledge": [
+     "Proxy API",
+     "Symfony",
+     "Menu Item"
+    ],
+    "esco_skills": [
+     "computer programming",
+     "handle customer complaints",
+     "present menus",
+     "proxy servers"
+    ],
+    "not_in_esco": [
+     "Symfony"
+    ]
+   },
+   "ms": 2025.7
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 14264.2
+  },
+  {
+   "node": "verifier",
+   "flagged": 4,
+   "repaired": 1,
+   "dropped": 3,
+   "ms": 6226.5
+  }
+ ],
+ "llm_calls": 5,
+ "input_tokens": 12913,
+ "output_tokens": 3302,
+ "cost_usd": 0.058846,
+ "latency_ms": 23909.1,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 4,
+ "verifier_repaired": 1,
+ "verifier_dropped": 3,
+ "plan": {
+  "role_family": "backend / PHP web development (Drupal & Symfony, eCommerce)",
+  "seniority": "lead",
+  "target_titles": [
+   "Technical Lead (Drupal)",
+   "Team Lead PHP Developer",
+   "Senior Drupal Developer",
+   "Senior Backend Developer (Symfony)",
+   "eCommerce Solutions Architect",
+   "Drupal Commerce Lead Developer"
+  ],
+  "must_have_skills": [
+   "Drupal",
+   "Drupal Commerce",
+   "PHP",
+   "Symfony",
+   "REST API development",
+   "eCommerce",
+   "Team leadership",
+   "Backend development",
+   "Custom module development",
+   "Client solution design"
+  ],
+  "nice_to_have_skills": [
+   "Open source contribution",
+   "Acquia",
+   "API proxy/gateway design",
+   "Drupal 7",
+   "Technical writing",
+   "Telecommunication domain",
+   "Code review and mentoring",
+   "Agile/Scrum"
+  ],
+  "search_queries": [
+   "Drupal Commerce team lead PHP",
+   "Senior Drupal developer Symfony eCommerce",
+   "Technical lead PHP Symfony API backend",
+   "Drupal architect eCommerce retail telecom",
+   "Lead PHP developer Drupal Commerce open source"
+  ]
+ },
+ "wall_ms": 26266.5,
+ "pool": [
+  {
+   "job_id": "djinni-job-14732",
+   "label": 0,
+   "title": "Chief Marketing Officer IT"
+  },
+  {
+   "job_id": "djinni-job-74469",
+   "label": 1,
+   "title": "Middle PHP Engineer (Laravel)"
+  },
+  {
+   "job_id": "djinni-job-86429",
+   "label": 0,
+   "title": "OpenGL Developer"
+  },
+  {
+   "job_id": "djinni-job-138014",
+   "label": 0,
+   "title": "Trainee PHP Developer"
+  },
+  {
+   "job_id": "djinni-job-82421",
+   "label": 0,
+   "title": "Middle Web Developer (Vue.js)"
+  },
+  {
+   "job_id": "djinni-job-63575",
+   "label": 1,
+   "title": "Magento developer"
+  },
+  {
+   "job_id": "djinni-job-45516",
+   "label": 0,
+   "title": "In-Vehicle Diagnostic / OTA Architect (Romania)"
+  },
+  {
+   "job_id": "djinni-job-17382",
+   "label": 0,
+   "title": "Copywriter"
+  },
+  {
+   "job_id": "djinni-job-37420",
+   "label": 1,
+   "title": "Full-Stack Engineer (PHP/ React.js)"
+  },
+  {
+   "job_id": "djinni-job-34238",
+   "label": 0,
+   "title": "Front-end (React) Developer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-188695",
+  "cv_category": "PHP",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 1.0,
+  "n_claims": 26,
+  "n_supported": 26,
+  "hallucination_rate": 0.0,
+  "llm_calls": 5,
+  "input_tokens": 12913,
+  "output_tokens": 3302,
+  "cost_usd": 0.058846,
+  "latency_ms": 23909.1,
+  "wall_ms": 26266.5,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 4,
+  "verifier_repaired": 1,
+  "verifier_dropped": 3
+ },
+ "faithfulness": {
+  "n_claims": 26,
+  "n_supported": 26,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-63575",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-74469",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-37420",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-138014",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-82421",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-34238",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-14732",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-45516",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-86429",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-17382",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

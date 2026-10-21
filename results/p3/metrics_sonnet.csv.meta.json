@@ -1,0 +1,32 @@
+{
+  "file": "results/p3/metrics_sonnet.csv",
+  "rows": 2,
+  "columns": [
+    "approach",
+    "n_cvs",
+    "n_cvs_with_relevant",
+    "ndcg10",
+    "ndcg10_std",
+    "p_at_3",
+    "mrr",
+    "p_at_3_rel1",
+    "mrr_rel1",
+    "coverage",
+    "claims_per_cv",
+    "supported_per_cv",
+    "hallucination_rate",
+    "llm_calls",
+    "input_tokens",
+    "output_tokens",
+    "cost_usd",
+    "latency_s",
+    "wall_s",
+    "errors",
+    "approach_label"
+  ],
+  "created_utc": "2026-10-21T09:10:11Z",
+  "git_commit": "db1ad6b",
+  "model": "agent_ablation",
+  "labels": "data/labels/final.csv",
+  "n_cvs": 12
+}

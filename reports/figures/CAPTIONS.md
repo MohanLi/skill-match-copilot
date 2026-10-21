@@ -65,3 +65,6 @@ Every figure exists as `<name>.png` (for slides/report) and `<name>.html` (inter
 | 59 | `p3_ranking_quality_agent.png` | Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same 30 labelled 10-job pools. | src/p3_agent/evaluate.py |
 | 60 | `p3_hallucination_agent.png` | Problem 3: hallucination rate of the explanations (unsupported claims ÷ all claims, automatic checker) — the verifier's effect. | src/p3_agent/evaluate.py |
 | 61 | `p3_efficiency_agent.png` | Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools). | src/p3_agent/evaluate.py |
+| 62 | `p3_ranking_quality_sonnet.png` | Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same 12 labelled 10-job pools. | src/p3_agent/evaluate.py |
+| 63 | `p3_hallucination_sonnet.png` | Problem 3: hallucination rate of the explanations (unsupported claims ÷ all claims, automatic checker) — the verifier's effect. | src/p3_agent/evaluate.py |
+| 64 | `p3_efficiency_sonnet.png` | Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools). | src/p3_agent/evaluate.py |

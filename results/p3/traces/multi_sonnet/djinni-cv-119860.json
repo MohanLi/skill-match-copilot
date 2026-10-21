@@ -1,0 +1,642 @@
+{
+ "approach": "multi_agent",
+ "ranking": [
+  {
+   "job_id": "djinni-job-8899",
+   "rank": 1,
+   "fit_score": 82.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "web development using Node.js, Nest.js, and Express.js",
+     "job_quote": "Developing back-end things with Node.js"
+    },
+    {
+     "skill": "Express.js",
+     "resume_quote": "Node.js, Nest.js, and Express.js",
+     "job_quote": "Express.js"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "MongoDB",
+     "job_quote": "MongoDB"
+    },
+    {
+     "skill": "MySQL",
+     "job_quote": "MySQL"
+    },
+    {
+     "skill": "Mocha.js",
+     "job_quote": "Mocha.js (or any other test framework),"
+    }
+   ],
+   "summary": "Backend Node.js role requiring 1+ years with Node.js and Express.js, which directly matches the candidate's core stack. The candidate lacks the listed databases and test-framework experience, and Docker is only a plus here.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-59309",
+   "rank": 2,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "web development using Node.js, Nest.js, and Express.js",
+     "job_quote": "5+ years of experience using Node.js and expertise in Typescript"
+    },
+    {
+     "skill": "team lead",
+     "resume_quote": "I led a team called \"Noders\" to first place",
+     "job_quote": "1+ years of team lead experience managing the workflow of an engineering team"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TypeScript",
+     "job_quote": "expertise in Typescript"
+    },
+    {
+     "skill": "SQL and NoSQL databases",
+     "job_quote": "Experience with SQL and NoSQL databases"
+    },
+    {
+     "skill": "Automated testing",
+     "job_quote": "Experience with automated testing frameworks"
+    }
+   ],
+   "summary": "Right role family (backend Node.js), but it is a lead position requiring 5+ years and TypeScript expertise, above the candidate's middle level (Dec 2022 to present). The candidate's contest team leadership partially supports it.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-120989",
+   "rank": 3,
+   "fit_score": 55.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "web development using Node.js, Nest.js, and Express.js",
+     "job_quote": "Experience in various JavaScript front-end frameworks (notably Node.js)"
+    },
+    {
+     "skill": "Microservices",
+     "resume_quote": "expertise in gRPC, Microservices, Redis, Docker",
+     "job_quote": "customer facing applications and backend microservices"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Modern JavaScript 4+ years",
+     "job_quote": "4+ years of experience in modern JavaScript"
+    },
+    {
+     "skill": "DevOps",
+     "job_quote": "Experience in the DevOps field"
+    },
+    {
+     "skill": "Software tests",
+     "job_quote": "Strive for quality by writing software tests"
+    }
+   ],
+   "summary": "Node.js and microservices work matches the candidate's stack, but the role is senior with 4+ years required, beyond the candidate's experience. Strong architectural skills and test writing are not evidenced in the resume.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-9332",
+   "rank": 4,
+   "fit_score": 48.0,
+   "matched_skills": [
+    {
+     "skill": "Node.js",
+     "resume_quote": "web development using Node.js, Nest.js, and Express.js",
+     "job_quote": "at least one modern language - Ruby, Node.JS, Java, Kotlin or similar"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "3+ years web development",
+     "job_quote": "3+ years of experience in web development and design"
+    },
+    {
+     "skill": "BSc. in CS",
+     "job_quote": "BSc. in CS, engineering, or equivalent"
+    },
+    {
+     "skill": "Data pipelines",
+     "job_quote": "building and developing modules, data pipelines, and services"
+    }
+   ],
+   "summary": "Generic backend engineering role where Node.js is only one acceptable language. The candidate's experience is under the 3+ year requirement, and a CS degree and data-pipeline experience are not shown.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-126943",
+   "rank": 5,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "Express",
+     "resume_quote": "Node.js, Nest.js, and Express.js",
+     "job_quote": "Experience with ReactJS,Express"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Expert JavaScript",
+     "job_quote": "Expert-level knowledge of JavaScript"
+    },
+    {
+     "skill": "ReactJS",
+     "job_quote": "Experience with ReactJS,Express"
+    },
+    {
+     "skill": "5+ years web experience",
+     "job_quote": "5+ years of web application development experience"
+    }
+   ],
+   "summary": "Front-end-heavy senior React role. Only the Express overlap is relevant, and the seniority and React requirements are well beyond the candidate's profile.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-57340",
+   "rank": 6,
+   "fit_score": 20.0,
+   "matched_skills": [
+    {
+     "skill": "NodeJS",
+     "resume_quote": "web development using Node.js, Nest.js, and Express.js",
+     "job_quote": "Experience with NodeJS;"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React",
+     "job_quote": "1+ year of experience with React"
+    },
+    {
+     "skill": "HTML/CSS",
+     "job_quote": "Experience with HTML, CSS (SASS, Bootstrap, Material UI), JS, TS;"
+    },
+    {
+     "skill": "AJAX",
+     "job_quote": "Experience with AJAX;"
+    }
+   ],
+   "summary": "Junior front-end React role in which NodeJS is only a nice-to-have. This is the wrong role family and below the candidate's level.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-14990",
+   "rank": 7,
+   "fit_score": 12.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Core Java",
+     "job_quote": "3+ years of experience and excellent knowledge of Core Java"
+    },
+    {
+     "skill": "MSSQL migration",
+     "job_quote": "migrating applications from Sybase to MSSQL"
+    }
+   ],
+   "summary": "Java developer role focused on Sybase-to-MSSQL migration for a banking client. The stack and domain do not overlap with the candidate's Node.js background.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-141599",
+   "rank": 8,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Xamarin.Android",
+     "job_quote": "Experience with Xamarin.Android;"
+    },
+    {
+     "skill": "ASP.NET and C#",
+     "job_quote": "Knowledge in ASP.NET and C#;"
+    }
+   ],
+   "summary": "Mobile .NET/Xamarin role with no overlap with the candidate's Node.js backend skills.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-26274",
+   "rank": 9,
+   "fit_score": 7.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Linux and system administration",
+     "job_quote": "In-depth knowledge and experience of system administration from 2 years (required)!"
+    },
+    {
+     "skill": "AWS resources",
+     "job_quote": "Experience with AWS resources: EC2 / RDS / DynamoDB / Lambdas / S3 / Autoscaling"
+    }
+   ],
+   "summary": "DevOps and system administration role centred on AWS and Linux. The candidate lists Docker, but the role family is different and there is no AWS or sysadmin experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-100595",
+   "rank": 10,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Software testing experience",
+     "job_quote": "2+ years of proven experience in software testing"
+    },
+    {
+     "skill": "WPF client testing",
+     "job_quote": "Experience in testing client-server applications with windows based clients(WPF)"
+    }
+   ],
+   "summary": "Manual QA tester role for a WPF desktop application. This is a different role family with no overlap with the candidate's development profile.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "backend development (Node.js / microservices)",
+    "seniority": "middle",
+    "target_titles": [
+     "Node.js Developer",
+     "Backend Developer (Node.js)",
+     "NestJS Developer",
+     "Backend Engineer",
+     "Microservices Developer",
+     "Full Stack Developer (Node.js)"
+    ],
+    "must_have_skills": [
+     "Node.js",
+     "Nest.js",
+     "Express.js",
+     "Microservices",
+     "gRPC",
+     "Redis",
+     "Docker",
+     "REST API design",
+     "Agile"
+    ],
+    "nice_to_have_skills": [
+     "Telegraf",
+     "Monolithic vs microservices architecture",
+     "Database integration (SQL/NoSQL)",
+     "Server-side development",
+     "Mentoring / teaching",
+     "Team leadership",
+     "Cross-functional collaboration"
+    ],
+    "search_queries": [
+     "Node.js backend developer NestJS microservices",
+     "NestJS developer gRPC Redis Docker",
+     "Backend engineer Node.js Express microservices architecture",
+     "Node.js developer middle microservices Docker Redis",
+     "Node.js NestJS backend developer remote"
+    ]
+   },
+   "ms": 3244.5
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Node.js backend developer NestJS microservices",
+    "NestJS developer gRPC Redis Docker",
+    "Backend engineer Node.js Express microservices architecture",
+    "Node.js developer middle microservices Docker Redis",
+    "Node.js NestJS backend developer remote",
+    "Node.js Developer",
+    "Backend Developer (Node.js)",
+    "NestJS Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "Developed software solutions",
+     "cross-functional",
+     "utilizing agile methodologies",
+     "communication skills",
+     "thrive under pressure",
+     "guiding",
+     "programming",
+     "working on a variety of"
+    ],
+    "knowledge": [
+     "Homedev",
+     "web development",
+     "Node.js",
+     "Nest.js",
+     "Express.js",
+     "gRPC",
+     "Microservices",
+     "Redis",
+     "Docker",
+     "telegraf",
+     "agile",
+     "monolithic and micro-services architecture",
+     "contest",
+     "Node",
+     "server-side development",
+     "API design",
+     "database integration"
+    ],
+    "esco_skills": [
+     "Agile development",
+     "communication",
+     "computer programming",
+     "database",
+     "deal with pressure from unexpected circumstances",
+     "dock operations",
+     "guidance, navigation and control",
+     "web programming"
+    ],
+    "not_in_esco": [
+     "Developed software solutions",
+     "cross-functional",
+     "working on a variety of",
+     "Homedev",
+     "Node.js",
+     "Nest.js",
+     "Express.js",
+     "gRPC",
+     "Microservices",
+     "Redis",
+     "telegraf",
+     "monolithic and micro-services architecture",
+     "contest",
+     "Node",
+     "server-side development",
+     "API design"
+    ]
+   },
+   "ms": 10847.1
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 14990.6
+  },
+  {
+   "node": "verifier",
+   "flagged": 3,
+   "repaired": 3,
+   "dropped": 0,
+   "ms": 6590.4
+  }
+ ],
+ "llm_calls": 5,
+ "input_tokens": 14738,
+ "output_tokens": 3846,
+ "cost_usd": 0.067936,
+ "latency_ms": 24496.1,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 3,
+ "verifier_repaired": 3,
+ "verifier_dropped": 0,
+ "plan": {
+  "role_family": "backend development (Node.js / microservices)",
+  "seniority": "middle",
+  "target_titles": [
+   "Node.js Developer",
+   "Backend Developer (Node.js)",
+   "NestJS Developer",
+   "Backend Engineer",
+   "Microservices Developer",
+   "Full Stack Developer (Node.js)"
+  ],
+  "must_have_skills": [
+   "Node.js",
+   "Nest.js",
+   "Express.js",
+   "Microservices",
+   "gRPC",
+   "Redis",
+   "Docker",
+   "REST API design",
+   "Agile"
+  ],
+  "nice_to_have_skills": [
+   "Telegraf",
+   "Monolithic vs microservices architecture",
+   "Database integration (SQL/NoSQL)",
+   "Server-side development",
+   "Mentoring / teaching",
+   "Team leadership",
+   "Cross-functional collaboration"
+  ],
+  "search_queries": [
+   "Node.js backend developer NestJS microservices",
+   "NestJS developer gRPC Redis Docker",
+   "Backend engineer Node.js Express microservices architecture",
+   "Node.js developer middle microservices Docker Redis",
+   "Node.js NestJS backend developer remote"
+  ]
+ },
+ "wall_ms": 35676.4,
+ "pool": [
+  {
+   "job_id": "djinni-job-14990",
+   "label": 0,
+   "title": "Citigroup_Regular/Senior Java developer"
+  },
+  {
+   "job_id": "djinni-job-100595",
+   "label": 0,
+   "title": "Regular Manual Tester"
+  },
+  {
+   "job_id": "djinni-job-9332",
+   "label": 1,
+   "title": "Backend Software Engineer to Fiverr"
+  },
+  {
+   "job_id": "djinni-job-120989",
+   "label": 1,
+   "title": "Senior Node.js developer"
+  },
+  {
+   "job_id": "djinni-job-8899",
+   "label": 2,
+   "title": "Backend/Nodejs Developer"
+  },
+  {
+   "job_id": "djinni-job-141599",
+   "label": 0,
+   "title": "Xamarin Developer"
+  },
+  {
+   "job_id": "djinni-job-57340",
+   "label": 0,
+   "title": "Junior React Developer"
+  },
+  {
+   "job_id": "djinni-job-126943",
+   "label": 0,
+   "title": "Senior Software Engineer (React)"
+  },
+  {
+   "job_id": "djinni-job-26274",
+   "label": 0,
+   "title": "DevOps engineer (product company)"
+  },
+  {
+   "job_id": "djinni-job-59309",
+   "label": 0,
+   "title": "Lead Backend JavaScript Engineer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi",
+  "cv_id": "djinni-cv-119860",
+  "cv_category": "Node.js",
+  "ndcg10": 0.9515234565959557,
+  "p_at_3": 0.3333333333333333,
+  "mrr": 1.0,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 1,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 1.0,
+  "n_claims": 35,
+  "n_supported": 35,
+  "hallucination_rate": 0.0,
+  "llm_calls": 5,
+  "input_tokens": 14738,
+  "output_tokens": 3846,
+  "cost_usd": 0.067936,
+  "latency_ms": 24496.100000000002,
+  "wall_ms": 35676.4,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 2,
+  "reasons": "{}",
+  "verifier_flagged": 3,
+  "verifier_repaired": 3,
+  "verifier_dropped": 0
+ },
+ "faithfulness": {
+  "n_claims": 35,
+  "n_supported": 35,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-8899",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-59309",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-120989",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-9332",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-126943",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-57340",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-14990",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-141599",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-26274",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-100595",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}
