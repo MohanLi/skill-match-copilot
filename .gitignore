@@ -38,3 +38,7 @@ venv/
 .DS_Store
 .vscode/
 .idea/
+
+# --- agent traces contain fragments of CV / posting text: kept locally and in the state bundle, not in git ---
+results/p3/traces/
+results/p3/_old/
