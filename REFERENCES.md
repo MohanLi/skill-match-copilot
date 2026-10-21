@@ -16,8 +16,8 @@
 | Model | Used for | License |
 |-------|----------|---------|
 | `jjzha/jobbert-base-cased` — https://huggingface.co/jjzha/jobbert-base-cased | Problem 1 champion (fine-tuned token classifier) | No license stated on the model card (research use; noted as a limitation) |
-| `sentence-transformers/all-MiniLM-L6-v2` — https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | Problem 2 baseline and base of the fine-tuned bi-encoder; job/ESCO embeddings | Apache-2.0 |
-| `TechWolf/ConTeXT-Skill-Extraction-base` — https://huggingface.co/TechWolf/ConTeXT-Skill-Extraction-base | Problem 2 published baseline (via WorkRB) | See model card |
+| `sentence-transformers/all-MiniLM-L6-v2` — https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | Problem 2 zero-shot baseline and base of the in-house fine-tuned bi-encoder; job-text and query embeddings of the Chroma index | Apache-2.0 |
+| `TechWolf/ConTeXT-Skill-Extraction-base` — https://huggingface.co/TechWolf/ConTeXT-Skill-Extraction-base | Problem 2 champion encoder (selected on WorkRB validation); evaluated via WorkRB | See model card |
 | Anthropic Claude (`claude-haiku-5-5`, `claude-sonnet-5-5`, `claude-opus-5-5`) | Few-shot extractor, retrieve-then-LLM selector, agents, gold-standard labelling | Anthropic API terms |
 | spaCy `en_core_web_sm` 3.8 | POS/NER features in EDA | MIT |
 
