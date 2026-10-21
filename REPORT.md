@@ -264,11 +264,25 @@ the in-house encoder; figures `p2_nil_threshold_sweep`, `p2_nil_results`):
 **Task.** Given a resume, return the top-10 jobs from a pool with, for each job, a fit score, the matched
 and missing skills and **verbatim quotes** from the resume and the posting that support every claim.
 
-**Ground truth.** 300 resume–job pairs (30 Djinni CVs × 10 postings each: 4 from the same category, 3 from
-a related one, 3 random), graded 0 / 1 / 2 (not a fit / partial / strong) by `claude-opus-5-5` (primary) and `claude-sonnet-5-5` (second rater)
-with a written guideline (`data/labels/guideline.md`); weighted Cohen's κ reported; Opus adjudicates
-disagreements. A 1,000-pair *silver* set (same-category heuristic) checks that conclusions hold at scale.
-Limitation: labels are model-made, not human-made (decision 6).
+**Ground truth.** 300 resume–job pairs: 30 Djinni CVs (3 per category × the 10 largest categories) × a
+fixed pool of 10 indexed postings each (4 from the same category, 3 from a related one, 3 random), graded
+0 / 1 / 2 (not a fit / partial / strong) by two independent LLM raters following a written guideline
+(`data/labels/guideline.md`, `prompts/label_fit_v1.yaml`): `claude-opus-5-5` (rater A) and
+`claude-sonnet-5-5` (rater B). Results (`data/labels/kappa.json`, `data/labels/final.csv`):
+
+* Agreement 91 %, Cohen's κ = 0.81 (unweighted), **0.83 (linear)**, 0.87 (quadratic) — "almost perfect"
+  on the usual scale, and the 27 disagreements are all one level apart (never 0 vs 2). Opus adjudicated
+  them with a written rationale (`prompts/label_adjudicate_v1.yaml`).
+* Final distribution: **205 not-a-fit / 82 partial / 13 strong**. Labels track the sampling tiers: random
+  pairs are 86/90 "0", related pairs 80/90 "0", same-category pairs 39 "0" / 69 "1" / 12 "2". Only 9 of
+  the 30 CVs have a strong fit in their pool, and 2 CVs have no relevant job at all — so the ranking task
+  is mostly *partial fit above non-fit*; we therefore report Precision@3 and MRR both with "strong" and
+  with "partial or better" as the relevance threshold, and nDCG@10 (graded) over the 28 pools that contain
+  at least one relevant job.
+* Cost of the gold set: $7.28 (Opus $4.52, Sonnet $2.40, adjudication $0.36); ~15 minutes wall time. A
+  1,000-CV *silver* evaluation (relevance = same job category, over the whole 6,000-posting index) checks
+  that the conclusions hold at scale. Limitation (decision 6): labels are model-made, not human-made; the
+  labelling kit (`data/processed/labeling_sheet.xlsx`) exists so that a human pass can replace them.
 
 **Approaches** (`src/p3_agent/`), same five tools, same model (`claude-haiku-5-5`), same prompts directory:
 

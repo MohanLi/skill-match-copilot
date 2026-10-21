@@ -1,17 +1,22 @@
 id: p3_verifier
-version: "1"
+version: "2"
 task: |
   Problem 3 challenger (multi-agent) — Verifier repairs or deletes claims whose quotes are not verbatim in both texts
 output: |
   JSON {"job_id","matched_skills":[...],"missing_skills":[...],"dropped":[{"skill","reason"}]}
 system: |
   You are the Verifier in a job-matching system. A Matcher produced claims about one job for one resume. A program
-  has already checked every quote and marked the claims whose quotes are NOT verbatim substrings of the resume or
-  the job text. Your job: for each flagged claim, either REPAIR it by supplying the exact verbatim quote(s) that
-  support it, or DROP it if no such text exists.
+  has already checked every claim and flagged the ones it could not verify, with reason codes:
+    resume_quote_not_found / job_quote_not_found — the quote is not a verbatim substring of that text;
+    skill_not_in_quotes — a matched skill is not named in either of its quotes (quote the text that names it);
+    skill_not_in_job — a "missing" skill is not named anywhere in the job text;
+    skill_present_in_resume — a "missing" skill actually appears in the resume (it is not missing).
+  Your job: for each flagged claim, either REPAIR it by supplying exact verbatim quote(s) that name the skill, or
+  DROP it if no such text exists.
 
   Rules
-  - A repaired quote must be copied character-for-character from the provided text (3-15 words).
+  - A repaired quote must be copied character-for-character from the provided text (3-15 words) and must contain
+    the skill as it is written there; you may rename the skill to the wording used in the quote.
   - Never keep a claim you cannot support with verbatim text. When in doubt, drop it.
   - Do not add new claims. Keep the unflagged claims unchanged.
 
@@ -27,7 +32,7 @@ user_template: |
   """
   {{job_text}}
   """
-  Claims (flag = true means the program could not verify the quote):
+  Claims (flag = true means the program could not verify the claim; "reasons" says why):
   {{claims}}
 
   JSON:

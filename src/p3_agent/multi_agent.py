@@ -110,10 +110,12 @@ class MultiAgent:
     def verifier(self, s: MState) -> dict[str, Any]:
         t0 = time.perf_counter()
         jobs = {c["job_id"]: c for c in s["candidates"]}
+        resume_esco = list((s.get("profile") or {}).get("esco_skills") or [])
         verified, n_flagged, n_repaired, n_dropped = [], 0, 0, 0
         for e in s["ranking"]:
             job = jobs.get(e["job_id"], {})
-            claims = flag_claims(e, s["resume"], job.get("text", ""))
+            job_esco = list(job.get("esco_skills") or [])
+            claims = flag_claims(e, s["resume"], job.get("text", ""), resume_esco, job_esco)
             flagged = [c for c in claims if c["flag"]]
             n_flagged += len(flagged)
             llm_dropped: list[dict] = []
@@ -127,7 +129,7 @@ class MultiAgent:
                     llm_dropped = [{"skill": c.get("skill"), "reason": f"verifier error: {str(ex)[:80]}"} for c in flagged]
             e["dropped"] = llm_dropped
             # final deterministic pass: anything still unsupported is removed
-            claims2 = flag_claims(e, s["resume"], job.get("text", ""))
+            claims2 = flag_claims(e, s["resume"], job.get("text", ""), resume_esco, job_esco)
             keep_m = [c for c in claims2 if c["kind"] == "matched" and not c["flag"]]
             keep_x = [c for c in claims2 if c["kind"] == "missing" and not c["flag"]]
             dropped_now = [c for c in claims2 if c["flag"]]
@@ -135,7 +137,7 @@ class MultiAgent:
             n_repaired += max(0, len(flagged) - len(dropped_now) - len(llm_dropped))
             e["matched_skills"] = [{k: c[k] for k in ("skill", "resume_quote", "job_quote") if k in c} for c in keep_m]
             e["missing_skills"] = [{k: c[k] for k in ("skill", "job_quote") if k in c} for c in keep_x]
-            e["dropped"] = (e.get("dropped") or []) + [{"skill": c.get("skill"), "reason": "quote not verbatim"} for c in dropped_now]
+            e["dropped"] = (e.get("dropped") or []) + [{"skill": c.get("skill"), "reason": ", ".join(c.get("reasons") or ["unsupported"])} for c in dropped_now]
             verified.append(e)
         self._run.trace.append({"node": "verifier", "flagged": n_flagged, "repaired": n_repaired, "dropped": n_dropped, "ms": round((time.perf_counter() - t0) * 1000, 1)})
         self._run.extra.update({"verifier_flagged": n_flagged, "verifier_repaired": n_repaired, "verifier_dropped": n_dropped})

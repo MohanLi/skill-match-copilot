@@ -69,15 +69,19 @@ def normalise_ranking(obj: Any, top_n: int) -> list[dict[str, Any]]:
     return dedup[:top_n]
 
 
-def flag_claims(entry: dict[str, Any], resume: str, job_text: str) -> list[dict[str, Any]]:
-    """Deterministic half of the Verifier: mark claims whose quotes are not verbatim."""
+def flag_claims(entry: dict[str, Any], resume: str, job_text: str, resume_esco: list[str] | None = None, job_esco: list[str] | None = None) -> list[dict[str, Any]]:
+    """Deterministic half of the Verifier. Applies exactly the checks the faithfulness metric applies
+    (src/p3_agent/faithfulness.py): quotes must be verbatim, a matched skill must be named in its quotes (or be an
+    ESCO skill of both sides), a missing skill must be named in the job and absent from the resume."""
+    from .faithfulness import check_matched, check_missing
+
     claims = []
     for c in entry.get("matched_skills", []):
-        ok = bool(c.get("resume_quote")) and quote_in_text(c["resume_quote"], resume) and bool(c.get("job_quote")) and quote_in_text(c["job_quote"], job_text)
-        claims.append({"kind": "matched", **c, "flag": not ok})
+        chk = check_matched(c, resume, job_text, resume_esco, job_esco)
+        claims.append({"kind": "matched", **c, "flag": not chk.supported, "reasons": chk.reasons})
     for c in entry.get("missing_skills", []):
-        ok = bool(c.get("job_quote")) and quote_in_text(c["job_quote"], job_text) and not quote_in_text(c.get("skill", ""), resume)
-        claims.append({"kind": "missing", **c, "flag": not ok})
+        chk = check_missing(c, resume, job_text, resume_esco, job_esco)
+        claims.append({"kind": "missing", **c, "flag": not chk.supported, "reasons": chk.reasons})
     return claims
 
 
