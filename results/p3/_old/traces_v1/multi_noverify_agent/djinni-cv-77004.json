@@ -1,0 +1,476 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-106385",
+   "rank": 1,
+   "fit_score": 58.0,
+   "matched_skills": [
+    {
+     "skill": "Selenium",
+     "resume_quote": "Java, Selenium, TestNG, SQL, Git (flow).",
+     "job_quote": "Selenium if UI testing needed or any API libraries if back end"
+    },
+    {
+     "skill": "UI testing",
+     "resume_quote": "experience in creating UI tests and APIs.",
+     "job_quote": "Selenium if UI testing needed"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": ".NET testing framework",
+     "job_quote": "Hands-on experience with .Net testing framework;"
+    },
+    {
+     "skill": "X-unit",
+     "job_quote": "Good knowledge of X-unit;"
+    }
+   ],
+   "summary": "Strong overlap on Selenium-based UI testing, but the role requires 4+ years of experience and .NET tooling, which the candidate lacks; seniority is a mismatch for a junior profile.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-67211",
+   "rank": 2,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java, Selenium, TestNG, SQL, Git (flow).",
+     "job_quote": "using C#/Java"
+    },
+    {
+     "skill": "Selenium",
+     "resume_quote": "I know Selenium, TestNG, and Jackson well.",
+     "job_quote": "Selenium"
+    },
+    {
+     "skill": "SQL",
+     "resume_quote": "Java, Selenium, TestNG, SQL, Git (flow).",
+     "job_quote": "Have knowledge in SQL"
+    },
+    {
+     "skill": "Agile/Scrum",
+     "resume_quote": "Scrum, Kanban, Lean",
+     "job_quote": "Good understanding of Agile/Scrum"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C#/NUnit",
+     "job_quote": "Knowledge of NUnit or similar unit test framework"
+    },
+    {
+     "skill": "Cloud automation (Kobiton, Saucelabs)",
+     "job_quote": "Experience with cloud-based automation solutions like Kobiton, Saucelabs"
+    }
+   ],
+   "summary": "Good match on Java, Selenium, SQL, and Scrum for UI/API automation, but the posting is titled Middle and asks for 3+ years of automation experience and C#/NUnit knowledge the resume does not show.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-5653",
+   "rank": 3,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "Scrum",
+     "resume_quote": "Scrum, Kanban, Lean",
+     "job_quote": "Agile - Scrum Experience"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C#",
+     "job_quote": "Technical Test Automation experience (3-5 years)"
+    },
+    {
+     "skill": "Test automation frameworks experience",
+     "job_quote": "Test Automation - experience with multiple Frameworks"
+    }
+   ],
+   "summary": "Partial alignment on Scrum and test planning, but the role requires 3-5 years of technical test automation and multiple frameworks, beyond a junior candidate's experience.",
+   "dropped": [
+    {
+     "skill": "Test planning",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-106293",
+   "rank": 4,
+   "fit_score": 36.0,
+   "matched_skills": [
+    {
+     "skill": "Java",
+     "resume_quote": "Java, Selenium, TestNG, SQL, Git (flow).",
+     "job_quote": "Proficiency in Java or Javascript"
+    },
+    {
+     "skill": "Scrum",
+     "resume_quote": "Scrum, Kanban, Lean",
+     "job_quote": "Participate in all Scrum ceremonies"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "NoSQL/MongoDB",
+     "job_quote": "Good understanding of NoSQL databases, preferably MongoDB"
+    }
+   ],
+   "summary": "Java and Scrum overlap, but the Senior title and 5+ years requirement clearly exceed a junior profile, and the candidate lacks NoSQL experience.",
+   "dropped": [
+    {
+     "skill": "Senior seniority (5+ years)",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-101218",
+   "rank": 5,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "Systems testing",
+     "resume_quote": "Bug creation and verification of the feature.",
+     "job_quote": "experience with process analysis, design, and implementation, business and technical requirements, problem-solving, and systems testing"
+    }
+   ],
+   "missing_skills": [],
+   "summary": "Largely a different domain (RPA/Intelligent Automation with MS Power Platform); only generic testing overlap, with no RPA tooling on the resume.",
+   "dropped": [
+    {
+     "skill": "Power Platform/UiPath RPA tooling",
+     "reason": "skill_not_in_job"
+    },
+    {
+     "skill": "Programming/database experience",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "QA automation / test engineering",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior QA Automation Engineer",
+     "Junior AQA Engineer",
+     "Automation QA Engineer",
+     "Junior Test Automation Engineer",
+     "QA Engineer (Java Automation)"
+    ],
+    "must_have_skills": [
+     "Java",
+     "Selenium",
+     "TestNG",
+     "UI test automation",
+     "API test automation",
+     "SQL",
+     "Git",
+     "TeamCity",
+     "Jenkins",
+     "Scrum"
+    ],
+    "nice_to_have_skills": [
+     "Jackson",
+     "CodeFresh",
+     "Kanban",
+     "ElasticSearch",
+     "Kibana",
+     "DynamoDB",
+     "ML feature testing",
+     "Bug tracking and verification"
+    ],
+    "search_queries": [
+     "Junior QA Automation Engineer Java Selenium TestNG",
+     "Automation QA Engineer Java Selenium API testing",
+     "Junior AQA Engineer Java TestNG Jenkins TeamCity",
+     "Test Automation Engineer Java SQL Git Scrum junior",
+     "QA Engineer Java Selenium ML testing"
+    ]
+   },
+   "ms": 0.3
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Junior QA Automation Engineer Java Selenium TestNG",
+    "Automation QA Engineer Java Selenium API testing",
+    "Junior AQA Engineer Java TestNG Jenkins TeamCity",
+    "Test Automation Engineer Java SQL Git Scrum junior",
+    "QA Engineer Java Selenium ML testing",
+    "Junior QA Automation Engineer",
+    "Junior AQA Engineer",
+    "Automation QA Engineer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "Bug",
+     "Work closely with the developers ' team",
+     "creating UI tests and APIs",
+     "team player"
+    ],
+    "knowledge": [
+     "Java",
+     "Selenium",
+     "TestNG",
+     "SQL",
+     "Git",
+     "Jenkins",
+     "CodeFresh",
+     "Scrum",
+     "Kanban",
+     "Lean",
+     "ElasticSearch",
+     "Kibana )",
+     "DynamoDB",
+     "of",
+     "testing",
+     "UI tests"
+    ],
+    "esco_skills": [
+     "Java (computer programming)",
+     "SQL",
+     "lean manufacturing",
+     "test procedures"
+    ],
+    "not_in_esco": [
+     "Bug",
+     "Work closely with the developers ' team",
+     "creating UI tests and APIs",
+     "team player",
+     "Selenium",
+     "TestNG",
+     "Git",
+     "Jenkins",
+     "CodeFresh",
+     "Scrum",
+     "Kanban",
+     "ElasticSearch",
+     "Kibana )",
+     "DynamoDB",
+     "of",
+     "UI tests"
+    ]
+   },
+   "ms": 10377.8
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 5,
+   "ms": 0.8
+  },
+  {
+   "node": "verifier",
+   "flagged": 4,
+   "repaired": 0,
+   "dropped": 4,
+   "ms": 14.9
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 9740,
+ "output_tokens": 2284,
+ "cost_usd": 0.002116,
+ "latency_ms": 8909.2,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 4,
+ "verifier_repaired": 0,
+ "verifier_dropped": 4,
+ "plan": {
+  "role_family": "QA automation / test engineering",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior QA Automation Engineer",
+   "Junior AQA Engineer",
+   "Automation QA Engineer",
+   "Junior Test Automation Engineer",
+   "QA Engineer (Java Automation)"
+  ],
+  "must_have_skills": [
+   "Java",
+   "Selenium",
+   "TestNG",
+   "UI test automation",
+   "API test automation",
+   "SQL",
+   "Git",
+   "TeamCity",
+   "Jenkins",
+   "Scrum"
+  ],
+  "nice_to_have_skills": [
+   "Jackson",
+   "CodeFresh",
+   "Kanban",
+   "ElasticSearch",
+   "Kibana",
+   "DynamoDB",
+   "ML feature testing",
+   "Bug tracking and verification"
+  ],
+  "search_queries": [
+   "Junior QA Automation Engineer Java Selenium TestNG",
+   "Automation QA Engineer Java Selenium API testing",
+   "Junior AQA Engineer Java TestNG Jenkins TeamCity",
+   "Test Automation Engineer Java SQL Git Scrum junior",
+   "QA Engineer Java Selenium ML testing"
+  ]
+ },
+ "wall_ms": 10396.5,
+ "pool": [
+  {
+   "job_id": "djinni-job-67211",
+   "label": 1,
+   "title": "Middle Automation QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-106293",
+   "label": 0,
+   "title": "Senior Automation QA Engineer (Java/JavaScript)"
+  },
+  {
+   "job_id": "djinni-job-93014",
+   "label": 0,
+   "title": "Project Manager (BPO)"
+  },
+  {
+   "job_id": "djinni-job-106385",
+   "label": 0,
+   "title": "Senior Automation QA (.Net)"
+  },
+  {
+   "job_id": "djinni-job-141514",
+   "label": 0,
+   "title": "WordPress sites manager"
+  },
+  {
+   "job_id": "djinni-job-101218",
+   "label": 1,
+   "title": "RPA Engineer/ IA (Intelligent Automation) Engineer"
+  },
+  {
+   "job_id": "djinni-job-5653",
+   "label": 1,
+   "title": "Automation QA C# (adi)"
+  },
+  {
+   "job_id": "djinni-job-34047",
+   "label": 0,
+   "title": "Front-end Game Developer"
+  },
+  {
+   "job_id": "djinni-job-141194",
+   "label": 0,
+   "title": "Wordpress Developer"
+  },
+  {
+   "job_id": "djinni-job-70097",
+   "label": 0,
+   "title": "Middle Full Stack Developer (Safe and Secure System)"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-77004",
+  "cv_category": "QA Automation",
+  "ndcg10": 0.7122630665145961,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 0.5,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 0.5,
+  "n_claims": 17,
+  "n_supported": 17,
+  "hallucination_rate": 0.0,
+  "llm_calls": 2,
+  "input_tokens": 9740,
+  "output_tokens": 2284,
+  "cost_usd": 0.002116,
+  "latency_ms": 8909.2,
+  "wall_ms": 10396.5,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 0,
+  "reasons": "{}",
+  "verifier_flagged": 4,
+  "verifier_repaired": 0,
+  "verifier_dropped": 4
+ },
+ "faithfulness": {
+  "n_claims": 17,
+  "n_supported": 17,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-106385",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-67211",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-5653",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-106293",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-101218",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

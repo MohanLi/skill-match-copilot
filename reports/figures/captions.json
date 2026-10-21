@@ -346,5 +346,23 @@
     "source": "notebooks/05_eda_generated",
     "order": 58,
     "updated": "2026-10-21"
+  },
+  "p3_ranking_quality_agent": {
+    "caption": "Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same 30 labelled 10-job pools.",
+    "source": "src/p3_agent/evaluate.py",
+    "order": 59,
+    "updated": "2026-10-21"
+  },
+  "p3_hallucination_agent": {
+    "caption": "Problem 3: hallucination rate of the explanations (unsupported claims ÷ all claims, automatic checker) — the verifier's effect.",
+    "source": "src/p3_agent/evaluate.py",
+    "order": 60,
+    "updated": "2026-10-21"
+  },
+  "p3_efficiency_agent": {
+    "caption": "Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools).",
+    "source": "src/p3_agent/evaluate.py",
+    "order": 61,
+    "updated": "2026-10-21"
   }
 }

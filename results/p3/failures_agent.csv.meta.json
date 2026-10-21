@@ -1,0 +1,14 @@
+{
+  "file": "results/p3/failures_agent.csv",
+  "rows": 36,
+  "columns": [
+    "approach",
+    "cv_id",
+    "failure_types",
+    "ndcg10",
+    "hallucination_rate",
+    "reasons"
+  ],
+  "created_utc": "2026-10-21T08:17:51Z",
+  "git_commit": "236cb7c"
+}

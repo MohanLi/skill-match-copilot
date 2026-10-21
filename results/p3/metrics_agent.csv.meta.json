@@ -1,0 +1,32 @@
+{
+  "file": "results/p3/metrics_agent.csv",
+  "rows": 4,
+  "columns": [
+    "approach",
+    "n_cvs",
+    "n_cvs_with_relevant",
+    "ndcg10",
+    "ndcg10_std",
+    "p_at_3",
+    "mrr",
+    "p_at_3_rel1",
+    "mrr_rel1",
+    "coverage",
+    "claims_per_cv",
+    "supported_per_cv",
+    "hallucination_rate",
+    "llm_calls",
+    "input_tokens",
+    "output_tokens",
+    "cost_usd",
+    "latency_s",
+    "wall_s",
+    "errors",
+    "approach_label"
+  ],
+  "created_utc": "2026-10-21T08:17:51Z",
+  "git_commit": "236cb7c",
+  "model": "agent",
+  "labels": "data/labels/final.csv",
+  "n_cvs": 30
+}

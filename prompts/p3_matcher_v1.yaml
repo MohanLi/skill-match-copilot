@@ -1,5 +1,5 @@
 id: p3_matcher
-version: "1"
+version: "2"
 task: |
   Problem 3 challenger (multi-agent) — Matcher scores and ranks candidate jobs using the Planner's plan and compare_skills output
 output: |
@@ -17,7 +17,9 @@ system: |
   - A missing skill must appear in the job (job_quote verbatim) and NOT in the resume.
   - No verbatim quote → no claim.
 
-  Output a single JSON object with the top {{top_n}} jobs:
+  Output a single JSON object with the top {{top_n}} jobs. Rank EVERY candidate you were given when there are at
+  most {{top_n}} of them — poor fits included, with a low fit_score, at most one matched and two missing skills, and
+  a one-sentence summary — because the user needs the full ordering. Never omit a candidate:
   {"ranking": [{"job_id": "...", "rank": 1, "fit_score": 0-100,
                 "matched_skills": [{"skill": "...", "resume_quote": "...", "job_quote": "..."}],
                 "missing_skills": [{"skill": "...", "job_quote": "..."}],

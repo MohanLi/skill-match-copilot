@@ -62,3 +62,6 @@ Every figure exists as `<name>.png` (for slides/report) and `<name>.html` (inter
 | 56 | `eda05_fit_by_label.png` | Calibration check: agent fit scores against the gold 0/1/2 labels. | notebooks/05_eda_generated |
 | 57 | `eda05_unsupported_reasons.png` | Failure modes of generated explanations: reason codes of unsupported claims (quote not found in resume / job, skill not in the quotes, missing skill actually present). | notebooks/05_eda_generated |
 | 58 | `eda05_rater_agreement.png` | Agreement between the two LLM raters on the 300 resume–job fit labels (confusion matrix; disagreements were adjudicated). | notebooks/05_eda_generated |
+| 59 | `p3_ranking_quality_agent.png` | Problem 3: nDCG@10, Precision@3 and MRR (relevant = strong fit, and relevant = partial fit or better) of the embedding baseline, the single ReAct agent and the multi-agent pipeline on the same 30 labelled 10-job pools. | src/p3_agent/evaluate.py |
+| 60 | `p3_hallucination_agent.png` | Problem 3: hallucination rate of the explanations (unsupported claims ÷ all claims, automatic checker) — the verifier's effect. | src/p3_agent/evaluate.py |
+| 61 | `p3_efficiency_agent.png` | Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools). | src/p3_agent/evaluate.py |

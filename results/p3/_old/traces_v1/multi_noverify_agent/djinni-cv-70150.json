@@ -1,0 +1,723 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-50265",
+   "rank": 1,
+   "fit_score": 78.0,
+   "matched_skills": [
+    {
+     "skill": "Java 11",
+     "resume_quote": "Java 11, Spring Boot (Cloud, JPA, Security, Web), REST API, Kubernetes",
+     "job_quote": "Excellent knowledge of Java 11;"
+    },
+    {
+     "skill": "Docker and Kubernetes",
+     "resume_quote": "Configured applications and servers for deploying in Kubernetes.",
+     "job_quote": "Knowledge of Docker and Kubernetes;"
+    },
+    {
+     "skill": "REST API",
+     "resume_quote": "Developed API for client mobile application.",
+     "job_quote": "Knowledge of REST API;"
+    },
+    {
+     "skill": "Microservice architecture",
+     "resume_quote": "transitioning them into microservices and message brokers",
+     "job_quote": "Experience with microservice architecture;"
+    },
+    {
+     "skill": "MS SQL/PostgreSQL",
+     "resume_quote": "Postgres, MSSQL, Mongo, Elastic Search",
+     "job_quote": "Knowledge of MS SQL/PostgreSQL/MySQL relational databases;"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Scrum",
+     "job_quote": "Experience in a Scrum team;"
+    },
+    {
+     "skill": "English (technical documentation level)",
+     "job_quote": "Knowledge of English at the level of technical documentation."
+    }
+   ],
+   "summary": "Strongest technical match: the resume's Java 17/Spring stack, microservices, Kubernetes and Docker experience map directly onto this role's core requirements. Seniority aligns well with the 'Middle/Senior' label and the candidate's tech-lead history.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-50565",
+   "rank": 2,
+   "fit_score": 74.0,
+   "matched_skills": [
+    {
+     "skill": "Java 11",
+     "resume_quote": "Java 11, Spring Boot (Cloud, JPA, Security, Web)",
+     "job_quote": "Java 11, Spring Boot, PostgreSQL, AWS"
+    },
+    {
+     "skill": "Spring Boot",
+     "resume_quote": "Spring Boot (Cloud, JPA, Security, Web)",
+     "job_quote": "Java 11, Spring Boot, PostgreSQL, AWS"
+    },
+    {
+     "skill": "PostgreSQL",
+     "resume_quote": "Postgres, MSSQL, Mongo, Elastic Search",
+     "job_quote": "Java 11, Spring Boot, PostgreSQL, AWS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "AWS",
+     "job_quote": "Java 11, Spring Boot, PostgreSQL, AWS"
+    },
+    {
+     "skill": "Mobile stack (ReactNative/Swift)",
+     "job_quote": "ReactNative or Swift for mobile app"
+    },
+    {
+     "skill": "OCR experience",
+     "job_quote": "OCR experience is a big plus"
+    }
+   ],
+   "summary": "Very close stack match (Java 11, Spring Boot, PostgreSQL) and the tech-lead background fits the code-review and standards responsibilities. Gaps are AWS and mobile tooling, and the role is mid-level leaning.",
+   "dropped": [
+    {
+     "skill": "Code reviews / coding standards",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-70198",
+   "rank": 3,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "Java / Spring Boot",
+     "resume_quote": "Java 17, Spring Boot (Cloud, JPA, Security, Web)",
+     "job_quote": "Java (Spring Framework / Spring Boot) and Angular"
+    },
+    {
+     "skill": "Angular",
+     "resume_quote": "Docker, Angular, Kubernetes, Microservices",
+     "job_quote": "2-3 years of experience with Java (Spring Framework / Spring Boot) and Angular"
+    },
+    {
+     "skill": "Message-oriented middleware",
+     "resume_quote": "RabbitMQ",
+     "job_quote": "Familiarity with message-oriented middleware"
+    },
+    {
+     "skill": "RESTful APIs",
+     "resume_quote": "Developed API for client mobile application.",
+     "job_quote": "Developed RESTful APIs and single-page applications"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "TypeScript / CSS / SASS",
+     "job_quote": "HTML, Typescript, and CSS including pre-processors such as Less or SASS"
+    },
+    {
+     "skill": "Scrum / Agile",
+     "job_quote": "Worked within an agile software development process e.g. Scrum"
+    }
+   ],
+   "summary": "Full-stack role: the Java/Spring backend and Angular experience match, but the front-end expectations (TypeScript, CSS preprocessors) are not evidenced in the resume beyond the Angular listing. Mid-level requirement is a slight seniority mismatch.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-50728",
+   "rank": 4,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "Microservices",
+     "resume_quote": "transitioning them into microservices and message brokers",
+     "job_quote": "setting up microservices"
+    },
+    {
+     "skill": "Cloud",
+     "resume_quote": "Java 17, Spring Boot (Cloud, JPA, Security, Web)",
+     "job_quote": "journey to the cloud"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Agile software development",
+     "job_quote": "Professional experience in supporting agile software development projects"
+    }
+   ],
+   "summary": "Backend/cloud and microservices overlap is real, but the role requires German and full-stack work with a consulting focus, and the job text is truncated. Moderate fit.",
+   "dropped": [
+    {
+     "skill": "German language",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-77772",
+   "rank": 5,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "Kafka",
+     "resume_quote": "Integrated Kafka in tracking system, which resulted in higher performance.",
+     "job_quote": "Knowledge in AWS and Kafka"
+    },
+    {
+     "skill": "REST API",
+     "resume_quote": "Developed API for client mobile application.",
+     "job_quote": "At least 2+ years experience from Rest API development"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C++ / C#",
+     "job_quote": "Experience writing code in C++, C#"
+    }
+   ],
+   "summary": "Primary languages (C++/C#) are not in the resume, so this is a weak match despite Kafka and REST overlap. Java is only a plus here.",
+   "dropped": [
+    {
+     "skill": "Git",
+     "reason": "skill_present_in_resume"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-18963",
+   "rank": 6,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "Communication",
+     "resume_quote": "Tech Lead Backend Software Engineer",
+     "job_quote": "Excellent Communication skills"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Customer support experience",
+     "job_quote": "Previous experience in customer support or sales will be a plus"
+    }
+   ],
+   "summary": "Non-engineering customer support role; the only overlap is generic communication. Poor fit.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-66461",
+   "rank": 7,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "SQL",
+     "resume_quote": "Optimizing SQL queries",
+     "job_quote": "Experience in technologies like Sharepoint online, Azure SQL, Azure integration"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Microsoft Power Platform",
+     "job_quote": "2+ years of experience in Microsoft Power Platform (Power App & Power Automate)"
+    },
+    {
+     "skill": "Microsoft Dataverse",
+     "job_quote": "Strong experience with Microsoft Dataverse (or CDS)"
+    }
+   ],
+   "summary": "Low-code Microsoft stack with no overlap with the resume's Java/Spring experience. Poor fit.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-84953",
+   "rank": 8,
+   "fit_score": 10.0,
+   "matched_skills": [
+    {
+     "skill": "Cloud technologies",
+     "resume_quote": "Java 17, Spring Boot (Cloud, JPA, Security, Web)",
+     "job_quote": "3+ years of experience with Cloud technologies"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "C#/.NET Framework",
+     "job_quote": "5+ years of experience with C#/.NET Framework"
+    }
+   ],
+   "summary": "Requires 5+ years of C#/.NET and embedded/IoT C expertise, neither of which the resume shows. Poor fit.",
+   "dropped": [
+    {
+     "skill": "IoT / embedded C",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-74443",
+   "rank": 9,
+   "fit_score": 8.0,
+   "matched_skills": [
+    {
+     "skill": "MySQL / Redis",
+     "resume_quote": "Postgres, MSSQL, Mongo, Elastic Search",
+     "job_quote": "Experience with MySQL, Redis,Google Datastore;"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP / Yii",
+     "job_quote": "Experience with PHP, Yii framework;"
+    },
+    {
+     "skill": "JavaScript / Bootstrap",
+     "job_quote": "Experience with JavaScript,Bootstrap;"
+    }
+   ],
+   "summary": "Core stack is PHP/Yii, which the resume does not contain. Only database overlap. Poor fit.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-99041",
+   "rank": 10,
+   "fit_score": 5.0,
+   "matched_skills": [
+    {
+     "skill": "Communication",
+     "resume_quote": "Tech Lead Backend Software Engineer",
+     "job_quote": "Good interpersonal communications and technical writing skills"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React.JS",
+     "job_quote": "React.JS Developer (Junior)"
+    }
+   ],
+   "summary": "Junior front-end React role with no overlap with the candidate's backend seniority or stack. Poor fit.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "backend / java software engineering",
+    "seniority": "senior",
+    "target_titles": [
+     "Senior Java Developer",
+     "Senior Backend Engineer",
+     "Java Backend Developer",
+     "Tech Lead Backend Engineer",
+     "Senior Software Engineer (Java)",
+     "Backend Engineer (Spring Boot / Microservices)"
+    ],
+    "must_have_skills": [
+     "Java 17",
+     "Spring Boot",
+     "Spring Cloud",
+     "Spring Data JPA / Hibernate",
+     "REST API",
+     "Microservices",
+     "PostgreSQL",
+     "MSSQL",
+     "Docker",
+     "Kubernetes"
+    ],
+    "nice_to_have_skills": [
+     "Kafka",
+     "RabbitMQ",
+     "Elasticsearch",
+     "MongoDB",
+     "Redis",
+     "Angular",
+     "CI/CD",
+     "Maven",
+     "Gradle",
+     "WebSocket",
+     "LDAP",
+     "Spring Security"
+    ],
+    "search_queries": [
+     "Senior Java Developer Spring Boot microservices Kubernetes",
+     "Java Backend Engineer Kafka RabbitMQ PostgreSQL",
+     "Tech Lead Java Spring Boot e-commerce microservices",
+     "Senior Backend Engineer Java Elasticsearch Docker",
+     "Java Spring Boot REST API remote Montenegro"
+    ]
+   },
+   "ms": 0.4
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "Senior Java Developer Spring Boot microservices Kubernetes",
+    "Java Backend Engineer Kafka RabbitMQ PostgreSQL",
+    "Tech Lead Java Spring Boot e-commerce microservices",
+    "Senior Backend Engineer Java Elasticsearch Docker",
+    "Java Spring Boot REST API remote Montenegro",
+    "Senior Java Developer",
+    "Senior Backend Engineer",
+    "Java Backend Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "Developed and implemented new project architecture",
+     "Reducing loading times by 70 %",
+     "implementing caching",
+     "optimizing SQL queries",
+     "order processing",
+     "calculations",
+     "Modified versioning libraries",
+     "seamlessly with",
+     "Implemented CI/CD for the project",
+     "Implemented dynamic testing environments as part of a team",
+     "Developed API for client mobile application",
+     "Configured applications and servers for deploying in Kubernetes",
+     "Designed a module for analyzing player data",
+     "identifying potential account issues",
+     "Implemented LDAP-based authentication and registration for operators",
+     "Developed integration with game server",
+     "Designed and implemented a notification system for operators",
+     "Implemented multiple new major gaming systems"
+    ],
+    "knowledge": [
+     "SQL",
+     "calculations",
+     "communication",
+     "brokers",
+     "Java 17",
+     "Spring Boot",
+     "Cloud",
+     "JPA",
+     "Security",
+     "Web )",
+     "REST API",
+     "Postgres",
+     "MSSQL",
+     "Mongo",
+     "Elastic Search",
+     "Docker",
+     "Angular",
+     "Kubernetes",
+     "Microservices",
+     "RabbitMQ"
+    ],
+    "esco_skills": [
+     "Angular",
+     "Apache Maven",
+     "Java (computer programming)",
+     "LDAP",
+     "MySQL",
+     "PostgreSQL",
+     "SQL",
+     "SQL Server",
+     "carry out calculations",
+     "cloud technologies",
+     "communication",
+     "dock operations",
+     "install electricity sockets",
+     "process customer orders",
+     "security threats",
+     "web programming"
+    ],
+    "not_in_esco": [
+     "Developed and implemented new project architecture",
+     "Reducing loading times by 70 %",
+     "implementing caching",
+     "optimizing SQL queries",
+     "Modified versioning libraries",
+     "seamlessly with",
+     "Implemented CI/CD for the project",
+     "Implemented dynamic testing environments as part of a team",
+     "Developed API for client mobile application",
+     "Configured applications and servers for deploying in Kubernetes",
+     "Designed a module for analyzing player data",
+     "identifying potential account issues",
+     "Developed integration with game server",
+     "Designed and implemented a notification system for operators",
+     "Implemented multiple new major gaming systems",
+     "brokers",
+     "Spring Boot",
+     "JPA",
+     "REST API",
+     "Mongo"
+    ]
+   },
+   "ms": 29568.1
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 10,
+   "ms": 0.9
+  },
+  {
+   "node": "verifier",
+   "flagged": 4,
+   "repaired": 0,
+   "dropped": 4,
+   "ms": 62.2
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 11725,
+ "output_tokens": 4397,
+ "cost_usd": 0.003371,
+ "latency_ms": 16491.7,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 4,
+ "verifier_repaired": 0,
+ "verifier_dropped": 4,
+ "plan": {
+  "role_family": "backend / java software engineering",
+  "seniority": "senior",
+  "target_titles": [
+   "Senior Java Developer",
+   "Senior Backend Engineer",
+   "Java Backend Developer",
+   "Tech Lead Backend Engineer",
+   "Senior Software Engineer (Java)",
+   "Backend Engineer (Spring Boot / Microservices)"
+  ],
+  "must_have_skills": [
+   "Java 17",
+   "Spring Boot",
+   "Spring Cloud",
+   "Spring Data JPA / Hibernate",
+   "REST API",
+   "Microservices",
+   "PostgreSQL",
+   "MSSQL",
+   "Docker",
+   "Kubernetes"
+  ],
+  "nice_to_have_skills": [
+   "Kafka",
+   "RabbitMQ",
+   "Elasticsearch",
+   "MongoDB",
+   "Redis",
+   "Angular",
+   "CI/CD",
+   "Maven",
+   "Gradle",
+   "WebSocket",
+   "LDAP",
+   "Spring Security"
+  ],
+  "search_queries": [
+   "Senior Java Developer Spring Boot microservices Kubernetes",
+   "Java Backend Engineer Kafka RabbitMQ PostgreSQL",
+   "Tech Lead Java Spring Boot e-commerce microservices",
+   "Senior Backend Engineer Java Elasticsearch Docker",
+   "Java Spring Boot REST API remote Montenegro"
+  ]
+ },
+ "wall_ms": 29634.6,
+ "pool": [
+  {
+   "job_id": "djinni-job-50565",
+   "label": 2,
+   "title": "Java Engineer"
+  },
+  {
+   "job_id": "djinni-job-18963",
+   "label": 0,
+   "title": "Customer support manager"
+  },
+  {
+   "job_id": "djinni-job-66461",
+   "label": 0,
+   "title": "Microsoft Power Apps Developer"
+  },
+  {
+   "job_id": "djinni-job-50265",
+   "label": 2,
+   "title": "Java developer Middle/Senior"
+  },
+  {
+   "job_id": "djinni-job-70198",
+   "label": 1,
+   "title": "Middle Full-stack Java engineer (Angular)"
+  },
+  {
+   "job_id": "djinni-job-77772",
+   "label": 1,
+   "title": "Middle-Senior C++ developer"
+  },
+  {
+   "job_id": "djinni-job-84953",
+   "label": 0,
+   "title": ".NET Team Lead for Silicon Labs"
+  },
+  {
+   "job_id": "djinni-job-74443",
+   "label": 0,
+   "title": "Middle PHP Engineer"
+  },
+  {
+   "job_id": "djinni-job-50728",
+   "label": 2,
+   "title": "Java Full-Stack Developer (German Speaker)"
+  },
+  {
+   "job_id": "djinni-job-99041",
+   "label": 0,
+   "title": "React.JS Developer (Junior)"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-70150",
+  "cv_category": "Java",
+  "ndcg10": 0.9807710461847231,
+  "p_at_3": 0.6666666666666666,
+  "mrr": 1.0,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 3,
+  "n_partial_or_better_in_pool": 5,
+  "coverage": 1.0,
+  "n_claims": 37,
+  "n_supported": 37,
+  "hallucination_rate": 0.0,
+  "llm_calls": 2,
+  "input_tokens": 11725,
+  "output_tokens": 4397,
+  "cost_usd": 0.003371,
+  "latency_ms": 16491.7,
+  "wall_ms": 29634.6,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 2,
+  "reasons": "{}",
+  "verifier_flagged": 4,
+  "verifier_repaired": 0,
+  "verifier_dropped": 4
+ },
+ "faithfulness": {
+  "n_claims": 37,
+  "n_supported": 37,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-50265",
+    "n_claims": 7,
+    "n_supported": 7,
+    "n_matched": 5,
+    "n_matched_supported": 5,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-50565",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-70198",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-50728",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-77772",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-18963",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-66461",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-84953",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-74443",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-99041",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

@@ -1,0 +1,493 @@
+{
+ "approach": "multi_agent_no_verifier",
+ "ranking": [
+  {
+   "job_id": "djinni-job-141305",
+   "rank": 1,
+   "fit_score": 42.0,
+   "matched_skills": [
+    {
+     "skill": "HTML",
+     "resume_quote": "HTML (strong level) - use semantic markup.",
+     "job_quote": "Core technologies - WP, CSS, HTML"
+    },
+    {
+     "skill": "CSS",
+     "resume_quote": "CSS (strong level) - Bootstrap 3/4, Flexbox, Grid layouts.",
+     "job_quote": "Core technologies - WP, CSS, HTML"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "WordPress",
+     "job_quote": "Core technologies - WP, CSS, HTML"
+    },
+    {
+     "skill": "WP plugin development",
+     "job_quote": "Experience in WP plugins development is required!"
+    },
+    {
+     "skill": "SEO optimization",
+     "job_quote": "Main tasks: Layout, WP plugin development, SEO optimization"
+    }
+   ],
+   "summary": "Front-end layout work overlaps with the candidate's strong HTML/CSS, but the role centres on WordPress and plugin development, which the resume does not mention. Seniority is unstated, so it is a partial fit at best.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-53559",
+   "rank": 2,
+   "fit_score": 38.0,
+   "matched_skills": [
+    {
+     "skill": "CSS",
+     "resume_quote": "CSS (strong level) - Bootstrap 3/4, Flexbox, Grid layouts.",
+     "job_quote": "Hands on experience in Javascript, CSS3 and HTML5"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "JavaScript (Vue.js, Vuex)",
+     "job_quote": "Current UI tech stack: JavaScript, Vue.js, Vuex, Sass, Vant.js"
+    },
+    {
+     "skill": "Sass",
+     "job_quote": "Current UI tech stack: JavaScript, Vue.js, Vuex, Sass, Vant.js"
+    },
+    {
+     "skill": "Git/GitHub",
+     "job_quote": "Working knowledge of modern control systems (Git/Github)"
+    }
+   ],
+   "summary": "Junior front-end role that asks for HTML5, CSS3 and JavaScript, which match the candidate's core stack. It requires 1.5+ years of commercial experience and Vue.js, which the candidate lacks, and the resume does not mention Git.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-34253",
+   "rank": 3,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "HTML",
+     "resume_quote": "HTML (strong level) - use semantic markup.",
+     "job_quote": "Strong experience working with HTML and CSS to create responsive, user-friendly web pages"
+    },
+    {
+     "skill": "CSS",
+     "resume_quote": "CSS (strong level) - Bootstrap 3/4, Flexbox, Grid layouts.",
+     "job_quote": "Strong experience working with HTML and CSS to create responsive, user-friendly web pages"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React",
+     "job_quote": "Zutobi is looking for a React Developer to join our amazing global team!"
+    },
+    {
+     "skill": "Next.js",
+     "job_quote": "Zutobi website (using Next.js)."
+    },
+    {
+     "skill": "TypeScript",
+     "job_quote": "Typescript"
+    }
+   ],
+   "summary": "HTML and CSS are a strong match, but the role requires React, Next.js and 3+ years of front-end experience, while the candidate has under one year. The seniority gap makes this a stretch.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-63562",
+   "rank": 4,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "HTML",
+     "resume_quote": "HTML (strong level) - use semantic markup.",
+     "job_quote": "HTML / CSS / JavaScript"
+    },
+    {
+     "skill": "CSS",
+     "resume_quote": "CSS (strong level) - Bootstrap 3/4, Flexbox, Grid layouts.",
+     "job_quote": "HTML / CSS / JavaScript"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "MySQL",
+     "job_quote": "SQL / MySQL"
+    },
+    {
+     "skill": "Magento 2",
+     "job_quote": "Magento 2"
+    }
+   ],
+   "summary": "This is a back-end PHP/Magento role, and the candidate's HTML/CSS is only a nice-to-have. The candidate has no PHP or SQL experience.",
+   "dropped": [
+    {
+     "skill": "PHP",
+     "reason": "job_quote_not_found"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-38800",
+   "rank": 5,
+   "fit_score": 20.0,
+   "matched_skills": [
+    {
+     "skill": "HTML",
+     "resume_quote": "HTML (strong level) - use semantic markup.",
+     "job_quote": "Knowledge of HTML, CSS & Javascript"
+    },
+    {
+     "skill": "CSS",
+     "resume_quote": "CSS (strong level) - Bootstrap 3/4, Flexbox, Grid layouts.",
+     "job_quote": "Knowledge of HTML, CSS & Javascript"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP",
+     "job_quote": "Proficiency in PHP or similar scripting language"
+    },
+    {
+     "skill": "SQL",
+     "job_quote": "Fluency in SQL and relational databases"
+    }
+   ],
+   "summary": "This role is about 80% backend PHP with legacy code and requires SQL fluency. The candidate's HTML/CSS/JavaScript is only a secondary requirement.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-197",
+   "rank": 6,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Adobe Photoshop",
+     "job_quote": "High Proficiency with 2D graphics software (Adobe Photoshop, Illustrator as a plus AfterEffects)"
+    }
+   ],
+   "summary": "This is a 2D game-art role that requires 3+ years in the game industry and art-focused skills. The candidate's Photoshop experience is intermediate and related to web template slicing, and the resume has no evidence of game art.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "node": "planner",
+   "plan": {
+    "role_family": "front-end development",
+    "seniority": "junior",
+    "target_titles": [
+     "Junior Front-end Developer",
+     "Front-end Developer (Junior)",
+     "Junior Web Developer",
+     "Junior UI Developer",
+     "HTML/CSS/JavaScript Developer"
+    ],
+    "must_have_skills": [
+     "HTML5 (semantic markup)",
+     "CSS3 (Flexbox, Grid layouts)",
+     "Bootstrap 3/4",
+     "JavaScript (ES6, DOM manipulation, promises, async/await, closures)",
+     "Responsive layout / cross-browser markup"
+    ],
+    "nice_to_have_skills": [
+     "Photoshop (template slicing, color and text work)",
+     "Python (basic: loops, data types)",
+     "Git / version control",
+     "React or another JavaScript framework",
+     "UI/UX fundamentals",
+     "REST API consumption (fetch/AJAX)"
+    ],
+    "search_queries": [
+     "junior front-end developer HTML CSS JavaScript Bootstrap",
+     "junior web developer JavaScript ES6 Flexbox Grid",
+     "front-end developer junior HTML5 CSS3 Bootstrap Photoshop",
+     "junior UI developer HTML CSS responsive layout",
+     "entry level front-end developer JavaScript DOM promises"
+    ]
+   },
+   "ms": 0.4
+  },
+  {
+   "node": "retriever",
+   "queries": [
+    "junior front-end developer HTML CSS JavaScript Bootstrap",
+    "junior web developer JavaScript ES6 Flexbox Grid",
+    "front-end developer junior HTML5 CSS3 Bootstrap Photoshop",
+    "junior UI developer HTML CSS responsive layout",
+    "entry level front-end developer JavaScript DOM promises",
+    "Junior Front-end Developer",
+    "Front-end Developer (Junior)",
+    "Junior Web Developer"
+   ],
+   "n_candidates": 10,
+   "profile": {
+    "skills": [
+     "work with colors",
+     "template slicing",
+     "work with texts"
+    ],
+    "knowledge": [
+     "HTML",
+     "semantic markup",
+     "CSS",
+     "Bootstrap 3/4",
+     "Flexbox",
+     "Grid layouts",
+     "DOM",
+     "Generators",
+     "async",
+     "promises",
+     "ES6",
+     "Lambda functions",
+     "Closures",
+     "slicing",
+     "Python",
+     "loops",
+     "data types"
+    ],
+    "esco_skills": [
+     "CSS",
+     "Python (computer programming)",
+     "add colour",
+     "electric generators",
+     "review closing procedures",
+     "slice fish",
+     "use markup languages"
+    ],
+    "not_in_esco": [
+     "template slicing",
+     "work with texts",
+     "HTML",
+     "Bootstrap 3/4",
+     "Flexbox",
+     "Grid layouts",
+     "DOM",
+     "async",
+     "promises",
+     "ES6",
+     "Lambda functions",
+     "loops",
+     "data types"
+    ]
+   },
+   "ms": 6645.2
+  },
+  {
+   "node": "matcher",
+   "n_in": 10,
+   "n_ranked": 6,
+   "ms": 0.8
+  },
+  {
+   "node": "verifier",
+   "flagged": 1,
+   "repaired": 0,
+   "dropped": 1,
+   "ms": 11.9
+  }
+ ],
+ "llm_calls": 2,
+ "input_tokens": 9221,
+ "output_tokens": 2662,
+ "cost_usd": 0.002253,
+ "latency_ms": 10897.7,
+ "tool_calls": 102,
+ "error": null,
+ "truncated_output": false,
+ "verifier_flagged": 1,
+ "verifier_repaired": 0,
+ "verifier_dropped": 1,
+ "plan": {
+  "role_family": "front-end development",
+  "seniority": "junior",
+  "target_titles": [
+   "Junior Front-end Developer",
+   "Front-end Developer (Junior)",
+   "Junior Web Developer",
+   "Junior UI Developer",
+   "HTML/CSS/JavaScript Developer"
+  ],
+  "must_have_skills": [
+   "HTML5 (semantic markup)",
+   "CSS3 (Flexbox, Grid layouts)",
+   "Bootstrap 3/4",
+   "JavaScript (ES6, DOM manipulation, promises, async/await, closures)",
+   "Responsive layout / cross-browser markup"
+  ],
+  "nice_to_have_skills": [
+   "Photoshop (template slicing, color and text work)",
+   "Python (basic: loops, data types)",
+   "Git / version control",
+   "React or another JavaScript framework",
+   "UI/UX fundamentals",
+   "REST API consumption (fetch/AJAX)"
+  ],
+  "search_queries": [
+   "junior front-end developer HTML CSS JavaScript Bootstrap",
+   "junior web developer JavaScript ES6 Flexbox Grid",
+   "front-end developer junior HTML5 CSS3 Bootstrap Photoshop",
+   "junior UI developer HTML CSS responsive layout",
+   "entry level front-end developer JavaScript DOM promises"
+  ]
+ },
+ "wall_ms": 6662.0,
+ "pool": [
+  {
+   "job_id": "djinni-job-53559",
+   "label": 1,
+   "title": "Junior FrontEnd Developer for Wireless Headphone App Store"
+  },
+  {
+   "job_id": "djinni-job-197",
+   "label": 0,
+   "title": "2D Artist"
+  },
+  {
+   "job_id": "djinni-job-8857",
+   "label": 0,
+   "title": "Backend Node.js developer"
+  },
+  {
+   "job_id": "djinni-job-76004",
+   "label": 0,
+   "title": "Middle QA Engineer"
+  },
+  {
+   "job_id": "djinni-job-38800",
+   "label": 0,
+   "title": "Full Stack PHP Developer (LAMP)"
+  },
+  {
+   "job_id": "djinni-job-34253",
+   "label": 0,
+   "title": "Front-end React Developer"
+  },
+  {
+   "job_id": "djinni-job-117572",
+   "label": 0,
+   "title": "Senior Java Engineer #11303"
+  },
+  {
+   "job_id": "djinni-job-63562",
+   "label": 0,
+   "title": "***Magento Back-End Developer"
+  },
+  {
+   "job_id": "djinni-job-30792",
+   "label": 1,
+   "title": "Founding Fullstack/Product Engineeer"
+  },
+  {
+   "job_id": "djinni-job-141305",
+   "label": 1,
+   "title": "WordPress Developer"
+  }
+ ],
+ "metrics": {
+  "approach": "multi_noverify",
+  "cv_id": "djinni-cv-81405",
+  "cv_category": "JavaScript",
+  "ndcg10": 0.9134015924715543,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 3,
+  "coverage": 0.6,
+  "n_claims": 23,
+  "n_supported": 23,
+  "hallucination_rate": 0.0,
+  "llm_calls": 2,
+  "input_tokens": 9221,
+  "output_tokens": 2662,
+  "cost_usd": 0.0022530000000000002,
+  "latency_ms": 10897.7,
+  "wall_ms": 6662.0,
+  "tool_calls": 102,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 1,
+  "verifier_repaired": 0,
+  "verifier_dropped": 1
+ },
+ "faithfulness": {
+  "n_claims": 23,
+  "n_supported": 23,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-141305",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-53559",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-34253",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-63562",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-38800",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-197",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}
