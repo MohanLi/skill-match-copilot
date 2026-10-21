@@ -1,4 +1,4 @@
-"""Streamlit demo — paste a resume, pick single- or multi-agent mode, see ranked jobs with highlighted
+"""Streamlit demo — paste a resume, pick an approach (champion: single ReAct agent + verifier), see ranked jobs with highlighted
 evidence and the agent trace.   Run: streamlit run src/ui/app.py"""
 from __future__ import annotations
 
@@ -42,7 +42,9 @@ def highlight(text: str, quotes: list[str], color: str) -> str:
 with st.sidebar:
     st.header("Settings")
     index_name = st.selectbox("Job index", ["live_jobs", "djinni_jobs"], help="live_jobs = this week's data/AI/ML postings; djinni_jobs = evaluation pool")
-    mode = st.radio("Approach", ["single", "multi", "baseline"], format_func=lambda m: {"single": "Single ReAct agent (champion)", "multi": "Multi-agent + verifier (challenger)", "baseline": "Embedding baseline (no LLM)"}[m])
+    mode = st.radio("Approach", ["single_verified", "single", "multi", "baseline"],
+                    format_func=lambda m: {"single_verified": "Single ReAct agent + Verifier (champion)", "single": "Single ReAct agent (no verifier)",
+                                           "multi": "Planner → Retriever → Matcher → Verifier", "baseline": "Embedding baseline (no LLM)"}[m])
     top_n = st.slider("Jobs to return", 3, 10, 5)
     model = st.text_input("LLM role / model id", "agent")
     try:
@@ -60,6 +62,7 @@ if st.button("Find matching jobs", type="primary", disabled=not resume.strip()):
     from src.p3_agent.multi_agent import MultiAgent
     from src.p3_agent.single_agent import SingleAgent
     from src.p3_agent.tools import ToolBox
+    from src.p3_agent.verified import VerifiedSingleAgent
 
     clean = scrub(resume).text
     tb = ToolBox(index_name, extractor=extractor, normalizer=normalizer)
@@ -69,6 +72,8 @@ if st.button("Find matching jobs", type="primary", disabled=not resume.strip()):
             run = EmbeddingBaseline(tb, top_n=top_n).run(clean, prefs)
         elif mode == "single":
             run = SingleAgent(tb, model=model, top_n=top_n, task="ui_single").run(clean, prefs)
+        elif mode == "single_verified":
+            run = VerifiedSingleAgent(tb, model=model, top_n=top_n, task="ui_single_verified").run(clean, prefs)
         else:
             run = MultiAgent(tb, model=model, top_n=top_n, task="ui_multi").run(clean, prefs)
         prof = resume_profile(tb, clean)

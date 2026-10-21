@@ -37,7 +37,7 @@ class SearchIn(BaseModel):
 class MatchIn(BaseModel):
     resume: str = Field(..., min_length=50, max_length=20000)
     preferences: str = ""
-    mode: str = Field("single", pattern="^(single|multi|baseline)$")
+    mode: str = Field("single_verified", pattern="^(single_verified|single|multi|baseline)$")  # champion first
     index: str = "live_jobs"
     top_n: int = 5
     model: str = "agent"
@@ -96,13 +96,16 @@ def match(inp: MatchIn) -> dict[str, Any]:
     from ..p3_agent.multi_agent import MultiAgent
     from ..p3_agent.single_agent import SingleAgent
     from ..p3_agent.tools import ToolBox
+    from ..p3_agent.verified import VerifiedSingleAgent
 
     t0 = time.perf_counter()
     resume = scrub(inp.resume).text
     tb = ToolBox(inp.index, extractor=STATE["extractor"], normalizer=STATE["normalizer"])
     if tb.index.count() == 0:
         raise HTTPException(status_code=503, detail=f"index {inp.index} is empty; run src.index.build_job_index")
-    approach = {"single": lambda: SingleAgent(tb, model=inp.model, top_n=inp.top_n, task="api_single"), "multi": lambda: MultiAgent(tb, model=inp.model, top_n=inp.top_n, task="api_multi"), "baseline": lambda: EmbeddingBaseline(tb, top_n=inp.top_n)}[inp.mode]()
+    approach = {"single_verified": lambda: VerifiedSingleAgent(tb, model=inp.model, top_n=inp.top_n, task="api_single_verified"),
+                "single": lambda: SingleAgent(tb, model=inp.model, top_n=inp.top_n, task="api_single"), "multi": lambda: MultiAgent(tb, model=inp.model, top_n=inp.top_n, task="api_multi"),
+                "baseline": lambda: EmbeddingBaseline(tb, top_n=inp.top_n)}[inp.mode]()
     run = approach.run(resume, inp.preferences)
     jobs = {j["job_id"]: j for j in JobIndex(inp.index).get_many([e["job_id"] for e in run.ranking])} if run.ranking else {}
     prof = resume_profile(tb, resume) if inp.mode != "baseline" else {"esco_skills": []}
