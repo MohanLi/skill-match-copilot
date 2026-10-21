@@ -25,6 +25,15 @@ COLS = {
 }
 
 
+def parse_dates(s: pd.Series) -> pd.Series:
+    """The feed mixes full ISO timestamps (Ashby, Gem) with date-only stamps (Greenhouse, Lever, Workday); pandas' default
+    inference keeps only the first format and silently drops the rest, so parse as ISO 8601 (falls back to 'mixed')."""
+    try:
+        return pd.to_datetime(s, errors="coerce", utc=True, format="ISO8601")
+    except (ValueError, TypeError):
+        return pd.to_datetime(s, errors="coerce", utc=True, format="mixed")
+
+
 def local_dir() -> Path:
     return ROOT / data_cfg()["datasets"]["live_jobs"]["local"]
 

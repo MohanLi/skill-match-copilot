@@ -23,12 +23,14 @@ from ..utils.io import read_jsonl, write_json, write_results
 
 
 def _period(s: pd.Series, freq: str) -> pd.Series:
-    d = pd.to_datetime(s, errors="coerce", utc=True)
+    from ..data.live_jobs import parse_dates
+
+    d = parse_dates(s)
     return d.dt.to_period(freq).astype(str)
 
 
 def load_indexed(pool: str) -> pd.DataFrame | None:
-    p = ROOT / "data" / "processed" / f"{pool}_jobs.parquet"
+    p = ROOT / "data" / "processed" / f"{pool}.parquet"  # written by src/index/build_job_index.py (djinni_jobs / live_jobs)
     return pd.read_parquet(p) if p.exists() else None
 
 

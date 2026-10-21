@@ -32,6 +32,20 @@ def select_djinni_sample(jobs: pd.DataFrame, n: int, seed: int, n_categories: in
     return out
 
 
+def export_parquet(index: JobIndex, name: str) -> pd.DataFrame:
+    """data/processed/<name>.parquet = every indexed posting's metadata (no text): ids, title, category, skills, counts."""
+    ids = index.all_ids()
+    rows = []
+    for b in range(0, len(ids), 1000):
+        res = index.col.get(ids=ids[b : b + 1000], include=["metadatas"])
+        rows += [{"job_id": i, **(m or {})} for i, m in zip(res["ids"], res["metadatas"])]
+    out = pd.DataFrame(rows)
+    proc = ROOT / "data" / "processed" / f"{name}.parquet"
+    proc.parent.mkdir(parents=True, exist_ok=True)
+    out.to_parquet(proc, index=False)
+    return out
+
+
 def main() -> None:
     cfg = models_cfg()
     ap = argparse.ArgumentParser()
@@ -41,6 +55,7 @@ def main() -> None:
     ap.add_argument("--batch", type=int, default=64)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--live-sample", type=int, default=None, help="live pool: keep the N most recent postings (default configs/models.yaml index.live_sample_size)")
+    ap.add_argument("--prune", action="store_true", help="remove indexed postings that are no longer in the selection (e.g. after the selection rule changed)")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -55,7 +70,7 @@ def main() -> None:
         jobs = jobs.drop_duplicates(["title", "description"])
         live_n = args.live_sample if args.live_sample is not None else cfg["index"].get("live_sample_size", 4000)
         if live_n and len(jobs) > live_n:  # most recent postings first (the demo should show this week's jobs)
-            jobs["_posted"] = pd.to_datetime(jobs["posted_at"], errors="coerce", utc=True)
+            jobs["_posted"] = live_jobs.parse_dates(jobs["posted_at"])
             jobs = jobs.sort_values("_posted", ascending=False, na_position="last").head(live_n).drop(columns=["_posted"])
         jobs["category"] = jobs["department"].fillna("").astype(str)
         jobs["company"] = jobs["company"].fillna("").astype(str)
@@ -69,6 +84,13 @@ def main() -> None:
     name = f"{args.pool}_jobs"
     index = JobIndex(name)
     done = set(index.all_ids())
+    if args.prune:
+        stale = sorted(done - set(jobs["job_id"]))
+        if stale:
+            for b in range(0, len(stale), 500):
+                index.col.delete(ids=stale[b : b + 500])
+            print(f"{name}: pruned {len(stale)} postings outside the current selection")
+            done = set(index.all_ids())
     todo = jobs[~jobs["job_id"].isin(done)].reset_index(drop=True)
     print(f"{name}: {len(jobs)} postings selected, {len(done)} already indexed, {len(todo)} to do")
 
@@ -95,13 +117,7 @@ def main() -> None:
         rows_out += [{k: v for k, v in d.items() if k != "text"} for d in docs]
         print(f"  indexed {min(b + args.batch, len(todo))}/{len(todo)}  ({(time.time()-t0)/60:.1f} min)", flush=True)
 
-    out = pd.DataFrame(rows_out)
-    proc = ROOT / "data" / "processed" / f"{name}.parquet"
-    proc.parent.mkdir(parents=True, exist_ok=True)
-    if proc.exists():
-        prev = pd.read_parquet(proc)
-        out = pd.concat([prev[~prev["job_id"].isin(out["job_id"])], out], ignore_index=True)
-    out.to_parquet(proc, index=False)
+    out = export_parquet(index, name)  # the whole collection, so interrupted or pruned builds stay consistent
     rng = random.Random(args.seed)
     spot = out.sample(n=min(20, len(out)), random_state=args.seed)[["job_id", "title", "category", "esco_skills", "raw_skills"]].to_dict("records")
     write_json({"pool": name, "selected": int(len(jobs)), "indexed_total": index.count(), "newly_indexed": len(todo), "build_time_min": round((time.time() - t0) / 60, 1),

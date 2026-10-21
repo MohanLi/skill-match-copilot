@@ -1,0 +1,12 @@
+{
+  "file": "results/monitoring/emerging_skills.csv",
+  "rows": 40,
+  "columns": [
+    "phrase",
+    "count",
+    "best_esco",
+    "score"
+  ],
+  "created_utc": "2026-10-21T10:53:36Z",
+  "git_commit": "b0951d7"
+}

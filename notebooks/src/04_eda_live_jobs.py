@@ -97,7 +97,7 @@ print(wd.describe().round(1).to_dict())
 fig
 
 # %%
-smp["posted"] = pd.to_datetime(smp["posted_at"], errors="coerce", utc=True).dt.date
+smp["posted"] = live_jobs.parse_dates(smp["posted_at"]).dt.date   # ISO-8601 parser: the feed mixes full timestamps and date-only stamps
 pdd = smp.dropna(subset=["posted"]).groupby("posted").size().reset_index(name="postings").tail(60)
 if len(pdd):
     fig = px.bar(pdd, x="posted", y="postings", title="Postings by posting date (last 60 days with data, 20k sample)")
@@ -127,7 +127,7 @@ fig
 # ## 5. After the pipeline: ESCO skills extracted from the live AI/ML postings (if the index has been built)
 
 # %%
-idx_file = ROOT / "data" / "processed" / "live_jobs_jobs.parquet"
+idx_file = ROOT / "data" / "processed" / "live_jobs.parquet"
 if idx_file.exists():
     li = pd.read_parquet(idx_file)
     sk = collections.Counter(s for v in li["esco_skills"].fillna("") for s in v.split("|") if s)

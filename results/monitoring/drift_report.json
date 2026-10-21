@@ -1,0 +1,484 @@
+{
+  "generated_utc": "2026-10-21T10:53:04Z",
+  "alert_threshold": 0.02,
+  "nil_share_live_weekly": [
+    {
+      "period": "2026-08-03/2026-08-09",
+      "postings": 54,
+      "esco": 927,
+      "nil": 1900,
+      "nil_share": 0.6720905553590378
+    },
+    {
+      "period": "2026-08-10/2026-08-16",
+      "postings": 124,
+      "esco": 2334,
+      "nil": 4927,
+      "nil_share": 0.6785566726346234
+    },
+    {
+      "period": "2026-08-17/2026-08-23",
+      "postings": 115,
+      "esco": 2143,
+      "nil": 4530,
+      "nil_share": 0.6788550876667167
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "postings": 113,
+      "esco": 2239,
+      "nil": 4536,
+      "nil_share": 0.669520295202952
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "postings": 140,
+      "esco": 2771,
+      "nil": 5177,
+      "nil_share": 0.6513588324106694
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "postings": 160,
+      "esco": 3007,
+      "nil": 6368,
+      "nil_share": 0.6792533333333334
+    },
+    {
+      "period": "2026-09-14/2026-09-20",
+      "postings": 14,
+      "esco": 245,
+      "nil": 612,
+      "nil_share": 0.7141190198366394
+    }
+  ],
+  "nil_share_djinni_quarterly": [
+    {
+      "period": "2019Q4",
+      "postings": 47,
+      "esco": 577,
+      "nil": 777,
+      "nil_share": 0.5738552437223042
+    },
+    {
+      "period": "2020Q1",
+      "postings": 201,
+      "esco": 2592,
+      "nil": 3364,
+      "nil_share": 0.564808596373405
+    },
+    {
+      "period": "2020Q2",
+      "postings": 214,
+      "esco": 2664,
+      "nil": 3342,
+      "nil_share": 0.5564435564435565
+    },
+    {
+      "period": "2020Q3",
+      "postings": 312,
+      "esco": 3731,
+      "nil": 4960,
+      "nil_share": 0.5707053273501324
+    },
+    {
+      "period": "2020Q4",
+      "postings": 348,
+      "esco": 4410,
+      "nil": 5639,
+      "nil_share": 0.5611503632202209
+    },
+    {
+      "period": "2021Q1",
+      "postings": 429,
+      "esco": 5331,
+      "nil": 7256,
+      "nil_share": 0.5764677842218161
+    },
+    {
+      "period": "2021Q2",
+      "postings": 486,
+      "esco": 5771,
+      "nil": 7840,
+      "nil_share": 0.5760047020792006
+    },
+    {
+      "period": "2021Q3",
+      "postings": 579,
+      "esco": 7557,
+      "nil": 9889,
+      "nil_share": 0.5668348045397226
+    },
+    {
+      "period": "2021Q4",
+      "postings": 606,
+      "esco": 7779,
+      "nil": 10291,
+      "nil_share": 0.5695074709463198
+    },
+    {
+      "period": "2022Q1",
+      "postings": 559,
+      "esco": 7342,
+      "nil": 10093,
+      "nil_share": 0.5788930312589619
+    },
+    {
+      "period": "2022Q2",
+      "postings": 496,
+      "esco": 6092,
+      "nil": 8197,
+      "nil_share": 0.5736580586465113
+    },
+    {
+      "period": "2022Q3",
+      "postings": 420,
+      "esco": 5176,
+      "nil": 7151,
+      "nil_share": 0.580108704469863
+    },
+    {
+      "period": "2022Q4",
+      "postings": 380,
+      "esco": 4596,
+      "nil": 6522,
+      "nil_share": 0.5866162978953049
+    },
+    {
+      "period": "2023Q1",
+      "postings": 360,
+      "esco": 4685,
+      "nil": 6076,
+      "nil_share": 0.5646315398197194
+    },
+    {
+      "period": "2023Q2",
+      "postings": 383,
+      "esco": 5198,
+      "nil": 7074,
+      "nil_share": 0.5764341590612777
+    },
+    {
+      "period": "2023Q3",
+      "postings": 180,
+      "esco": 2543,
+      "nil": 3685,
+      "nil_share": 0.5916827231856133
+    }
+  ],
+  "unsupported_claim_rate": [
+    {
+      "day": "eval:agent:multi",
+      "unsupported_rate": 0.0,
+      "requests": 30
+    },
+    {
+      "day": "eval:agent:multi_noverify",
+      "unsupported_rate": 0.1784140969162996,
+      "requests": 30
+    },
+    {
+      "day": "eval:agent:single",
+      "unsupported_rate": 0.17758985200845667,
+      "requests": 30
+    },
+    {
+      "day": "eval:agent:single_verified",
+      "unsupported_rate": 0.0,
+      "requests": 30
+    },
+    {
+      "day": "eval:sonnet:multi",
+      "unsupported_rate": 0.0,
+      "requests": 12
+    },
+    {
+      "day": "eval:sonnet:single",
+      "unsupported_rate": 0.228494623655914,
+      "requests": 12
+    }
+  ],
+  "alerts": [
+    {
+      "day": "eval:agent:multi_noverify",
+      "unsupported_rate": 0.1784140969162996,
+      "requests": 30
+    },
+    {
+      "day": "eval:agent:single",
+      "unsupported_rate": 0.17758985200845667,
+      "requests": 30
+    },
+    {
+      "day": "eval:sonnet:single",
+      "unsupported_rate": 0.228494623655914,
+      "requests": 12
+    }
+  ],
+  "volume_by_category_live": [
+    {
+      "period": "2026-08-03/2026-08-09",
+      "category": "Data",
+      "postings": 1
+    },
+    {
+      "period": "2026-08-03/2026-08-09",
+      "category": "Engineering",
+      "postings": 9
+    },
+    {
+      "period": "2026-08-03/2026-08-09",
+      "category": "Product",
+      "postings": 1
+    },
+    {
+      "period": "2026-08-03/2026-08-09",
+      "category": "Technology",
+      "postings": 6
+    },
+    {
+      "period": "2026-08-10/2026-08-16",
+      "category": "Data",
+      "postings": 10
+    },
+    {
+      "period": "2026-08-10/2026-08-16",
+      "category": "Engineering",
+      "postings": 28
+    },
+    {
+      "period": "2026-08-10/2026-08-16",
+      "category": "Product",
+      "postings": 5
+    },
+    {
+      "period": "2026-08-10/2026-08-16",
+      "category": "R&D",
+      "postings": 9
+    },
+    {
+      "period": "2026-08-10/2026-08-16",
+      "category": "Technology",
+      "postings": 2
+    },
+    {
+      "period": "2026-08-17/2026-08-23",
+      "category": "Data",
+      "postings": 3
+    },
+    {
+      "period": "2026-08-17/2026-08-23",
+      "category": "Engineering",
+      "postings": 30
+    },
+    {
+      "period": "2026-08-17/2026-08-23",
+      "category": "Product",
+      "postings": 6
+    },
+    {
+      "period": "2026-08-17/2026-08-23",
+      "category": "Research",
+      "postings": 7
+    },
+    {
+      "period": "2026-08-17/2026-08-23",
+      "category": "Technology",
+      "postings": 5
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "category": "Data",
+      "postings": 5
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "category": "Engineering",
+      "postings": 28
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "category": "Product",
+      "postings": 3
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "category": "R&D",
+      "postings": 1
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "category": "Research",
+      "postings": 1
+    },
+    {
+      "period": "2026-08-24/2026-08-30",
+      "category": "Technology",
+      "postings": 8
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "category": "Data",
+      "postings": 5
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "category": "Engineering",
+      "postings": 38
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "category": "Product",
+      "postings": 5
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "category": "R&D",
+      "postings": 6
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "category": "Research",
+      "postings": 6
+    },
+    {
+      "period": "2026-08-31/2026-09-06",
+      "category": "Technology",
+      "postings": 10
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "category": "Data",
+      "postings": 6
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "category": "Engineering",
+      "postings": 46
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "category": "Product",
+      "postings": 3
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "category": "R&D",
+      "postings": 2
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "category": "Research",
+      "postings": 5
+    },
+    {
+      "period": "2026-09-07/2026-09-13",
+      "category": "Technology",
+      "postings": 10
+    },
+    {
+      "period": "2026-09-14/2026-09-20",
+      "category": "Engineering",
+      "postings": 4
+    },
+    {
+      "period": "2026-09-14/2026-09-20",
+      "category": "Product",
+      "postings": 1
+    }
+  ],
+  "similarity_to_training_live": 0.5381368807563801,
+  "similarity_to_training_djinni": 0.5988010756626753,
+  "emerging_skills_top": [
+    {
+      "phrase": "aws",
+      "count": 136,
+      "best_esco": "cloud technologies",
+      "score": 0.4307
+    },
+    {
+      "phrase": "dbt",
+      "count": 122,
+      "best_esco": "DB2",
+      "score": 0.6153
+    },
+    {
+      "phrase": "snowflake",
+      "count": 103,
+      "best_esco": "snowboard",
+      "score": 0.5962
+    },
+    {
+      "phrase": "pytorch",
+      "count": 102,
+      "best_esco": "pneumatics",
+      "score": 0.374
+    },
+    {
+      "phrase": "hands-on",
+      "count": 85,
+      "best_esco": "use hand tools",
+      "score": 0.408
+    },
+    {
+      "phrase": "llms",
+      "count": 78,
+      "best_esco": "Litmos",
+      "score": 0.5077
+    },
+    {
+      "phrase": "gcp",
+      "count": 77,
+      "best_esco": "general surgery",
+      "score": 0.5127
+    },
+    {
+      "phrase": "ci/cd",
+      "count": 76,
+      "best_esco": "CA Datacom/DB",
+      "score": 0.3964
+    },
+    {
+      "phrase": "llm",
+      "count": 75,
+      "best_esco": "Litmos",
+      "score": 0.4842
+    },
+    {
+      "phrase": "monitoring",
+      "count": 74,
+      "best_esco": "environmental management monitors",
+      "score": 0.6219
+    },
+    {
+      "phrase": "observability",
+      "count": 67,
+      "best_esco": "observe matter",
+      "score": 0.4836
+    },
+    {
+      "phrase": "bigquery",
+      "count": 67,
+      "best_esco": "analyse big data",
+      "score": 0.5458
+    },
+    {
+      "phrase": "databricks",
+      "count": 62,
+      "best_esco": "data warehouse",
+      "score": 0.5453
+    },
+    {
+      "phrase": "and",
+      "count": 61,
+      "best_esco": "perform multiple tasks at the same time",
+      "score": 0.2516
+    },
+    {
+      "phrase": "experimentation",
+      "count": 56,
+      "best_esco": "conduct experiments on animals",
+      "score": 0.5705
+    }
+  ]
+}

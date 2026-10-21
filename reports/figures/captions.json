@@ -153,55 +153,55 @@
     "caption": "Live snapshot: number of postings per applicant-tracking-system source (Ashby, Greenhouse, Lever, …).",
     "source": "notebooks/04_eda_live_jobs",
     "order": 28,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_salary_missingness": {
     "caption": "Salary availability in the live snapshot: most postings leave compensation fields empty.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 29,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_top_titles": {
     "caption": "Most frequent job titles across the whole live snapshot.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 30,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_departments": {
     "caption": "Live snapshot sample: distribution of department.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 31,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_employment_type": {
     "caption": "Live snapshot sample: distribution of employment type.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 32,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_description_length": {
     "caption": "Length of live postings after HTML stripping (postings with text only): median 668 words — several times longer than a Djinni posting.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 33,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_posting_dates": {
     "caption": "Posting dates in the sample: the snapshot contains postings that are still open, so dates spread over several months with a recent peak.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 34,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_ai_role_families": {
     "caption": "The live demo index: data/AI/ML postings grouped into role families by title pattern.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 35,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "eda04_description_coverage_by_source": {
     "caption": "Only the Greenhouse, Ashby, Lever, Rippling and Gem feeds return posting bodies; Workday and SmartRecruiters listings are title-only, so the live index can only cover postings with text.",
     "source": "notebooks/04_eda_live_jobs",
     "order": 36,
-    "updated": "2026-10-20"
+    "updated": "2026-10-21"
   },
   "p2_nil_threshold_sweep_p2_biencoder": {
     "caption": "Tuning the 'not in ESCO' cosine threshold on the TECH validation spans: joint accuracy, NIL-decision F1 and accuracy on mapped phrases vs threshold.",
@@ -381,6 +381,18 @@
     "caption": "Problem 3: LLM calls, cost and latency per resume for each approach (same model and tools).",
     "source": "src/p3_agent/evaluate.py",
     "order": 64,
+    "updated": "2026-10-21"
+  },
+  "ops_dashboard": {
+    "caption": "Model Ops dashboard: share of phrases outside ESCO per period (new skills), unsupported-claim rate with the alert line, posting volume by category and the emerging-skills review queue.",
+    "source": "src/monitoring/drift_report.py",
+    "order": 65,
+    "updated": "2026-10-21"
+  },
+  "eda04_top_esco_skills_live": {
+    "caption": "Most frequent ESCO skills extracted from this week's data/AI/ML postings by the champion pipeline (tagger → bi-encoder).",
+    "source": "notebooks/04_eda_live_jobs",
+    "order": 66,
     "updated": "2026-10-21"
   }
 }
