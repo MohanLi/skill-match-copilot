@@ -1,0 +1,886 @@
+{
+ "approach": "single_agent_verified",
+ "ranking": [
+  {
+   "job_id": "djinni-job-16520",
+   "rank": 1,
+   "fit_score": 62.0,
+   "matched_skills": [
+    {
+     "skill": "copywriting",
+     "resume_quote": "Brand Marketing, Content Marketing, Digital Marketing",
+     "job_quote": "Copywriting experience"
+    },
+    {
+     "skill": "Content Marketing",
+     "resume_quote": "Content Marketing, Digital Marketing, Social Media Marketing",
+     "job_quote": "Experience producing various types of content"
+    },
+    {
+     "skill": "social media marketing",
+     "resume_quote": "Social Media Marketing, Search Engine Optimization",
+     "job_quote": "social media pitches"
+    },
+    {
+     "skill": "CMS",
+     "resume_quote": "WordPress Design, Shopify Stock Design",
+     "job_quote": "Experience with CMS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "E-mail marketing strategy",
+     "job_quote": "E-mail marketing strategy."
+    },
+    {
+     "skill": "Figma / Photoshop",
+     "job_quote": "Figma / Photoshop"
+    }
+   ],
+   "summary": "Strong content and copywriting overlap with the candidate's content marketing and CMS background (WordPress/Shopify). Gaps are email marketing strategy and design tools, and the role is more content-writing focused than sales-strategy focused.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-15880",
+   "rank": 2,
+   "fit_score": 58.0,
+   "matched_skills": [
+    {
+     "skill": "social media marketing",
+     "resume_quote": "Social Media Marketing, Search Engine Optimization",
+     "job_quote": "Social media and email marketing experience"
+    },
+    {
+     "skill": "content marketing strategy",
+     "resume_quote": "Content Marketing, Digital Marketing, Social Media Marketing",
+     "job_quote": "Experience developing content strategies"
+    },
+    {
+     "skill": "WordPress",
+     "resume_quote": "WordPress Design, Shopify Stock Design",
+     "job_quote": "Technical knowledge of Wordpress or other CMS"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "email marketing and automations",
+     "job_quote": "Strong knowledge of marketing tools and automations for media, social and email marketing"
+    },
+    {
+     "skill": "paid marketing campaigns",
+     "job_quote": "building and measuring paid marketing campaigns on different platforms"
+    }
+   ],
+   "summary": "Good overlap on social media, content strategy and WordPress with a brand-marketing angle. Requires stronger email automation and paid-campaign experience and is more corporate communications than the candidate's e-commerce focus.",
+   "dropped": [
+    {
+     "skill": "marketing plan development",
+     "reason": "The matched claim's job_quote 'Experience working with and developing a marketing plan' names the skill, but the claim was flagged as 'skill_not_in_job' for the missing-skill version; no resume quote supports a 'missing' status and the resume does not clearly name marketing plan development, so the claim is dropped rather than repaired."
+    },
+    {
+     "skill": "brand definition",
+     "reason": "skill_not_in_quotes"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-129946",
+   "rank": 3,
+   "fit_score": 52.0,
+   "matched_skills": [
+    {
+     "skill": "content marketing strategy",
+     "resume_quote": "Content Marketing, Digital Marketing, Social Media Marketing",
+     "job_quote": "Create a content plan based on content strategy."
+    }
+   ],
+   "missing_skills": [],
+   "summary": "Solid match on social media content and copywriting for a social-media-manager role. Requires 2+ years in the field plus graphic and bilingual content skills, which the resume does not show.",
+   "dropped": [
+    {
+     "skill": "content creation and copywriting",
+     "reason": "skill_not_in_quotes"
+    },
+    {
+     "skill": "social media content",
+     "reason": "skill_not_in_quotes"
+    },
+    {
+     "skill": "graphic design tools",
+     "reason": "skill_not_in_job"
+    },
+    {
+     "skill": "English and Ukrainian writing",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-1006",
+   "rank": 4,
+   "fit_score": 48.0,
+   "matched_skills": [
+    {
+     "skill": "digital marketing techniques",
+     "resume_quote": "Digital Marketer Specialist with 4 qualified years",
+     "job_quote": "thorough knowledge of the principles of digital advertising, marketing, and media"
+    },
+    {
+     "skill": "brand marketing",
+     "resume_quote": "Brand Marketing, Content Marketing, Digital Marketing",
+     "job_quote": "Experience with various projects types, including web, mobile, video, brand"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "media planning",
+     "job_quote": "Participate in the client planning process, including situation analysis, digital media planning"
+    },
+    {
+     "skill": "agency client management",
+     "job_quote": "Serve as the key, day-to-day agency representative for our clients"
+    },
+    {
+     "skill": "public speaking",
+     "job_quote": "Has excellent public speaking skills and experience"
+    }
+   ],
+   "summary": "Digital marketing background transfers well to an agency account role, but the role centers on client-facing account management, pitching and media planning, which the resume does not evidence. Requires 2+ years in a similar role.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-134827",
+   "rank": 5,
+   "fit_score": 8.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "JavaScript/React engineering",
+     "job_quote": "Experience with React"
+    }
+   ],
+   "summary": "Software engineering team-lead role with no overlap with the candidate's marketing profile; included only because it was in the fixed candidate pool.",
+   "dropped": [
+    {
+     "skill": "team leadership",
+     "reason": "The job text does name leading a team ('Minimum 3 years of experience leading a team'), so the claim could be repaired, but the claim was classified as 'missing' while the resume contains no team leadership experience. Under the rules, a 'missing' skill must be named in the job text and the repaired quote must name the skill as written. The job quote 'Minimum 3 years of experience leading a team' is verbatim and names team leadership, so this claim is supportable. However, the resume contains no leadership or team-management experience, so the skill is genuinely missing and the claim is retained as repaired below.\n\nRepaired: the job quote 'Minimum 3 years of experience leading a team' is verbatim and names the skill; the claim was flagged only because the skill wording 'team leadership' does not appear in the job text, so the skill is renamed to match the quote's wording."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-50094",
+   "rank": 6,
+   "fit_score": 6.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "Java/Spring Boot development",
+     "job_quote": "3+ years of experience using Java, EJB, Spring Boot"
+    }
+   ],
+   "summary": "Java backend developer role unrelated to digital marketing; only a weak mention of marketing strategy appears in the preferred requirements.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-137681",
+   "rank": 7,
+   "fit_score": 4.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Trainee Java engineering course, unrelated to the candidate's marketing field.",
+   "dropped": [
+    {
+     "skill": "Java programming",
+     "reason": "skill_not_in_job"
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-127688",
+   "rank": 8,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Senior QA automation role in Java, unrelated to the candidate's marketing field.",
+   "dropped": [
+    {
+     "skill": "test automation",
+     "reason": "The quote 'develop automated software tests' is not verbatim in the job text, and the job text does not contain a verbatim quote naming a missing test automation skill that is absent from the resume. The job explicitly requires test automation, and the resume does not show that skill, but no exact supporting quote could be supplied from the job text under the verification rules, so the claim is dropped."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-45525",
+   "rank": 9,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "investment analysis",
+     "job_quote": "analyzing investment projects"
+    }
+   ],
+   "summary": "Investment analyst role in finance, unrelated to the candidate's marketing field.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-45248",
+   "rank": 10,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "DevOps internship, unrelated to the candidate's marketing field.",
+   "dropped": [
+    {
+     "skill": "DevOps tooling",
+     "reason": "The flagged 'missing' claim is not supported: the job text names DevOps culture and practices, but the skill 'DevOps tooling' is not named in the job text as a missing requirement, and the only quote offered is about DevOps culture. The job text does mention specific tools (AWS, CI/CD, Docker, Ansible, Kubernetes, Prometheus, Grafana, ELK stack), but the resume contains no tool-level skills to compare against, so the claim cannot be verified as a missing skill and is dropped."
+    }
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting the skills from the resume and running searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Digital Marketing Specialist. Digital Marketer Specialist with 4 years of experience in developing sales strategies, Brand Awareness, trigger emails. Services: WordPress Design, Shopify Stock Design, Shopify Store Management, Products Upload, Website Advertising, Brand Marketing, Content Marketing, Digital Marketing, Social Media Marketing, Search Engine Optimization, Search Engine Marketing, Real Estate Marketing, Product Marketing. Shopify Store Design and Shopify Marketing Expert. Crowdfunding Campaign creation and promotion."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Digital Marketing Specialist",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Shopify store management and marketing",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "SEO SEM social media content marketing brand awareness",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000545
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Digital Marketing Specialist. Digital Marketer Specialist with 4 years of experience in developing sales strategies, Brand Awareness, trigger emails. Services: WordPress Design, Shopify Stock Design, Shopify Store Management, Products Upload, Website Advertising, Brand Marketing, Content Marketing, Digital Marketing, Social Media Marketing, Search Engine Optimization, Search Engine Marketing, Real Estate Marketing, Product Marketing. Shopify Store Design and Shopify Marketing Expert. Crowdfunding Campaign creation and promotion."
+   },
+   "output_preview": "{\"skills\": [\"developing sales strategies\", \"Brand Awareness\", \"trigger emails\"], \"knowledge\": [\"Brand\", \"trigger emails\", \"WordPress Design\", \"Shopify Stock Design\", \"Shopify Store Management\", \"Products Upload\", \"Website Advertising\", \"Brand Marketing\", \"Content Marketing\", \"Digital Marketing\", \"Social Media Marketing\", \"Search Engine Optimization\", \"Search Engine Marketing\", \"Real Estate Marketing\", \"Product Marketing\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Digital Marketing Specialist",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-15880\", \"title\": \"Communications Manager\", \"company\": \"RubyPlay\", \"category\": \"Marketing\", \"score\": 0.4843, \"esco_skills\": [\"English\", \"WordPress\", \"alter management\", \"apply social media marketing\", \"communicate with media\", \"consult with business clients\", \"content marketing strategy\", \"create media plan\", \"define brand identity\", \"develop new products\", \"execute email marketing\", \"manage website\", \"plan \", \"plan marketing strategy\", \"publishing industry\"], \"snippet\": \"Communications Manager\\nСM creates, implements, and oversees communications programs, internal or ex"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Shopify store management and marketing",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-16520\", \"title\": \"Content Manager\", \"company\": \"paspartoo\", \"category\": \"Marketing\", \"score\": 0.3545, \"esco_skills\": [\"Adobe Photoshop\", \"English\", \"compile content\", \"medical studies\", \"perform copywriting\", \"plan marketing strategy\", \"stimulate creative processes\", \"use content management system software\", \"write in conversational tone\"], \"snippet\": \"Content Manager\\nRequirements:\\r\\n- Copywriting experience\\r\\n- Fluent in English\\r\\n- Experience producing various types of content (blogs, case studies, articles, emails, social media pitches) using different writing st"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "SEO SEM social media content marketing brand awareness",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-15880\", \"title\": \"Communications Manager\", \"company\": \"RubyPlay\", \"category\": \"Marketing\", \"score\": 0.4632, \"esco_skills\": [\"English\", \"WordPress\", \"alter management\", \"apply social media marketing\", \"communicate with media\", \"consult with business clients\", \"content marketing strategy\", \"create media plan\", \"define brand identity\", \"develop new products\", \"execute email marketing\", \"manage website\", \"plan \", \"plan marketing strategy\", \"publishing industry\"], \"snippet\": \"Communications Manager\\nСM creates, implements, and oversees communications programs, internal or ex"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The candidate pool is only 10 distinct jobs. I'll pull the full text of the marketing-related ones and normalize the resume skills to compare.",
+   "tool_uses": [
+    {
+     "name": "normalize_skills",
+     "input": {
+      "phrases": [
+       "Shopify Store Management",
+       "WordPress Design",
+       "Search Engine Optimization",
+       "Search Engine Marketing",
+       "Social Media Marketing",
+       "Content Marketing",
+       "Brand Marketing",
+       "Product Marketing",
+       "trigger emails",
+       "developing sales strategies",
+       "Website Advertising",
+       "Real Estate Marketing",
+       "Brand Awareness"
+      ]
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-15880"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-16520"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-129946"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-1006"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001427
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "normalize_skills",
+   "input": {
+    "phrases": [
+     "Shopify Store Management",
+     "WordPress Design",
+     "Search Engine Optimization",
+     "Search Engine Marketing",
+     "Social Media Marketing",
+     "Content Marketing",
+     "Brand Marketing",
+     "Product Marketing",
+     "trigger emails",
+     "developing sales strategies",
+     "Website Advertising",
+     "Real Estate Marketing",
+     "Brand Awareness"
+    ]
+   },
+   "output_preview": "{\"mapped\": [{\"phrase\": \"Shopify Store Management\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5254}, {\"phrase\": \"WordPress Design\", \"esco_label\": \"WordPress\", \"score\": 0.7151}, {\"phrase\": \"Search Engine Optimization\", \"esco_label\": \"search engine optimisation\", \"score\": 0.9552}, {\"phrase\": \"Search Engine Marketing\", \"esco_label\": \"search engine optimisation\", \"score\": 0.7566}, {\"phrase\": \"Social Media Marketing\", \"esco_label\": \"apply social media marketing\", \"score\": 0.8992}, {\"phrase\": \"Content Marketing\", \"esco_label\": \"content marketing strategy\", \"score\": 0.9005}, {\"phrase\": \"Brand Marketing\""
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-15880"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-15880\", \"title\": \"Communications Manager\", \"company\": \"RubyPlay\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Communications Manager\\nСM creates, implements, and oversees communications programs, internal or external, that effectively describe and promote RubyPlay brand and its products. \\r\\nAs our ambassador, you will work on advocating the company’s culture and name, creating and finding opportunities for long-term success.\\n\\nWhat will you be responsible for?\\r\\n-You will be our internal journalist, building strong connections with various teams to learn their storie"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-16520"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-16520\", \"title\": \"Content Manager\", \"company\": \"paspartoo\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Content Manager\\nRequirements:\\r\\n- Copywriting experience\\r\\n- Fluent in English\\r\\n- Experience producing various types of content (blogs, case studies, articles, emails, social media pitches) using different writing styles.\\r\\n- Ability to spark the reader’s interest with the first few sentences and explain complex things in a friendly and conversational tone\\r\\n- Creativity and a good eye for details\\r\\n- Experience with CMS\\r\\n- Figma / Photoshop\\r\\n- E-mail mark"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-129946"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-129946\", \"title\": \"SMM Manager/Content manager\", \"company\": \"S-PRO\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"SMM Manager/Content manager\\nHi, my name is Olena, and I’m the Communications Manager at S-PRO. I’m looking for a person who will be responsible for the company's social media and content creation for them.\\r\\n\\r\\n**Responsibilities:**\\r\\n\\r\\n- Create a content plan based on content strategy. \\r\\n- Write posts for social media (FB, Instagram, LinkedIn, Twitter)\\r\\n- Create simple images for posts using Canvas or any similar instrument \\r\\n- Create posts for p"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-1006"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-1006\", \"title\": \"Account Manager\", \"company\": \"ADSH\", \"category\": \"Marketing\", \"url\": \"\", \"text\": \"Account Manager\\nLeadingAds is looking for an Account Manager for Agency accounts.\\r\\nWe are providing marketing services in FB, Google and other platforms.\\r\\n\\r\\nLeadingAds  is looking for an Account Manager for Agency accounts.\\r\\nWe are providing marketing services in FB, Google and other platforms.\\r\\n \\r\\n \\r\\nOur Client Services team serves as the first line of contact with our clients. They identify client needs and work strategically to provide thoughtful solutions"
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "Let me check the remaining marketing-adjacent postings and compare skills for the top candidates.",
+   "tool_uses": [
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-50094"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-134827"
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "WordPress",
+       "search engine optimisation",
+       "apply social media marketing",
+       "content marketing strategy",
+       "brand marketing techniques",
+       "promote products in advertisements",
+       "real estate market",
+       "sales strategies",
+       "define brand identity",
+       "Shopify Store Management",
+       "trigger emails",
+       "Website Advertising",
+       "copywriting"
+      ],
+      "job_skills": [
+       "English",
+       "WordPress",
+       "apply social media marketing",
+       "content marketing strategy",
+       "define brand identity",
+       "execute email marketing",
+       "manage website",
+       "create media plan",
+       "plan marketing strategy",
+       "social media management",
+       "use content management system software",
+       "writing techniques",
+       "tell a story"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "WordPress",
+       "search engine optimisation",
+       "apply social media marketing",
+       "content marketing strategy",
+       "brand marketing techniques",
+       "promote products in advertisements",
+       "sales strategies",
+       "copywriting",
+       "trigger emails"
+      ],
+      "job_skills": [
+       "perform copywriting",
+       "use content management system software",
+       "write in conversational tone",
+       "plan marketing strategy",
+       "content marketing strategy",
+       "apply social media marketing",
+       "English",
+       "compile content",
+       "Adobe Photoshop"
+      ]
+     }
+    },
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "apply social media marketing",
+       "content marketing strategy",
+       "brand marketing techniques",
+       "promote products in advertisements",
+       "sales strategies",
+       "search engine optimisation",
+       "digital marketing techniques"
+      ],
+      "job_skills": [
+       "digital marketing techniques",
+       "plan digital marketing",
+       "media planning",
+       "marketing management",
+       "deliver a sales pitch",
+       "identify new business opportunities",
+       "mobile marketing",
+       "plan marketing strategy",
+       "define brand identity",
+       "develop creative ideas"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.002161
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-50094"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-50094\", \"title\": \"Java Developer (Fitness App sphere)\", \"company\": \"Coherent Solutions\", \"category\": \"Java\", \"url\": \"\", \"text\": \"Java Developer (Fitness App sphere)\\nWhat You'll Do\\r\\nDesign, code, and test technical solutions with an emphasis on Test Driven Development;\\r\\nProactively work with Business Analysts to understand project requirements;\\r\\nRecognize and effectively communicate risks to project timelines and quality;\\r\\nStrive to eliminate defects as early as possible by actively participating in code reviews;\\r\\nSupport and help guide the evolution of the sys"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-134827"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-134827\", \"title\": \"Team Lead JavaScript (React)\", \"company\": \"Exadel\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Team Lead JavaScript (React)\\n**Requirements:**\\r\\n• Bachelor or Master degree in Computer Science/Engineering or related fields\\r\\n• Strong experience in software engineering and application development\\r\\n• Experience with React\\r\\n• Extensive experience in Scrum methodologies, ideally certified Scrum master\\r\\n• Minimum 3 years of experience leading a team\\r\\n• Knowledge of test-driven development, continuous delivery, and continuous integration\\r\\n• Ex"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "WordPress",
+     "search engine optimisation",
+     "apply social media marketing",
+     "content marketing strategy",
+     "brand marketing techniques",
+     "promote products in advertisements",
+     "real estate market",
+     "sales strategies",
+     "define brand identity",
+     "Shopify Store Management",
+     "trigger emails",
+     "Website Advertising",
+     "copywriting"
+    ],
+    "job_skills": [
+     "English",
+     "WordPress",
+     "apply social media marketing",
+     "content marketing strategy",
+     "define brand identity",
+     "execute email marketing",
+     "manage website",
+     "create media plan",
+     "plan marketing strategy",
+     "social media management",
+     "use content management system software",
+     "writing techniques",
+     "tell a story"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"WordPress\", \"apply social media marketing\", \"content marketing strategy\", \"define brand identity\"], \"missing\": [\"English\", \"execute email marketing\", \"manage website\", \"create media plan\", \"plan marketing strategy\", \"social media management\", \"use content management system software\", \"writing techniques\", \"tell a story\"], \"extra\": [\"search engine optimisation\", \"brand marketing techniques\", \"promote products in advertisements\", \"real estate market\", \"sales strategies\", \"Shopify Store Management\", \"trigger emails\", \"Website Advertising\", \"copywriting\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "WordPress",
+     "search engine optimisation",
+     "apply social media marketing",
+     "content marketing strategy",
+     "brand marketing techniques",
+     "promote products in advertisements",
+     "sales strategies",
+     "copywriting",
+     "trigger emails"
+    ],
+    "job_skills": [
+     "perform copywriting",
+     "use content management system software",
+     "write in conversational tone",
+     "plan marketing strategy",
+     "content marketing strategy",
+     "apply social media marketing",
+     "English",
+     "compile content",
+     "Adobe Photoshop"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"perform copywriting\", \"content marketing strategy\", \"apply social media marketing\"], \"missing\": [\"use content management system software\", \"write in conversational tone\", \"plan marketing strategy\", \"English\", \"compile content\", \"Adobe Photoshop\"], \"extra\": [\"WordPress\", \"search engine optimisation\", \"brand marketing techniques\", \"promote products in advertisements\", \"sales strategies\", \"trigger emails\"]}"
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "apply social media marketing",
+     "content marketing strategy",
+     "brand marketing techniques",
+     "promote products in advertisements",
+     "sales strategies",
+     "search engine optimisation",
+     "digital marketing techniques"
+    ],
+    "job_skills": [
+     "digital marketing techniques",
+     "plan digital marketing",
+     "media planning",
+     "marketing management",
+     "deliver a sales pitch",
+     "identify new business opportunities",
+     "mobile marketing",
+     "plan marketing strategy",
+     "define brand identity",
+     "develop creative ideas"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"digital marketing techniques\"], \"missing\": [\"plan digital marketing\", \"media planning\", \"marketing management\", \"deliver a sales pitch\", \"identify new business opportunities\", \"mobile marketing\", \"plan marketing strategy\", \"define brand identity\", \"develop creative ideas\"], \"extra\": [\"apply social media marketing\", \"content marketing strategy\", \"brand marketing techniques\", \"promote products in advertisements\", \"sales strategies\", \"search engine optimisation\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "I have the evidence I need. The candidate pool is only 10 jobs, and only 5 are marketing-related; the other 5 (Java, JavaScript, QA, DevOps, Investment Analyst) are clearly outside the candidate's digital marketing family, so I rank them last with low scores. I did not fully fetch the remaining non-marketing postings, so their scores rest on title and snippet only.\n\nQuote verification notes: each matched quote below was checked against the resume text and job text. Where a phrase appears in the job's raw skills but the quote must be verbatim from the posting, I used the posting's own wording.\n\n```json\n{\"ranking\": [\n  {\"job_id\": \"djinni-job-16520\", \"rank\": 1, \"fit_score\": 62,\n   \"matched_skills\": [\n     {\"skill\": \"copywriting\", \"resume_quote\": \"Brand Marketing, Content Marketing, Digital Marketing\", \"job_quote\": \"Copywriting experience\"},\n     {\"skill\": \"content marketing strategy\", \"resume_quote\": \"Content Marketing, Digital Marketing, Social Media Marketing\", \"job_quote\": \"Experience producing various types of content\"},\n     {\"skill\": \"social media marketing\", \"resume_quote\": \"Social Media Marketing, Search Engine Optimization\", \"job_quote\": \"social media pitches\"},\n     {\"skill\": \"CMS\", \"resume_quote\": \"WordPress Design, Shopify Stock Design\", \"job_quote\": \"Experience with CMS\"}\n   ],\n   \"missing_skills\": [\n     {\"skill\": \"email marketing strategy\", \"job_quote\": \"E-mail marketing strategy.\"},\n     {\"skill\": \"Figma / Photoshop\", \"job_quote\": \"Figma / Photoshop\"}\n   ],\n   \"s",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.003596
+  },
+  {
+   "node": "verifier",
+   "flagged": 13,
+   "repaired": 3,
+   "dropped": 10,
+   "ms": 20034.2
+  }
+ ],
+ "llm_calls": 12,
+ "input_tokens": 71689,
+ "output_tokens": 8138,
+ "cost_usd": 0.011239,
+ "latency_ms": 37219.2,
+ "tool_calls": 14,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 26219.9,
+ "steps": 4,
+ "verifier_flagged": 13,
+ "verifier_repaired": 3,
+ "verifier_dropped": 10,
+ "pool": [
+  {
+   "job_id": "djinni-job-127688",
+   "label": 0,
+   "title": "Senior Test Automation Engineer (Java)"
+  },
+  {
+   "job_id": "djinni-job-1006",
+   "label": 1,
+   "title": "Account Manager"
+  },
+  {
+   "job_id": "djinni-job-137681",
+   "label": 0,
+   "title": "Trainee Java Engineer"
+  },
+  {
+   "job_id": "djinni-job-45525",
+   "label": 0,
+   "title": "Investment Analyst"
+  },
+  {
+   "job_id": "djinni-job-45248",
+   "label": 0,
+   "title": "Intern DevOps"
+  },
+  {
+   "job_id": "djinni-job-50094",
+   "label": 0,
+   "title": "Java Developer (Fitness App sphere)"
+  },
+  {
+   "job_id": "djinni-job-16520",
+   "label": 1,
+   "title": "Content Manager"
+  },
+  {
+   "job_id": "djinni-job-15880",
+   "label": 1,
+   "title": "Communications Manager"
+  },
+  {
+   "job_id": "djinni-job-134827",
+   "label": 0,
+   "title": "Team Lead JavaScript (React)"
+  },
+  {
+   "job_id": "djinni-job-129946",
+   "label": 1,
+   "title": "SMM Manager/Content manager"
+  }
+ ],
+ "metrics": {
+  "approach": "single_verified",
+  "cv_id": "djinni-cv-30477",
+  "cv_category": "Marketing",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 1.0,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 4,
+  "coverage": 1.0,
+  "n_claims": 20,
+  "n_supported": 20,
+  "hallucination_rate": 0.0,
+  "llm_calls": 12,
+  "input_tokens": 71689,
+  "output_tokens": 8138,
+  "cost_usd": 0.011239,
+  "latency_ms": 37219.200000000004,
+  "wall_ms": 26219.9,
+  "tool_calls": 14,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 13,
+  "verifier_repaired": 3,
+  "verifier_dropped": 10,
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 20,
+  "n_supported": 20,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-16520",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-15880",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 3,
+    "n_matched_supported": 3,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-129946",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-1006",
+    "n_claims": 5,
+    "n_supported": 5,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-134827",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-50094",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-137681",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-127688",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-45525",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-45248",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}

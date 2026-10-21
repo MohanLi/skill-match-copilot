@@ -148,13 +148,13 @@ def main() -> None:
     fails = []
     for _, r in df[df["approach"] != "baseline"].iterrows():
         kinds = []
-        if r["top1_label"] is not None and r["top1_label"] < 2 and r["n_strong_in_pool"] > 0:
+        if pd.notna(r["top1_label"]) and r["top1_label"] < 2 and r["n_strong_in_pool"] > 0:
             kinds.append("wrong_top1")
         if (r["hallucination_rate"] or 0) > 0:
             kinds.append("unsupported_claim")
         if r["p_at_3"] < 1 and r["n_strong_in_pool"] >= 3:
             kinds.append("missed_strong_fit")
-        if r["error"]:
+        if isinstance(r["error"], str) and r["error"]:
             kinds.append("run_error")
         if kinds:
             fails.append({"approach": r["approach"], "cv_id": r["cv_id"], "failure_types": ",".join(kinds), "ndcg10": None if pd.isna(r["ndcg10"]) else round(r["ndcg10"], 3), "hallucination_rate": r["hallucination_rate"], "reasons": r["reasons"]})

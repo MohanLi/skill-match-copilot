@@ -1,6 +1,6 @@
 {
   "file": "results/p3/metrics_agent.csv",
-  "rows": 4,
+  "rows": 5,
   "columns": [
     "approach",
     "n_cvs",
@@ -24,8 +24,8 @@
     "errors",
     "approach_label"
   ],
-  "created_utc": "2026-10-21T08:55:16Z",
-  "git_commit": "ca05d45",
+  "created_utc": "2026-10-21T09:55:27Z",
+  "git_commit": "9b16c2f",
   "model": "agent",
   "labels": "data/labels/final.csv",
   "n_cvs": 30

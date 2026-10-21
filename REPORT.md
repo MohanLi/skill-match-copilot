@@ -259,8 +259,6 @@ the in-house encoder; figures `p2_nil_threshold_sweep`, `p2_nil_results`):
 
 ## 5. Problem 3 — matching and explaining with a tool-using agent
 
-*(evaluation running — this section is filled from `results/p3/` when the stage runner finishes)*
-
 **Task.** Given a resume, return the top-10 jobs from a pool with, for each job, a fit score, the matched
 and missing skills and **verbatim quotes** from the resume and the posting that support every claim.
 
@@ -284,15 +282,83 @@ fixed pool of 10 indexed postings each (4 from the same category, 3 from a relat
   that the conclusions hold at scale. Limitation (decision 6): labels are model-made, not human-made; the
   labelling kit (`data/processed/labeling_sheet.xlsx`) exists so that a human pass can replace them.
 
-**Approaches** (`src/p3_agent/`), same five tools, same model (`claude-haiku-5-5`), same prompts directory:
+**Approaches** (`src/p3_agent/`). All arms share the same five tools (`extract_skills`, `normalize_skills`,
+`search_jobs`, `get_job`, `compare_skills`), the same model (`claude-haiku-5-5`, thinking off), the same versioned
+prompts and the same on-disk cache:
 
-| | Baseline | Challenger A: single ReAct agent | Champion candidate B: planner → retriever → matcher → verifier |
-|---|---|---|---|
-| How | embed resume, cosine top-10, skill overlap | one LangGraph agent loop calling tools until it answers | planner (LLM) → retriever (code) → matcher (LLM) → verifier (quote check + one repair call) |
-| Metrics | nDCG@10, P@3, MRR against the gold grades; faithfulness = share of quoted claims found verbatim; cost, latency, tool calls | | |
+| Key | Approach | How it works |
+|---|---|---|
+| `baseline` | embedding baseline, no LLM | embed the resume (all-MiniLM-L6-v2), cosine-rank the pool |
+| `single` | **single ReAct agent** (LangGraph loop) | one agent calls tools until it answers; up to 12 steps |
+| `multi` | **planner → retriever → matcher → verifier** | planner (LLM) writes role family, must-haves and search queries; retriever (code) runs the tools; matcher (LLM) ranks and explains; verifier checks every claim deterministically, sends flagged ones to one LLM repair call per job and drops what remains unsupported |
+| `multi_noverify` | ablation | the same pipeline with the verifier removed |
+| `single_verified` | **single ReAct agent + the same verifier** | added after the first results showed the two arms win on different axes |
 
-Results table, the Sonnet ablation (`--tag sonnet`), the `multi_noverify` ablation (verifier removed) and the
-silver-set check go here.
+**Metrics.** nDCG@10 (graded gains 0/1/2) over the 28 pools with a relevant job; Precision@3 and MRR with
+"strong fit" and with "partial or better" as relevance; *coverage* (share of the 10 pool jobs the agent actually
+ranked — unranked jobs are appended in baseline order); **faithfulness** = share of matched/missing-skill claims
+whose quotes are verbatim in the resume/posting *and* name the skill (automatic checker,
+`src/p3_agent/faithfulness.py`, 20 unit tests); LLM calls, tokens, cost and latency per resume.
+
+**Results on the gold pools** (`results/p3/metrics_agent.csv`, figures `p3_ranking_quality_agent`,
+`p3_hallucination_agent`, `p3_efficiency_agent`):
+
+| Approach | nDCG@10 | P@3 ≥ partial | MRR ≥ partial | P@3 strong | MRR strong | Coverage | Claims / CV | **Unsupported claims** | LLM calls | Cost / CV | Latency |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Embedding baseline | 0.886 | 0.678 | 0.920 | 0.122 | 0.704 | 1.00 | — | — | 0 | $0 | 0.7 s |
+| Planner→…→Matcher, no verifier | 0.887 | 0.733 | 0.896 | 0.111 | 0.731 | 0.99 | 30.3 | 17.8 % | 2.0 | $0.003 | 12.7 s |
+| Planner→…→Matcher→Verifier | 0.887 | 0.733 | 0.896 | 0.111 | 0.731 | 0.99 | 26.0 | **0.0 %** | 5.9 | $0.004 | 20.7 s |
+| Single ReAct agent | **0.961** | **0.767** | **0.982** | **0.133** | **0.889** | 0.97 | 31.5 | 17.8 % | 4.0 | $0.008 | 20.3 s |
+| **Single ReAct agent + Verifier** | **0.961** | **0.767** | **0.982** | **0.133** | **0.889** | 0.97 | 27.0 | **0.0 %** | 8.2 | $0.010 | 30.2 s |
+
+What the numbers say:
+
+* **Ranking.** The single ReAct agent is the best ranker: nDCG 0.961 vs 0.886 for the embedding baseline, and
+  it puts a partial-or-better fit at or next to the top for almost every resume (MRR 0.98). The planner→matcher pipeline, which
+  asks one LLM call to order all ten candidates at once, is no better than the embedding baseline (0.887):
+  reading each posting with `get_job` + `compare_skills` and scoring it step by step is what buys the +0.07.
+  Per category (`results/p3/per_cv_agent.csv`) the single agent wins or ties everywhere; the pipeline loses to
+  the baseline on "Other", Node.js and QA, where its one-shot matcher misorders the low-fit tail.
+* **Faithfulness.** Without a verifier, **about one claim in six is unsupported** — 17.8 % for both the ReAct
+  agent and the matcher. The reasons (`results/p3/failures_agent.csv`) are mostly naming, not fabrication:
+  the skill is not named in the quoted text (`skill_not_in_quotes`, 75 of 172 single-agent cases) or a
+  "missing" skill is not in the posting at all (`skill_not_in_job`, 68); invented quotes are rare
+  (`job_quote_not_found` 16, `resume_quote_not_found` 3). The verifier flags 5.6 claims per resume, repairs
+  1.1 with a correct verbatim quote and drops 4.6, which takes the unsupported share to 0 % at a cost of
+  ~15 % fewer claims and +$0.002 per resume.
+* **Combination.** Because the verifier is a post-processor, it composes with either orchestration: *single
+  ReAct agent + verifier* keeps the best ranking **and** reaches 0 % unsupported claims. It is the
+  champion for the product; the planner→matcher→verifier pipeline is the cheaper fallback (half the input
+  tokens, since it never re-reads the conversation).
+* **Cost and latency.** Everything is cheap at Haiku prices — the whole 30-resume evaluation of five arms cost
+  under $1 — but latency is 20–30 s per resume for the agentic arms versus 0.7 s for the baseline, which is
+  why the baseline remains the first-pass ranker in the API and the agent is invoked for the top-k only.
+
+**Model ablation** — the same evaluation on the first 12 CVs with `claude-sonnet-5-5`
+(`results/p3/metrics_sonnet.csv`, same 12 CVs with Haiku in brackets):
+
+| Approach (12 CVs) | nDCG@10 | MRR ≥ partial | Unsupported claims | Cost / CV |
+|---|---|---|---|---|
+| Single ReAct agent — Sonnet | 0.947 [Haiku 0.957] | 0.955 [0.955] | 22.8 % [20.2 %] | $0.117 [$0.007] |
+| Planner→…→Verifier — Sonnet | **0.965** [0.902] | **1.000** [0.955] | 0.0 % [0.0 %] | $0.076 [$0.004] |
+
+The larger model lifts the one-shot matcher (0.902 → 0.965) more than the step-by-step agent, which is already
+near the ceiling with Haiku, and it does **not** reduce unsupported claims (22.8 % vs 20.2 %): faithfulness
+comes from the verifier, not from model size. At 16× the price, Sonnet is not worth it for this task.
+
+**Silver check at scale** — 1,000 Djinni CVs against the whole 6,000-posting index, relevance = same job
+category (`results/p3/silver_metrics.csv`, figure `p3_silver_eval`; agents on the first 60 CVs, baseline
+numbers on the same 60 in brackets): baseline nDCG@10 0.777 [0.747], single agent 0.787, pipeline 0.794;
+P@10 0.773 [0.742] / 0.787 / 0.792. Both agents beat the embedding ranker by +0.04–0.05 nDCG on this rough
+signal over a realistic pool, with no run errors; the two agents are within noise of each other here, as
+they are on the gold set's partial-fit metrics.
+
+**Failure analysis** (`results/p3/failures_agent.csv`, traces in `results/p3/traces/`): with the verifier in
+place, the remaining failures are ranking errors — a non-strong job at rank 1 while a strong fit exists
+(2 of 9 such CVs for the verified single agent, 4 for the pipeline) and one missed strong fit in a pool with
+three of them. The dropped claims are almost all of the "skill not named in the quote" kind — e.g. a matched
+skill "Unit testing" supported by quotes that talk about test automation in general — which is exactly the
+over-generalisation an auditor would reject.
 
 ---
 
@@ -310,23 +376,38 @@ See `docs/architecture.md` for the diagram and the maintenance plan. In brief:
 * **Monitoring**: `drift_report.py` tracks the NOT_IN_ESCO share (new skills), the similarity of new
   postings to the tagger's training distribution, the unsupported-claim rate of agent answers (alert above
   2 %), and feeds frequent unmapped phrases into a human review queue (`results/monitoring/emerging_skills.csv`).
-* **Spend**: LLM cost of the whole project so far ≈ $2.3 of the $25 budget (`logs/llm_calls.jsonl`).
+* **Spend**: LLM cost of the whole project ≈ $14.3 of the $25 budget (`logs/llm_calls.jsonl`): gold labels $7.3, Sonnet ablation $2.4, everything else (P1 extractor, P2 re-ranking and reject decisions, Haiku agents, silver set) ≈ $3.5.
 
 ---
 
-## 7. Conclusion (draft)
+## 7. Conclusion
 
-* **Extraction**: a 110M-parameter tagger fine-tuned for an hour on CPU beats a frontier LLM used few-shot
-  by 0.10–0.19 strict F1, over-extracts 5× less and never paraphrases — the LLM paraphrases 7 % of the time.
-  Small supervised models remain the right tool for span extraction when verbatim evidence matters.
-* **Normalization**: dense retrieval is mandatory (BM25 is 2× worse); fine-tuning on synthetic pairs pays
-  off (+0.10 MAP after one CPU epoch); the published ConTeXT encoder is the champion; LLM re-ranking only
-  pays for itself on a weak retriever. The reject option is a first-class problem: 37–43 % of real phrases
-  are not in ESCO.
-* **Matching** — to be completed.
+* **Extraction (P1).** A 110M-parameter tagger fine-tuned for an hour on CPU beats a frontier LLM used
+  few-shot by 0.10–0.19 strict F1, over-extracts 5× less and never paraphrases, whereas 7 % of the LLM's
+  "extractions" are not in the text. For span extraction that must quote evidence, the small supervised
+  model is the right tool; the LLM is the better *reader* only when recall matters more than precision.
+* **Normalization (P2).** Dense retrieval is mandatory (BM25 is 2× worse on verb-phrase labels);
+  fine-tuning on synthetic pairs pays off (+0.10 MAP after one CPU epoch) but the published ConTeXT encoder,
+  trained on the same recipe at scale, is the champion (MAP 0.54 / 0.42 / 0.46). LLM re-ranking only pays
+  on a weak retriever (+0.09 MAP) and adds ≤ 0.02 on a strong one at 50× the latency. The reject option is a
+  first-class problem — 37–43 % of real phrases are not in ESCO — and a single tuned cosine threshold
+  nearly doubles joint accuracy for free.
+* **Matching (P3).** Step-by-step tool use (ReAct) ranks better than a one-shot planner→matcher pipeline
+  (nDCG 0.96 vs 0.89, baseline 0.89), but *both* make unsupported claims one time in six. Faithfulness does
+  not come from a bigger model (Sonnet: 23 % unsupported) but from a verifier that enforces the metric
+  (verbatim quotes that name the skill): it removes every unsupported claim at +$0.002 per resume. The
+  product champion is therefore **single ReAct agent + verifier**: nDCG 0.96, 0 % unsupported claims,
+  $0.01 and 30 s per resume with Haiku.
+* **Across the three problems** the same pattern holds: a measured small model or a deterministic check
+  beats "ask a bigger LLM" on precision and cost, and the LLM earns its place where judgement over several
+  pieces of evidence is needed (ranking, repairing a claim with the right quote).
 
-**Limitations.** One training seed; four epochs; LLM-made fit labels; ESCO 1.1.0 is not the newest release;
-the live index only sees postings whose ATS exposes the body; JobBERT has no explicit licence.
+**Limitations.** One training seed and four epochs for the tagger (dev F1 still rising); gold fit labels
+are model-made (two raters, κ = 0.83, but no human pass yet); 30 labelled CVs make the agent comparison
+indicative rather than conclusive (nDCG std 0.07–0.17); ESCO 1.1.0 is not the newest release; the live
+index only sees postings whose ATS exposes the body (53 % of data/AI/ML postings); JobBERT has no explicit
+licence. **Next steps:** seeds 43/44 and 8–10 epochs for the taggers; more bi-encoder epochs; a 100-pair
+human-labelled subset to validate the LLM labels; newer ESCO; prompt-cached agent calls to cut latency.
 
 ---
 

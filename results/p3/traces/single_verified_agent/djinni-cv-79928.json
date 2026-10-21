@@ -1,0 +1,781 @@
+{
+ "approach": "single_agent_verified",
+ "ranking": [
+  {
+   "job_id": "djinni-job-36121",
+   "rank": 1,
+   "fit_score": 58.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "Using pure JS, npm-packages and SCSS",
+     "job_quote": "Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS"
+    },
+    {
+     "skill": "CSS",
+     "resume_quote": "Using React, CSS.",
+     "job_quote": "Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS"
+    },
+    {
+     "skill": "SCSS",
+     "resume_quote": "Using pure JS, npm-packages and SCSS",
+     "job_quote": "Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS"
+    },
+    {
+     "skill": "REST API",
+     "resume_quote": "i worked with Rest Api and a little design",
+     "job_quote": "Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS, MySQL, Vue, Vue/Nuxt.js, Vue / Vuex, REST API"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Git",
+     "job_quote": "Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS"
+    },
+    {
+     "skill": "MySQL",
+     "job_quote": "Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS, MySQL"
+    }
+   ],
+   "summary": "Closest stack overlap (JavaScript, CSS/SCSS, REST API) and explicitly accepts a junior-friendly 'Developing new projects from scratch' role, but it expects Vue and Laravel backend skills the candidate does not list.",
+   "dropped": [
+    {
+     "skill": "Vue.js",
+     "reason": "The quote 'Strong knowledge of Vuejs' does not appear verbatim in the job text. The job text only mentions Vue in the requirements list ('Vue, Vue/Nuxt.js, Vue / Vuex'), and no verbatim 3-15 word quote with the skill was supplied, so the claim cannot be repaired from the provided text."
+    },
+    {
+     "skill": "Laravel / PHP backend",
+     "reason": "Laravel is named in the job text, but PHP is not mentioned anywhere in the job text, and the claim is a 'missing' skill that the resume does not show. The job does name Laravel, but the claim as a combined 'Laravel / PHP backend' skill is not supported by the job text. Dropped to avoid an unsupported claim."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-69680",
+   "rank": 2,
+   "fit_score": 45.0,
+   "matched_skills": [
+    {
+     "skill": "React",
+     "resume_quote": "Using React, CSS.",
+     "job_quote": "At least 2 years of ReactJS development experience"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Git",
+     "job_quote": "Experience working with Git"
+    },
+    {
+     "skill": "Agile",
+     "job_quote": "Ability to multi-task under pressure in an agile environment"
+    }
+   ],
+   "summary": "React is the strongest overlap, but the posting requires 2+ years of ReactJS experience (Middle level), which exceeds the candidate's junior profile.",
+   "dropped": [
+    {
+     "skill": "Team collaboration",
+     "reason": "The resume quote 'My role on the project was Team Lead' is not verbatim (the resume reads 'a Team Lead'), and no verbatim resume text supports team collaboration in a way that matches the job's team player requirement; dropped rather than repaired."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-113271",
+   "rank": 3,
+   "fit_score": 40.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "Using pure JS, npm-packages and SCSS",
+     "job_quote": "Experience with pure JavaScript and modern JavaScript frameworks"
+    },
+    {
+     "skill": "Responsive layouts",
+     "resume_quote": "i worked with adaptive version of the site on the phone",
+     "job_quote": "Experience developing responsive layouts for a desktop, tablet, and mobile"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Git",
+     "job_quote": "Experience with Git"
+    }
+   ],
+   "summary": "Good match on pure JavaScript and responsive layouts, but it is a Senior role requiring 5+ years and Vue.js expertise.",
+   "dropped": [
+    {
+     "skill": "Vue.js",
+     "reason": "Flagged as skill_not_in_job, but the job text does name the skill: 'Strong knowledge of Vuejs'. The claim's job_quote is verbatim, so it could be repaired by renaming the skill to 'Vuejs'. However, the claim is a 'missing' skill, and the resume contains no Vue.js, so it remains a valid missing skill. Repairing it with the verbatim quote 'Strong knowledge of Vuejs' and skill name 'Vuejs' would keep it; given the instruction to drop when the quote cannot support the claim as worded, the claim is dropped here because the skill name 'Vue.js' is not written in the job text and no correctly-named verbatim quote was retained under that label."
+    }
+   ]
+  },
+  {
+   "job_id": "djinni-job-76794",
+   "rank": 4,
+   "fit_score": 30.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "Using pure JS, npm-packages and SCSS",
+     "job_quote": "Good knowledge JavaScript/TypeScript"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "React Native / Redux",
+     "job_quote": "Knowledge/experience with Redux, React Hooks, React-Navigation"
+    },
+    {
+     "skill": "GraphQL",
+     "job_quote": "Experience with GraphQL, Apollo GraphQL"
+    },
+    {
+     "skill": "TypeScript",
+     "job_quote": "Good knowledge JavaScript/TypeScript"
+    }
+   ],
+   "summary": "Mobile-focused Middle role requiring 2.5+ years of experience and GraphQL/Redux, a weaker fit for a web-focused junior.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-37981",
+   "rank": 5,
+   "fit_score": 25.0,
+   "matched_skills": [
+    {
+     "skill": "JavaScript",
+     "resume_quote": "Using pure JS, npm-packages and SCSS",
+     "job_quote": "3+ or more years experience with JavaScript and web development"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "DevOps",
+     "job_quote": "Experience with DevOps, TDD, and SOLID principles"
+    }
+   ],
+   "summary": "Backend-heavy Node.js role requiring 3+ years of experience; the candidate's front-end profile is only a partial overlap.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-59954",
+   "rank": 6,
+   "fit_score": 22.0,
+   "matched_skills": [
+    {
+     "skill": "React",
+     "resume_quote": "Using React, CSS.",
+     "job_quote": "React/Node.JS/Redux/TailwindCSS."
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "Node.js",
+     "job_quote": "React/Node.JS/Redux/TailwindCSS."
+    },
+    {
+     "skill": "SaaS",
+     "job_quote": "creating and running SaaS from scratch"
+    }
+   ],
+   "summary": "Lead-level full-stack role that requires SaaS and Energy calculation experience, well beyond a junior profile despite the React overlap.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-114725",
+   "rank": 7,
+   "fit_score": 12.0,
+   "matched_skills": [
+    {
+     "skill": "CSS",
+     "resume_quote": "Using React, CSS.",
+     "job_quote": "Pixel perfect frontend implementation should be the only way that you work"
+    }
+   ],
+   "missing_skills": [
+    {
+     "skill": "PHP",
+     "job_quote": "Senior fullstack PHP engineer"
+    }
+   ],
+   "summary": "Senior PHP full-stack role with no meaningful overlap with the candidate's JavaScript front-end stack.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-85156",
+   "rank": 8,
+   "fit_score": 5.0,
+   "matched_skills": [],
+   "missing_skills": [
+    {
+     "skill": "C#/.NET",
+     "job_quote": "We are looking for a C # /. Net Core developer"
+    }
+   ],
+   "summary": "Backend .NET role with no overlap with the candidate's JavaScript/React front-end experience.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-100876",
+   "rank": 9,
+   "fit_score": 3.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Marketing and research manager role unrelated to front-end development.",
+   "dropped": []
+  },
+  {
+   "job_id": "djinni-job-15218",
+   "rank": 10,
+   "fit_score": 2.0,
+   "matched_skills": [],
+   "missing_skills": [],
+   "summary": "Azure cloud architecture consultant role unrelated to front-end development.",
+   "dropped": []
+  }
+ ],
+ "trace": [
+  {
+   "step": 1,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "I'll start by extracting skills from the resume and running searches in parallel.",
+   "tool_uses": [
+    {
+     "name": "extract_skills",
+     "input": {
+      "text": "Position: Junior Front-end Developer\n\nExperience: ---Filmoteka \nProject about searching movies, and adding favorite movies to a client personal library. Using pure JS, npm-packages and SCSS. My role on the project was a Team Lead, i worked with Rest Api and a little design on the main page.\n ---Kapusta\nWebsite to control your money. Using React, CSS. My role on the project was a developer, i worked with adaptive version of the site on the phone and its design.\n ---Hell English \nEnglish school site. Neat and bright, responsible layout. Using Parcel, SCSS, JS. My role on the project was a developer, i worked with with animation of the site and design of the main page."
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "Junior Front-end Developer JavaScript React SCSS",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "junior web developer HTML CSS JavaScript responsive design REST API",
+      "k": 10
+     }
+    },
+    {
+     "name": "search_jobs",
+     "input": {
+      "query": "React developer adaptive layout animation team lead front-end",
+      "k": 10
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.000519
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "extract_skills",
+   "input": {
+    "text": "Position: Junior Front-end Developer\n\nExperience: ---Filmoteka \nProject about searching movies, and adding favorite movies to a client personal library. Using pure JS, npm-packages and SCSS. My role on the project was a Team Lead, i worked with Rest Api and a little design on the main page.\n ---Kapusta\nWebsite to control your money. Using React, CSS. My role on the project was a developer, i worked with adaptive version of the site on the phone and its design.\n ---Hell English \nEnglish school site. Neat and bright, responsible layout. Using Parcel, SCSS, JS. My role on the project was a developer, i worked with with animation of the site and design of the main page."
+   },
+   "output_preview": "{\"skills\": [], \"knowledge\": [\"JS\", \"npm-packages\", \"SCSS\", \"Rest Api\", \"React\", \"CSS\", \"English\", \"Parcel\"]}"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "Junior Front-end Developer JavaScript React SCSS",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-69680\", \"title\": \"Middle Frontend ReactJS developer\", \"company\": \"Intellias\", \"category\": \"JavaScript\", \"score\": 0.6426, \"esco_skills\": [\"Agile development\", \"English\", \"perform multiple tasks at the same time\", \"solve problems\"], \"snippet\": \"Middle Frontend ReactJS developer\\n**Requirements:**\\r\\nAt least 2 years of ReactJS development experience;\\r\\nExperience working with Git;\\r\\nAbility to multi-task under pressure in an agile environment;\\r\\nFast learner, problem solver, with great attention to details;\\r\\nCommunicative team player, yet comfor\"}, {\"job_id\": \"djinni"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "junior web developer HTML CSS JavaScript responsive design REST API",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-37981\", \"title\": \"Full Stack JS Developer\", \"company\": \"ABCloudZ\", \"category\": \"Node.js\", \"score\": 0.3221, \"esco_skills\": [\"Agile development\", \"DevOps\", \"JavaScript\", \"develop automated software tests\", \"web programming\"], \"snippet\": \"Full Stack JS Developer\\nRequirements:\\r\\n• 3+ or more years experience with JavaScript and web development\\r\\n• 2+ years experience with NodeJS building backend services\\r\\n\\r\\nExperience with DevOps, TDD, and SOLID principles\\r\\n\\r\\nResponsibilities:\\r\\n• Follows established architecture patterns and practices u\"}, {\"job_id\": \"djinni-jo"
+  },
+  {
+   "step": 1,
+   "type": "tool",
+   "name": "search_jobs",
+   "input": {
+    "query": "React developer adaptive layout animation team lead front-end",
+    "k": 10
+   },
+   "output_preview": "[{\"job_id\": \"djinni-job-69680\", \"title\": \"Middle Frontend ReactJS developer\", \"company\": \"Intellias\", \"category\": \"JavaScript\", \"score\": 0.5125, \"esco_skills\": [\"Agile development\", \"English\", \"perform multiple tasks at the same time\", \"solve problems\"], \"snippet\": \"Middle Frontend ReactJS developer\\n**Requirements:**\\r\\nAt least 2 years of ReactJS development experience;\\r\\nExperience working with Git;\\r\\nAbility to multi-task under pressure in an agile environment;\\r\\nFast learner, problem solver, with great attention to details;\\r\\nCommunicative team player, yet comfor\"}, {\"job_id\": \"djinni"
+  },
+  {
+   "step": 2,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "The pool contains 10 distinct jobs. Next I'll normalize the resume skills and pull full text for the most relevant postings.",
+   "tool_uses": [
+    {
+     "name": "normalize_skills",
+     "input": {
+      "phrases": [
+       "JavaScript",
+       "npm packages",
+       "SCSS",
+       "REST API",
+       "React",
+       "CSS",
+       "Parcel",
+       "responsive design",
+       "animation",
+       "team lead"
+      ]
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-69680"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-113271"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-36121"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-76794"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-59954"
+     }
+    },
+    {
+     "name": "get_job",
+     "input": {
+      "job_id": "djinni-job-37981"
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.00131
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "normalize_skills",
+   "input": {
+    "phrases": [
+     "JavaScript",
+     "npm packages",
+     "SCSS",
+     "REST API",
+     "React",
+     "CSS",
+     "Parcel",
+     "responsive design",
+     "animation",
+     "team lead"
+    ]
+   },
+   "output_preview": "{\"mapped\": [{\"phrase\": \"JavaScript\", \"esco_label\": \"JavaScript\", \"score\": 1.0}, {\"phrase\": \"npm packages\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.4439}, {\"phrase\": \"SCSS\", \"esco_label\": \"JSSS\", \"score\": 0.6842}, {\"phrase\": \"REST API\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.3167}, {\"phrase\": \"React\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.61}, {\"phrase\": \"CSS\", \"esco_label\": \"CSS\", \"score\": 1.0}, {\"phrase\": \"Parcel\", \"esco_label\": \"NOT_IN_ESCO\", \"score\": 0.5217}, {\"phrase\": \"responsive design\", \"esco_label\": \"maintain responsive design\", \"score\": 0.8544}, {\"phrase\": \"animation\", \"esco_label\""
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-69680"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-69680\", \"title\": \"Middle Frontend ReactJS developer\", \"company\": \"Intellias\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Middle Frontend ReactJS developer\\n**Requirements:**\\r\\nAt least 2 years of ReactJS development experience;\\r\\nExperience working with Git;\\r\\nAbility to multi-task under pressure in an agile environment;\\r\\nFast learner, problem solver, with great attention to details;\\r\\nCommunicative team player, yet comfortable with independently owning a project end-to-end;\\r\\nGood spoken English.\\r\\n\\r\\n**What we offer:**\\r\\nWork in a great atmosphere with con"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-113271"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-113271\", \"title\": \"Senior Front-end (Vue) developer\", \"company\": \"Everse-soft\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Senior Front-end (Vue) developer\\nThe project lets the analytics team actionize their reports and metrics and automate the distribution of actionable insights from verified reports, delivering hyper-personal insights to the right business stakeholders at the right time directly where they are.\\r\\n\\r\\nDuration:\\r\\n4 months (full-time)\\r\\n\\r\\nRequirements:\\r\\n5+ years in development\\r\\nStrong knowledge of Vuejs\\r\\nExperience in building web applicat"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-36121"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-36121\", \"title\": \"Full Stack Developer - Laravel + Vue.js developer\", \"company\": \"Above Bits\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Full Stack Developer - Laravel + Vue.js developer\\nWe are a Ukrainian company with a head office in the USA (Charlotte, NC).\\r\\n\\r\\nWe are looking for a Full Stack developer for a long-term e-commerce project: CRM + Laravel.\\r\\nThe project is in the MVP stage of development. We need a second programmer for the project, we need to increase the pace of development.\\r\\nCurrent team on the project:\\r\\n   - PM;\\r\\n   - QA;\\r\\n   - Full S"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-76794"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-76794\", \"title\": \"Middle React Native Developer\", \"company\": \"Inmost\", \"category\": \"JavaScript\", \"url\": \"\", \"text\": \"Middle React Native Developer\\nInmost team invites Middle React Native Developer! With us you can work on interesting projects and improve your skills. Join us!\\n\\nIF YOU HAVE:\\r\\n🟢 More than 2,5 years of experience in developing applications;\\r\\n🟢 Good knowledge JavaScript/TypeScript;\\r\\n🟢Experience with GraphQL, Apollo GraphQL;\\r\\n🟢Knowledge/experience with Redux, React Hooks, React-Navigation;\\r\\n🟢English: intermediate;\\r\\n\\r\\nWE OFFER:\\r\\n✅fixed salary"
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-59954"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-59954\", \"title\": \"Lead Full Stack (React+Node) Developer\", \"company\": \"JOIDY\", \"category\": \"Node.js\", \"url\": \"\", \"text\": \"Lead Full Stack (React+Node) Developer\\nJOIDY is looking for Lead Full Stack React+Node developer to join our team!\\r\\n\\r\\n**Job Description:**\\r\\nThe company is developing custom web/mobile applications. \\r\\nThe product is a platform that helps property owners optimize energy consumption.\\r\\nThere are 2 goals here:\\r\\n— Reduce costs\\r\\n— Increase the energy label of the property.\\r\\nThe client's product identifies what can be improved and develops a "
+  },
+  {
+   "step": 2,
+   "type": "tool",
+   "name": "get_job",
+   "input": {
+    "job_id": "djinni-job-37981"
+   },
+   "output_preview": "{\"job_id\": \"djinni-job-37981\", \"title\": \"Full Stack JS Developer\", \"company\": \"ABCloudZ\", \"category\": \"Node.js\", \"url\": \"\", \"text\": \"Full Stack JS Developer\\nRequirements:\\r\\n• 3+ or more years experience with JavaScript and web development\\r\\n• 2+ years experience with NodeJS building backend services\\r\\n\\r\\nExperience with DevOps, TDD, and SOLID principles\\r\\n\\r\\nResponsibilities:\\r\\n• Follows established architecture patterns and practices used throughout the product software stack.\\r\\n• Offer suggestions to improve and minimize technical debt\\r\\n• Solve critical defects both in production "
+  },
+  {
+   "step": 3,
+   "type": "llm",
+   "stop_reason": "tool_use",
+   "text": "Verifying the key matches with a comparison, then finalizing. Note that the job postings are mostly mid/senior, and the candidate is junior, so fit scores should reflect that.",
+   "tool_uses": [
+    {
+     "name": "compare_skills",
+     "input": {
+      "resume_skills": [
+       "JavaScript",
+       "CSS",
+       "SCSS",
+       "React",
+       "REST API",
+       "npm packages",
+       "Parcel",
+       "responsive design",
+       "animations",
+       "team lead",
+       "English"
+      ],
+      "job_skills": [
+       "JavaScript",
+       "ReactJS",
+       "Git",
+       "English",
+       "agile",
+       "team player",
+       "problem solver",
+       "Vuejs",
+       "responsive layouts",
+       "CSS3",
+       "SASS",
+       "REST API",
+       "Laravel",
+       "jQuery",
+       "Node.js",
+       "Redux",
+       "TypeScript",
+       "GraphQL",
+       "React Hooks",
+       "TailwindCSS",
+       "SaaS",
+       "DevOps",
+       "TDD",
+       "SCRUM"
+      ]
+     }
+    }
+   ],
+   "cached": true,
+   "cost_usd": 0.001719
+  },
+  {
+   "step": 3,
+   "type": "tool",
+   "name": "compare_skills",
+   "input": {
+    "resume_skills": [
+     "JavaScript",
+     "CSS",
+     "SCSS",
+     "React",
+     "REST API",
+     "npm packages",
+     "Parcel",
+     "responsive design",
+     "animations",
+     "team lead",
+     "English"
+    ],
+    "job_skills": [
+     "JavaScript",
+     "ReactJS",
+     "Git",
+     "English",
+     "agile",
+     "team player",
+     "problem solver",
+     "Vuejs",
+     "responsive layouts",
+     "CSS3",
+     "SASS",
+     "REST API",
+     "Laravel",
+     "jQuery",
+     "Node.js",
+     "Redux",
+     "TypeScript",
+     "GraphQL",
+     "React Hooks",
+     "TailwindCSS",
+     "SaaS",
+     "DevOps",
+     "TDD",
+     "SCRUM"
+    ]
+   },
+   "output_preview": "{\"matched\": [\"JavaScript\", \"English\", \"REST API\", \"React Hooks\"], \"missing\": [\"ReactJS\", \"Git\", \"agile\", \"team player\", \"problem solver\", \"Vuejs\", \"responsive layouts\", \"CSS3\", \"SASS\", \"Laravel\", \"jQuery\", \"Node.js\", \"Redux\", \"TypeScript\", \"GraphQL\", \"TailwindCSS\", \"SaaS\", \"DevOps\", \"TDD\", \"SCRUM\"], \"extra\": [\"CSS\", \"SCSS\", \"npm packages\", \"Parcel\", \"responsive design\", \"animations\", \"team lead\"]}"
+  },
+  {
+   "step": 4,
+   "type": "llm",
+   "stop_reason": "end_turn",
+   "text": "Verbatim quote checks: the resume contains \"Using React, CSS.\" and \"worked with Rest Api\"; the job texts contain \"At least 2 years of ReactJS development experience\", \"Experience with pure JavaScript\", \"developing responsive layouts for a desktop\", \"Experience with Git\", \"Good knowledge JavaScript/TypeScript\", \"Knowledge/experience with Redux, React Hooks\", \"Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS\", \"Experience developing responsive layouts for a desktop, tablet, and mobile\", and \"Strong knowledge of Vuejs\".\n\nThe pool only contained 10 jobs, and none is a strong junior match. Ranking is by overlap and seniority fit.\n\n```json\n{\"ranking\": [\n   {\"job_id\": \"djinni-job-36121\", \"rank\": 1, \"fit_score\": 58,\n    \"matched_skills\": [\n      {\"skill\": \"JavaScript\", \"resume_quote\": \"Using pure JS, npm-packages and SCSS\", \"job_quote\": \"Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS\"},\n      {\"skill\": \"CSS\", \"resume_quote\": \"Using React, CSS.\", \"job_quote\": \"Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS\"},\n      {\"skill\": \"SCSS\", \"resume_quote\": \"Using pure JS, npm-packages and SCSS\", \"job_quote\": \"Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS\"},\n      {\"skill\": \"REST API\", \"resume_quote\": \"i worked with Rest Api and a little design\", \"job_quote\": \"Knowledge of Laravel, JavaScript, HTML5, CSS3, SASS, AJAX, Git, SCSS, MySQL, Vue, Vue/Nuxt.js, Vue / Vuex, REST API\"}\n    ],\n    \"missing_skills\": [\n      {\"skill\": \"Vue.js\", \"job_quot",
+   "tool_uses": [],
+   "cached": true,
+   "cost_usd": 0.003096
+  },
+  {
+   "node": "verifier",
+   "flagged": 7,
+   "repaired": 3,
+   "dropped": 4,
+   "ms": 12324.3
+  }
+ ],
+ "llm_calls": 9,
+ "input_tokens": 53699,
+ "output_tokens": 6890,
+ "cost_usd": 0.008816,
+ "latency_ms": 29001.2,
+ "tool_calls": 12,
+ "error": null,
+ "truncated_output": false,
+ "wall_ms": 23407.5,
+ "steps": 4,
+ "verifier_flagged": 7,
+ "verifier_repaired": 3,
+ "verifier_dropped": 4,
+ "pool": [
+  {
+   "job_id": "djinni-job-59954",
+   "label": 0,
+   "title": "Lead Full Stack (React+Node) Developer"
+  },
+  {
+   "job_id": "djinni-job-76794",
+   "label": 0,
+   "title": "Middle React Native Developer"
+  },
+  {
+   "job_id": "djinni-job-100876",
+   "label": 0,
+   "title": "Research and Engagement Manager"
+  },
+  {
+   "job_id": "djinni-job-15218",
+   "label": 0,
+   "title": "Cloud Consultant _Azure cloud Architecture relocate to Germany"
+  },
+  {
+   "job_id": "djinni-job-69680",
+   "label": 1,
+   "title": "Middle Frontend ReactJS developer"
+  },
+  {
+   "job_id": "djinni-job-36121",
+   "label": 1,
+   "title": "Full Stack Developer - Laravel + Vue.js developer"
+  },
+  {
+   "job_id": "djinni-job-114725",
+   "label": 0,
+   "title": "Senior fullstack PHP engineer"
+  },
+  {
+   "job_id": "djinni-job-37981",
+   "label": 0,
+   "title": "Full Stack JS Developer"
+  },
+  {
+   "job_id": "djinni-job-85156",
+   "label": 0,
+   "title": ".Net-програміст"
+  },
+  {
+   "job_id": "djinni-job-113271",
+   "label": 0,
+   "title": "Senior Front-end (Vue) developer"
+  }
+ ],
+ "metrics": {
+  "approach": "single_verified",
+  "cv_id": "djinni-cv-79928",
+  "cv_category": "JavaScript",
+  "ndcg10": 1.0,
+  "p_at_3": 0.0,
+  "mrr": null,
+  "p_at_3_rel1": 0.6666666666666666,
+  "mrr_rel1": 1.0,
+  "n_strong_in_pool": 0,
+  "n_partial_or_better_in_pool": 2,
+  "coverage": 1.0,
+  "n_claims": 24,
+  "n_supported": 24,
+  "hallucination_rate": 0.0,
+  "llm_calls": 9,
+  "input_tokens": 53699,
+  "output_tokens": 6890,
+  "cost_usd": 0.008816,
+  "latency_ms": 29001.199999999993,
+  "wall_ms": 23407.5,
+  "tool_calls": 12,
+  "error": null,
+  "top1_label": 1,
+  "reasons": "{}",
+  "verifier_flagged": 7,
+  "verifier_repaired": 3,
+  "verifier_dropped": 4,
+  "steps": 4
+ },
+ "faithfulness": {
+  "n_claims": 24,
+  "n_supported": 24,
+  "hallucination_rate": 0.0,
+  "reasons": {},
+  "per_job": [
+   {
+    "job_id": "djinni-job-36121",
+    "n_claims": 6,
+    "n_supported": 6,
+    "n_matched": 4,
+    "n_matched_supported": 4,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-69680",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-113271",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 2,
+    "n_matched_supported": 2,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-76794",
+    "n_claims": 4,
+    "n_supported": 4,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 3,
+    "n_missing_supported": 3,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-37981",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-59954",
+    "n_claims": 3,
+    "n_supported": 3,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 2,
+    "n_missing_supported": 2,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-114725",
+    "n_claims": 2,
+    "n_supported": 2,
+    "n_matched": 1,
+    "n_matched_supported": 1,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-85156",
+    "n_claims": 1,
+    "n_supported": 1,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 1,
+    "n_missing_supported": 1,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-100876",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   },
+   {
+    "job_id": "djinni-job-15218",
+    "n_claims": 0,
+    "n_supported": 0,
+    "n_matched": 0,
+    "n_matched_supported": 0,
+    "n_missing": 0,
+    "n_missing_supported": 0,
+    "hallucination_rate": 0.0,
+    "reasons": {}
+   }
+  ]
+ }
+}
