@@ -9,7 +9,7 @@ by quoted text and every step measured on a public benchmark or a labelled test 
 | Step | NLP problem | Champion | Challenger | Ground truth |
 |------|-------------|----------|------------|--------------|
 | 1. Extract skill phrases | Span tagging (NER-style) | Fine-tuned JobBERT token classifier | Few-shot Claude extractor | SkillSpan (expert BIO tags) |
-| 2. Normalize to ESCO | Retrieval / entity linking | Fine-tuned bi-encoder (MiniLM, synthetic pairs) | Retrieve-then-LLM | Skill-Extraction-benchmark via WorkRB |
+| 2. Normalize to ESCO | Retrieval / entity linking + reject option | ConTeXT bi-encoder (TechWolf) + tuned cosine threshold; in-house MiniLM fine-tuned on synthetic pairs as the owned alternative | Retrieve-then-LLM re-ranking / LLM reject decision | Skill-Extraction-benchmark via WorkRB |
 | 3. Match & explain | Tool-using agent | Single ReAct agent (LangGraph) | Planner → Retriever → Matcher → Verifier | 300 LLM-adjudicated resume–job pairs |
 
 Build status and how to resume an interrupted build: **[PROGRESS.md](PROGRESS.md)**. Design decisions and

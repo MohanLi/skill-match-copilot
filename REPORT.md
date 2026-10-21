@@ -251,7 +251,7 @@ at saying "none of these", at $0.13 per 1,000 phrases.)*
 and missing skills and **verbatim quotes** from the resume and the posting that support every claim.
 
 **Ground truth.** 300 resume–job pairs (30 Djinni CVs × 10 postings each: 4 from the same category, 3 from
-a related one, 3 random), graded 0–3 by `claude-opus-5-5` (primary) and `claude-sonnet-5-5` (second rater)
+a related one, 3 random), graded 0 / 1 / 2 (not a fit / partial / strong) by `claude-opus-5-5` (primary) and `claude-sonnet-5-5` (second rater)
 with a written guideline (`data/labels/guideline.md`); weighted Cohen's κ reported; Opus adjudicates
 disagreements. A 1,000-pair *silver* set (same-category heuristic) checks that conclusions hold at scale.
 Limitation: labels are model-made, not human-made (decision 6).
