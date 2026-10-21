@@ -1,6 +1,6 @@
 # PROGRESS — Skill-Match Copilot build log
 
-**Last updated:** 2026-10-21 01:42 UTC · **Built by:** Claude in a cloud workspace, mirrored to Kevin's Mac
+**Last updated:** 2026-10-21 04:15 UTC · **Built by:** Claude in a cloud workspace, mirrored to Kevin's Mac
 (`~/Desktop/2026 Autumn/NLP/Project/skill-match-copilot`). **This folder on the Mac is the source of truth.**
 
 ## How to resume after an interruption
@@ -21,20 +21,21 @@ Legend: ✅ done · 🔄 in progress · ⏳ waiting on Kevin · ⬜ not started
 | 0 | Repo skeleton, decision log, configs, download script | ✅ | `docs/decisions.md`, `configs/*.yaml`, `scripts/download_assets.py` |
 | 1 | Workspace env + GitHub-sourced data, utils (LLM wrapper, PII, text, viz), prompts v1, faithfulness checker (20/20 tests), labelling guideline, synthetic resume | ✅ | `src/utils/`, `prompts/`, `tests/` (31 tests pass) |
 | 2 | Import Kevin's download bundle, verify counts, `docs/data_schema.md` | ✅ | 10/10 asset checks OK (`results/eda/asset_check.json`, `docs/data_schema.md`) |
-| 3 | EDA notebooks 01–04 + figures | 🔄 | 01 SkillSpan ✅, 02 ESCO benchmark ✅ (`notebooks/`, `reports/figures/`, `results/eda/*.json`); 03 Djinni and 04 live jobs are written, waiting for data |
+| 3 | EDA notebooks 01–04 + figures | ✅ | 01 SkillSpan, 02 ESCO benchmark (re-run with the official ESCO CSVs), 03 Djinni (lean loaders), 04 live jobs (description coverage per ATS) — `notebooks/`, `reports/figures/`, `results/eda/*.json` |
 | 4 | Problem 1: tagger vs few-shot LLM | ✅ (seed 42) | test strict F1: tagger skill 0.472 / knowledge 0.632 vs Haiku few-shot 0.285 / 0.530 vs dictionary 0.114 / 0.207 (`results/p1/metrics_summary_test.csv`, figures `p1_*`). Extra seeds + longer training = optional follow-up |
-| 5 | Problem 2: WorkRB baselines, bi-encoder, retrieve-then-LLM, NIL | 🔄 | code complete (`src/p2_normalize/`); BM25 validation baseline run with the stand-in ESCO (`results/p2/workrb_val.csv`); models wait for MiniLM/ConTeXT + synthetic pairs |
-| 6 | Job index + agent tools | 🔄 | code complete (`src/index/`, `src/p3_agent/tools.py`), mocked tests pass; needs Djinni data + models |
-| 7 | Problem 3: gold labels, baseline, single vs multi-agent, EDA 05 | 🔄 | agents, labelling, evaluation code complete and wiring-tested with a scripted LLM; waits for index + key |
-| 8 | Model Ops: API, UI, ingestion, drift report, architecture doc, Dockerfile | 🔄 | written (`src/api/app.py`, `src/ui/app.py`, `src/monitoring/`, `docs/architecture.md`, `Dockerfile`); smoke tests after models exist |
+| 5 | Problem 2: WorkRB baselines, bi-encoder, retrieve-then-LLM, NIL | ✅ | test MAP Tech/House/TechWolf: BM25 .275/.160/.177 · MiniLM .365/.246/.293 · in-house fine-tuned MiniLM .424/.313/.374 · **ConTeXT (champion) .536/.423/.460** · RTL on ConTeXT k=50 (challenger) .537/.443/.479 (`results/p2/workrb_test.csv`); NIL threshold 0.64 for ConTeXT (`results/p2/nil.csv`) |
+| 6 | Job index + agent tools | 🔄 | `index_djinni` building (6,000 postings, ~2.5 h on CPU), then `index_live` (4,000 most recent data/AI/ML postings with text) |
+| 7 | Problem 3: gold labels, baseline, single vs multi-agent, EDA 05 | ⬜ | code complete and wiring-tested; runs after the indexes (`p3_pairs → p3_labels → p3_eval → p3_eval_sonnet → p3_silver → eda05`) |
+| 8 | Model Ops: API, UI, ingestion, drift report, architecture doc, Dockerfile | 🔄 | written (`src/api/app.py`, `src/ui/app.py`, `src/monitoring/`, `docs/architecture.md`, `Dockerfile`); `drift` stage + smoke tests after the indexes exist |
 | 9 | Draft report, slide outline, references, README, verification pass | ⬜ | |
 
 ## Next action
 
 `scripts/run_stages.sh` is running the remaining stages unattended in the workspace (markers in `logs/runs/*.done`,
 failures listed in `logs/runs/FAILED`). To resume after an interruption: `scripts/run_stages.sh` (skips finished stages).
-Stage order: p2_val_baselines ✅ → p2_train_biencoder → p2_val_ours → p2_val_rtl → p2_test_all → p2_nil → eda03 → eda04 →
-index_djinni → index_live → p3_pairs → p3_labels → p3_eval → p3_eval_sonnet → p3_silver → eda04_post → drift → eda05, then Phase 9.
+Remaining order: index_djinni (running) → index_live → p3_pairs → p3_labels (Opus + Sonnet, ≈ $8–12) → p3_eval →
+p3_eval_sonnet → p3_silver → eda04_post → drift → eda05 → Phase 9 (fill Section 5 of `REPORT.md`, `SLIDES_OUTLINE.md`,
+README/architecture update for the ConTeXT champion, verification pass).
 
 ## Waiting on Kevin
 
@@ -54,7 +55,14 @@ Nothing — both inputs arrived 2026-10-20 (bundle verified, key works).
   parameters; reproducibility comes from the on-disk cache. Verified prices: Haiku 5.5 $0.10/$0.50, Sonnet 5.5 $2/$10, Opus 5.5 $4/$20 per MTok.
 - **Tagger training loop** replaced the HF `Trainer` (transformers 5 removed `group_by_length`): explicit loop with
   length-bucketed batches, linear warm-up, dev evaluation per epoch, best epoch kept.
-- **Live index** = the 4,000 most recent data/AI/ML postings (CPU budget), configurable in `configs/models.yaml`.
+- **Live index** = the 4,000 most recent data/AI/ML postings *with a description* (CPU budget), configurable in `configs/models.yaml`.
+  Only 53 % of the data/AI/ML postings carry a body (Workday and SmartRecruiters feeds are title-only); Greenhouse bodies arrive as
+  escaped HTML and are unescaped by `strip_html`.
+- **P2 champion = ConTeXT-Skill-Extraction-base**, chosen on WorkRB validation MAP (0.675/0.548 vs 0.538/0.413 for the in-house
+  fine-tuned MiniLM). The in-house model is kept as the owned alternative (`p2_normalize.champion_encoder` switches it in; re-run
+  `nil_eval` to re-tune the threshold). LLM re-ranking adds ≤ 0.02 MAP on ConTeXT, so the pure encoder is deployed.
+- **Job index embeddings use all-MiniLM-L6-v2 at 256 tokens** (`src/index/embedder.py`), not the 64-token skill-phrase encoder.
+- **EDA 03 needed the lean Djinni loaders** (Arrow strings, text fields merged into one column): the first run hit the 7 GB RAM limit.
 
 ## Milestone log
 
@@ -62,3 +70,5 @@ Nothing — both inputs arrived 2026-10-20 (bundle verified, key works).
 - 2026-10-15 10:00 UTC — Environment installed; EDA 01–02 executed (16 figures); P1/P2 pipelines smoke-tested (Phase 1).
 - 2026-10-15 10:30 UTC — P3 agents, index, labelling, evaluation, API/UI/monitoring written; 31 tests pass.
 - 2026-10-21 01:40 UTC — Data bundle imported and verified; both taggers trained (seed 42); P1 evaluated; stage runner started for P2–P3.
+- 2026-10-21 04:15 UTC — P2 complete (champion ConTeXT, challenger RTL, NIL for both encoders); EDA 01–04 all executed; trained
+  models mirrored to the Mac (`models/p1_tagger`, `models/p2_biencoder`); Djinni index build restarted with the new embedder.
