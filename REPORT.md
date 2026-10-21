@@ -236,10 +236,24 @@ reproducible, fully-owned alternative (`champion_encoder` in `configs/models.yam
 **"Not in ESCO"** (`results/p2/nil.csv` for the champion encoder, `results/p2/nil_p2_biencoder.csv` for
 the in-house encoder; figures `p2_nil_threshold_sweep`, `p2_nil_results`):
 
-*(numbers for the ConTeXT encoder are being produced; the in-house encoder's run gave: threshold 0.70 tuned
-on TECH validation → TECH test joint accuracy 0.578 / NIL-F1 0.660 for the thresholded encoder vs
-0.605 / 0.722 for the LLM selector over the top-10; HOUSE 0.496 / 0.609 vs 0.529 / 0.617. The LLM is better
-at saying "none of these", at $0.13 per 1,000 phrases.)*
+| Encoder | Approach | TECH joint acc. | TECH NIL-F1 (P / R) | TECH acc. on mapped | HOUSE joint acc. | HOUSE NIL-F1 (P / R) | Cost |
+|---|---|---|---|---|---|---|---|
+| ConTeXT | top-1, no reject (reference) | 0.338 | — | 0.583 | 0.286 | — | — |
+| ConTeXT | **cosine threshold 0.64 (champion)** | **0.604** | 0.679 (0.64 / 0.72) | 0.516 | 0.495 | **0.619** (0.53 / 0.74) | free |
+| ConTeXT | top-10 + Haiku decides (challenger) | 0.584 | **0.697** (0.71 / 0.69) | 0.510 | **0.515** | 0.584 (0.63 / 0.55) | $0.13 / 1,000 phrases, 1.1 s |
+| in-house MiniLM | cosine threshold 0.70 | 0.578 | 0.660 (0.56 / 0.80) | 0.418 | 0.496 | 0.609 (0.47 / 0.87) | free |
+| in-house MiniLM | top-10 + Haiku decides | 0.605 | 0.722 (0.70 / 0.75) | 0.502 | 0.529 | 0.617 (0.62 / 0.61) | $0.13 / 1,000 phrases |
+
+* Without a reject option, a top-1 linker is right on only 34 % (TECH) / 29 % (HOUSE) of phrases, because
+  42 % / 36 % of them have no ESCO label at all. A single cosine threshold, tuned on the TECH *validation*
+  spans (`p2_nil_threshold_sweep`), nearly doubles joint accuracy (0.60 / 0.50) at zero cost.
+* With the stronger ConTeXT encoder, the threshold and the LLM decision are a wash: the LLM is more precise
+  about rejecting (0.71 vs 0.64 NIL precision on TECH) but rejects less often, and it costs $0.13 per
+  1,000 phrases plus a second of latency. The LLM's advantage is larger on the weaker in-house encoder —
+  the same pattern as in the ranking task.
+* Accuracy on the mappable phrases drops when a threshold is applied (0.58 → 0.52 on TECH): the price of
+  rejecting is rejecting some true mentions. The pipeline keeps the thresholded encoder as champion and
+  surfaces the rejected phrases to the review queue (Section 6), where the LLM can be run on demand.
 
 ---
 
