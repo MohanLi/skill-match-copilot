@@ -22,6 +22,11 @@ COLS = {
     "posted_at": ["posted_at", "published_at", "created_at", "date_posted", "first_seen"],
     "apply_url": ["apply_url", "url", "link", "job_url"],
     "source": ["source", "ats", "provider", "platform"],
+    "board": ["source_slug", "board", "company_slug"],   # the employer's job-board name; the feed has no company column
+    "salary_min": ["salary_min"],
+    "salary_max": ["salary_max"],
+    "salary_currency": ["salary_currency"],
+    "salary_period": ["salary_period"],
 }
 
 
@@ -78,6 +83,12 @@ def _norm(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
             return ""
         return str(v)
 
+    def _loc_list(v):
+        if isinstance(v, (list, tuple)) or (hasattr(v, "tolist") and not isinstance(v, (str, float, int))):
+            return [str(x).strip() for x in list(v) if str(x).strip()]
+        return [v.strip()] if isinstance(v, str) and v.strip() else []
+
+    out["location_list"] = out["locations"].map(_loc_list)   # one entry per place, for the index's job facts
     out["locations"] = out["locations"].map(_loc)
     out["text"] = (out["title"] + "\n" + out["description"]).str.strip()
     out["n_chars"] = out["description"].str.len()
@@ -89,6 +100,17 @@ def load_filtered() -> tuple[pd.DataFrame, dict]:
     df = pd.read_parquet(local_dir() / f"live_jobs_{d}_ai_data.parquet")
     out, used = _norm(df)
     return out, {"snapshot_date": d, "source_columns": list(df.columns), "mapping": used, "rows": len(out)}
+
+
+def load_rows(job_ids) -> pd.DataFrame:
+    """Normalised feed rows for already-indexed job ids (src/index/job_facts.py adds their facts to the index)."""
+    d = snapshot_date()
+    df = pd.read_parquet(local_dir() / f"live_jobs_{d}_ai_data.parquet")
+    wanted = set(job_ids)
+    if "id" in df.columns:  # filter first: cleaning 2,000 descriptions is fast, cleaning the whole feed is not
+        df = df[("live-" + df["id"].astype(str)).isin(wanted)].reset_index(drop=True)
+    out, _ = _norm(df)
+    return out[out["job_id"].isin(wanted)].drop_duplicates("job_id")
 
 
 def load_sample() -> tuple[pd.DataFrame, dict]:

@@ -17,9 +17,10 @@ import pandas as pd
 from ..data import djinni, live_jobs
 from ..p1_extract.predict import SkillExtractor
 from ..p2_normalize.normalizer import get_normalizer
-from ..utils.config import ROOT, models_cfg
+from ..utils.config import models_cfg
 from ..utils.io import write_json
-from .store import JobIndex
+from .job_facts import facts_from_row
+from .store import JobIndex, export_parquet
 
 
 def select_djinni_sample(jobs: pd.DataFrame, n: int, seed: int, n_categories: int) -> pd.DataFrame:
@@ -29,20 +30,6 @@ def select_djinni_sample(jobs: pd.DataFrame, n: int, seed: int, n_categories: in
     per_cat = n // n_categories
     parts = [jobs[jobs["category"] == c].sample(n=min(per_cat, (jobs["category"] == c).sum()), random_state=seed) for c in top_cats]
     out = pd.concat(parts).sample(frac=1.0, random_state=seed).reset_index(drop=True)
-    return out
-
-
-def export_parquet(index: JobIndex, name: str) -> pd.DataFrame:
-    """data/processed/<name>.parquet = every indexed posting's metadata (no text): ids, title, category, skills, counts."""
-    ids = index.all_ids()
-    rows = []
-    for b in range(0, len(ids), 1000):
-        res = index.col.get(ids=ids[b : b + 1000], include=["metadatas"])
-        rows += [{"job_id": i, **(m or {})} for i, m in zip(res["ids"], res["metadatas"])]
-    out = pd.DataFrame(rows)
-    proc = ROOT / "data" / "processed" / f"{name}.parquet"
-    proc.parent.mkdir(parents=True, exist_ok=True)
-    out.to_parquet(proc, index=False)
     return out
 
 
@@ -111,6 +98,8 @@ def main() -> None:
                 "esco_skills": "|".join(nm["esco_skills"])[:4000], "raw_skills": "|".join(dict.fromkeys(raw))[:4000], "n_chars": int(j["n_chars"]),
                 "n_skill_phrases": len(ex["skills"]), "n_knowledge_phrases": len(ex["knowledge"]), "n_esco": len(nm["esco_skills"]), "n_not_in_esco": len(nm["not_in_esco"]),
             }
+            if args.pool == "live":  # company, locations, remote, employment type, salary — what cards show and requirements filter on
+                doc.update(facts_from_row(j))
             docs.append(doc)
         emb = index.embed([f"{d['title']}. {d['text'][:1500]}" for d in docs])
         index.upsert(docs, emb)

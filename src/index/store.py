@@ -2,7 +2,8 @@
 
 Each job is stored once: id, document = cleaned text (title + description), embedding = all-MiniLM-L6-v2 text embedding (src/index/embedder.py)
 vector of 'title. description[:1500]', metadata = title, company, category, exp_years, english_level,
-published, source, url, esco_skills ('|'-joined), raw_skills ('|'-joined), n_chars."""
+published, source, url, esco_skills ('|'-joined), raw_skills ('|'-joined), n_chars, plus the job facts of
+src/index/job_facts.py for live postings (locations ' | '-joined, remote, employment_type, salary_*)."""
 from __future__ import annotations
 
 import json
@@ -73,6 +74,26 @@ class JobIndex:
 
     def all_ids(self) -> list[str]:
         return self.col.get(include=[])["ids"]
+
+    def all_metadata(self, batch: int = 1000) -> list[dict[str, Any]]:
+        """Every posting's id + metadata (no texts, no vectors) — the job facts that requirements are checked against."""
+        ids = self.all_ids()
+        rows: list[dict[str, Any]] = []
+        for b in range(0, len(ids), batch):
+            res = self.col.get(ids=ids[b : b + batch], include=["metadatas"])
+            rows += [{"job_id": i, **(m or {})} for i, m in zip(res["ids"], res["metadatas"])]
+        return rows
+
+
+def export_parquet(index: JobIndex, name: str):
+    """data/processed/<name>.parquet = every indexed posting's metadata (no text): ids, title, category, job facts, skills, counts."""
+    import pandas as pd
+
+    out = pd.DataFrame(index.all_metadata())
+    proc = ROOT / "data" / "processed" / f"{name}.parquet"
+    proc.parent.mkdir(parents=True, exist_ok=True)
+    out.to_parquet(proc, index=False)
+    return out
 
 
 def split_skills(meta_value: str | None) -> list[str]:
