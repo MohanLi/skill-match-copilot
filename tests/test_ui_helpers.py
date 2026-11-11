@@ -90,3 +90,36 @@ def test_csv_scores_and_formula_like_titles_are_labelled_safely():
     assert row['title'].startswith("'=")
     assert row['score_type'] == 'cosine_similarity_x100'
     assert row['url'] == ''
+
+
+def test_clean_extracted_text_rejoins_word_per_line_paragraphs():
+    from src.ui.helpers import clean_extracted_text
+
+    raw = ("EXPERIENCE\nGen AI Engineer Intern | TalkMeUp, Inc.            Jul 2026 - Sep 2026\n"
+           "● Owned model evaluation for a PyTorch service that scores produce freshness 0-100 from a photo to\n"
+           "automate\n\ngrocery\n\nrefunds;\n\nset\n\nacceptance criteria of a 2% false-accept ceiling and shipped the validator.\n"
+           "● Built a RAG system over 40k help-center chunks with GPT-4o-\nmini; cut handle time by 18%.\n\nSKILLS\nProgramming: Python, R, SQL\n")
+    text = clean_extracted_text(raw)
+    lines = text.splitlines()
+    assert "from a photo to automate grocery refunds; set acceptance criteria of a 2% false-accept ceiling and shipped the validator." in text
+    assert "GPT-4o-mini; cut handle time by 18%." in text
+    assert "Gen AI Engineer Intern | TalkMeUp, Inc.  Jul 2026 - Sep 2026" in lines   # tab-stop gap collapsed, not merged away
+    assert lines[0] == "EXPERIENCE" and "SKILLS" in lines and "Programming: Python, R, SQL" in lines
+    assert "\n\n\n" not in text
+
+
+def test_evidence_and_mapping_tables_are_valid_markdown():
+    from src.ui.helpers import evidence_table, mapping_table
+
+    matched = [{"skill": "Python", "resume_quote": "Python (expert) | SQL", "job_quote": "Strong Python\nskills"}]
+    table = evidence_table(matched, "matched")
+    assert table.splitlines()[0] == "| Skill | Your resume says | The posting asks for |"
+    assert "Python (expert) \\| SQL" in table and "Strong Python skills" in table   # pipes escaped, newlines collapsed
+    assert evidence_table([], "matched") == ""
+    missing = evidence_table([{"skill": "JAX", "job_quote": "PyTorch / JAX"}], "missing")
+    assert missing.splitlines()[0] == "| Skill to check | The posting asks for |" and "**JAX**" in missing
+    profile = {"mapped": [{"phrase": "Airflow", "esco_label": "control air flow", "score": 0.77},
+                          {"phrase": "SQL", "esco_label": "SQL", "score": 1.0},
+                          {"phrase": "dbt", "esco_label": "NOT_IN_ESCO", "score": 0.61}]}
+    rows = mapping_table(profile).splitlines()
+    assert rows[2].startswith("| SQL | SQL | 1.00") and rows[-1].startswith("| dbt | — not in ESCO — | 0.61")

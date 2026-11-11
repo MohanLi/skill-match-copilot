@@ -40,7 +40,8 @@ def resume_profile(toolbox, resume: str) -> dict[str, Any]:
     """Extract + normalize the resume once (code path shared by the multi-agent retriever and the baseline)."""
     ex = toolbox.extract_skills(resume)
     nm = toolbox.normalize_skills(ex["skills"] + ex["knowledge"])
-    return {"skills": ex["skills"], "knowledge": ex["knowledge"], "esco_skills": nm["esco_skills"], "not_in_esco": nm["not_in_esco"]}
+    return {"skills": ex["skills"], "knowledge": ex["knowledge"], "esco_skills": nm["esco_skills"], "not_in_esco": nm["not_in_esco"],
+            "mapped": nm.get("mapped", [])}  # per-phrase (phrase, esco_label, score) for display
 
 
 def normalise_ranking(obj: Any, top_n: int) -> list[dict[str, Any]]:

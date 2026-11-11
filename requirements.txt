@@ -42,3 +42,4 @@ accelerate
 openpyxl
 python-docx>=1.1.2
 pypdf
+pdfplumber

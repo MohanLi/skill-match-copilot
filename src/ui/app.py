@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from src.ui import service  # noqa: E402
-from src.ui.helpers import highlight, read_resume, results_csv, safe_url, search_key  # noqa: E402
+from src.ui.helpers import evidence_table, highlight, mapping_table, read_resume, results_csv, safe_url, search_key  # noqa: E402
 
 MODES = {"single_verified": "Verified matches", "single": "Single agent",
          "multi": "Multi-agent", "baseline": "Semantic search · no LLM"}
@@ -152,28 +152,15 @@ with matches_tab:
                 st.write(entry["summary"])
             matched, missing = entry.get("matched_skills") or [], entry.get("missing_skills") or []
             if result["mode"] != "baseline":
-                left, right = st.columns(2)
-                with left:
-                    st.markdown("**Skills I match**")
-                    if not matched:
-                        st.caption("No matched skills were returned.")
-                    for claim in matched:
-                        st.write(claim.get("skill", ""))
-                        st.caption("My resume")
-                        st.text(claim.get("resume_quote") or "No quote returned")
-                        st.caption("Job posting")
-                        st.text(claim.get("job_quote") or "No quote returned")
-                with right:
-                    st.markdown("**Skills to check**")
-                    if not missing:
-                        st.caption("No missing skills were returned.")
-                    for claim in missing:
-                        st.write(claim.get("skill", ""))
-                        st.text(claim.get("job_quote") or "No quote returned")
+                st.markdown(f"**Skills I match** · {len(matched)}")
+                st.markdown(evidence_table(matched, "matched") or "_No matched skills were returned._")
+                st.markdown(f"**Skills to check** · {len(missing)}")
+                st.markdown(evidence_table(missing, "missing") or "_No missing skills were returned._")
+                st.caption("Every quote is copied verbatim from the resume or the posting; claims the verifier could not support were removed.")
                 if entry.get("dropped"):
-                    with st.expander("Claims removed by the verifier"):
+                    with st.expander(f"Claims removed by the verifier · {len(entry['dropped'])}"):
                         for dropped in entry["dropped"]:
-                            st.write(f"{dropped.get('skill', '')}: {dropped.get('reason', '')}")
+                            st.markdown(f"- **{dropped.get('skill', '')}** — {dropped.get('reason', '')}")
             with st.expander("Read the job text"):
                 # Keep the whole text so evidence after character 5,000 is visible too.
                 st.markdown(highlight(job.get("text", ""), [c.get("job_quote", "") for c in matched + missing]), unsafe_allow_html=True)
@@ -184,10 +171,18 @@ with skills_tab:
     if profile is None:
         st.info("Semantic search does not extract a skill profile. Choose an agent mode to see my skills and ESCO matches.")
     else:
-        st.markdown("**My ESCO skills**")
-        st.write(", ".join(profile["esco_skills"]) or "No ESCO skills returned.")
-        st.markdown("**Phrases without an ESCO match**")
-        st.write(", ".join(profile["not_in_esco"]) or "None returned.")
+        n_esco, n_nil = len(profile["esco_skills"]), len(profile["not_in_esco"])
+        st.markdown(f"**{n_esco} ESCO skills** recognised in the resume · **{n_nil} phrases** have no ESCO equivalent (modern tools and frameworks mostly).")
+        table = mapping_table(profile)
+        if table:
+            st.caption("Each extracted phrase with the ESCO skill it was mapped to and the match strength; phrases below the tuned threshold stay unmapped. "
+                       "A wrong mapping here (e.g. a tool name landing on an unrelated ESCO skill) is the normaliser's known failure mode.")
+            st.markdown(table)
+        else:
+            st.markdown("**My ESCO skills**")
+            st.write(", ".join(profile["esco_skills"]) or "No ESCO skills returned.")
+            st.markdown("**Phrases without an ESCO match**")
+            st.write(", ".join(profile["not_in_esco"]) or "None returned.")
         with st.expander("Extracted phrases"):
             st.write({"skills": profile["skills"], "knowledge": profile["knowledge"]})
 

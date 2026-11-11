@@ -80,7 +80,7 @@ docker build -t skill-match-copilot . && docker run -p 8000:8000 --env-file .env
 `POST /match` takes `{"resume": "...", "mode": "single_verified|single|multi|baseline", "index": "live_jobs|djinni_jobs"}`
 and returns the ranking with quotes, the dropped claims, the faithfulness summary and the usage (calls, tokens, cost).
 
-The UI accepts a text-based PDF, DOCX, TXT or Markdown resume, or pasted text. Results stay on screen while you
+The UI accepts a text-based PDF, DOCX, TXT or Markdown resume, or pasted text (PDF text is rebuilt from glyph positions and re-flowed, so Word-exported PDFs do not arrive one word per line). Results stay on screen while you
 inspect evidence, download the CSV or change settings; a notice says when they belong to the previous search. The
 semantic baseline only needs the sentence encoder and a populated job index — it does not load the skill taggers,
 build a skill profile or call an LLM.
