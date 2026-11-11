@@ -40,3 +40,5 @@ rank-bm25
 pytest
 accelerate
 openpyxl
+python-docx>=1.1.2
+pypdf

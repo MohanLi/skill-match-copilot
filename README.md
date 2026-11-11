@@ -31,7 +31,7 @@ src/          utils/ (LLM wrapper, PII, text, viz) · data/ · p1_extract/ · p2
 results/      eda/ p1/ p2/ p3/ index/ monitoring/ — every table has a .meta.json (git commit, timestamp, config)
 reports/      figures/ — every figure as PNG (slides) and HTML (interactive); captions in figures/CAPTIONS.md
 models/       base/ (downloaded) · p1_tagger/{skill,knowledge}_seed42 · p2_biencoder (git-ignored, mirrored separately)
-tests/        33 tests (text utils, faithfulness checker, mocked agents)
+tests/        text utils, faithfulness checker, mocked agents, resume input and UI state
 ```
 
 ## Quick start
@@ -41,7 +41,7 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
 cp .env.example .env            # put ANTHROPIC_API_KEY=... in .env (never committed)
-python -m pytest tests           # 33 tests, no network needed
+python -m pytest tests           # no models, API keys or network needed
 ```
 
 Data and base models (one-time, on a machine that can reach huggingface.co):
@@ -79,6 +79,16 @@ docker build -t skill-match-copilot . && docker run -p 8000:8000 --env-file .env
 
 `POST /match` takes `{"resume": "...", "mode": "single_verified|single|multi|baseline", "index": "live_jobs|djinni_jobs"}`
 and returns the ranking with quotes, the dropped claims, the faithfulness summary and the usage (calls, tokens, cost).
+
+In the UI, I can upload a text-based PDF, DOCX, TXT or Markdown resume, or paste the text. Results stay on screen
+while I inspect evidence, download the CSV or change settings; a notice tells me when they belong to the previous search.
+The semantic baseline only needs the sentence encoder and a populated job index. It does not load the skill taggers,
+build a skill profile or call an LLM.
+
+A fresh clone does not include the trained `models/p1_tagger/` checkpoints or `chroma/` indexes. Restore those from the
+team's local bundle, or rebuild them using the commands above. `scripts/download_assets.py` downloads base models and
+data; it does **not** restore the trained taggers or the completed indexes. The UI lists missing local files before a
+search instead of failing with a model-loading traceback.
 
 ## Team hand-off
 
