@@ -52,6 +52,17 @@ def compare_skill_lists(resume_skills: list[str], job_skills: list[str], fuzzy_t
     return {"matched": matched, "missing": missing, "extra": extra}
 
 
+def _place(job: dict[str, Any]) -> dict[str, Any]:
+    """Location facts for the agent — only for postings that have them (live index), so tool outputs for the
+    evaluation index stay byte-identical and its cached LLM calls stay valid."""
+    out: dict[str, Any] = {}
+    if job.get("locations"):
+        out["location"] = str(job["locations"])[:200]
+    if isinstance(job.get("remote"), bool):
+        out["remote"] = job["remote"]
+    return out
+
+
 class ToolBox:
     def __init__(self, index_name: str = "djinni_jobs", pool_ids: list[str] | None = None, extractor: SkillExtractor | None = None, normalizer=None, snippet_chars: int = 300, job_text_chars: int = 3500):
         self.index = JobIndex(index_name)
@@ -61,6 +72,15 @@ class ToolBox:
         self.snippet_chars, self.job_text_chars = snippet_chars, job_text_chars
         self.calls: list[dict[str, Any]] = []
         self._pool_cache: dict[str, Any] | None = None
+        self.allowed_ids: list[str] | None = None   # requirement filter, see restrict_to()
+        self._allowed: dict[str, Any] | None = None
+
+    def restrict_to(self, job_ids) -> None:
+        """Limit search_jobs / get_job to these postings — the ones that meet the candidate's requirements
+        (src/p3_agent/requirements.py). Unlike pool_ids, which is the evaluation's fixed pool that must be ranked in
+        full, a restriction leaves every approach's normal 'search, then return the top N' behaviour unchanged."""
+        self.allowed_ids = list(job_ids) if job_ids else None
+        self._allowed = None
 
     @property
     def extractor(self) -> SkillExtractor:
@@ -97,6 +117,12 @@ class ToolBox:
             sims = pool["emb"] @ q
             order = np.argsort(-sims)[:k]
             hits = [{"job_id": pool["ids"][i], "score": round(float(sims[i]), 4), **(pool["metas"][i] or {}), "text": pool["docs"][i]} for i in order]
+        elif getattr(self, "allowed_ids", None):
+            allowed = self._allowed_pool()
+            sims = allowed["emb"] @ np.array(self.index.embed([str(query)])[0])
+            order = [int(i) for i in np.argsort(-sims)[:k]]
+            texts = {j["job_id"]: j.get("text") for j in self.index.get_many([allowed["ids"][i] for i in order])}
+            hits = [{"job_id": allowed["ids"][i], "score": round(float(sims[i]), 4), **(allowed["metas"][i] or {}), "text": texts.get(allowed["ids"][i]) or ""} for i in order]
         else:
             where = None
             if filters:
@@ -107,15 +133,29 @@ class ToolBox:
             except Exception:  # noqa: BLE001  (bad filter → unfiltered)
                 hits = self.index.search(str(query), k=k)
         return [{"job_id": h["job_id"], "title": h.get("title"), "company": h.get("company"), "category": h.get("category"), "score": h.get("score"),
-                 "esco_skills": split_skills(h.get("esco_skills"))[:15], "snippet": (h.get("text") or "")[: self.snippet_chars]} for h in hits]
+                 **_place(h), "esco_skills": split_skills(h.get("esco_skills"))[:15], "snippet": (h.get("text") or "")[: self.snippet_chars]} for h in hits]
+
+    def _allowed_pool(self) -> dict[str, Any]:
+        """Ids, metadata and vectors of the allowed postings (no texts: those are fetched for the top hits only)."""
+        if getattr(self, "_allowed", None) is None:
+            ids, metas, emb = [], [], []
+            for b in range(0, len(self.allowed_ids), 1000):
+                res = self.index.col.get(ids=self.allowed_ids[b : b + 1000], include=["metadatas", "embeddings"])
+                ids += list(res["ids"])
+                metas += list(res["metadatas"])
+                emb += list(res["embeddings"])
+            self._allowed = {"ids": ids, "metas": metas, "emb": np.array(emb), "set": set(ids)}
+        return self._allowed
 
     def get_job(self, job_id: str) -> dict[str, Any]:
         if self.pool_ids and job_id not in self.pool_ids:
             return {"error": f"job {job_id} is not in the candidate pool"}
+        if getattr(self, "allowed_ids", None) and str(job_id) not in self._allowed_pool()["set"]:
+            return {"error": f"job {job_id} does not meet the candidate's requirements; use a job_id returned by search_jobs"}
         j = self.index.get(str(job_id))
         if not j:
             return {"error": f"job {job_id} not found"}
-        return {"job_id": j["job_id"], "title": j.get("title"), "company": j.get("company"), "category": j.get("category"), "url": j.get("url"),
+        return {"job_id": j["job_id"], "title": j.get("title"), "company": j.get("company"), "category": j.get("category"), "url": j.get("url"), **_place(j),
                 "text": (j.get("text") or "")[: self.job_text_chars], "esco_skills": split_skills(j.get("esco_skills")), "raw_skills": split_skills(j.get("raw_skills"))[:60]}
 
     def compare_skills(self, resume_skills: list[str], job_skills: list[str]) -> dict[str, list[str]]:

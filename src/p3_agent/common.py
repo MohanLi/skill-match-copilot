@@ -104,3 +104,42 @@ def faithfulness_of_ranking(ranking: list[dict[str, Any]], resume: str, jobs: di
             reasons[k] = reasons.get(k, 0) + v
         per_job.append({"job_id": e["job_id"], **s})
     return {"n_claims": n_claims, "n_supported": n_sup, "hallucination_rate": (1 - n_sup / n_claims) if n_claims else 0.0, "reasons": reasons, "per_job": per_job}
+
+
+REPEAT_COSINE = 0.98   # same company + title: repeats of one posting sit at >= 0.98, different jobs with one title below 0.97
+
+
+def same_job(a: dict, b: dict) -> bool:
+    name = lambda job, key: " ".join(str(job.get(key) or "").lower().split())  # noqa: E731
+    return bool(name(a, "title")) and name(a, "title") == name(b, "title") and name(a, "company") == name(b, "company")
+
+
+def merge_repeats(ranking: list[dict], jobs: dict, vectors: dict) -> list[dict]:
+    """One card per job. Employers post the same job once per location (6.5% of the live index); a later result with
+    the same company, title and near-identical text is folded into the earlier one as `also` instead of taking a slot."""
+    kept: list[dict] = []
+    for entry in ranking:
+        job = jobs.get(entry["job_id"], {})
+        vec = vectors.get(entry["job_id"])
+        twin = None
+        for first in kept:
+            other = vectors.get(first["job_id"])
+            if vec is not None and other is not None and same_job(job, jobs.get(first["job_id"], {})) \
+                    and float(sum(x * y for x, y in zip(vec, other))) >= REPEAT_COSINE:
+                twin = first
+                break
+        if twin is None:
+            kept.append(entry)
+        else:
+            twin.setdefault("also", []).append({"job_id": entry["job_id"], "locations": job.get("locations"), "url": job.get("url")})
+    for i, entry in enumerate(kept):
+        entry["rank"] = i + 1
+    return kept
+
+
+def job_vectors(index, job_ids: list[str]) -> dict:
+    """Stored embeddings of a few postings, by job id (for merge_repeats)."""
+    if not job_ids:
+        return {}
+    res = index.col.get(ids=job_ids, include=["embeddings"])
+    return {i: [float(x) for x in e] for i, e in zip(res["ids"], res["embeddings"])}

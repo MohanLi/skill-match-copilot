@@ -34,9 +34,18 @@ class SearchIn(BaseModel):
     filters: dict[str, Any] | None = None
 
 
+class RequirementsIn(BaseModel):
+    """Role / location / remote requirements (src/p3_agent/requirements.py): they restrict the job pool before ranking."""
+    roles: list[str] = Field(default_factory=list, max_length=10)
+    locations: list[str] = Field(default_factory=list, max_length=20)
+    remote_ok: bool = False
+    remote_within: list[str] = Field(default_factory=list, max_length=10)
+
+
 class MatchIn(BaseModel):
     resume: str = Field(..., min_length=50, max_length=20000)
-    preferences: str = ""
+    preferences: str = ""                                    # free text for the agent
+    requirements: RequirementsIn | None = None
     mode: str = Field("single_verified", pattern="^(single_verified|single|multi|baseline)$")  # champion first
     index: str = "live_jobs"
     top_n: int = 5
@@ -90,10 +99,11 @@ def search(inp: SearchIn) -> dict[str, Any]:
 
 @app.post("/match")
 def match(inp: MatchIn) -> dict[str, Any]:
-    from ..index.store import JobIndex
     from ..p3_agent.baseline import EmbeddingBaseline
     from ..p3_agent.common import faithfulness_of_ranking, resume_profile
+    from ..p3_agent.match import match_jobs
     from ..p3_agent.multi_agent import MultiAgent
+    from ..p3_agent.requirements import Requirements, pool_summary
     from ..p3_agent.single_agent import SingleAgent
     from ..p3_agent.tools import ToolBox
     from ..p3_agent.verified import VerifiedSingleAgent
@@ -105,16 +115,21 @@ def match(inp: MatchIn) -> dict[str, Any]:
         raise HTTPException(status_code=503, detail=f"index {inp.index} is empty; run src.index.build_job_index")
     approach = {"single_verified": lambda: VerifiedSingleAgent(tb, model=inp.model, top_n=inp.top_n, task="api_single_verified"),
                 "single": lambda: SingleAgent(tb, model=inp.model, top_n=inp.top_n, task="api_single"), "multi": lambda: MultiAgent(tb, model=inp.model, top_n=inp.top_n, task="api_multi"),
-                "baseline": lambda: EmbeddingBaseline(tb, top_n=inp.top_n)}[inp.mode]()
-    run = approach.run(resume, inp.preferences)
-    jobs = {j["job_id"]: j for j in JobIndex(inp.index).get_many([e["job_id"] for e in run.ranking])} if run.ranking else {}
+                "baseline": lambda: EmbeddingBaseline(tb, top_n=inp.top_n + 5)}[inp.mode]()   # spare candidates: repeat postings are merged
+    req = Requirements.from_any(inp.requirements.model_dump() if inp.requirements else None)
+    req.notes = inp.preferences.strip()
+    # only postings that meet the requirements are searchable; too few → topped up and flagged per job (src/p3_agent/match.py)
+    run, jobs, checks, pool = match_jobs(approach, tb, resume, req, inp.top_n, baseline=inp.mode == "baseline")
     prof = resume_profile(tb, resume) if inp.mode != "baseline" else {"esco_skills": []}
     faith = faithfulness_of_ranking(run.ranking, resume, jobs, prof.get("esco_skills")) if inp.mode != "baseline" else None
     for e in run.ranking:
         j = jobs.get(e["job_id"], {})
         e["title"], e["company"], e["url"], e["category"] = j.get("title"), j.get("company"), j.get("url"), j.get("category")
+        e["locations"], e["remote"], e["published"] = j.get("locations"), j.get("remote"), j.get("published")
+        if req.filters:
+            e["requirements"] = checks.get(e["job_id"], [])
     rec = {"ts": time.time(), "mode": inp.mode, "index": inp.index, "model": inp.model, "n_results": len(run.ranking), "llm_calls": run.llm_calls, "cost_usd": run.cost_usd,
            "latency_ms": round((time.perf_counter() - t0) * 1000, 1), "hallucination_rate": faith["hallucination_rate"] if faith else None, "n_claims": faith["n_claims"] if faith else 0, "error": run.error}
     append_jsonl(rec, "logs/requests.jsonl")
-    return {"ranking": run.ranking, "profile": prof, "faithfulness": {k: v for k, v in faith.items() if k != "per_job"} if faith else None, "usage": {k: v for k, v in run.to_dict().items() if k in ("llm_calls", "input_tokens", "output_tokens", "cost_usd", "latency_ms", "tool_calls", "error")},
+    return {"ranking": run.ranking, "requirements": {"asked": req.to_dict(), "pool": pool_summary(pool)} if req.filters else None, "profile": prof, "faithfulness": {k: v for k, v in faith.items() if k != "per_job"} if faith else None, "usage": {k: v for k, v in run.to_dict().items() if k in ("llm_calls", "input_tokens", "output_tokens", "cost_usd", "latency_ms", "tool_calls", "error")},
             "trace": run.trace, "latency_ms": rec["latency_ms"]}
