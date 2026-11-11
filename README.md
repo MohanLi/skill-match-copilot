@@ -80,15 +80,15 @@ docker build -t skill-match-copilot . && docker run -p 8000:8000 --env-file .env
 `POST /match` takes `{"resume": "...", "mode": "single_verified|single|multi|baseline", "index": "live_jobs|djinni_jobs"}`
 and returns the ranking with quotes, the dropped claims, the faithfulness summary and the usage (calls, tokens, cost).
 
-In the UI, I can upload a text-based PDF, DOCX, TXT or Markdown resume, or paste the text. Results stay on screen
-while I inspect evidence, download the CSV or change settings; a notice tells me when they belong to the previous search.
-The semantic baseline only needs the sentence encoder and a populated job index. It does not load the skill taggers,
+The UI accepts a text-based PDF, DOCX, TXT or Markdown resume, or pasted text. Results stay on screen while you
+inspect evidence, download the CSV or change settings; a notice says when they belong to the previous search. The
+semantic baseline only needs the sentence encoder and a populated job index — it does not load the skill taggers,
 build a skill profile or call an LLM.
 
-A fresh clone does not include the trained `models/p1_tagger/` checkpoints or `chroma/` indexes. Restore those from the
-team's local bundle, or rebuild them using the commands above. `scripts/download_assets.py` downloads base models and
-data; it does **not** restore the trained taggers or the completed indexes. The UI lists missing local files before a
-search instead of failing with a model-loading traceback.
+A fresh clone does not include the trained `models/p1_tagger/` checkpoints or the `chroma/` indexes. Restore them from
+the team's local bundle or rebuild them with the commands above; `scripts/download_assets.py` downloads base models and
+data but does **not** restore the trained taggers or the completed indexes. The UI lists the missing local files before a
+search instead of failing with a model-loading traceback, and shows the full error under "Error details" if a search fails.
 
 ## Team hand-off
 

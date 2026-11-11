@@ -63,6 +63,8 @@ def test_failed_new_search_keeps_previous_results(ui, monkeypatch):
     button(app, 'Find matching jobs').click().run()
     assert not app.exception
     assert app.error and 'previous results' in app.error[0].value
+    assert any(item.label == 'Error details' for item in app.expander)
+    assert any('provider unavailable' in item.value for item in app.code)
     assert app.session_state['search_result'] == before
 
 

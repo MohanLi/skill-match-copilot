@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import sys
+import traceback
 from pathlib import Path
 
 import streamlit as st
@@ -105,8 +106,10 @@ if submitted:
             result["search_key"] = key
             st.session_state["search_result"] = result
             st.rerun()
-        except Exception:
+        except Exception as error:
             st.error("The search couldn't finish. Check the local models, index and API connection, then try again. Any previous results are still below.")
+            with st.expander("Error details"):
+                st.code(f"{type(error).__name__}: {error}\n\n{traceback.format_exc()}")
 
 result = st.session_state.get("search_result")
 if not result:
