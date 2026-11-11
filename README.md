@@ -71,7 +71,8 @@ the project: ≈ $14.
 
 ```bash
 uvicorn src.api.app:app --port 8000             # /health /extract /normalize /search /match
-streamlit run src/ui/app.py                     # paste a resume, pick an approach, see ranked jobs with evidence
+streamlit run src/ui/app.py                     # resume + requirements in, ranked jobs with evidence out
+python -m src.index.job_facts                   # once per existing index: add company / location / remote / salary (seconds, no re-embedding)
 python -m src.monitoring.daily_ingest           # refresh the live index (cron: 0 6 * * *)
 python -m src.monitoring.drift_report           # ops dashboard + emerging-skills review queue
 docker build -t skill-match-copilot . && docker run -p 8000:8000 --env-file .env skill-match-copilot
@@ -79,11 +80,30 @@ docker build -t skill-match-copilot . && docker run -p 8000:8000 --env-file .env
 
 `POST /match` takes `{"resume": "...", "mode": "single_verified|single|multi|baseline", "index": "live_jobs|djinni_jobs"}`
 and returns the ranking with quotes, the dropped claims, the faithfulness summary and the usage (calls, tokens, cost).
+Add `"requirements": {"roles": ["AI engineer"], "locations": ["Chicago"], "remote_ok": true, "remote_within": ["United States"]}`
+to rank only postings that meet them; each result then carries its requirement checks.
+
+**Requirements are filters, not hints** (`src/p3_agent/requirements.py`, `src/p3_agent/match.py`). Role, location and
+remote are plain rules on the job facts stored with each posting — a title matches a role when it contains every word
+of it, a place is matched as whole words in the posting's location, and a remote job can be limited to a region. The
+eligible postings are selected *before* any approach ranks, so a "Chicago or remote" search cannot return anything
+else; if fewer postings qualify than were asked for, the list is topped up and those results are flagged in red instead
+of being mixed in. Every card shows company, location, remote, posting age and salary where the feed has it, a check
+per requirement, and the evidence tables; a box above the cards counts the skills the returned jobs ask for that the
+resume does not show. Repeat postings of one job (same company and title, near-identical text — 6.5 % of the live
+index) share a card. "More like this" lists the nearest postings inside the same requirements, "Save" keeps a
+shortlist for the session, and "My skills" groups the resume's phrases into recognised ESCO skills, tools ESCO does
+not list, activities, and tagger leftovers. None of this touches the evaluated approaches: without requirements the
+code path, the prompts and therefore the reported numbers are unchanged.
 
 The UI accepts a text-based PDF, DOCX, TXT or Markdown resume, or pasted text (PDF text is rebuilt from glyph positions and re-flowed, so Word-exported PDFs do not arrive one word per line). Results stay on screen while you
 inspect evidence, download the CSV or change settings; a notice says when they belong to the previous search. The
 semantic baseline only needs the sentence encoder and a populated job index — it does not load the skill taggers,
 build a skill profile or call an LLM.
+
+An index built before job facts were stored still works — cards show fewer facts and only the role requirement
+applies — until `python -m src.index.job_facts` is run on a machine that has the feed snapshot in `data/raw/live_jobs`
+(or the updated `chroma/` folder is copied over).
 
 A fresh clone does not include the trained `models/p1_tagger/` checkpoints or the `chroma/` indexes. Restore them from
 the team's local bundle or rebuild them with the commands above; `scripts/download_assets.py` downloads base models and

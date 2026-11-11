@@ -123,3 +123,101 @@ def test_evidence_and_mapping_tables_are_valid_markdown():
                           {"phrase": "dbt", "esco_label": "NOT_IN_ESCO", "score": 0.61}]}
     rows = mapping_table(profile).splitlines()
     assert rows[2].startswith("| SQL | SQL | 1.00") and rows[-1].startswith("| dbt | — not in ESCO — | 0.61")
+
+
+def test_job_facts_line_is_readable_and_safe_markdown():
+    from datetime import date
+
+    from src.ui.helpers import facts_line, location_label, posted_label, salary_label
+
+    today = date(2026, 11, 10)
+    assert posted_label("2026-10-09T22:19:14.701+00:00", today) == "Posted Oct 9 · 32 days ago"
+    assert posted_label("2026-10-20T11:35:15.557Z", today) == "Posted Oct 20 · 21 days ago"
+    assert posted_label("2021-11-01T00:00:00+02:00", today) == "Posted Nov 1, 2021 · 5 years ago"
+    assert posted_label("", today) == "" and posted_label("not a date", today) == ""
+    assert salary_label({"salary_min": 160000.0, "salary_max": 210000.0, "salary_currency": "USD"}) == "$160,000–$210,000"
+    assert salary_label({"salary_min": 45000, "salary_max": 75000, "salary_currency": "EUR", "salary_period": "year"}) == "€45,000–€75,000 a year"
+    assert salary_label({"salary_min": float("nan")}) == "" and salary_label({}) == ""
+    job = {"company": "Scribd_inc", "locations": "San Francisco | Toronto | Denver | Chicago", "remote": True, "category": "Engineering",
+           "published": "2026-10-09", "salary_min": 160000.0, "salary_max": 210000.0, "salary_currency": "USD"}
+    assert location_label(job, ["chicago"]) == "Chicago; San Francisco (+2 more)"          # the place I asked for comes first
+    line = facts_line(job, today, ["Chicago"])
+    assert ":material/location_on: Chicago; San Francisco (+2 more)" in line and ":material/home_work: Remote" in line
+    assert "Scribd\\_inc" in line and "\\$160,000–\\$210,000" in line                        # no stray emphasis, no LaTeX
+    assert "Posted Oct 9 · 32 days ago" in line
+    djinni = facts_line({"company": "GlobalLogic", "category": "DevOps", "exp_years": "3y", "english_level": "upper"}, today)
+    assert "3+ years of experience" in djinni and "English: upper" in djinni and "location_on" not in djinni
+    assert facts_line({}) == ""
+
+
+def test_requirement_badges_and_pool_sentences():
+    from src.ui.helpers import pool_sentence, relaxed_sentence, requirement_badges
+
+    badges = requirement_badges([{"ok": True, "label": "Role: AI engineer"}, {"ok": False, "label": "Not Chicago [or] remote"},
+                                 {"ok": None, "label": "Location not listed"}], 4, 1)
+    assert badges.split(" :")[0] == ":green-badge[:material/check: Role: AI engineer]"
+    assert ":red-badge[:material/close: Not Chicago \\[or\\] remote]" in badges and ":gray-badge[:material/help: Location not listed]" in badges
+    assert badges.endswith(":gray-badge[4 skills matched] :gray-badge[1 to check]")
+    assert requirement_badges(None) == "" and requirement_badges([], 1, 0).startswith(":gray-badge[1 skill matched]")
+    pool = {"total": 2000, "meets_all": 158, "meets_location": 580, "meets_role": 587, "relaxed": []}
+    assert pool_sentence(pool) == "580 of 2,000 jobs meet the location requirement and 587 match the role; 158 do both."
+    assert pool_sentence({"total": 2000, "meets_all": 35, "meets_location": 35, "meets_role": None}) == "35 of 2,000 jobs meet the location requirement."
+    assert pool_sentence(None) == "" and relaxed_sentence(pool) == ""
+    assert relaxed_sentence({"meets_all": 1, "relaxed": ["role"]}).startswith("Only 1 job meets every requirement, so jobs with a different role")
+    assert relaxed_sentence({"meets_all": 0, "relaxed": ["role and location"]}).startswith("No jobs meet every requirement")
+
+
+def test_skills_summary_counts_jobs_not_mentions():
+    from src.ui.helpers import skills_summary, sort_ranking, summary_badges
+
+    ranking = [
+        {"job_id": "a", "matched_skills": [{"skill": "Python"}, {"skill": "python"}], "missing_skills": [{"skill": "Kubernetes (EKS)"}, {"skill": "active learning / human-in-the-loop evaluation"}]},
+        {"job_id": "b", "matched_skills": [{"skill": "Python"}], "missing_skills": [{"skill": "Kubernetes"}, {"skill": "Spark"}]},
+        {"job_id": "c", "matched_skills": [], "missing_skills": [{"skill": "kubernetes"}, {"skill": "Active learning"}, {"skill": ""}]},
+    ]
+    summary = skills_summary(ranking)
+    assert summary["n_jobs"] == 3 and summary["matched"] == [("Python", 2)]              # twice on one card is still one job
+    assert summary["missing"] == [("Kubernetes", 3), ("Active learning", 2), ("Spark", 1)]
+    assert summary_badges(summary["missing"], 3, "orange", limit=2) == ":orange-badge[Kubernetes · 3 of 3] :orange-badge[Active learning · 2 of 3] +1 more"
+    assert summary_badges(summary["missing"], 3, "orange").endswith(":gray-badge[Spark]")       # a one-off skill: no count, no colour
+    jobs = {"a": {"published": "2026-10-05"}, "b": {"published": "2026-10-20T11:00:00Z"}, "c": {}}
+    assert [e["job_id"] for e in sort_ranking(ranking, jobs, "newest")] == ["b", "a", "c"]
+    assert [e["job_id"] for e in sort_ranking(ranking, jobs, "fit")] == ["a", "b", "c"]
+
+
+def test_skill_profile_groups_put_recognised_skills_first_and_fragments_last():
+    from src.ui.helpers import esco_table, group_profile, is_fragment
+
+    profile = {"skills": ["taken", "improve detection precision", "deployed the backend on", "evaluated"],
+               "knowledge": ["PyTorch", "IAM )", "Bachelor of Science in", "SQL", "Docker"],
+               "mapped": [{"phrase": "SQL", "esco_label": "SQL", "score": 1.0}, {"phrase": "Docker", "esco_label": "dock operations", "score": 0.66},
+                          {"phrase": "evaluated", "esco_label": "types of evaluation", "score": 0.77}, {"phrase": "PyTorch", "esco_label": "NOT_IN_ESCO", "score": 0.37},
+                          {"phrase": "IAM )", "esco_label": "NOT_IN_ESCO", "score": 0.29}, {"phrase": "taken", "esco_label": "NOT_IN_ESCO", "score": 0.5},
+                          {"phrase": "improve detection precision", "esco_label": "NOT_IN_ESCO", "score": 0.49},
+                          {"phrase": "deployed the backend on", "esco_label": "NOT_IN_ESCO", "score": 0.56},
+                          {"phrase": "Bachelor of Science in", "esco_label": "NOT_IN_ESCO", "score": 0.56}, {"phrase": "pytorch", "esco_label": "NOT_IN_ESCO", "score": 0.3}]}
+    groups = group_profile(profile)
+    assert [r["phrase"] for r in groups["esco"]] == ["SQL", "evaluated", "Docker"]         # every mapped phrase, strongest first
+    assert groups["tools"] == ["PyTorch"] and groups["activities"] == ["improve detection precision"]
+    assert set(groups["fragments"]) == {"deployed the backend on", "Bachelor of Science in", "taken", "IAM )"}
+    table = esco_table(groups["esco"]).splitlines()
+    assert table[2] == "| SQL | SQL | 1.00 · strong |" and table[-1] == "| Docker | dock operations | 0.66 · weak |"
+    assert is_fragment("of Google") and is_fragment("stores", "skill") and not is_fragment("stores", "knowledge") and not is_fragment("OpenCV homography")
+    assert esco_table([]) == ""
+
+
+def test_search_key_and_csv_include_the_requirements():
+    from src.ui.helpers import saved_csv
+
+    base = ['resume', '', 'live_jobs', 'single', 5, 'agent']
+    assert search_key(*base) == search_key(*base, requirements={})
+    assert search_key(*base, requirements={'roles': ['AI engineer']}) != search_key(*base)
+    assert search_key(*base, requirements={'roles': ['AI engineer'], 'remote_ok': True}) == search_key(*base, requirements={'remote_ok': True, 'roles': ['AI engineer']})
+    result = {'mode': 'single', 'run': {'ranking': [{'job_id': '1', 'rank': 1, 'fit_score': 75}]},
+              'jobs': {'1': {'title': 'AI Engineer', 'company': 'ACME', 'locations': 'Chicago, IL | Remote - US', 'published': '2026-10-09T22:19:14.701+00:00', 'url': 'https://example.com/1'}},
+              'checks': {'1': [{'name': 'role', 'ok': True, 'label': 'Role: AI engineer'}, {'name': 'location', 'ok': False, 'label': 'Not Chicago'}]}}
+    row = list(csv.DictReader(io.StringIO(results_csv(result))))[0]
+    assert row['location'] == 'Chicago, IL; Remote - US' and row['posted'] == '2026-10-09'
+    assert row['requirements'] == 'met: Role: AI engineer; not met: Not Chicago'
+    saved = list(csv.DictReader(io.StringIO(saved_csv({'1': {'title': '=cmd', 'company': 'ACME', 'locations': 'Chicago', 'score': 75, 'url': 'javascript:x'}}))))[0]
+    assert saved['title'] == "'=cmd" and saved['url'] == '' and saved['location'] == 'Chicago'
